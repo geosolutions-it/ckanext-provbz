@@ -1,5 +1,286 @@
+@font-face {
+    font-family: 'dejavu_sansbook';
+    src: url('../fonts/DejaVuSans-webfont.eot');
+    src: url('../fonts/DejaVuSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DejaVuSans-webfont.woff') format('woff'),
+         url('../fonts/DejaVuSans-webfont.ttf') format('truetype'),
+         url('../fonts/DejaVuSans-webfont.svg#dejavu_sansbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'dejavu_sanscondensed';
+    src: url('../fonts/DejaVuSansCondensed-webfont.eot');
+    src: url('../fonts/DejaVuSansCondensed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DejaVuSansCondensed-webfont.woff') format('woff'),
+         url('../fonts/DejaVuSansCondensed-webfont.ttf') format('truetype'),
+         url('../fonts/DejaVuSansCondensed-webfont.svg#dejavu_sanscondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /*---------------- Override of ckan base CSS --------------*/
 
+/* header */
+.account-masthead {
+    min-height: 30px;
+    color: #ffffff;
+    background: #ffffff;
+}
 
+.masthead {
+    min-height: 55px;
+    color: #ffffff;
+    background: #ffffff;
+}
+
+.ck-row{
+	width: 1170px;
+	padding-top: 10px;
+}
+
+.masthead .content {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    right: 0;
+}
+
+.navbar {
+    margin-top: 5px;
+    min-height: 30px;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+    font-family: dejavu_sanscondensed;
+}
+
+.navbar > li > a {
+    color: #333;
+	text-transform: uppercase;
+}
+
+.masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li.active a {
+    background-color: #ffffff;
+	color: #96191A;
+}
+
+/* body */
+.account-masthead {
+    min-height: 30px;
+    color: #ffffff;
+    background: #ffffff;
+}
+
+body {
+    font-family: "dejavu_sansbook";
+    font-size: 14px;
+    color: #333;
+	background:  #404041;
+}
+
+[role=main], .main {
+    background: #ffffff
+}
+
+.hero {
+    background-image: url("../images/bg_intro.jpg");
+	background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+	height: 290px;
+}
+
+.search-form {
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+    border-bottom: 0px dotted #dddddd;
+}
+
+.extended_search .module-content {
+    padding: 0;
+    margin:  0;
+}
+
+.search-form .search-input button i {
+    color: #000000;
+    -webkit-transition: color 0.2s ease-in;
+    -moz-transition: color 0.2s ease-in;
+    -o-transition: color 0.2s ease-in;
+    transition: color 0.2s ease-in;
+}
+
+.search-form .search-input button:hover i {
+    color: #404040;
+}
+
+/* footer */
+.site-footer {
+    min-height: 55px;
+    color: #ffffff;
+    background:  #404041;
+    padding: 1em 0;
+}
+
+.site-footer a {
+    color: #D0D0D0;
+}
+
+.powered-by{
+	padding-top: 25px;
+}
+
+.ck-row-footer{
+	width: 1170px;
+}
+
+.footer-links ul li {
+    margin-bottom: 0px;
+}
+
+.footer-lks  li  > a > i {
+	padding-right: 5px;
+}
+
+.footer-left nav{
+	width: 350px;
+}
+
+.footer-center nav{
+	width: 350px;
+	margin-left: 80px;
+}
+
+.footer-right{
+	width: 350px;
+	float: right;
+}
+
+.footer-right nav > ul > li > i{
+	margin-right: 5px;
+}
+
+.logo_footer{
+	margin-bottom: 20px;
+}
+
+.account ul > li {
+    display: block;
+    float: left;
+    border-left: 0px solid #00232e;
+	padding-right: 15px;
+}
+
+.attribution.footer-right > form {
+	margin-top: 50px;
+}
 
 /*---------------- PROV-BZ's ckan CSS ---------------------*/
+
+.extended_search {
+    background-image: url("../images/bg-weiss-70.png");
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    max-width: 800px;
+}
+
+.extended_search form legend {
+	border-bottom: 0px solid #e5e5e5;
+	margin-bottom: 5px;
+    font-size: 16px;
+    line-height: inherit;
+    color: #333;
+    border: none;
+	padding: 0;
+}
+
+.extended_search h1 {
+    font-size: 26px;
+	margin-top: 0;
+	color: inherit;
+    font-family: dejavu_sanscondensed;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.search-form .search_field {
+    margin-top: 0px;
+}
+
+.home-search-form .search-input input {
+    height: 40px;
+}
+
+.search_field  input{
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 3px 6px;
+    font-size: 16px;
+    line-height: 1.42857;
+    position: relative;
+}
+
+.tags h2 {
+    font-size: 22px;
+	color: inherit;
+    font-family: dejavu_sanscondensed;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+#center-body {
+    padding-top: 8px;
+    background: #cd0e16;
+}
+
+.page-top > div.container > h1{
+    color: inherit;
+    font-family: dejavu_sanscondensed;
+    line-height: 1.1;
+    font-weight: normal;
+    font-size: 22px;
+	color: #ffffff;
+	margin: 0;
+}
+
+.page-top > div.container > h1 a {
+    color: #fff;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn-dataset-link {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.page-top {
+    background-color: #cd0e16;
+    color: #fff;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+}

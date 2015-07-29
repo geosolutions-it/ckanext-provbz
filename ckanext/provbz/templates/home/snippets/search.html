@@ -1,0 +1,26 @@
+{% set tags = h.get_facet_items_dict('tags', limit=3) %}
+{% set placeholder = _('eg. Gold Prices') %}
+
+<div class="extended_search">
+  <h1>Trova i dati che ti interessano</h1>
+  <form class="module-content search-form home-search-form" method="get" action="{% url_for controller='package', action='search' %}">
+    <legend>Cerca i dati e ottieni gli aggiornamenti per i dataset e le categorie a cui sei interessato</legend>
+    <!--h3 class="heading">{{ _("Search Your Data") }}</h3-->
+    <div class="search_field search-input control-group">
+      <input type="text" class="search" name="q" value="" autocomplete="off" placeholder="Cerca per..." /*placeholder="{{ placeholder }}"*/  />
+      <button type="submit">
+        <i class="icon-search"></i>
+        <span>{{ _('Search') }}</span>
+      </button>
+    </div>
+  </form>
+  <div class="tags">
+    <!--h3>{{ _('Popular Tags') }}</h3-->
+	<h2>Tag maggiormente utilizzati</h2>	
+    {% for tag in tags %}
+      <a class="tag" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
+    {% endfor %}
+	
+	<br/><br/><br/><br/>
+  </div>
+</div>
