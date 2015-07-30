@@ -23,6 +23,135 @@
 
 /*---------------- Override of ckan base CSS --------------*/
 
+.media-grid {
+    margin-left: -15px;
+	margin-right: -22px;
+}
+
+.span9 .page-header {
+    margin-left: -5px !important; 
+}
+
+.lang-select label, .lang-select select, .lang-select .lang-container {
+    float: none; 
+    margin-top: 0;
+	width: 100% !important;
+}
+
+a {
+    color: #96191A;
+    text-decoration: none;
+}
+
+.btn-primary {
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    background-color: #B11D1E;
+    background-image: -moz-linear-gradient(top,#B11D1E,#B11D1E);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#B11D1E),to(#B11D1E));
+    background-image: -webkit-linear-gradient(top,#B11D1E,#B11D1E);
+    background-image: -o-linear-gradient(top,#B11D1E,#B11D1E);
+    background-image: linear-gradient(to bottom,#B11D1E,#B11D1E);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B11D1E',endColorstr='#B11D1E',GradientType=0);
+    border-color: #B11D1E #B11D1E #B11D1E;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+    color: #ffffff;
+    background-color: #96191A;
+}
+
+a.tag:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #B11D1E;
+    border: 1px solid #96191A;
+    -webkit-box-shadow: inset 0 1px 0 #B11D1E;
+    -moz-box-shadow: inset 0 1px 0 #B11D1E;
+    box-shadow: inset 0 1px 0 #B11D1E;
+}
+
+.btn-col{
+	float: left;
+	width: 22%;
+	padding-right: 10px;
+    padding-left: 10px;
+}
+
+.btn-ck {
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+	color: #fff;
+	background-color: #B11D1E;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+	border-color: #a71718;
+	margin-top: 3px;
+    margin-bottom: 3px;
+	text-decoration: none; 
+	height: 34px;
+}
+
+.btn-ck:hover {
+    color: #fff;
+    background-color: #96191A;
+    border-color: #96191A;
+	text-decoration: none; 
+}
+
+.btn-ck:active {
+    color: #fff;
+    background-color: #204d74;
+    border-color: #122b40;
+	text-decoration: none; 
+}
+
+.more {
+    text-align: right;
+}
+
+.prymary {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.prymary h2 {
+    margin-top: 0;
+	color: inherit;
+    font-family: dejavu_sanscondensed;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.more-info{
+	height: 25px !important;
+}
+
+.background-light-grey {
+    background-color: #eee;
+}
+
+.container-home {
+    margin-right: auto;
+    margin-left: auto;
+	width: 1170px;
+}
+
+.logos {
+    padding-top: 20px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
 /* header */
 .account-masthead {
     min-height: 30px;
@@ -57,13 +186,17 @@
 }
 
 .navbar > li > a {
-    color: #333;
+    color: #333 !important; 
 	text-transform: uppercase;
+}
+
+.masthead .navigation .nav-pills {
+    margin-bottom: 5px;
 }
 
 .masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li.active a {
     background-color: #ffffff;
-	color: #96191A;
+	color: #96191A !important;
 }
 
 /* body */
@@ -77,11 +210,11 @@ body {
     font-family: "dejavu_sansbook";
     font-size: 14px;
     color: #333;
-	background:  #404041;
+	background-color: #404041;
 }
 
 [role=main], .main {
-    background: #ffffff
+    background: #ffffff;
 }
 
 .hero {
@@ -90,6 +223,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 	height: 290px;
+	min-height: 290px; 
 }
 
 .search-form {
@@ -143,13 +277,15 @@ body {
 	padding-right: 5px;
 }
 
-.footer-left nav{
+.footer-left{
 	width: 350px;
+	float: left;
 }
 
-.footer-center nav{
+.footer-center{
 	width: 350px;
 	margin-left: 80px;
+	float: left;
 }
 
 .footer-right{
@@ -176,6 +312,15 @@ body {
 	margin-top: 50px;
 }
 
+
+.span9 {
+    width: 940px;
+}
+
+.container{
+	width: 1170px;
+}
+
 /*---------------- PROV-BZ's ckan CSS ---------------------*/
 
 .extended_search {
@@ -186,6 +331,8 @@ body {
     margin-right: auto;
     padding: 15px;
     max-width: 800px;
+	height: 239px;
+	width: 770px;
 }
 
 .extended_search form legend {
@@ -283,4 +430,40 @@ body {
     padding-top: 1em;
     padding-bottom: 1em;
     text-align: center;
+}
+
+.inner-ck{
+	padding: 0px 0px !important;
+}
+
+.home-dataset-list{
+	margin-bottom: 30px;
+}
+
+.home-dataset-list .dataset-heading a {
+    color: #B11D1E !important;
+	font-size: 18px;
+}
+
+.home-dataset-list h3 {
+    color: inherit;
+    font-family: dejavu_sanscondensed;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.home-dataset-list h2{
+    color: inherit;
+    font-family: dejavu_sanscondensed;
+	font-size: 22px;
+	font-weight: 500;
+    line-height: 1.1;
+}
+
+.home-dataset-list .dataset-item{
+	border-bottom: 0px dotted #dddddd;
+}
+
+.main-ck{
+	background-color: #EEE;
 }

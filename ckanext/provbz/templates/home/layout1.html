@@ -8,7 +8,7 @@
 	
 	<div class="page-top">
       <div class="container">
-        <h1>Benvenuto nella piattaforma Open Data Alto Adige <a href="/dataset?q=" type="button" class="btn-dataset-link">ACCEDI AI DATASET</a></h1>
+        <h1>{% trans %}Benvenuto nella piattaforma Open Data Alto Adige{% endtrans %} <a href="/dataset?q=" type="button" class="btn-dataset-link">{% trans %}ACCEDI AI DATASET{% endtrans %}</a></h1>
       </div>
     </div>
 </div>
@@ -19,8 +19,40 @@
         {% snippet 'home/snippets/promoted.html' %} 
       </div>#}
       <div class="span6 col1">
-        {# % snippet 'home/snippets/stats.html' % #}		
+        {# % snippet 'home/snippets/stats.html' % #}
+        {% snippet 'home/snippets/recently_updated_dataset_list.html' %}		
       </div> 
     </div>
+  </div>
+  
+  <div class="background-light-grey">
+	<div class="container container-home">
+	  <div class="prymary">
+		<h2>
+		  {% trans %}Cosa sono gli OPENdata?{% endtrans %}
+		</h2>
+		<p>
+		  Sed sem tellus, blandit at orci non, finibus euismod tortor. Pellentesque volutpat pharetra metus eget dictum. Etiam tincidunt elit sed malesuada <a href="#">vulputate lorem</a> ipsum dolor sit amet sed sem tellus, blandit at orci non, finibus euismod tortor. Pellentesque volutpat pharetra metus eget dictum. Etiam tincidunt elit sed malesuada vulputate.
+		</p>
+		<div class="more">
+		  <a role="button" href="#" class="btn-ck more-info">{% trans %}Leggi tutto{% endtrans %} <i class="icon-angle-right"></i></a>
+		</div>
+	  </div>
+	</div>     
+  </div>
+  
+  <div class="sponsor">
+	<div class="container container-home">
+	  <div class="row">
+		<div class="logos row">
+		  <a href="http://www.provincia.bz.it">
+			<img src="{{h.url_for_static('/images/logo/logo_pr.png')}}" alt="Provincia autonoma di Bolzano" class="img-responsive pr_bz">
+		  </a>
+		  <a href="http://www.gvcc.net">
+			<img src="{{h.url_for_static('/images/logo/logo_cc.png')}}" alt="Consorzio dei Comuni di Bolzano" class="img-responsive consorzio_comuni">
+		  </a>
+		</div>
+	  </div>
+	</div>
   </div>
 </div>

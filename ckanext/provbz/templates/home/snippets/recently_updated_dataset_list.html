@@ -1,0 +1,14 @@
+{% set datasets = h.recent_updates(2) %}
+
+<!--h1>{{datasets}}</h1-->
+<div class="home-dataset-list">
+   <!--h2>Recently updated dataset ({{datasets|count}})</h2-->
+   <h2>Ultimi dataset</h2>
+   <div class="inner inner-ck">
+      <ul class="dataset-list unstyled">
+         {% for dataset in datasets %}
+            {% snippet 'snippets/package_item.html', package=dataset, truncate_title=80 %}
+         {% endfor %}
+      </ul>
+   </div>
+</div>
