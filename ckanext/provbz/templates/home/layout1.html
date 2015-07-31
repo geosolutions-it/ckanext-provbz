@@ -15,13 +15,32 @@
 <div role="main">
   <div class="container">
     <div class="row row2">
-      {#<div class="span6 col2">
-        {% snippet 'home/snippets/promoted.html' %} 
-      </div>#}
       <div class="span6 col1">
         {# % snippet 'home/snippets/stats.html' % #}
         {% snippet 'home/snippets/recently_updated_dataset_list.html' %}		
       </div> 
+	  <div class="span6 col2 col-ck">
+        {#% snippet 'home/snippets/promoted.html' %#} 
+		<div class="col-sm-6">
+            <div class="news-box">
+              <h2>
+                Ultime News
+              </h2>
+              <div class="news">
+                <h3 class="news-heading"><a href="#">Lorem ipsum dolor sit amet</a></h3>
+                <img class="news-object" src="{{h.url_for_static('/images/news-img.jpg')}}" alt="...">
+                <div class="news-body">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. 
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
     </div>
   </div>
   

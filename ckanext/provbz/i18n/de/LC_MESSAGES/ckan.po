@@ -4842,6 +4842,7 @@ msgstr "Webseiten-URL"
 msgid "eg. http://example.com (if blank uses resource url)"
 msgstr "z.B. http://example.com (wenn leer, verwenden der Ressourcen-URL)"
 
+
 ## ---------------- ProvBz------------------ ##
 
 #: templates/header.html:107
@@ -4854,11 +4855,11 @@ msgstr "Faq"
 
 #: templates/footer.html:13
 msgid "Informazioni Dati Trentino"
-msgstr "Information Data Trentino"
+msgstr "Trentino Informationsdaten"
 
 #: templates/footer.html:19
 msgid "Domande frequenti"
-msgstr "Veelgestelde Vragen" 
+msgstr "häufige gestellte Fragen" 
 
 #: templates/footer.html:25
 msgid "Atom Feed"
@@ -4866,11 +4867,11 @@ msgstr "Atom Feed"
 
 #: templates/footer.html:31
 msgid "Ringraziamenti"
-msgstr "dank"
+msgstr "Dank"
 
 #: templates/footer.html:37
 msgid "Note legali"
-msgstr "wettelijke vermeldingen"
+msgstr "Rechtliche Hinweise"
 
 #: templates/footer.html:43
 msgid "Privacy"
@@ -4878,40 +4879,40 @@ msgstr "Privacy"
 
 #: templates/footer.html:62
 msgid "Realizzato con"
-msgstr "gemaakt met"
+msgstr "realisiert mit"
 
 #: templates/footer.html:125
 msgid "ACCEDI AL GEOPORTALE"
-msgstr "ENTER THE Geoportaal"
+msgstr "Zugriff auf das GeoPortal"
 
 #: templates/home/layout1.html:11
 msgid "Benvenuto nella piattaforma Open Data Alto Adige"
-msgstr "Welkom bij Open Data platform Tirol"
+msgstr "Willkommen auf Open Data Plattform Tirol"
 
 #: templates/home/layout1.html:11
 msgid "ACCEDI AI DATASET"
-msgstr "GA NAAR DATASET"
+msgstr "Zugang zu Datensätzen"
 
 #: templates/home/layout1.html:32
 msgid "Cosa sono gli OPENdata?"
-msgstr "Wat zijn opendata?"
+msgstr "Was sind die Open Data"
 
 #: templates/home/layout1.html:38
 msgid "Leggi tutto"
-msgstr "Lees alle"
+msgstr "alles lesen"
 
 #: templates/home/snippets/search.html:2
 msgid "Trova i dati che ti interessano"
-msgstr "Vinden gegevens die u de zorg over"
+msgstr "finden Sie die Daten, die Sie interessieren"
 
 #: templates/home/snippets/search.html:5
 msgid "Cerca i dati e ottieni gli aggiornamenti per i dataset e le categorie a cui sei interessato"
-msgstr "Doorzoeken en krijg updates voor de dataset en categorieën u geïnteresseerd bent"
+msgstr "Suchen Sie die Daten und erhalten Sie Aktualisierungen für die Datenmenge und Kategorien, die Sie interessieren"
 
 #: templates/home/snippets/search.html:7
 msgid "Tag maggiormente utilizzati"
-msgstr "Tags meest gebruikte"
+msgstr "Schlagwörter meisten benutzt"
 
 #: templates/home/snippets/search.html:19
 msgid "Cerca per..."
-msgstr "zoeken naar..."
+msgstr "Auf der Suche nach"

@@ -115,6 +115,16 @@ a.tag:hover {
 	text-decoration: none; 
 }
 
+.btn-ck:visited {
+    color: #fff;
+	text-decoration: none; 
+}
+
+.btn-ck:focus {
+    color: #fff;
+	text-decoration: none; 
+}
+
 .more {
     text-align: right;
 }
@@ -467,3 +477,63 @@ body {
 .main-ck{
 	background-color: #EEE;
 }
+
+.news-box {
+    border: 1px solid #ddd;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.news-box h2 {
+    margin-top: 0;
+	font-size: 22px;
+	color: inherit;
+    font-family: dejavu_sanscondensed;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.news .news-object {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.news .news-object {
+    width: 150px;
+    margin: 5px 10px 0px 0px;
+    float: left;
+}
+
+.news .news-heading {
+    margin: 0px 0px 8px;
+}
+
+.news .news-body {
+    margin-top: 10px;
+}
+
+.news-body p {
+    margin: 0 0 10px;
+}
+
+.col-ck{
+	float: right;
+	width: 600px;
+}
+
+.news-heading  {
+    color: inherit;
+    font-family: dejavu_sanscondensed;
+    font-weight: 500;
+    line-height: 1.1;
+	font-size: 18px;
+}
+
+.news-heading a:hover  {
+	color: #B11D1E !important;
+    font-size: 18px;
+}
+
