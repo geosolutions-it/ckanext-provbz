@@ -537,3 +537,23 @@ body {
     font-size: 18px;
 }
 
+.category-head{
+    list-style: none;
+}
+
+.category-head label{
+	color: #B11D1E;
+	font-weight: 900;
+	font-size: 12px;
+	background-color: #EEE;
+}
+
+.disabled span {
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    color: #7E7B7B;
+    font-size: 14px;
+    line-height: 20px;
+    margin: -7px -25px;
+}

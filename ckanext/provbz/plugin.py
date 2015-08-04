@@ -24,5 +24,6 @@ class PROVBZThemePlugin(plugins.SingletonPlugin):
 	# see the ITemplateHelpers plugin interface.
 	def get_helpers(self):
                 return {
-         	    'recent_updates': helpers.recent_updates
+         	    'recent_updates': helpers.recent_updates,
+                    'get_custom_categories_list': helpers.get_custom_categories_list
 	        }
