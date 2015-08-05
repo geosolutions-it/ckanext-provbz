@@ -4916,3 +4916,19 @@ msgstr "Schlagwörter meisten benutzt"
 #: templates/home/snippets/search.html:19
 msgid "Cerca per..."
 msgstr "Auf der Suche nach"
+
+#: templates/snippets/facet_list.html:75
+msgid "POPOLAZIONE ED ECONOMIA"
+msgstr "Bevölkerung und Wirtschaft"
+
+#: templates/snippets/facet_list.html:77
+msgid "NATURA ED AMBIENTE"
+msgstr "NATUR UND UMWELT"
+
+#: templates/snippets/facet_list.html:79
+msgid "DATI DI BASE E PIANIFICAZIONE"
+msgstr "DATENBANK UND PLANUNG"
+
+#: templates/snippets/facet_list.html:81
+msgid "ALTRE CATEGORIE"
+msgstr "SONSTIGE KATEGORIEN"

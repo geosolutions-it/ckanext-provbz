@@ -68,26 +68,32 @@ def get_custom_categories_list(items):
 
 		items.append(new_facet)
 		
-	base_pianification = []
-	nature_habitat = []
-	population_economy = []	
-	
-	active = False
-	for item in items:
-		name = item.get('name')
-		if active is not True:
-			active = item.get('active')
-		
-		if name == 'transportation' or name == 'utilitiescommunication' or name == 'farming':
-			population_economy.append(item)
-		elif name == 'climatologymeteorologyatmosphere' or name == 'environment' or name == 'geoscientificinformation' or name == 'inlandwaters':
-			nature_habitat.append(item)
-		elif name == 'boundaries' or name == 'elevation' or name == 'imagerybasemapsearthcover' or name == 'planningcadastre':
-			base_pianification.append(item)
-	
+        base_pianification = []
+        nature_habitat = []
+        population_economy = []
+        other = []
+
+        active = False
+        for item in items:
+                name = item.get('name')
+                if active is not True:
+                        active = item.get('active')
+
+                if name == 'transportation' or name == 'utilitiescommunication' or name == 'farming':
+                        population_economy.append(item)
+                elif name == 'climatologymeteorologyatmosphere' or name == 'environment' or name == 'geoscientificinformation' or name == 'inlandwaters':
+                        nature_habitat.append(item)
+                elif name == 'boundaries' or name == 'elevation' or name == 'imagerybasemapsearthcover' or name == 'planningcadastre':
+                        base_pianification.append(item)
+                else:
+                        other.append(item)
+
     facets = []
-    facets.append(population_economy)
-    facets.append(nature_habitat)
-    facets.append(base_pianification)	
-	
+    facets.append({'name': 'population_economy', 'items': population_economy})
+    facets.append({'name': 'nature_habitat', 'items': nature_habitat})
+    facets.append({'name': 'base_pianification', 'items': base_pianification})
+    facets.append({'name': 'other', 'items': other})
+
     return {'active': active, 'facets_list': facets}
+
+

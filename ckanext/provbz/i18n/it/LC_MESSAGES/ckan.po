@@ -4912,3 +4912,19 @@ msgstr "Tag maggiormente utilizzati"
 #: templates/home/snippets/search.html:19
 msgid "Cerca per..."
 msgstr "Cerca per..."
+
+#: templates/snippets/facet_list.html:75
+msgid "POPOLAZIONE ED ECONOMIA"
+msgstr "POPOLAZIONE ED ECONOMIA"
+
+#: templates/snippets/facet_list.html:77
+msgid "NATURA ED AMBIENTE"
+msgstr "NATURA ED AMBIENTE"
+
+#: templates/snippets/facet_list.html:79
+msgid "DATI DI BASE E PIANIFICAZIONE"
+msgstr "DATI DI BASE E PIANIFICAZIONE"
+
+#: templates/snippets/facet_list.html:81
+msgid "ALTRE CATEGORIE"
+msgstr "ALTRE CATEGORIE"

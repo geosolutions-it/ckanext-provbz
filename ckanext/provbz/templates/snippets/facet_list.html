@@ -61,85 +61,29 @@ within_tertiary
 			
 				{% if name == "groups" %}
 				    <!-- All the categories (11) must be visualized, the default limit value for facets is 10 -->
-				    {% set items = h.get_facet_items_dict(name, 11) %}
+				    {% set items = h.get_facet_items_dict(name, 50) %}
 					
 					{% set result = h.get_custom_categories_list(items) %}
 					
 					{% set gf = result.get('facets_list') %}
 					{% set active = result.get('active') %}
 					
-					{% set population_economy = gf[0] %}
 					<nav>
-						<li class="category-head">
-							<label class="tree-toggler nav-header" onClick="$(this).parent().children('ul.tree').toggle(200);">{% trans %}POPOLAZIONE ED ECONOMIA{% endtrans %}</label>
-							<ul class="{{ nav_class or 'unstyled nav nav-simple nav-facet' }} tree" style="{% if not active %} display: none;{% endif %}">
-							  {% for item in population_economy %}
-								{% set href = h.remove_url_param(name, item.name, extras=extras, alternative_url=alternative_url) if item.active else h.add_url_param(new_params={name: item.name}, extras=extras, alternative_url=alternative_url) %}
-								{% set label = label_function(item) if label_function else item.display_name %}
-								{% set label_truncated = h.truncate(label, 22) if not label_function else label %}
-								{% set count = count_label(item['count']) if count_label else ('(%d)' % item['count']) %}
-								{% if item.disabled %}
-								  <li class="disabled">
-									  <span>{{ label_truncated }} {{ count }}</span>
-								  </li>
+					    {% for facet_item in gf %}
+							<li class="category-head">
+							    {% if facet_item.get('name') == "population_economy" %}
+									<label class="tree-toggler nav-header" onClick="$(this).parent().children('ul.tree').toggle(200);">{% trans %}POPOLAZIONE ED ECONOMIA{% endtrans %}</label>
+								{% elif facet_item.get('name') == "nature_habitat" %}
+									<label class="tree-toggler nav-header" onClick="$(this).parent().children('ul.tree').toggle(200);">{% trans %}NATURA ED AMBIENTE{% endtrans %}</label>
+								{% elif facet_item.get('name') == "base_pianification" %}
+									<label class="tree-toggler nav-header" onClick="$(this).parent().children('ul.tree').toggle(200);">{% trans %}DATI DI BASE E PIANIFICAZIONE{% endtrans %}</label>
 								{% else %}
-								  <li class="{{ nav_item_class or 'nav-item' }}{% if item.active %} active{% endif %}">
-									<a href="{{ href }}" title="{{ label if label != label_truncated else '' }}">
-									  <span>{{ label_truncated }} {{ count }}</span>
-									</a>
-								  </li>
+									<label class="tree-toggler nav-header" onClick="$(this).parent().children('ul.tree').toggle(200);">{% trans %}ALTRE CATEGORIE{% endtrans %}</label>
 								{% endif %}
-							  {% endfor %}
-							</ul>
-						</li>
-						
-						{% set nature_habitat = gf[1] %}
-						<li class="category-head">
-							<label class="tree-toggler nav-header" onClick="$(this).parent().children('ul.tree').toggle(200);">{% trans %}NATURA ED AMBIENTE{% endtrans %}</label>
-							<ul class="{{ nav_class or 'unstyled nav nav-simple nav-facet' }} tree" style="{% if not active %} display: none;{% endif %}">
-							  {% for item in nature_habitat %}
-								{% set href = h.remove_url_param(name, item.name, extras=extras, alternative_url=alternative_url) if item.active else h.add_url_param(new_params={name: item.name}, extras=extras, alternative_url=alternative_url) %}
-								{% set label = label_function(item) if label_function else item.display_name %}
-								{% set label_truncated = h.truncate(label, 22) if not label_function else label %}
-								{% set count = count_label(item['count']) if count_label else ('(%d)' % item['count']) %}
-								{% if item.disabled %}
-								  <li class="disabled">
-									  <span>{{ label_truncated }} {{ count }}</span>
-								  </li>
-								{% else %}
-								  <li class="{{ nav_item_class or 'nav-item' }}{% if item.active %} active{% endif %}">
-									<a href="{{ href }}" title="{{ label if label != label_truncated else '' }}">
-									  <span>{{ label_truncated }} {{ count }}</span>
-									</a>
-								  </li>
-								{% endif %}
-							  {% endfor %}
-							</ul>
-						</li>
-						
-						{% set base_pianification = gf[2] %}
-						<li class="category-head">
-							<label class="tree-toggler nav-header" onClick="$(this).parent().children('ul.tree').toggle(200);">{% trans %}DATI DI BASE E PIANIFICAZIONE{% endtrans %}</label>
-							<ul class="{{ nav_class or 'unstyled nav nav-simple nav-facet' }} tree" style="{% if not active %} display: none;{% endif %}">
-							  {% for item in base_pianification %}
-								{% set href = h.remove_url_param(name, item.name, extras=extras, alternative_url=alternative_url) if item.active else h.add_url_param(new_params={name: item.name}, extras=extras, alternative_url=alternative_url) %}
-								{% set label = label_function(item) if label_function else item.display_name %}
-								{% set label_truncated = h.truncate(label, 22) if not label_function else label %}
-								{% set count = count_label(item['count']) if count_label else ('(%d)' % item['count']) %}
-								{% if item.disabled %}
-								  <li class="disabled">
-									  <span>{{ label_truncated }} {{ count }}</span>
-								  </li>
-								{% else %}
-								  <li class="{{ nav_item_class or 'nav-item' }}{% if item.active %} active{% endif %}">
-									<a href="{{ href }}" title="{{ label if label != label_truncated else '' }}">
-									  <span>{{ label_truncated }} {{ count }}</span>
-									</a>
-								  </li>
-								{% endif %}
-							  {% endfor %}
-							</ul>
-						</li>
+
+								{% snippet 'snippets/facet_list_group.html', facet_item=facet_item.get('items'), name=name, active=active, extras=extras, alternative_url=alternative_url%}		
+							</li>							
+						{% endfor %}						
 					</nav>
 				{% else %}
 					<nav>
