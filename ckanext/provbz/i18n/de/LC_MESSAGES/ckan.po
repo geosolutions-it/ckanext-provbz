@@ -4950,7 +4950,7 @@ msgid "bbox-west-long"
 msgstr "westlicher Länge"
 
 msgid "coupled-resource"
-msgstr "Risorsa Accoppiata"
+msgstr "gekoppelten Ressourcen"
 
 msgid "dataset-reference-date"
 msgstr "Datum Reference Dataset"
