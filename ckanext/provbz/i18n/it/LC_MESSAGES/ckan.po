@@ -4928,3 +4928,72 @@ msgstr "DATI DI BASE E PIANIFICAZIONE"
 #: templates/snippets/facet_list.html:81
 msgid "ALTRE CATEGORIE"
 msgstr "ALTRE CATEGORIE"
+
+#: ckan/templates/snippets/additional_info.html:77
+msgid "access_constraints"
+msgstr "Vincoli di Accesso"
+
+msgid "bbox-east-long"
+msgstr "Longitudine Est"
+
+msgid "bbox-north-lat"
+msgstr "Latitudine Nord"
+
+msgid "bbox-south-lat"
+msgstr "Latitudine Sud"
+
+msgid "bbox-west-long"
+msgstr "Longitudine Ovest"
+
+msgid "coupled-resource"
+msgstr "Risorsa Accoppiata"
+
+msgid "dataset-reference-date"
+msgstr "Data di Riferimento del Dataset"
+
+msgid "frequency-of-update"
+msgstr "Frequenza di Aggiornamento"
+
+msgid "gn_localized_url"
+msgstr "URL Localizzato di GeoNetwork"
+
+msgid "gn_view_metadata_url"
+msgstr "URL di visualizzazione del Metadato in GeoNetwork"
+
+msgid "contact-email"
+msgstr "E-mail del Contatto"
+
+msgid "guid"
+msgstr "Identificatore del Metadato"
+
+msgid "licence"
+msgstr "Licenza"
+
+msgid "metadata-date"
+msgstr "Data del Metadato"
+
+msgid "metadata-language"
+msgstr "Lingua del Metadato"
+
+msgid "progress"
+msgstr "Progresso"
+
+msgid "resource-type"
+msgstr "Tipo di Risorsa"
+
+msgid "responsible-party"
+msgstr "Responsabile del Metadato"
+
+msgid "spatial"
+msgstr "Spaziale"
+
+msgid "spatial-data-service-type"
+msgstr "Tipo di Servizio Spaziale"
+
+msgid "spatial-reference-system"
+msgstr "Sistema di Riferimento Spaziale"
+
+msgid "spatial_harvester"
+msgstr "Harvester Spaziale"
+
+

@@ -4887,7 +4887,7 @@ msgstr "Zugriff auf das GeoPortal"
 
 #: templates/home/layout1.html:11
 msgid "Benvenuto nella piattaforma Open Data Alto Adige"
-msgstr "Willkommen auf Open Data Plattform Tirol"
+msgstr "Willkommen auf Open Data Plattform Südtirol"
 
 #: templates/home/layout1.html:11
 msgid "ACCEDI AI DATASET"
@@ -4895,7 +4895,7 @@ msgstr "Zugang zu Datensätzen"
 
 #: templates/home/layout1.html:32
 msgid "Cosa sono gli OPENdata?"
-msgstr "Was sind die Open Data"
+msgstr "Was sind Open Data"
 
 #: templates/home/layout1.html:38
 msgid "Leggi tutto"
@@ -4932,3 +4932,70 @@ msgstr "DATENBANK UND PLANUNG"
 #: templates/snippets/facet_list.html:81
 msgid "ALTRE CATEGORIE"
 msgstr "SONSTIGE KATEGORIEN"
+
+#: ckan/templates/snippets/additional_info.html:77
+msgid "access_constraints"
+msgstr "Zugriffseinschränkungen"
+
+msgid "bbox-east-long"
+msgstr "Längengrad Ost"
+
+msgid "bbox-north-lat"
+msgstr "nördlicher Breite"
+
+msgid "bbox-south-lat"
+msgstr "Breitengrad Süd"
+
+msgid "bbox-west-long"
+msgstr "westlicher Länge"
+
+msgid "coupled-resource"
+msgstr "Risorsa Accoppiata"
+
+msgid "dataset-reference-date"
+msgstr "Datum Reference Dataset"
+
+msgid "frequency-of-update"
+msgstr "Bildwiederholrate"
+
+msgid "gn_localized_url"
+msgstr "URL entfernt GeoNetwork"
+
+msgid "gn_view_metadata_url"
+msgstr "Anzeige-URL der Metadaten in GeoNetwork"
+
+msgid "contact-email"
+msgstr "E-Mail Kontakt"
+
+msgid "guid"
+msgstr "Identifier Metadaten"
+
+msgid "licence"
+msgstr "Führerschein"
+
+msgid "metadata-date"
+msgstr "Datum der Metadaten"
+
+msgid "metadata-language"
+msgstr "Sprach Metadaten"
+
+msgid "progress"
+msgstr "Fortschritt"
+
+msgid "resource-type"
+msgstr "Ressourcentyp"
+
+msgid "responsible-party"
+msgstr "Leiter der Metadaten"
+
+msgid "spatial"
+msgstr "Raum"
+
+msgid "spatial-data-service-type"
+msgstr "Art der Space Service"
+
+msgid "spatial-reference-system"
+msgstr "Spatial Reference System"
+
+msgid "spatial_harvester"
+msgstr "Harvester Raum"
