@@ -4999,3 +4999,9 @@ msgstr "Spatial Reference System"
 
 msgid "spatial_harvester"
 msgstr "Harvester Raum"
+
+msgid "Ultimi dataset"
+msgstr "Letzte Dataset"
+
+msgid "Ultime News"
+msgstr "Neueste Nachrichten"

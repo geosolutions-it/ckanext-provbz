@@ -9,6 +9,9 @@ import ckan.lib.helpers as h
 
 import ckan.logic as logic
 
+from pylons.i18n.translation import get_lang
+from ckanext.multilang.model import PackageMultilang
+
 #NUM_TOP_PUBLISHERS = 6
 #NUM_MOST_VIEWED_DATASETS = 10
 
@@ -18,7 +21,7 @@ def recent_updates(n):
     '''
     Return a list of the n most recently updated datasets.
     '''
-    log.debug(':::::::::::::::::::::::::::::::::: %r' % n)
+    log.debug('::::: Retrrieving latest datasets: %r' % n)
     context = {'model': model,
                'session': model.Session,
                'user': p.toolkit.c.user or p.toolkit.c.author}
@@ -32,8 +35,20 @@ def recent_updates(n):
         log.error(e)
         search_results = {}
 
-    log.info('Found %d recent updates:::::::: ' % len(search_results))
-    log.info('Updates:::::::::::::::::::::::  %r ' % search_results)
+    for item in search_results.get('results'):
+        log.info(':::::::::::: Retrieving the corresponding localized title and abstract :::::::::::::::')
+
+        lang = get_lang()[0]
+        #log.info('::::::::::::::::::::::: %r ', item)                
+        
+        q_results = model.Session.query(PackageMultilang).filter(PackageMultilang.package_id == item.get('id'), PackageMultilang.lang == lang).all() 
+
+        if q_results:
+            for result in q_results:
+                item[result.field] = result.text
+
+    log.debug('Found %d recent updates:::::::: ' % len(search_results))
+    log.debug('Updates:::::::::::::::::::::::  %r ' % search_results)
 	
     return search_results.get('results', [])
 	
