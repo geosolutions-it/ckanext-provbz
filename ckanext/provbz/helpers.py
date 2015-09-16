@@ -9,18 +9,24 @@ import ckan.lib.helpers as h
 
 import ckan.logic as logic
 
+from pylons import config
+
 from pylons.i18n.translation import get_lang
 from ckanext.multilang.model import PackageMultilang
 
-#NUM_TOP_PUBLISHERS = 6
-#NUM_MOST_VIEWED_DATASETS = 10
 
 log = logging.getLogger(__file__)
 
+def get_default_locale():
+    locale_default = config.get('ckan.locale_default')
+
+    log.debug('Retrieving Ckan default locale: %r', locale_default)
+    return locale_default
+
 def recent_updates(n):
-    '''
-    Return a list of the n most recently updated datasets.
-    '''
+    #
+    # Return a list of the n most recently updated datasets.
+    #
     log.debug('::::: Retrrieving latest datasets: %r' % n)
     context = {'model': model,
                'session': model.Session,
@@ -39,7 +45,6 @@ def recent_updates(n):
         log.info(':::::::::::: Retrieving the corresponding localized title and abstract :::::::::::::::')
 
         lang = get_lang()[0]
-        #log.info('::::::::::::::::::::::: %r ', item)                
         
         q_results = model.Session.query(PackageMultilang).filter(PackageMultilang.package_id == item.get('id'), PackageMultilang.lang == lang).all() 
 
@@ -51,11 +56,12 @@ def recent_updates(n):
     log.debug('Updates:::::::::::::::::::::::  %r ' % search_results)
 	
     return search_results.get('results', [])
-	
+
+'''	
 def get_custom_categories_list(items):
-    '''
-    Return the list of the categories tree
-    '''
+    #
+    # Return the list of the categories tree
+    #
 	
     ##log.debug(':::::::::::::::::::::::::::::::::: %r' % items)
 	
@@ -110,5 +116,5 @@ def get_custom_categories_list(items):
     facets.append({'name': 'other', 'items': other})
 
     return {'active': active, 'facets_list': facets}
-
+'''
 
