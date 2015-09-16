@@ -23,7 +23,12 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
         super_package_dicts = []
         for cls in PBZHarvester.__bases__:
             c = cls()
+            
+            if hasattr(c, 'source_config'):
+                c.source_config = self.source_config
+
             super_package_dicts.append(c.get_package_dict(iso_values, harvest_object))
+
             if hasattr(c, '_package_dict'):
                     self._package_dict = c._package_dict
 
