@@ -19,7 +19,7 @@
 	<h2>{% trans %}Tag maggiormente utilizzati{% endtrans %}</h2>	
 	{% for tag in tags %}
 		<div class="btn-col">
-		  <a class="btn-ck btn-block" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 16) }}</a>
+		  <a class="btn-ck btn-block" href="{% url_for controller='package', action='search', tags=tag.name %}" title="{{ tag.display_name }}">{{ h.truncate(tag.display_name, 16) }}</a>
 		</div>      
 	{% endfor %}	
   </div>
