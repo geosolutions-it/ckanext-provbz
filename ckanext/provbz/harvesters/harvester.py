@@ -1,6 +1,9 @@
 
 import logging
 
+from ckan import model
+from ckan.model import Session
+
 from ckan.plugins.core import SingletonPlugin
 
 from ckanext.multilang.harvesters.multilang import MultilangHarvester
@@ -32,6 +35,7 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
             if hasattr(c, '_package_dict'):
                     self._package_dict = c._package_dict
 
+        # Merging metadata extras
         package_dict = None
         for _dict in super_package_dicts:
             if package_dict:
@@ -44,6 +48,25 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
                 package_dict['extras'] = extras
             else:
                 package_dict = _dict
+
+        # Check for metadata license
+        ckan_license = None
+        use_constraints = iso_values.get('use-constraints')
+        if use_constraints:
+            use_constraints = use_constraints[0]
+            import ckan.logic.action.get as _license
+            license_list = _license.license_list({'model': model, 'session': Session, 'user': 'harvest'}, {})
+            for license in license_list:
+                if use_constraints == str(license.get('id')) or use_constraints == str(license.get('url')):
+                    ckan_license = license
+                    break
+
+        if ckan_license:
+            package_dict['license_id'] = ckan_license.get('id')
+        else:
+            default_license = self.source_config.get('default_license')
+            if default_license:
+                package_dict['license_id'] = default_license
 
         # End of processing, return the modified package
         return package_dict
