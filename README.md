@@ -1,6 +1,6 @@
-=============
+--------------
 ckanext-provbz
-=============
+--------------
 
 The ckanext-provbz CKAN's extension provide some customizations for the CKAN Look and Feel.
 In addition this extension provides an harvester that merge functionalities between two other 
@@ -38,3 +38,15 @@ To install ckanext-provbz:
    ``/etc/ckan/default/production.ini``).
 
 4. Restart CKAN.
+
+----------------------
+Harvest Configuration
+----------------------
+
+Using the ckanext-provbz harvester you can use an additional configuration property in addition to the other allowed for the ckanext-geonetwork and ckanext-multilang harvesters:
+
+* ``default_license``: with this property you can specify the default license to use for the CKAN's dataset if none useLimitation has been found into the metadata. Below an example:
+
+{
+  "default_license": "cc-zero"
+}
