@@ -47,6 +47,32 @@ Using the ckanext-provbz harvester you can use an additional configuration prope
 
 * ``default_license``: with this property you can specify the default license to use for the CKAN's dataset if none useLimitation has been found into the metadata. Below an example:
 
-{
-  "default_license": "cc-zero"
-}
+     {
+       "default_license": "cc-zero"
+     }
+
+Below the complete configuration to use:
+
+     {
+          "private_datasets": "False", 
+          "version": "2.6", 
+          "harvest_iso_categories": "True",
+          "group_mapping": {
+               "farming": "farming", 
+               "utilitiesCommunication": "boundaries", 
+               "transportation": "boundaries", 
+               "inlandWaters": "environment", 
+               "geoscientificInformation": "administration", 
+               "environment": "environment", 
+               "climatologyMeteorologyAtmosphere": "climatologymeteorologyatmosphere", 
+               "planningCadastre": "boundaries", 
+               "imageryBaseMapsEarthCover": "boundaries", 
+               "elevation": "boundaries", 
+               "boundaries": "boundaries"
+          },
+          "ckan_locales_mapping":{
+               "ita": "it",
+               "ger": "de"
+          },
+          "default_license": "cc-zero"
+     }
