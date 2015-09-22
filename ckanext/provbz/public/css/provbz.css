@@ -151,9 +151,7 @@ a.tag:hover {
 }
 
 .container-home {
-    margin-right: auto;
-    margin-left: auto;
-	width: 1170px;
+    margin: 0 auto;
 }
 
 .logos {
@@ -176,7 +174,6 @@ a.tag:hover {
 }
 
 .ck-row{
-	width: 1170px;
 	padding-top: 10px;
 }
 
@@ -214,13 +211,16 @@ a.tag:hover {
     min-height: 30px;
     color: #ffffff;
     background: #ffffff;
+    width: 1170px;
 }
 
 body {
     font-family: "dejavu_sansbook";
     font-size: 14px;
     color: #333;
-	background-color: #404041;
+    background: #404041;
+    margin: 0 auto;
+    width: 100%;
 }
 
 [role=main], .main {
@@ -276,7 +276,7 @@ body {
 }
 
 .ck-row-footer{
-	width: 1170px;
+	/*width: 100%;*/
 }
 
 .footer-links ul li {
@@ -288,13 +288,13 @@ body {
 }
 
 .footer-left{
-	width: 350px;
+	width: 300px;
 	float: left;
 }
 
 .footer-center{
-	width: 350px;
-	margin-left: 80px;
+	/*width: 350px;
+	margin-left: 80px;*/
 	float: left;
 }
 
@@ -324,11 +324,10 @@ body {
 
 
 .span9 {
-    width: 940px;
+    /*width: 940px;*/
 }
 
 .container{
-	width: 1170px;
 }
 
 /*---------------- PROV-BZ's ckan CSS ---------------------*/
@@ -342,7 +341,8 @@ body {
     padding: 15px;
     max-width: 800px;
 	height: 239px;
-	width: 770px;
+    margin: 0 auto;
+    overflow: visible;
 }
 
 .extended_search form legend {
@@ -521,7 +521,7 @@ body {
 
 .col-ck{
 	float: right;
-	width: 600px;
+	/*width: 600px;*/
 }
 
 .news-heading  {
@@ -556,4 +556,9 @@ body {
     font-size: 14px;
     line-height: 20px;
     margin: -7px -25px;
+}
+
+.wrapper {
+    /*width: 1170px;*/
+    margin: 0 auto;
 }

@@ -1,5 +1,11 @@
 {% ckan_extends %}
 
+{%- block meta -%}
+  <meta charset="utf-8" />
+  {% block meta_generator %}<meta name="generator" content="ckan {{ c.__version__ }}" />{% endblock %}
+  {#% block meta_viewport %}<meta name="viewport" content="width=device-width, initial-scale=1.0">{% endblock %#}
+{%- endblock -%}
+
 {% block styles %}
    {{ super() }}
    <link rel="stylesheet" href="/css/provbz.css" type="text/css">
