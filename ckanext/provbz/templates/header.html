@@ -100,12 +100,11 @@
               {{ h.build_nav_main(
                 ('search', _('Datasets')),
                 ('organizations_index', _('Organizations')),
-                ('group_index', _('Groups')),
-                ('about', _('About'))
+                ('group_index', _('Groups'))
               ) }}
             {% endblock %}
-			<!--li><a href="/apps">{% trans %}Apps{% endtrans %}</a></li-->
-			<li><a href="/faq">{% trans %}Faq{% endtrans %}</a></li>
+      			<li><a href="/info">{% trans %}Informazioni{% endtrans %}</a></li>
+      			<li><a href="/faq">{% trans %}Faq{% endtrans %}</a></li>
           </ul>
         </nav>
       {% endblock %}

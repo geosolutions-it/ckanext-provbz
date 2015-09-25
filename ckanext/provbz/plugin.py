@@ -10,6 +10,7 @@ class PBZThemePlugin(plugins.SingletonPlugin):
     # Declare that this class implements IConfigurer.
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
+    plugins.implements(plugins.IRoutes)
 
     def update_config(self, config):
         # Add this plugin's templates dir to CKAN's extra_template_paths, so
@@ -27,3 +28,14 @@ class PBZThemePlugin(plugins.SingletonPlugin):
             'get_default_locale': helpers.get_default_locale
             #'get_custom_categories_list': helpers.get_custom_categories_list
         }
+
+    def before_map(self, map):
+        map.connect('/privacy', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzprivacy')
+        map.connect('/legal', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzlegal')
+        map.connect('/faq', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzfaq')
+        map.connect('/info', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzinfo')
+        map.connect('/acknowledgements', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzacknowledgements')
+        return map
+        
+    def after_map(self, route_map):
+        return route_map

@@ -1,0 +1,19 @@
+{% extends "page.html" %}
+
+{% block subtitle %}{{ _(' Informazioni Dati Trentino') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _(' Informazioni Dati Trentino'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzinfo' %}</li>
+{% endblock %}
+
+{% block primary %}
+  <article class="module">
+    <div class="module-content">
+      {% block about %}
+          {% snippet 'home/snippets/info.html' %}
+      {% endblock %}
+    </div>
+  </article>
+{% endblock %}
+
+{% block secondary %}{% endblock %}

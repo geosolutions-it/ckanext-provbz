@@ -1,0 +1,19 @@
+{% extends "page.html" %}
+
+{% block subtitle %}{{ _('FAQ') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('FAQ'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzfaq' %}</li>
+{% endblock %}
+
+{% block primary %}
+  <article class="module">
+    <div class="module-content">
+      {% block about %}
+          {% snippet 'home/snippets/faq.html' %}
+      {% endblock %}
+    </div>
+  </article>
+{% endblock %}
+
+{% block secondary %}{% endblock %}

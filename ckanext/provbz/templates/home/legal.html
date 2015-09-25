@@ -1,0 +1,19 @@
+{% extends "page.html" %}
+
+{% block subtitle %}{{ _('Note Legali') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('Note Legali'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzlegal' %}</li>
+{% endblock %}
+
+{% block primary %}
+  <article class="module">
+    <div class="module-content">
+      {% block about %}
+          {% snippet 'home/snippets/legal.html' %}
+      {% endblock %}
+    </div>
+  </article>
+{% endblock %}
+
+{% block secondary %}{% endblock %}
