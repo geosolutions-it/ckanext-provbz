@@ -8,13 +8,13 @@
 				{% block footer_links %}
 				  <!--li><a href="{{ h.url_for(controller='home', action='about') }}">{{ _('About {0}').format(g.site_title) }}</a></li-->
 				  <li>
-					  <a href="/info">
+					  <a href={{ h.getLocalizedPageLink('info') }}>
 						  <i class="icon-comment"></i>
 						  {% trans %}Informazioni Dati Trentino{% endtrans %}
 					  </a>
 				  </li>
 				  <li>
-					  <a href="/faq">
+					  <a href={{ h.getLocalizedPageLink('faq') }}>
 						  <i class="icon-question"></i>
 						  {% trans %}Domande frequenti{% endtrans %}
 					  </a>
@@ -26,19 +26,19 @@
 					  </a>
 				  </li>
 				  <li>
-					<a href="/acknowledgements">
+					<a href={{ h.getLocalizedPageLink('acknowledgements') }}>
 					  <i class="icon-user"></i>
 					  {% trans %}Ringraziamenti{% endtrans %}
 					</a>
 				  </li>
 				  <li>
-					<a href="/legal">
+					<a href={{ h.getLocalizedPageLink('legal') }}>
 					  <i class="icon-legal"></i>
 					  {% trans %}Note legali{% endtrans %}
 					</a>
 				  </li>
 				  <li>
-					<a href="/privacy">
+					<a href={{ h.getLocalizedPageLink('privacy') }}>
 					  <i class="icon-key"></i>
 					  {% trans %}Privacy{% endtrans %}
 					</a>

@@ -23,6 +23,20 @@ def get_default_locale():
     log.debug('Retrieving Ckan default locale: %r', locale_default)
     return locale_default
 
+def get_locale():
+    lang = get_lang()[0]
+
+    log.info('Retrieving Ckan current locale: %r', lang)
+    return lang
+
+def getLocalizedPageLink(page):
+    locale = get_lang()[0]
+
+    if(page):
+        url = "/" + locale + "/" + page
+
+    return url
+
 def recent_updates(n):
     #
     # Return a list of the n most recently updated datasets.

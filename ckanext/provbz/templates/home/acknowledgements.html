@@ -1,16 +1,32 @@
 {% extends "page.html" %}
 
-{% block subtitle %}{{ _('Ringraziamenti') }}{% endblock %}
+{% set locale = h.get_locale() %}
+
+{% block subtitle %}
+    {% if locale == 'de' %}
+		{{ _(' Ribgraziamenti DE') }}
+	{% else %}
+		{{ _(' Ribgraziamenti') }}
+	{% endif %}
+{% endblock %}
 
 {% block breadcrumb_content %}
-  <li class="active">{% link_for _('Ringraziamenti'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzacknowledgements' %}</li>
+    {% if locale == 'de' %}
+    	<li class="active">{% link_for _('Ringraziamenti DE'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzacknowledgements' %}</li>
+  	{% else %}
+		<li class="active">{% link_for _('Ringraziamenti'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzacknowledgements' %}</li>
+  	{% endif %}
 {% endblock %}
 
 {% block primary %}
   <article class="module">
     <div class="module-content">
-      {% block about %}
-          {% snippet 'home/snippets/acknowledgements.html' %}
+      {% block about %}          
+          {% if locale == 'de' %}
+          	{% snippet 'home/snippets/acknowledgements_de.html' %}
+          {% else %}
+			{% snippet 'home/snippets/acknowledgements.html' %}
+          {% endif %}
       {% endblock %}
     </div>
   </article>

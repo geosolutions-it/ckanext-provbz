@@ -1,16 +1,32 @@
 {% extends "page.html" %}
 
-{% block subtitle %}{{ _('Note Legali') }}{% endblock %}
+{% set locale = h.get_locale() %}
+
+{% block subtitle %}
+    {% if locale == 'de' %}
+		{{ _(' Note Legali DE') }}
+	{% else %}
+		{{ _(' Note Legali') }}
+	{% endif %}
+{% endblock %}
 
 {% block breadcrumb_content %}
-  <li class="active">{% link_for _('Note Legali'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzlegal' %}</li>
+    {% if locale == 'de' %}
+    	<li class="active">{% link_for _('Note Legali DE'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzlegal' %}</li>
+  	{% else %}
+		<li class="active">{% link_for _('Note Legali'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzlegal' %}</li>
+  	{% endif %}
 {% endblock %}
 
 {% block primary %}
   <article class="module">
     <div class="module-content">
-      {% block about %}
-          {% snippet 'home/snippets/legal.html' %}
+      {% block about %}          
+          {% if locale == 'de' %}
+          	{% snippet 'home/snippets/legal_de.html' %}
+          {% else %}
+			{% snippet 'home/snippets/legal.html' %}
+          {% endif %}
       {% endblock %}
     </div>
   </article>

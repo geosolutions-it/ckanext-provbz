@@ -1,16 +1,32 @@
 {% extends "page.html" %}
 
-{% block subtitle %}{{ _(' Informazioni Dati Trentino') }}{% endblock %}
+{% set locale = h.get_locale() %}
+
+{% block subtitle %}
+    {% if locale == 'de' %}
+		{{ _(' Informazioni Dati Trentino DE') }}
+	{% else %}
+		{{ _(' Informazioni Dati Trentino') }}
+	{% endif %}
+{% endblock %}
 
 {% block breadcrumb_content %}
-  <li class="active">{% link_for _(' Informazioni Dati Trentino'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzinfo' %}</li>
+    {% if locale == 'de' %}
+    	<li class="active">{% link_for _(' Informazioni Dati Trentino DE'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzinfo' %}</li>
+  	{% else %}
+		<li class="active">{% link_for _(' Informazioni Dati Trentino'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzinfo' %}</li>
+  	{% endif %}
 {% endblock %}
 
 {% block primary %}
   <article class="module">
     <div class="module-content">
-      {% block about %}
-          {% snippet 'home/snippets/info.html' %}
+      {% block about %}          
+          {% if locale == 'de' %}
+          	{% snippet 'home/snippets/info_de.html' %}
+          {% else %}
+			{% snippet 'home/snippets/info.html' %}
+          {% endif %}
       {% endblock %}
     </div>
   </article>

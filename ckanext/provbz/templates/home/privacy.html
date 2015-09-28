@@ -1,16 +1,32 @@
 {% extends "page.html" %}
 
-{% block subtitle %}{{ _('Privacy') }}{% endblock %}
+{% set locale = h.get_locale() %}
+
+{% block subtitle %}
+    {% if locale == 'de' %}
+		{{ _(' Privacy DE') }}
+	{% else %}
+		{{ _(' Privacy') }}
+	{% endif %}
+{% endblock %}
 
 {% block breadcrumb_content %}
-  <li class="active">{% link_for _('Privacy'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzprivacy' %}</li>
+    {% if locale == 'de' %}
+    	<li class="active">{% link_for _('Privacy DE'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzprivacy' %}</li>
+  	{% else %}
+		<li class="active">{% link_for _('Privacy'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzprivacy' %}</li>
+  	{% endif %}
 {% endblock %}
 
 {% block primary %}
   <article class="module">
     <div class="module-content">
-      {% block about %}
-          {% snippet 'home/snippets/privacy.html' %}
+      {% block about %}          
+          {% if locale == 'de' %}
+          	{% snippet 'home/snippets/privacy_de.html' %}
+          {% else %}
+			{% snippet 'home/snippets/privacy.html' %}
+          {% endif %}
       {% endblock %}
     </div>
   </article>

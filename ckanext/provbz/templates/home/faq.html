@@ -1,16 +1,32 @@
 {% extends "page.html" %}
 
-{% block subtitle %}{{ _('FAQ') }}{% endblock %}
+{% set locale = h.get_locale() %}
+
+{% block subtitle %}
+    {% if locale == 'de' %}
+		{{ _(' FAQ DE') }}
+	{% else %}
+		{{ _(' FAQ') }}
+	{% endif %}
+{% endblock %}
 
 {% block breadcrumb_content %}
-  <li class="active">{% link_for _('FAQ'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzfaq' %}</li>
+    {% if locale == 'de' %}
+    	 <li class="active">{% link_for _('FAQ DE'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzfaq' %}</li>
+  	{% else %}
+		 <li class="active">{% link_for _('FAQ'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzfaq' %}</li>
+  	{% endif %}
 {% endblock %}
 
 {% block primary %}
   <article class="module">
     <div class="module-content">
-      {% block about %}
-          {% snippet 'home/snippets/faq.html' %}
+      {% block about %}          
+          {% if locale == 'de' %}
+          	{% snippet 'home/snippets/faq_de.html' %}
+          {% else %}
+			{% snippet 'home/snippets/faq.html' %}
+          {% endif %}
       {% endblock %}
     </div>
   </article>

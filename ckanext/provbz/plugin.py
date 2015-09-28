@@ -25,7 +25,9 @@ class PBZThemePlugin(plugins.SingletonPlugin):
     def get_helpers(self):
         return {
             'recent_updates': helpers.recent_updates,
-            'get_default_locale': helpers.get_default_locale
+            'get_default_locale': helpers.get_default_locale,
+            'get_locale': helpers.get_locale,
+            'getLocalizedPageLink': helpers.getLocalizedPageLink
             #'get_custom_categories_list': helpers.get_custom_categories_list
         }
 

@@ -94,6 +94,7 @@
     <div class="content">
 
       {% block header_site_navigation %}
+        {% set locale = h.get_locale() %}
         <nav class="section navigation">
           <ul class="nav nav-pills navbar">
             {% block header_site_navigation_tabs %}
@@ -103,8 +104,8 @@
                 ('group_index', _('Groups'))
               ) }}
             {% endblock %}
-      			<li><a href="/info">{% trans %}Informazioni{% endtrans %}</a></li>
-      			<li><a href="/faq">{% trans %}Faq{% endtrans %}</a></li>
+      			<li><a href={{ h.getLocalizedPageLink('info') }}>{% trans %}About{% endtrans %}</a></li>
+      			<li><a href={{ h.getLocalizedPageLink('faq') }}>{% trans %}Faq{% endtrans %}</a></li>
           </ul>
         </nav>
       {% endblock %}
