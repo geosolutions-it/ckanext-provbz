@@ -39,25 +39,54 @@
           </a>
         </li>
         {% if res.url and h.is_url(res.url) %}
-        <li>
-          <a href="{{ res.url }}" class="resource-url-analytics" target="_blank">
-            {% if res.has_views %}
-              <i class="icon-download"></i>
-              {{ _('Download') }}
-            {% else %}
-              <i class="icon-external-link"></i>
-              {{ _('Go to resource') }}
-            {% endif %}            
-          </a>
-        </li>
-        {% if res.format == 'WS' %}
-        <li>
-          <a href="{{ res.url }}" class="resource-url-analytics" target="_blank" download>
-              <i class="icon-download"></i>
-              {{ _('Download') }}
-          </a>
-        </li>
-        {% endif %}
+          {% set geocat_url = [] %}
+
+          {% for extra in pkg.extras%}
+            {% if extra.key == 'geocat_layer_url'%}
+              {% do geocat_url.append(extra.value) %}
+            {% endif %}
+          {% endfor%}
+
+          {% for extra in pkg.extras%}
+            {% if extra.key == 'guid' %}
+              {% do geocat_url.append(extra.value) %}
+            {% endif %}
+          {% endfor%}
+
+          {% if res.format == 'WMS' and geocat_url[0] and geocat_url[1] %}
+            <li>
+              <a href="{{ geocat_url[0] + geocat_url[1] }}" class="resource-url-analytics" target="_blank">
+                {% if res.has_views %}
+                  <i class="icon-download"></i>
+                  {{ _('Download') }}
+                {% else %}
+                  <i class="icon-external-link"></i>
+                  {{ _('Go to resource') }}
+                {% endif %}            
+              </a>
+            </li>
+          {% else %}
+            <li>
+              <a href="{{ res.url }}" class="resource-url-analytics" target="_blank">
+                {% if res.has_views %}
+                  <i class="icon-download"></i>
+                  {{ _('Download') }}
+                {% else %}
+                  <i class="icon-external-link"></i>
+                  {{ _('Go to resource') }}
+                {% endif %}            
+              </a>
+            </li>
+          {% endif %}
+
+          {% if res.format == 'WS' %}
+            <li>
+              <a href="{{ res.url }}" class="resource-url-analytics" target="_blank" download>
+                  <i class="icon-download"></i>
+                  {{ _('Download') }}
+              </a>
+            </li>
+          {% endif %}
         {% endif %}
         {% if can_edit %}
         <li>
