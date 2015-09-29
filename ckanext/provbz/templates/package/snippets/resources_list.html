@@ -9,6 +9,15 @@ Example:
   {% snippet "package/snippets/resources_list.html", pkg=pkg, resources=pkg.resources %}
 
 #}
+
+{% set geocat_url = [] %}
+
+{% for extra in pkg.extras%}
+  {% if extra.key == 'geocat_layer_url'%}
+    {% do geocat_url.append(extra.value) %}
+  {% endif %}
+{% endfor%}
+
 <section id="dataset-resources" class="resources">
   <h3>{{ _('Data and Resources') }}</h3>
   {% block resource_list %}
@@ -16,8 +25,10 @@ Example:
       <ul class="{% block resource_list_class %}resource-list{% endblock %}">
         {% block resource_list_inner %}
           {% for resource in resources %}
-            <!-- Unnamed resources should not be shown -->
-            {% if resource.name != 'Unnamed resource'%}
+            <!-- Unnamed resources and WFS resources from geocatalog should not be shown -->
+            {% set wfs_geocat = geocat_url[0] and resource.format == "WFS" %}
+
+            {% if resource.name != 'Unnamed resource'  and not wfs_geocat %}
               {% snippet 'package/snippets/resource_item.html', pkg=pkg, res=resource %}
             {% endif %}
           {% endfor %}
