@@ -4244,7 +4244,7 @@ msgstr "Le mie organizzazioni"
 #: ckan/templates/user/dashboard.html:22
 #: ckan/templates/user/dashboard_groups.html:12
 msgid "My Groups"
-msgstr "Le mie categorie"
+msgstr "I miele categorie"
 
 #: ckan/templates/user/dashboard.html:39
 msgid "Activity from items that I'm following"
@@ -5001,3 +5001,6 @@ msgstr "Ultimi Dataset"
 
 msgid "Ultime News"
 msgstr "Ultime News"
+
+msgid "Geocatalogo"
+msgstr "Geocatalogo"

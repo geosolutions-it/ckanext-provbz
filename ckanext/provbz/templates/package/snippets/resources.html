@@ -32,7 +32,7 @@ Example:
           <ul class="unstyled nav nav-simple">
             <!-- Unnamed resources and WFS resources from geocatalog should not be shown -->
             {% for resource in resources %}
-              {% set wfs_geocat = geocat_url[0] and resource.format == "WFS" %}
+              {% set wfs_geocat = geocat_url[0] and (resource.format == "WFS"  or resource.format == "WCS") %}
 
               {% if resource.name != 'Unnamed resource' and not wfs_geocat %}
                 <li class="nav-item{{ ' active' if active == resource.id }}">

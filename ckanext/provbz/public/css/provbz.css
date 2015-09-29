@@ -562,3 +562,7 @@ body {
     /*width: 1170px;*/
     margin: 0 auto;
 }
+
+#geocat_label{
+    background-color: #4B7D51;
+}

@@ -5005,3 +5005,6 @@ msgstr "Letzte Dataset"
 
 msgid "Ultime News"
 msgstr "Neueste Nachrichten"
+
+msgid "Geocatalogo"
+msgstr "Geokatalog"
