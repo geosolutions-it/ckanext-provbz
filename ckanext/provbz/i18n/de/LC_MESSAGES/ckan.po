@@ -4962,7 +4962,7 @@ msgid "gn_localized_url"
 msgstr "URL entfernt GeoNetwork"
 
 msgid "gn_view_metadata_url"
-msgstr "Anzeige-URL der Metadaten in GeoNetwork"
+msgstr "URL für die Visualisierung und Download des Datensatzes im Geokatalog"
 
 msgid "contact-email"
 msgstr "E-Mail Kontakt"

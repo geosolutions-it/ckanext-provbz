@@ -3808,7 +3808,7 @@ msgstr "Anteprima della risorsa"
 
 #: ckan/templates/package/snippets/resources_list.html:13
 msgid "Data and Resources"
-msgstr "Data e Risorse"
+msgstr "Dati e Risorse"
 
 #: ckan/templates/package/snippets/resources_list.html:29
 msgid "This dataset has no data"
@@ -4958,7 +4958,7 @@ msgid "gn_localized_url"
 msgstr "URL Localizzato di GeoNetwork"
 
 msgid "gn_view_metadata_url"
-msgstr "URL di visualizzazione del Metadato in GeoNetwork"
+msgstr "URL di visualizzazione e scarico del dato dal Geocatalogo"
 
 msgid "contact-email"
 msgstr "E-mail del Contatto"

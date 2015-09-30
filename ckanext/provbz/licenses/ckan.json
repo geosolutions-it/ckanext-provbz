@@ -1,0 +1,50 @@
+[
+   {
+      "status":"active",
+      "maintainer":"",
+      "od_conformance":"not reviewed",
+      "family":"",
+      "osd_conformance":"not reviewed",
+      "domain_data":"False",
+      "title":"License not specified",
+      "url":"",
+      "is_generic":"True",
+      "is_okd_compliant":"False",
+      "is_osi_compliant":"False",
+      "domain_content":"False",
+      "domain_software":"False",
+      "id":"notspecified"
+   },
+   {
+      "status":"active",
+      "maintainer":"",
+      "od_conformance":"approved",
+      "family":"",
+      "osd_conformance":"not reviewed",
+      "domain_data":"True",
+      "title":"Creative Commons CCZero",
+      "url":"http://www.opendefinition.org/licenses/cc-zero",
+      "is_generic":"False",
+      "is_okd_compliant":"True",
+      "is_osi_compliant":"False",
+      "domain_content":"True",
+      "domain_software":"False",
+      "id":"cc-zero"
+   },
+   {
+      "status":"active",
+      "maintainer":"",
+      "od_conformance":"approved",
+      "family":"",
+      "osd_conformance":"not reviewed",
+      "domain_data":"False",
+      "title":"Creative Commons Attribution",
+      "url": "http://www.opendefinition.org/licenses/cc-by",
+      "is_generic":"False",
+      "is_okd_compliant":"True",
+      "is_osi_compliant":"False",
+      "domain_content":"False",
+      "domain_software":"False",
+      "id":"cc-by"
+   }
+]
