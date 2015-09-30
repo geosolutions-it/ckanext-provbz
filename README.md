@@ -39,7 +39,11 @@ To install ckanext-provbz:
 
 7. The ckanext-provbz extension provides some updates for the i18n files for 'it' and 'de' languages. Locale files in CKAN (.mo and .po) for these languages must be replaced with files located in this extension at the ckanext-provbz/ckanext/provbz/i18n/ path.
 
-8. Restart CKAN.
+8. Update the production.ini configuration finding the default property ``licenses_group_url`` and change the value:
+
+     licenses_group_url = file:///usr/lib/ckan/default/src/ckanext-provbz/ckanext/provbz/licenses/ckan.json
+
+9. Restart CKAN.
 
 ----------------------
 Harvest Configuration
@@ -49,9 +53,9 @@ Using the ckanext-provbz harvester you can use an additional configuration prope
 
 * ``default_license``: with this property you can specify the default license to use for the CKAN's dataset if none useLimitation has been found into the metadata. Below an example:
 
-     {
-       "default_license": "cc-zero"
-     }
+          {
+            "default_license": "cc-zero"
+          }
 
 Below the complete configuration to use:
 
