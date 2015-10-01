@@ -45,7 +45,12 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
                     if item not in extras:
                         extras.append(item)
 
-                package_dict['extras'] = extras
+                package_dict['extras'] = extras 
+                if package_dict.get('owner_org') != _dict.get('owner_org'):
+                    source_dataset = model.Package.get(harvest_object.source.id)
+                    if source_dataset.owner_org:
+                        if _dict.get('owner_org') != source_dataset.owner_org:
+                            package_dict['owner_org'] =_dict.get('owner_org')
             else:
                 package_dict = _dict
 
