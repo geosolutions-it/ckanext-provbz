@@ -5004,3 +5004,15 @@ msgstr "Ultime News"
 
 msgid "Geocatalogo"
 msgstr "Geocatalogo"
+
+msgid "Per dati si intendono pezzi di singola informazione di varia natura, che descrivono fatti riproducibili senza ambiguità e che possono essere espressi e archiviati in formati digitali. Il Codice dell'Amministrazione Digitale (art. 68, c. 3, lett. b) definisce dati aperti i dati che presentano le seguenti caratteristiche:"
+msgstr "Per dati si intendono pezzi di singola informazione di varia natura, che descrivono fatti riproducibili senza ambiguità e che possono essere espressi e archiviati in formati digitali. Il Codice dell'Amministrazione Digitale (art. 68, c. 3, lett. b) definisce dati aperti i dati che presentano le seguenti caratteristiche:"
+
+msgid "sono disponibili secondo i termini di una licenza che ne permetta l'utilizzo da parte di chiunque, anche per finalità commerciali, in formato disaggregato"
+msgstr "sono disponibili secondo i termini di una licenza che ne permetta l'utilizzo da parte di chiunque, anche per finalità commerciali, in formato disaggregato"
+
+msgid "sono accessibili attraverso le tecnologie dell'informazione e della comunicazione, ivi comprese le reti telematiche pubbliche e private, in formati aperti ai sensi della lettera a), sono adatti all'utilizzo automatico da parte di programmi per elaboratori e sono provvisti dei relativi metadati"
+msgstr "sono accessibili attraverso le tecnologie dell'informazione e della comunicazione, ivi comprese le reti telematiche pubbliche e private, in formati aperti ai sensi della lettera a), sono adatti all'utilizzo automatico da parte di programmi per elaboratori e sono provvisti dei relativi metadati"
+
+msgid "sono resi disponibili gratuitamente attraverso le tecnologie dell'informazione e della comunicazione, ivi comprese le reti telematiche pubbliche e private, oppure sono resi disponibili ai costi marginali sostenuti per la loro riproduzione e divulgazione"
+msgstr "sono resi disponibili gratuitamente attraverso le tecnologie dell'informazione e della comunicazione, ivi comprese le reti telematiche pubbliche e private, oppure sono resi disponibili ai costi marginali sostenuti per la loro riproduzione e divulgazione"

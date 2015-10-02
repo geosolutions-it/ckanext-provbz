@@ -5008,3 +5008,15 @@ msgstr "Neueste Nachrichten"
 
 msgid "Geocatalogo"
 msgstr "Geokatalog"
+
+msgid "Per dati si intendono pezzi di singola informazione di varia natura, che descrivono fatti riproducibili senza ambiguità e che possono essere espressi e archiviati in formati digitali. Il Codice dell'Amministrazione Digitale (art. 68, c. 3, lett. b) definisce dati aperti i dati che presentano le seguenti caratteristiche:"
+msgstr "Die Daten beziehen sich auf die einzelnen Informationen verschiedener Art, beschreibt eindeutig reproduzierbaren Fakten und dass zum Ausdruck gebracht und in digitalen Formaten gespeichert werden können. (... Kunst 68, c 3, Buchstabe B) Die Digitale Verwaltung Kodex definiert Daten öffnen Sie die Daten, die die folgenden Eigenschaften aufweisen:"
+
+msgid "sono disponibili secondo i termini di una licenza che ne permetta l'utilizzo da parte di chiunque, anche per finalità commerciali, in formato disaggregato"
+msgstr "sind unter den Bedingungen der Lizenz, die ihre Verwendung von jedermann, auch für kommerzielle Zwecke, in aufgeschlüsselten Format"
+
+msgid "sono accessibili attraverso le tecnologie dell'informazione e della comunicazione, ivi comprese le reti telematiche pubbliche e private, in formati aperti ai sensi della lettera a), sono adatti all'utilizzo automatico da parte di programmi per elaboratori e sono provvisti dei relativi metadati"
+msgstr "Sie sind durch die Informations- und Kommunikationstechnologie zu erreichen, einschließlich Computer-Netzwerken von öffentlichen und privaten, in offenen Formaten in Übereinstimmung mit Buchstabe a), sind für die Verwendung durch automatisierte Computerprogramme und sind mit ihren Metadaten bereitgestellt"
+
+msgid "sono resi disponibili gratuitamente attraverso le tecnologie dell'informazione e della comunicazione, ivi comprese le reti telematiche pubbliche e private, oppure sono resi disponibili ai costi marginali sostenuti per la loro riproduzione e divulgazione"
+msgstr "Sie werden kostenlos zur Verfügung durch die Informations- und Kommunikationstechnologien, einschließlich Computer-Netzwerken von öffentlichen und privaten, oder auf die Grenzkosten für die Reproduktion und Verbreitung entstehen zur Verfügung gestellt werden"
