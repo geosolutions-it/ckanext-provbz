@@ -382,7 +382,7 @@ body {
     position: relative;
 }
 
-.tags h2 {
+.tag_container h2 {
     font-size: 22px;
 	color: inherit;
     font-family: dejavu_sanscondensed;
