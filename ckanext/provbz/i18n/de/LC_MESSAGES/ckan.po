@@ -5009,6 +5009,8 @@ msgstr "Neueste Nachrichten"
 msgid "Geocatalogo"
 msgstr "Geokatalog"
 
+## ----------------testo cosa sono gli opendata------------------ ##
+
 msgid "Per dati si intendono pezzi di singola informazione di varia natura, che descrivono fatti riproducibili senza ambiguità e che possono essere espressi e archiviati in formati digitali. Il Codice dell'Amministrazione Digitale (art. 68, c. 3, lett. b) definisce dati aperti i dati che presentano le seguenti caratteristiche:"
 msgstr "Die Daten beziehen sich auf die einzelnen Informationen verschiedener Art, beschreibt eindeutig reproduzierbaren Fakten und dass zum Ausdruck gebracht und in digitalen Formaten gespeichert werden können. (... Kunst 68, c 3, Buchstabe B) Die Digitale Verwaltung Kodex definiert Daten öffnen Sie die Daten, die die folgenden Eigenschaften aufweisen:"
 
