@@ -9,3 +9,6 @@ For each additional changes to the languages files, modify the .po file and then
 
 (default)[root@bolzano ckan]# python setup.py compile_catalog --locale {de or it}
 
+(default)[root@bolzano ckan]systemctl restart supervisord
+
+
