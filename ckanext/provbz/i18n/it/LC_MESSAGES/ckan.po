@@ -4850,8 +4850,8 @@ msgid "Faq"
 msgstr "Faq"
 
 #: templates/footer.html:13
-msgid "Informazioni Dati Trentino"
-msgstr "Informazioni Dati Trentino"
+msgid "Informazioni Dati Alto Adige"
+msgstr "Informazioni Open data Alto Adige"
 
 #: templates/footer.html:19
 msgid "Domande frequenti"
@@ -5018,3 +5018,38 @@ msgstr "sono accessibili attraverso le tecnologie dell'informazione e della comu
 
 msgid "sono resi disponibili gratuitamente attraverso le tecnologie dell'informazione e della comunicazione, ivi comprese le reti telematiche pubbliche e private, oppure sono resi disponibili ai costi marginali sostenuti per la loro riproduzione e divulgazione"
 msgstr "sono resi disponibili gratuitamente attraverso le tecnologie dell'informazione e della comunicazione, ivi comprese le reti telematiche pubbliche e private, oppure sono resi disponibili ai costi marginali sostenuti per la loro riproduzione e divulgazione"
+
+# -------- shibbolet plugin ------------#
+
+#: ckanext/repoze/who/shibboleth/controller.py:25
+msgid "No user info received for login"
+msgstr "Non sono state ricevute informazioni sull'utente"
+
+#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:25
+msgid "Shibboleth"
+msgstr "Shibboleth"
+
+#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:26
+msgid "Login through Shibboleth."
+msgstr "Accedi attraverso Shibboleth"
+
+#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:33
+msgid "Login via Shibboleth"
+msgstr "Accedi attraverso Shibboleth"
+
+#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:45
+msgid "Authentication by using local account"
+msgstr "Autenticazione con account locale"
+
+#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:49
+msgid "Username"
+msgstr "Nome utente"
+
+#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:50
+msgid "Password"
+msgstr "Password"
+
+#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:59
+msgid "Log in"
+msgstr "Accedi"
+

@@ -4854,8 +4854,8 @@ msgid "Faq"
 msgstr "Faq"
 
 #: templates/footer.html:13
-msgid "Informazioni Dati Trentino"
-msgstr "Trentino Informationsdaten"
+msgid "Informazioni Dati Alto Adige"
+msgstr "Informationen Open Data Südtirol"
 
 #: templates/footer.html:19
 msgid "Domande frequenti"
@@ -5022,3 +5022,38 @@ msgstr "Sie sind durch die Informations- und Kommunikationstechnologie zu erreic
 
 msgid "sono resi disponibili gratuitamente attraverso le tecnologie dell'informazione e della comunicazione, ivi comprese le reti telematiche pubbliche e private, oppure sono resi disponibili ai costi marginali sostenuti per la loro riproduzione e divulgazione"
 msgstr "Sie werden kostenlos zur Verfügung durch die Informations- und Kommunikationstechnologien, einschließlich Computer-Netzwerken von öffentlichen und privaten, oder auf die Grenzkosten für die Reproduktion und Verbreitung entstehen zur Verfügung gestellt werden"
+
+# -------- shibbolet plugin ------------#
+
+#: ckanext/repoze/who/shibboleth/controller.py:25
+msgid "No user info received for login"
+msgstr "[No user info received for login]"
+
+#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:25
+msgid "Shibboleth"
+msgstr "[Shibboleth]"
+
+#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:26
+msgid "Login through Shibboleth."
+msgstr "[Login through Shibboleth.]"
+
+#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:33
+msgid "Login via Shibboleth"
+msgstr "[Login through Shibboleth]"
+
+#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:45
+msgid "Authentication by using local account"
+msgstr "[Authentication by using local account]"
+
+#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:49
+msgid "Username"
+msgstr "[Username]"
+
+#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:50
+msgid "Password"
+msgstr "[Password]"
+
+#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:59
+msgid "Log in"
+msgstr "[Log in]"
+
