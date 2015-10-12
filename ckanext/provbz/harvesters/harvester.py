@@ -46,11 +46,16 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
                         extras.append(item)
 
                 package_dict['extras'] = extras 
-                if package_dict.get('owner_org') != _dict.get('owner_org'):
-                    source_dataset = model.Package.get(harvest_object.source.id)
-                    if source_dataset.owner_org:
-                        if _dict.get('owner_org') != source_dataset.owner_org:
-                            package_dict['owner_org'] =_dict.get('owner_org')
+
+                ## Configuring package organizations         
+                organisation_mapping = self.source_config.get('organisation_mapping', [])
+
+                if organisation_mapping:
+                    if package_dict.get('owner_org') != _dict.get('owner_org'):
+                        source_dataset = model.Package.get(harvest_object.source.id)
+                        if source_dataset.owner_org:
+                            if _dict.get('owner_org') != source_dataset.owner_org:
+                                package_dict['owner_org'] =_dict.get('owner_org')
             else:
                 package_dict = _dict
 
