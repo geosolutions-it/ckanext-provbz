@@ -3377,7 +3377,7 @@ msgstr "Stato"
 #: ckan/templates/package/resource_data.html:49
 #: ckan/templates/package/resource_read.html:157
 msgid "Last updated"
-msgstr "Ultimo aggiornamento"
+msgstr "Ultima modifica"
 
 #: ckan/templates/package/resource_data.html:53
 msgid "Never"
@@ -3594,7 +3594,7 @@ msgstr "Stato"
 
 #: ckan/templates/package/snippets/additional_info.html:62
 msgid "Last Updated"
-msgstr "Ultimo aggiornamento"
+msgstr "Ultima modifica"
 
 #: ckan/templates/package/snippets/data_api_button.html:10
 msgid "Data API"
@@ -5007,6 +5007,36 @@ msgstr "Geocatalogo"
 
 msgid "Contattaci"
 msgstr "Contattaci"
+
+msgid "Holder"
+msgstr "Titolare del dato"
+
+msgid "Sector"
+msgstr "Settore"
+
+msgid "Temporal Coverage"
+msgstr "Copertura Temporale"
+
+msgid "Geographical Coverage"
+msgstr "Copertura geografica"
+
+msgid "Geographical Min Level"
+msgstr "Livello geografico minimo"
+
+msgid "Publication Date"
+msgstr "Data di pubblicazione"
+
+msgid "Update Type"
+msgstr "Tipo di aggiornamento"
+
+msgid "Update Text"
+msgstr "Aggiornamento"
+
+msgid "Base Year"
+msgstr "Anno di base"
+
+msgid "Encoding"
+msgstr "Codifica caratteri"
 
 ## ----------------testo cosa sono gli opendata------------------ ##
 

@@ -5012,6 +5012,36 @@ msgstr "Geokatalog"
 msgid "Contattaci"
 msgstr "Berührung"
 
+msgid "Holder"
+msgstr "Inhaber der Daten"
+
+msgid "Sector"
+msgstr "Sektor"
+
+msgid "Temporal Coverage"
+msgstr "Zeitlichen Rahmen"
+
+msgid "Geographical Coverage"
+msgstr "Geographische Abdeckung"
+
+msgid "Geographical Min Level"
+msgstr "Geographisch Mindest"
+
+msgid "Publication Date"
+msgstr "Erscheinungsdatum"
+
+msgid "Update Type"
+msgstr "Updatetyp"
+
+msgid "Update Text"
+msgstr "Aktualisierung"
+
+msgid "Base Year"
+msgstr "Basisjahr"
+
+msgid "Encoding"
+msgstr "Zeichenkodierung"
+
 ## ----------------testo cosa sono gli opendata------------------ ##
 
 msgid "Per dati si intendono pezzi di singola informazione di varia natura, che descrivono fatti riproducibili senza ambiguità e che possono essere espressi e archiviati in formati digitali. Il Codice dell'Amministrazione Digitale (art. 68, c. 3, lett. b) definisce dati aperti i dati che presentano le seguenti caratteristiche:"

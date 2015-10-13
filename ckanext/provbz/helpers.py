@@ -1,5 +1,6 @@
 import logging
 import operator
+import json
 
 import ckan
 import ckan.model as model
@@ -36,6 +37,10 @@ def getLocalizedPageLink(page):
         url = "/" + locale + "/" + page
 
     return url
+
+def parseRefDate(references):
+    j = json.loads(references)
+    return j
 
 def recent_updates(n):
     #
