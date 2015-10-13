@@ -4,7 +4,7 @@
 
 {% block subtitle %}
     {% if locale == 'de' %}
-		{{ _(' Ribgraziamenti DE') }}
+		{{ _(' Dank') }}
 	{% else %}
 		{{ _(' Ribgraziamenti') }}
 	{% endif %}
@@ -12,7 +12,7 @@
 
 {% block breadcrumb_content %}
     {% if locale == 'de' %}
-    	<li class="active">{% link_for _('Ringraziamenti DE'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzacknowledgements' %}</li>
+    	<li class="active">{% link_for _('Dank'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzacknowledgements' %}</li>
   	{% else %}
 		<li class="active">{% link_for _('Ringraziamenti'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzacknowledgements' %}</li>
   	{% endif %}

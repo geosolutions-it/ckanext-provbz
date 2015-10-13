@@ -4,7 +4,7 @@
 
 {% block subtitle %}
     {% if locale == 'de' %}
-		{{ _(' Note Legali DE') }}
+		{{ _(' Rechtliche Anmerkungen') }}
 	{% else %}
 		{{ _(' Note Legali') }}
 	{% endif %}
@@ -12,7 +12,7 @@
 
 {% block breadcrumb_content %}
     {% if locale == 'de' %}
-    	<li class="active">{% link_for _('Note Legali DE'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzlegal' %}</li>
+    	<li class="active">{% link_for _('Rechtliche Anmerkungen'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzlegal' %}</li>
   	{% else %}
 		<li class="active">{% link_for _('Note Legali'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzlegal' %}</li>
   	{% endif %}

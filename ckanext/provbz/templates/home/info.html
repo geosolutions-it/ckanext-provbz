@@ -4,17 +4,17 @@
 
 {% block subtitle %}
     {% if locale == 'de' %}
-		{{ _(' Informazioni Dati Trentino DE') }}
+		{{ _(' Informationen zu den Open Data in Südtirol') }}
 	{% else %}
-		{{ _(' Informazioni Dati Trentino') }}
+		{{ _(' Informazioni Open data Alto Adige') }}
 	{% endif %}
 {% endblock %}
 
 {% block breadcrumb_content %}
     {% if locale == 'de' %}
-    	<li class="active">{% link_for _(' Informazioni Dati Trentino DE'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzinfo' %}</li>
+    	<li class="active">{% link_for _(' Informationen zu den Open Data in Südtirol'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzinfo' %}</li>
   	{% else %}
-		<li class="active">{% link_for _(' Informazioni Dati Trentino'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzinfo' %}</li>
+		<li class="active">{% link_for _(' Informazioni Open data Alto Adige'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzinfo' %}</li>
   	{% endif %}
 {% endblock %}
 

@@ -4,7 +4,7 @@
 
 {% block subtitle %}
     {% if locale == 'de' %}
-		{{ _(' Privacy DE') }}
+		{{ _(' Privacy') }}
 	{% else %}
 		{{ _(' Privacy') }}
 	{% endif %}
@@ -12,7 +12,7 @@
 
 {% block breadcrumb_content %}
     {% if locale == 'de' %}
-    	<li class="active">{% link_for _('Privacy DE'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzprivacy' %}</li>
+    	<li class="active">{% link_for _('Privacy'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzprivacy' %}</li>
   	{% else %}
 		<li class="active">{% link_for _('Privacy'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzprivacy' %}</li>
   	{% endif %}
