@@ -3377,7 +3377,7 @@ msgstr "Stato"
 #: ckan/templates/package/resource_data.html:49
 #: ckan/templates/package/resource_read.html:157
 msgid "Last updated"
-msgstr "Ultima modifica"
+msgstr "Ultimo aggiornamento"
 
 #: ckan/templates/package/resource_data.html:53
 msgid "Never"
