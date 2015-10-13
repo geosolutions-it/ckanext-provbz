@@ -340,7 +340,7 @@ body {
     margin-right: auto;
     padding: 15px;
     max-width: 800px;
-	/*height: 239px;*/
+	height: 245px;
     margin: 0 auto;
     overflow: visible;
 }
@@ -348,7 +348,7 @@ body {
 .extended_search form legend {
 	border-bottom: 0px solid #e5e5e5;
 	margin-bottom: 5px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: inherit;
     color: #333;
     border: none;
