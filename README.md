@@ -62,7 +62,6 @@ Below the complete configuration to use:
      {
           "private_datasets": "False", 
           "version": "2.6", 
-          "import_force": "False",
           "harvest_iso_categories": "True",
           "default_extras": {
                "geocat_layer_url": "http://geocatalogo.retecivica.bz.it/geokatalog/#!home&layer="
