@@ -92,13 +92,21 @@ Below the complete configuration to use:
                     "utilitiesCommunication": "boundaries", 
                     "transportation": "boundaries", 
                     "inlandWaters": "environment", 
-                    "geoscientificInformation": "administration", 
+                    "geoscientificInformation": "geoscientificinformation", 
                     "environment": "environment", 
                     "climatologyMeteorologyAtmosphere": "climatologymeteorologyatmosphere", 
                     "planningCadastre": "boundaries", 
                     "imageryBaseMapsEarthCover": "boundaries", 
                     "elevation": "boundaries", 
-                    "boundaries": "boundaries"
+                    "boundaries": "boundaries",
+                    "structure": "boundaries", 
+                    "location": "boundaries", 
+                    "economy": "economy",
+                    "society": "economy",
+                    "biota": "environment",
+                    "intelligenceMilitary": "boundaries",
+                    "oceans": "environment",
+                    "health": "health"
                },
                "ckan_locales_mapping":{
                     "ita": "it",
