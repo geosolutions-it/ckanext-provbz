@@ -5042,6 +5042,12 @@ msgstr "Basisjahr"
 msgid "Encoding"
 msgstr "Zeichenkodierung"
 
+msgid "Leggi tutto il contenuto"
+msgstr "Lesen Sie sich die Inhalte"
+
+msgid "Metadata di default"
+msgstr "Metadaten-Standard"
+
 ## ----------------testo cosa sono gli opendata------------------ ##
 
 msgid "Per dati si intendono pezzi di singola informazione di varia natura, che descrivono fatti riproducibili senza ambiguità e che possono essere espressi e archiviati in formati digitali. Il Codice dell'Amministrazione Digitale (art. 68, c. 3, lett. b) definisce dati aperti i dati che presentano le seguenti caratteristiche:"

@@ -86,6 +86,17 @@
             <ul class="unstyled">
               {% block header_account_logged %}
               {% if c.userobj.sysadmin %}
+                  <li>
+				    <a href="{{ h.url_for('pages_index') }}" title="{{ _('Pages') }}">
+				      <i class="icon-file"></i>
+				    </a>
+				  </li>
+				  <!--li>
+				    <a href="{{ h.url_for('blog_index') }}" title="{{ _('Blog') }}">
+				      <i class="icon-pencil"></i>
+				    </a>
+				  </li-->
+
                 <li>
                   <a href="{{ h.url_for(controller='admin', action='index') }}" title="{{ _('Sysadmin settings') }}">
                     <i class="icon-legal"></i>

@@ -22,23 +22,30 @@
 	  <div class="span6 col2 col-ck">
         {#% snippet 'home/snippets/promoted.html' %#} 
 		  <div class="col-sm-6">
-            <div class="news-box">
-              <h2>
-                {% trans %}Ultime News{% endtrans %}
-              </h2>
-              <div class="news">
-                <h3 class="news-heading"><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                <img class="news-object" src="{{h.url_for_static('/images/news-img.jpg')}}" alt="...">
-                <div class="news-body">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. 
-                  </p>
+            {% set news_page = h.get_news_preview('news') %}
+            {% if news_page %}
+              <div class="news-box">
+                <h2>
+                  {% trans %}Ultime News{% endtrans %}
+                </h2>
+                {% set locale = h.get_locale() %}
+                <h3 class="news-heading"><a href={{ h.getLocalizedPageLink('pages/news') }}>{% trans %}Leggi tutto il contenuto{% endtrans %}</a></h3>        
+                <div class="news">  
+                  <img class="news-object" src="{{h.url_for_static('/images/news-img.jpg')}}" alt="...">  
+                  {{ h.render_content(h.truncate(news_page.content, 350)) }}
+                  <!--h3 class="news-heading"><a href="#">Lorem ipsum dolor sit amet</a></h3>
+                  <img class="news-object" src="{{h.url_for_static('/images/news-img.jpg')}}" alt="...">
+                  <div class="news-body">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                      consequat. 
+                    </p>
+                  </div-->
                 </div>
               </div>
-            </div>
+            {% endif %}
           </div>
       </div>
     </div>

@@ -159,7 +159,8 @@ class PBZThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
             'get_default_locale': helpers.get_default_locale,
             'get_locale': helpers.get_locale,
             'getLocalizedPageLink': helpers.getLocalizedPageLink,
-            'parseRefDate': helpers.parseRefDate
+            'parseRefDate': helpers.parseRefDate,
+            'get_news_preview': helpers.get_news_preview
             #'get_custom_categories_list': helpers.get_custom_categories_list
         }
 

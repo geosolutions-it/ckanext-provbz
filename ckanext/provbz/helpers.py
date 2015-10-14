@@ -15,6 +15,8 @@ from pylons import config
 from pylons.i18n.translation import get_lang
 from ckanext.multilang.model import PackageMultilang
 
+import ckanext.pages.db as db
+
 
 log = logging.getLogger(__file__)
 
@@ -41,6 +43,16 @@ def getLocalizedPageLink(page):
 def parseRefDate(references):
     j = json.loads(references)
     return j
+
+def get_news_preview(page):
+    lang = get_lang()[0]
+
+    log.info('Retrieving News page preview for current locale: %r', lang)
+
+    news_page = db.Page.get(name=page, lang=lang)
+    if news_page:
+        news_page = db.table_dictize(news_page, {})
+    return news_page
 
 def recent_updates(n):
     #
