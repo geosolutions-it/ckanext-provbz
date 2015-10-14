@@ -59,50 +59,58 @@ Using the ckanext-provbz harvester you can use an additional configuration prope
 
 Below the complete configuration to use:
 
-     {
-          "private_datasets": "False", 
-          "version": "2.6", 
-          "harvest_iso_categories": "True",
-          "default_extras": {
-               "geocat_layer_url": "http://geocatalogo.retecivica.bz.it/geokatalog/#!home&layer="
-          },
-          "organisation_mapping": [
-               {"key": "pab-foreste" ,"value": "Ufficio 32.3 - Ufficio Pianificazione forestale"},
-               {"key": "comune-bolzano-sistema-informativo-territoriale" ,"value": "Ufficio Sistema Informativo      Territoriale, Comune di Bolzano"},
-               {"key": "pab-agenzia-provinciale-per-l-ambiente" ,"value": "Ripartizione 29 - Agenzia provinciale per l'ambiente"},
-               {"key": "pab-servizio-strade" ,"value": "Ripartizione 12 - Servizio Strade"},
-               {"key": "pab-protezione-antincendi-e-civile" ,"value": "Ripartizione 26 - Protezione antincendi e civile"},
-               {"key": "pab-natura-paesaggio-e-sviluppo-del-territorio" ,"value": "Ripartizione 28 - Natura, paesaggio e sviluppo del territorio"},
-               {"key": "pab-opere-idrauliche" ,"value": "Ripartizione 30 - Opere idrauliche"},
-               {"key": "pab-libro-fondiario-catasto-fondiario-e-urbano" ,"value": "Ripartizione 41 - Libro fondiario, catasto fondiario e urbano"},
-               {"key": "pab-foreste" ,"value": "Ripartizione 32 - Foreste"},
-               {"key": "comune-merano-urbanistica-ed-edilizia-privata" ,"value": "Ufficio urbanistica ed edilizia privata del comune di Merano"},
-               {"key": "pab-agricoltura" ,"value": "Ripartizione 31 - agricoltura"},
-               {"key": "pab-dipartimento-economia-innovazione-e-europa" ,"value": "Dipartimento Economia, Innovazione e Europa"},
-               {"key": "pab-edilizia-e-servizio-tecnico" ,"value": "Ripartizione 11 - Edilizia e servizio tecnico"},
-               {"key": "pab-beni-culturali" ,"value": "Ripartizione 13 - Beni culturali"},
-               {"key": "pab-economia" ,"value": "Ripartizione 35 - Economia"},
-               {"key": "eurac" ,"value": "Istituto di Telerilevamento Applicato, EURAC"},
-               {"key": "pab-natura-paesaggio-e-sviluppo-del-territorio" ,"value": "Cartografia provinciale e coordinamento geodati - Ripartizione 28"},
-               {"key": "pab-astat" ,"value": "Istituto Provinciale di Statistica ASTAT"},
-               {"key": "pab-agenzia-provinciale-per-l-ambiente" ,"value": "29. Agenzia provinciale per l'ambiente"}
-          ],
-          "group_mapping": {
-               "farming": "farming", 
-               "utilitiesCommunication": "boundaries", 
-               "transportation": "boundaries", 
-               "inlandWaters": "environment", 
-               "geoscientificInformation": "administration", 
-               "environment": "environment", 
-               "climatologyMeteorologyAtmosphere": "climatologymeteorologyatmosphere", 
-               "planningCadastre": "boundaries", 
-               "imageryBaseMapsEarthCover": "boundaries", 
-               "elevation": "boundaries", 
-               "boundaries": "boundaries"
-          },
-          "ckan_locales_mapping":{
-               "ita": "it",
-               "ger": "de"
-          },
-          "default_license": "cc-zero"
-     }
+          {
+               "private_datasets": "False", 
+               "version": "2.6", 
+               "harvest_iso_categories": "True",
+               "default_extras": {
+                    "geocat_layer_url": "http://geocatalogo.retecivica.bz.it/geokatalog/#!home&layer="
+               },
+               "organisation_mapping": [
+                    {"key": "pab-foreste" ,"value": "Ufficio 32.3 - Ufficio Pianificazione forestale"},
+                    {"key": "comune-bolzano-sistema-informativo-territoriale" ,"value": "Ufficio Sistema Informativo Territoriale, Comune di Bolzano"},
+                    {"key": "pab-agenzia-provinciale-per-l-ambiente" ,"value": "Ripartizione 29 - Agenzia provinciale per l'ambiente"},
+                    {"key": "pab-servizio-strade" ,"value": "Ripartizione 12 - Servizio Strade"},
+                    {"key": "pab-protezione-antincendi-e-civile" ,"value": "Ripartizione 26 - Protezione antincendi e civile"},
+                    {"key": "pab-natura-paesaggio-e-sviluppo-del-territorio" ,"value": "Ripartizione 28 - Natura, paesaggio e sviluppo del territorio"},
+                    {"key": "pab-opere-idrauliche" ,"value": "Ripartizione 30 - Opere idrauliche"},
+                    {"key": "pab-libro-fondiario-catasto-fondiario-e-urbano" ,"value": "Ripartizione 41 - Libro fondiario, catasto fondiario e urbano"},
+                    {"key": "pab-foreste" ,"value": "Ripartizione 32 - Foreste"},
+                    {"key": "comune-merano-urbanistica-ed-edilizia-privata" ,"value": "Ufficio urbanistica ed edilizia privata del comune di Merano"},
+                    {"key": "pab-agricoltura" ,"value": "Ripartizione 31 - agricoltura"},
+                    {"key": "pab-dipartimento-economia-innovazione-e-europa" ,"value": "Dipartimento Economia, Innovazione e Europa"},
+                    {"key": "pab-edilizia-e-servizio-tecnico" ,"value": "Ripartizione 11 - Edilizia e servizio tecnico"},
+                    {"key": "pab-beni-culturali" ,"value": "Ripartizione 13 - Beni culturali"},
+                    {"key": "pab-economia" ,"value": "Ripartizione 35 - Economia"},
+                    {"key": "eurac" ,"value": "Istituto di Telerilevamento Applicato, EURAC"},
+                    {"key": "pab-natura-paesaggio-e-sviluppo-del-territorio" ,"value": "Cartografia provinciale e coordinamento geodati - Ripartizione 28"},
+                    {"key": "provincia-autonoma-di-bolzano-alto-adige-astat" ,"value": "Istituto Provinciale di Statistica ASTAT"},
+                    {"key": "pab-agenzia-provinciale-per-l-ambiente" ,"value": "29. Agenzia provinciale per l'ambiente"}
+               ],
+               "group_mapping": {
+                    "farming": "farming", 
+                    "utilitiesCommunication": "boundaries", 
+                    "transportation": "boundaries", 
+                    "inlandWaters": "environment", 
+                    "geoscientificInformation": "geoscientificinformation", 
+                    "environment": "environment", 
+                    "climatologyMeteorologyAtmosphere": "climatologymeteorologyatmosphere", 
+                    "planningCadastre": "boundaries", 
+                    "imageryBaseMapsEarthCover": "boundaries", 
+                    "elevation": "boundaries", 
+                    "boundaries": "boundaries",
+                    "structure": "boundaries", 
+                    "location": "boundaries", 
+                    "economy": "economy",
+                    "society": "economy",
+                    "biota": "environment",
+                    "intelligenceMilitary": "boundaries",
+                    "oceans": "environment",
+                    "health": "health"
+               },
+               "ckan_locales_mapping":{
+                    "ita": "it",
+                    "ger": "de"
+               },
+               "default_license": "cc-zero"
+          }
