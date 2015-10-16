@@ -5087,6 +5087,24 @@ msgstr "Nicht gefunden"
 msgid "The resource could not be found."
 msgstr "Die Ressource konnte nicht gefunden werden."
 
+msgid "annuale"
+msgstr "jährlich"
+
+msgid "mensile"
+msgstr "monatlich"
+
+msgid "settimanale"
+msgstr "wöchentlich"
+
+msgid "giornaliero"
+msgstr "täglich"
+
+msgid "continuo"
+msgstr "dauer"
+
+msgid "una tantum"
+msgstr "einmalig"
+
 ## ----------------testo cosa sono gli opendata------------------ ##
 
 msgid "Per dati si intendono pezzi di singola informazione di varia natura, che descrivono fatti riproducibili senza ambiguità e che possono essere espressi e archiviati in formati digitali. Il Codice dell'Amministrazione Digitale (art. 68, c. 3, lett. b) definisce dati aperti i dati che presentano le seguenti caratteristiche:"

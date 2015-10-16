@@ -36,17 +36,17 @@
 
               {% set geocat_url = [] %}
 
-              {% for extra in pkg.extras%}
-                {% if extra.key == 'geocat_layer_url'%}
+              {% for extra in pkg.extras %}
+                {% if extra.key == 'geocat_layer_url' %}
                   {% do geocat_url.append(extra.value) %}
                 {% endif %}
-              {% endfor%}
+              {% endfor %}
 
-              {% for extra in pkg.extras%}
+              {% for extra in pkg.extras %}
                 {% if extra.key == 'guid' %}
                   {% do geocat_url.append(extra.value) %}
                 {% endif %}
-              {% endfor%}
+              {% endfor %}
 
               {% if res.format == 'WMS' and geocat_url[0] and geocat_url[1] %}
                 <li>

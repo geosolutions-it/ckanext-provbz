@@ -10,73 +10,83 @@
     </thead>
     <tbody>
         {% if pkg_dict.holder %}
+          {% set holder = h.getLocalizedFieldValue('holder', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Holder") }}</th>
-            <td class="dataset-details">{{ pkg_dict.holder }}</td>
+            <td class="dataset-details">{{ holder or pkg_dict.holder }}</td>
           </tr>
         {% endif %}
         
         {% if pkg_dict.sector %}
+          {% set sector = h.getLocalizedFieldValue('sector', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Sector") }}</th>
-            <td class="dataset-details">{{ pkg_dict.sector }}</td>
+            <td class="dataset-details">{{ sector or pkg_dict.sector }}</td>
           </tr>
         {% endif %}
       
         {% if pkg_dict.temporal_coverage %}
+          {% set temporal_coverage = h.getLocalizedFieldValue('temporal_coverage', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Temporal Coverage") }}</th>
-            <td class="dataset-details">{{ pkg_dict.temporal_coverage }}</td>
+            <td class="dataset-details">{{ temporal_coverage or pkg_dict.temporal_coverage }}</td>
           </tr>
         {% endif %}
         
         {% if pkg_dict.geographical_coverage %}
+          {% set geographical_coverage = h.getLocalizedFieldValue('geographical_coverage', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Geographical Coverage") }}</th>
-            <td class="dataset-details">{{ pkg_dict.geographical_coverage }}</td>
+            <td class="dataset-details">{{ geographical_coverage or pkg_dict.geographical_coverage }}</td>
           </tr>
         {% endif %}
         
         {% if pkg_dict.geographical_min_level %}
+          {% set geographical_min_level = h.getLocalizedFieldValue('geographical_min_level', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Geographical Min Level") }}</th>
-            <td class="dataset-details">{{ pkg_dict.geographical_min_level }}</td>
+            <td class="dataset-details">{{ geographical_min_level or pkg_dict.geographical_min_level }}</td>
           </tr>
         {% endif %}
         
         {% if pkg_dict.publication_date %}
+          {% set publication_date = h.getLocalizedFieldValue('publication_date', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Publication Date") }}</th>
-            <td class="dataset-details">{{ pkg_dict.publication_date }}</td>
+            <td class="dataset-details">{{ publication_date or pkg_dict.publication_date }}</td>
           </tr>
         {% endif %}
         
         {% if pkg_dict.update_type %}
+          {% set update_type = h.getLocalizedFieldValue('update_type', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Update Type") }}</th>
-            <td class="dataset-details">{{ pkg_dict.update_type }}</td>
+            <td class="dataset-details">{{ update_type or pkg_dict.update_type }}</td>
           </tr>
         {% endif %}
         
         {% if pkg_dict.update_text %}
+          {% set update_text = h.getLocalizedFieldValue('update_text', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Update Text") }}</th>
-            <td class="dataset-details">{{ pkg_dict.update_text }}</td>
+            <td class="dataset-details">{{ update_text or pkg_dict.update_text }}</td>
           </tr>
         {% endif %}
 
         {% if pkg_dict.base_year %}
+          {% set base_year = h.getLocalizedFieldValue('base_year', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Base Year") }}</th>
-            <td class="dataset-details">{{ pkg_dict.base_year }}</td>
+            <td class="dataset-details">{{ base_year or pkg_dict.base_year }}</td>
           </tr>
         {% endif %}
 
 
         {% if pkg_dict.encoding %}
+          {% set encoding = h.getLocalizedFieldValue('encoding', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Encoding") }}</th>
-            <td class="dataset-details">{{ pkg_dict.encoding }}</td>
+            <td class="dataset-details">{{ encoding or pkg_dict.encoding }}</td>
           </tr>
         {% endif %}
     </tbody>

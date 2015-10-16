@@ -14,25 +14,35 @@
 {% endblock %}
 
 {% block package_basic_fields_custom %}
-  {{ form.input('holder', label=_('Holder'), id='field-holder', placeholder=_('Holder'), value=data.holder, error=errors.holder, classes=['control-medium']) }}
+  {% set holder = h.getLocalizedFieldValue('holder', data) %}
+  {{ form.input('holder', label=_('Holder'), id='field-holder', placeholder=_('Holder'), value=holder or data.holder, error=errors.holder, classes=['control-medium']) }}
+   
+  {% set sector = h.getLocalizedFieldValue('sector', data) %}
+  {{ form.input('sector', label=_('Sector'), id='field-sector', placeholder=_('Sector'), value=sector or data.sector, error=errors.sector, classes=['control-medium']) }}
 
-  {{ form.input('sector', label=_('Sector'), id='field-sector', placeholder=_('Sector'), value=data.sector, error=errors.sector, classes=['control-medium']) }}
+  {% set temporal_coverage = h.getLocalizedFieldValue('temporal_coverage', data) %}
+  {{ form.input('temporal_coverage', label=_('Temporal Coverage'), id='field-temporal_coverage', placeholder=_('Temporal Coverage'), value=temporal_coverage or data.temporal_coverage, error=errors.temporal_coverage, classes=['control-medium']) }}
 
-  {{ form.input('temporal_coverage', label=_('Temporal Coverage'), id='field-temporal_coverage', placeholder=_('Temporal Coverage'), value=data.temporal_coverage, error=errors.temporal_coverage, classes=['control-medium']) }}
+  {% set geographical_coverage = h.getLocalizedFieldValue('geographical_coverage', data) %}
+  {{ form.input('geographical_coverage', label=_('Geographical Coverage'), id='field-geographical_coverage', placeholder=_('Geographical Coverage'), value=geographical_coverage or data.geographical_coverage, error=errors.geographical_coverage, classes=['control-medium']) }}
 
-  {{ form.input('geographical_coverage', label=_('Geographical Coverage'), id='field-geographical_coverage', placeholder=_('Geographical Coverage'), value=data.geographical_coverage, error=errors.geographical_coverage, classes=['control-medium']) }}
+  {% set geographical_min_level = h.getLocalizedFieldValue('geographical_min_level', data) %}
+  {{ form.input('geographical_min_level', label=_('Geographical Min Level'), id='field-geographical_min_level', placeholder=_('Geographical Min Level'), value=geographical_min_level or data.geographical_min_level, error=errors.geographical_min_level, classes=['control-medium']) }}
 
-  {{ form.input('geographical_min_level', label=_('Geographical Min Level'), id='field-geographical_min_level', placeholder=_('Geographical Min Level'), value=data.geographical_min_level, error=errors.geographical_min_level, classes=['control-medium']) }}
+  {% set publication_date = h.getLocalizedFieldValue('publication_date', data) %}
+  {{ form.input('publication_date', label=_('Publication Date'), id='field-publication_date', placeholder=_('Publication Date'), value=publication_date or data.publication_date, error=errors.publication_date, classes=['control-medium']) }}
 
-  {{ form.input('publication_date', label=_('Publication Date'), id='field-publication_date', placeholder=_('Publication Date'), value=data.publication_date, error=errors.publication_date, classes=['control-medium']) }}
+  {% set update_type = h.getLocalizedFieldValue('update_type', data) %}
+  {{ form.select('update_type', label=_('Update Type'), options=[{'name':"annuale", 'value': _('annuale')},{'name': "mensile", 'value': _('mensile')},{'name': "settimanale", 'value': _('settimanale')},{'name': "giornaliero", 'value': _('giornaliero')},{'name': "continuo", 'value': _('continuo')},{'name': "una tantum", 'value': _('una tantum')}], selected=update_type or data.update_type, error=errors.update_type) }}
 
-  {{ form.select('update_type', label=_('Update Type'), options=[{'name':"annuale", 'value': "annuale"},{'name': "mensile", 'value': "mensile"},{'name': "settimanale", 'value': "settimanale"},{'name': "giornaliero", 'value': "giornaliero"},{'name': "continuo", 'value': "continuo"},{'name': "una tantum", 'value': "una tantum"}], selected=mensile, error=errors.update_type) }}
+  {% set update_text = h.getLocalizedFieldValue('update_text', data) %}
+  {{ form.input('update_text', label=_('Update Text'), id='field-update_text', placeholder=_('Update Text'), value=update_text or data.update_text, error=errors.update_text, classes=['control-medium']) }}
 
-  {{ form.input('update_text', label=_('Update Text'), id='field-update_text', placeholder=_('Update Text'), value=data.update_text, error=errors.update_text, classes=['control-medium']) }}
+  {% set base_year = h.getLocalizedFieldValue('base_year', data) %}
+  {{ form.input('base_year', label=_('Base Year'), id='field-base_year', placeholder=_('Base Year'), value=base_year or data.base_year, error=errors.base_year, classes=['control-medium']) }}
 
-  {{ form.input('base_year', label=_('Base Year'), id='field-base_year', placeholder=_('Base Year'), value=data.base_year, error=errors.base_year, classes=['control-medium']) }}
-
-  {{ form.input('encoding', label=_('Encoding'), id='field-encoding', placeholder=_('Encoding'), value=data.encoding, error=errors.encoding, classes=['control-medium']) }}
+  {% set encoding = h.getLocalizedFieldValue('encoding', data) %}
+  {{ form.input('encoding', label=_('Encoding'), id='field-encoding', placeholder=_('Encoding'), value=encoding or data.encoding, error=errors.encoding, classes=['control-medium']) }}
 
 {% endblock %}
 

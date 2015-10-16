@@ -15,10 +15,13 @@ from pylons import config
 from pylons.i18n.translation import get_lang
 from ckanext.multilang.model import PackageMultilang
 
+import ckanext.provbz.model.custom as custom
+
 import ckanext.pages.db as db
 
 
 log = logging.getLogger(__file__)
+
 
 def get_default_locale():
     locale_default = config.get('ckan.locale_default')
@@ -87,6 +90,17 @@ def recent_updates(n):
     log.debug('Updates:::::::::::::::::::::::  %r ' % search_results)
 	
     return search_results.get('results', [])
+
+def getLocalizedFieldValue(field=None, pkg_dict=None):
+    if field and pkg_dict:
+        lang = get_lang()[0]
+        localized_value = custom.get_field(field, pkg_dict.get('id'), lang)
+        if localized_value:
+            return localized_value.text
+        else:
+            return None
+    else:
+        return None
 
 '''	
 def get_custom_categories_list(items):

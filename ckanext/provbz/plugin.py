@@ -1,17 +1,43 @@
+import logging
+
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 
 import ckanext.provbz.helpers as helpers
 
+from ckan.lib.base import model
+from pylons.i18n.translation import get_lang
+
+import ckanext.provbz.model.custom as custom
+
+log = logging.getLogger(__name__)
+
 class PBZThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
-    '''An example theme plugin.
+
     '''
+    The Provincia di Bolzano theme plugin.
+    '''
+
+    custom_fields = [
+        ['holder'], 
+        ['sector'], 
+        ['geographical_coverage'], 
+        ['temporal_coverage'], 
+        ['geographical_min_level'], 
+        ['publication_date'], 
+        ['update_type'], 
+        ['update_text'],  
+        ['base_year'], 
+        ['encoding']
+    ]
 
     # Declare that this class implements IConfigurer.
     plugins.implements(plugins.IDatasetForm)
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IRoutes)
+    plugins.implements(plugins.IPackageController, inherit=True)
+
 
     def update_config(self, config):
         # Add this plugin's templates dir to CKAN's extra_template_paths, so
@@ -23,55 +49,13 @@ class PBZThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
         toolkit.add_public_directory(config, 'public')
 
     def _modify_package_schema(self, schema):
-        schema.update({
-            'holder': [toolkit.get_validator('ignore_missing'),
-                   toolkit.get_converter('convert_to_extras')]
-        })
-
-        schema.update({
-            'sector': [toolkit.get_validator('ignore_missing'),
-                   toolkit.get_converter('convert_to_extras')]
-        })
-
-        schema.update({
-            'geographical_coverage': [toolkit.get_validator('ignore_missing'),
-                   toolkit.get_converter('convert_to_extras')]
-        })
-
-        schema.update({
-            'temporal_coverage': [toolkit.get_validator('ignore_missing'),
-                   toolkit.get_converter('convert_to_extras')]
-        })
-
-        schema.update({
-            'geographical_min_level': [toolkit.get_validator('ignore_missing'),
-                   toolkit.get_converter('convert_to_extras')]
-        })
-
-        schema.update({
-            'publication_date': [toolkit.get_validator('ignore_missing'),
-                   toolkit.get_converter('convert_to_extras')]
-        })
-
-        schema.update({
-            'update_type': [toolkit.get_validator('ignore_missing'),
-                   toolkit.get_converter('convert_to_extras')]
-        })
-
-        schema.update({
-            'update_text': [toolkit.get_validator('ignore_missing'),
-                   toolkit.get_converter('convert_to_extras')]
-        })
-
-        schema.update({
-            'base_year': [toolkit.get_validator('ignore_missing'),
-                   toolkit.get_converter('convert_to_extras')]
-        })
-
-        schema.update({
-            'encoding': [toolkit.get_validator('ignore_missing'),
-                   toolkit.get_converter('convert_to_extras')]
-        })
+        for field in self.custom_fields:
+            schema.update({
+                field[0]: [
+                    toolkit.get_validator('ignore_missing'),
+                    toolkit.get_converter('convert_to_extras')
+                ]
+            })
 
         return schema
 
@@ -90,55 +74,14 @@ class PBZThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
     def show_package_schema(self):
         schema = super(PBZThemePlugin, self).show_package_schema()
-        schema.update({
-            'holder': [toolkit.get_converter('convert_from_extras'), 
-                      toolkit.get_validator('ignore_missing')]
-        })
 
-        schema.update({
-            'sector': [toolkit.get_converter('convert_from_extras'), 
-                      toolkit.get_validator('ignore_missing')]
-        })
-
-        schema.update({
-            'geographical_coverage': [toolkit.get_converter('convert_from_extras'), 
-                                       toolkit.get_validator('ignore_missing')]
-        })
-
-        schema.update({
-            'temporal_coverage': [toolkit.get_converter('convert_from_extras'), 
-                                       toolkit.get_validator('ignore_missing')]
-        })
-
-        schema.update({
-            'geographical_min_level': [toolkit.get_converter('convert_from_extras'), 
-                                     toolkit.get_validator('ignore_missing')]
-        })
-
-        schema.update({
-            'publication_date': [toolkit.get_converter('convert_from_extras'), 
-                                toolkit.get_validator('ignore_missing')]
-        })
-
-        schema.update({
-            'update_type': [toolkit.get_converter('convert_from_extras'), 
-                           toolkit.get_validator('ignore_missing')]
-        })
-
-        schema.update({
-            'update_text': [toolkit.get_converter('convert_from_extras'), 
-                            toolkit.get_validator('ignore_missing')]
-        })
-
-        schema.update({
-            'base_year': [toolkit.get_converter('convert_from_extras'), 
-                           toolkit.get_validator('ignore_missing')]
-        })
-
-        schema.update({
-            'encoding': [toolkit.get_converter('convert_from_extras'),
-                        toolkit.get_validator('ignore_missing')]
-        })
+        for field in self.custom_fields:
+            schema.update({
+                field[0]: [
+                    toolkit.get_converter('convert_from_extras'), 
+                    toolkit.get_validator('ignore_missing')
+                ]
+            })
 
         return schema
 
@@ -160,7 +103,8 @@ class PBZThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
             'get_locale': helpers.get_locale,
             'getLocalizedPageLink': helpers.getLocalizedPageLink,
             'parseRefDate': helpers.parseRefDate,
-            'get_news_preview': helpers.get_news_preview
+            'get_news_preview': helpers.get_news_preview,
+            'getLocalizedFieldValue': helpers.getLocalizedFieldValue
             #'get_custom_categories_list': helpers.get_custom_categories_list
         }
 
@@ -174,3 +118,48 @@ class PBZThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
         
     def after_map(self, route_map):
         return route_map
+
+    def after_create(self, context, pkg_dict):
+        if not custom.custom_field_table.exists():
+            custom.init_db()
+
+        lang = get_lang()[0]
+        
+        for extra in pkg_dict.get('extras'):
+            for field in self.custom_fields:
+                if extra.get('key') == field[0]:
+                    log.info(':::::::::::::::Localizing custom field: %r', field[0])
+                    
+                    # Create the localized field record
+                    self.createLocField(extra, lang, pkg_dict.get('id'))
+
+    def after_update(self, context, pkg_dict):
+        if not custom.custom_field_table.exists():
+            custom.init_db()
+
+        lang = get_lang()[0]
+        
+        for extra in pkg_dict.get('extras'):
+            for field in self.custom_fields:
+                if extra.get('key') == field[0]:
+                    log.info(':::::::::::::::Localizing custom field: %r', field[0])
+                    f = custom.get_field(extra.get('key'), pkg_dict.get('id'), lang)
+                    if f:
+                        if f.text != extra.get('value'):
+                            # Update the field localized value for the current language
+                            f.text = extra.get('value')
+                            f.save()
+
+                            log.info('Custom field updated successfully')
+                    else:
+                        # Create the localized field record
+                        self.createLocField(extra, lang, pkg_dict.get('id'))
+
+    def createLocField(self, extra, lang, packege_id): 
+        log.info(':::::::::::::::::::::::: %r', str(packege_id))
+
+        new_loc_field = custom.CustomFieldMultilang(packege_id, extra.get('key'), lang, extra.get('value'))
+        custom.CustomFieldMultilang.save(new_loc_field)
+
+        log.info('Custom field created successfully')
+        
