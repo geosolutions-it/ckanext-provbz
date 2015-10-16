@@ -13,7 +13,12 @@ harvesters built on the ckanext-spatial extension like:
 Requirements
 ------------
 
-The ckanext-multilang extension has been developed for CKAN 2.4 or later.
+The ckanext-provbz extension has been developed for CKAN 2.4.
+Other extensions needed as dependencies are:
+
+- https://github.com/geosolutions-it/ckanext-multilang
+- https://github.com/geosolutions-it/ckanext-geonetwork
+- https://github.com/geosolutions-it/ckanext-pages
 
 ------------------------
 Development Installation
