@@ -5048,6 +5048,45 @@ msgstr "Lesen Sie sich die Inhalte"
 msgid "Metadata di default"
 msgstr "Metadaten-Standard"
 
+msgid "Add page"
+msgstr "Seite hinzufügen"
+
+msgid "Publish Date"
+msgstr "Veröffentlichungsdatum"
+
+msgid "Menu Order"
+msgstr "Menü"
+
+msgid "Content"
+msgstr "Inhalt"
+
+msgid "eg. Page Title"
+msgstr "zB. Seitentitel"
+
+msgid "Pages"
+msgstr "Seiten"
+
+msgid "Language"
+msgstr "Sprache"
+
+msgid "Not in Menu"
+msgstr "Nicht im Menü"
+
+msgid "In Menu"
+msgstr "im Menü"
+
+msgid "Are you sure you want to delete this Page?"
+msgstr "Sind Sie sicher, Sie wollen, um diese Seite zu löschen?"
+
+msgid "This page is not localized for the current language. You have to create a new page for this language using the same identifier:"
+msgstr "Diese Seite wird nicht für die aktuelle Sprache lokalisiert. Sie haben eine neue Seite für diese Sprache mit der gleichen Kennung zu erstellen:"
+
+msgid "Not Found"
+msgstr "Nicht gefunden"
+
+msgid "The resource could not be found."
+msgstr "Die Ressource konnte nicht gefunden werden."
+
 ## ----------------testo cosa sono gli opendata------------------ ##
 
 msgid "Per dati si intendono pezzi di singola informazione di varia natura, che descrivono fatti riproducibili senza ambiguità e che possono essere espressi e archiviati in formati digitali. Il Codice dell'Amministrazione Digitale (art. 68, c. 3, lett. b) definisce dati aperti i dati che presentano le seguenti caratteristiche:"

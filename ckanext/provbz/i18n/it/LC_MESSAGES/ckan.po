@@ -5044,6 +5044,45 @@ msgstr "Leggi tutto il contenuto"
 msgid "Metadata di default"
 msgstr "Metadata di default"
 
+msgid "Add page"
+msgstr "Aggiungi pagina"
+
+msgid "Publish Date"
+msgstr "Data di pubblicazione"
+
+msgid "Menu Order"
+msgstr "Menu"
+
+msgid "Content"
+msgstr "Contenuto"
+
+msgid "eg. Page Title"
+msgstr "es. Titolo Pagina"
+
+msgid "Pages"
+msgstr "Pagine"
+
+msgid "Language"
+msgstr "Linguaggio"
+
+msgid "Not in Menu"
+msgstr "Non in Menu"
+
+msgid "In Menu"
+msgstr "Nel menu"
+
+msgid "Are you sure you want to delete this Page?"
+msgstr "Si è sicuri di voler cancellare questa pagina?"
+
+msgid "This page is not localized for the current language. You have to create a new page for this language using the same identifier:"
+msgstr "Questa pagina non è localizzata per la lingua corrente. Si deve creare una nuova pagina per la lingua correntemente usata utilizzando lo stesso identificatore:"
+
+msgid "Not Found"
+msgstr "Non trovato"
+
+msgid "The resource could not be found."
+msgstr "La risorsa non è stata trovata."
+
 ## ----------------testo cosa sono gli opendata------------------ ##
 
 msgid "Per dati si intendono pezzi di singola informazione di varia natura, che descrivono fatti riproducibili senza ambiguità e che possono essere espressi e archiviati in formati digitali. Il Codice dell'Amministrazione Digitale (art. 68, c. 3, lett. b) definisce dati aperti i dati che presentano le seguenti caratteristiche:"
