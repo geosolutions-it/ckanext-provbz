@@ -123,15 +123,17 @@ class PBZThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
         if not custom.custom_field_table.exists():
             custom.init_db()
 
-        lang = get_lang()[0]
-        
-        for extra in pkg_dict.get('extras'):
-            for field in self.custom_fields:
-                if extra.get('key') == field[0]:
-                    log.info(':::::::::::::::Localizing custom field: %r', field[0])
-                    
-                    # Create the localized field record
-                    self.createLocField(extra, lang, pkg_dict.get('id'))
+        # During the harvest the get_lang() is not defined
+        if get_lang():
+            lang = get_lang()[0]
+            
+            for extra in pkg_dict.get('extras'):
+                for field in self.custom_fields:
+                    if extra.get('key') == field[0]:
+                        log.info(':::::::::::::::Localizing custom field: %r', field[0])
+                        
+                        # Create the localized field record
+                        self.createLocField(extra, lang, pkg_dict.get('id'))
 
     def after_update(self, context, pkg_dict):
         if not custom.custom_field_table.exists():
@@ -145,18 +147,21 @@ class PBZThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
                     log.info(':::::::::::::::Localizing custom field: %r', field[0])
                     f = custom.get_field(extra.get('key'), pkg_dict.get('id'), lang)
                     if f:
-                        if f.text != extra.get('value'):
-                            # Update the field localized value for the current language
+                        if extra.get('value') == '':
+                            f.purge()
+                        elif f.text != extra.get('value'):
+                            # Update the localized field value for the current language
                             f.text = extra.get('value')
                             f.save()
 
                             log.info('Custom field updated successfully')
-                    else:
+
+                    elif extra.get('value') != '':
                         # Create the localized field record
                         self.createLocField(extra, lang, pkg_dict.get('id'))
 
     def createLocField(self, extra, lang, packege_id): 
-        log.info(':::::::::::::::::::::::: %r', str(packege_id))
+        log.debug(':::::::::::::::::::::::: %r', str(packege_id))
 
         new_loc_field = custom.CustomFieldMultilang(packege_id, extra.get('key'), lang, extra.get('value'))
         custom.CustomFieldMultilang.save(new_loc_field)
