@@ -19,6 +19,8 @@ import ckanext.provbz.model.custom as custom
 
 import ckanext.pages.db as db
 
+from HTMLParser import HTMLParser
+
 
 log = logging.getLogger(__file__)
 
@@ -47,6 +49,16 @@ def parseRefDate(references):
     j = json.loads(references)
     return j
 
+
+class HTMLNewsFirstImage(HTMLParser):
+    def __init__(self):
+        HTMLParser.__init__(self)
+        self.first_image = None
+
+    def handle_starttag(self, tag, attrs):
+        if tag == 'img' and not self.first_image:
+            self.first_image = dict(attrs)['src']
+
 def get_news_preview(page):
     lang = get_lang()[0]
 
@@ -54,8 +66,31 @@ def get_news_preview(page):
 
     news_page = db.Page.get(name=page, lang=lang)
     if news_page:
-        news_page = db.table_dictize(news_page, {})
-    return news_page
+        #news_page = db.table_dictize(news_page, {})
+
+        parser = HTMLNewsFirstImage()
+        parser.feed(news_page.content)
+        img = parser.first_image
+
+        pg_row = {
+            'title': news_page.title,
+            'content': news_page.content,
+            'name': news_page.name,
+            'publish_date': news_page.publish_date,
+            'group_id': news_page.group_id,
+            'page_type': news_page.page_type,
+        }
+
+        if img:
+            pg_row['image'] = img
+
+        extras = news_page.extras
+        if extras:
+            pg_row.update(json.loads(news_page.extras))
+
+        return pg_row
+    else:
+        return None
 
 def recent_updates(n):
     #

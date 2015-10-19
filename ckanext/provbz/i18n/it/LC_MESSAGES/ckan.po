@@ -1204,7 +1204,7 @@ msgstr "Sei stato invitato su {site_title}. È già stato creato un utente per t
 #: ckan/lib/mailer.py:145 ckan/templates/user/request_reset.html:3
 #: ckan/templates/user/request_reset.html:13
 msgid "Reset your password"
-msgstr "Azzera la tua password"
+msgstr "Resetta la tua password"
 
 #: ckan/lib/mailer.py:151
 msgid "Invite for {site_title}"
@@ -4084,7 +4084,7 @@ msgstr "Home"
 
 #: ckan/templates/snippets/language_selector.html:4
 msgid "Language"
-msgstr "Linguaggio"
+msgstr "Lingua"
 
 #: ckan/templates/snippets/language_selector.html:12
 #: ckan/templates/snippets/search_form.html:41
@@ -4371,11 +4371,11 @@ msgstr "Password dimenticata?"
 
 #: ckan/templates/user/login.html:44
 msgid "No problem, use our password recovery form to reset it."
-msgstr "Nessun problema, usa la funzione di recupero password per resettarla."
+msgstr "Nessun problema, usa la funzione di resettaggio della password."
 
 #: ckan/templates/user/login.html:47
 msgid "Forgot your password?"
-msgstr "Hai dimenticato la password?"
+msgstr "Resetta la password"
 
 #: ckan/templates/user/logout.html:3 ckan/templates/user/logout.html:9
 msgid "Logged Out"
@@ -4494,7 +4494,7 @@ msgstr "Azzeramento password"
 
 #: ckan/templates/user/request_reset.html:19
 msgid "Request reset"
-msgstr "Richiedi azzeramento"
+msgstr "Invia la richiesta"
 
 #: ckan/templates/user/request_reset.html:34
 msgid ""
@@ -4879,7 +4879,7 @@ msgstr "Realizzato con"
 
 #: templates/footer.html:125
 msgid "ACCEDI AL GEOPORTALE"
-msgstr "ACCEDI AL GEOPORTALE"
+msgstr "AREA RISERVATA"
 
 #: templates/home/layout1.html:11
 msgid "Benvenuto nella piattaforma Open Data Alto Adige"

@@ -4374,11 +4374,11 @@ msgstr "Haben Sie Ihr Kennwort vergessen?"
 
 #: ckan/templates/user/login.html:44
 msgid "No problem, use our password recovery form to reset it."
-msgstr "Kein Problem, nutze unser Formular, um dein Passwort zurückzusetzen."
+msgstr "Kein Problem, nutze die Möglichkeit dein Passwort zurückzusetzen."
 
 #: ckan/templates/user/login.html:47
 msgid "Forgot your password?"
-msgstr "Passwort vergessen?"
+msgstr "Password zurücksetzen"
 
 #: ckan/templates/user/logout.html:3 ckan/templates/user/logout.html:9
 msgid "Logged Out"
@@ -4497,13 +4497,13 @@ msgstr "Kennwort zurücksetzen"
 
 #: ckan/templates/user/request_reset.html:19
 msgid "Request reset"
-msgstr "Zurücksetzen anfordern"
+msgstr "Anforderung abschicken"
 
 #: ckan/templates/user/request_reset.html:34
 msgid ""
 "Enter your username into the box and we will send you an email with a link "
 "to enter a new password."
-msgstr "Gibt deinen Nutzernamen in das Feld ein und wir senden dir eine E-Mail mit einem Link um ein neues Passwort zu setzen."
+msgstr "Gibt deinen Benutzernamen in das Feld ein und wir senden dir eine E-Mail mit einem Link um ein neues Passwort zu setzen."
 
 #: ckan/templates/user/snippets/followee_dropdown.html:14
 #: ckan/templates/user/snippets/followee_dropdown.html:15
@@ -4883,7 +4883,7 @@ msgstr "realisiert mit"
 
 #: templates/footer.html:125
 msgid "ACCEDI AL GEOPORTALE"
-msgstr "Zugriff auf das GeoPortal"
+msgstr "ZUGANGSGESCHÜTZER BEREICH"
 
 #: templates/home/layout1.html:11
 msgid "Benvenuto nella piattaforma Open Data Alto Adige"
@@ -5010,7 +5010,7 @@ msgid "Geocatalogo"
 msgstr "Geokatalog"
 
 msgid "Contattaci"
-msgstr "Berührung"
+msgstr "Kontaktieren Sie uns"
 
 msgid "Holder"
 msgstr "Inhaber der Daten"
