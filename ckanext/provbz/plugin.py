@@ -120,8 +120,8 @@ class PBZThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
         return route_map
 
     def after_create(self, context, pkg_dict):
-        if not custom.custom_field_table.exists():
-            custom.init_db()
+        #if not custom.custom_field_table.exists():
+        #    custom.init_db()
 
         # During the harvest the get_lang() is not defined
         if get_lang():
@@ -136,8 +136,8 @@ class PBZThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
                         self.createLocField(extra, lang, pkg_dict.get('id'))
 
     def after_update(self, context, pkg_dict):
-        if not custom.custom_field_table.exists():
-            custom.init_db()
+        #if not custom.custom_field_table.exists():
+        #    custom.init_db()
 
         lang = get_lang()[0]
         
