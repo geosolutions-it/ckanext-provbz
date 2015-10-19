@@ -38,17 +38,21 @@ To install ckanext-provbz:
 
 5. python setup.py develop
 
-6. Add ``provbz_theme``  and ``provbz_harvester`` to the ``ckan.plugins`` setting in your CKAN
+6. Initilize the provbz additional DB table for custom metadata fields:
+
+	    paster --plugin=ckanext-provbz provbzdb initdb --config=/etc/ckan/default/production.ini
+
+7. Add ``provbz_theme``  and ``provbz_harvester`` to the ``ckan.plugins`` setting in your CKAN
    config file (by default the config file is located at
    ``/etc/ckan/default/production.ini``).
 
-7. The ckanext-provbz extension provides some updates for the i18n files for 'it' and 'de' languages. Locale files in CKAN (.mo and .po) for these languages must be replaced with files located in this extension at the ckanext-provbz/ckanext/provbz/i18n/ path.
+8. The ckanext-provbz extension provides some updates for the i18n files for 'it' and 'de' languages. Locale files in CKAN (.mo and .po) for these languages must be replaced with files located in this extension at the ckanext-provbz/ckanext/provbz/i18n/ path.
 
-8. Update the production.ini configuration finding the default property ``licenses_group_url`` and change the value:
+9. Update the production.ini configuration finding the default property ``licenses_group_url`` and change the value:
 
-     licenses_group_url = file:///usr/lib/ckan/default/src/ckanext-provbz/ckanext/provbz/licenses/ckan.json
+         licenses_group_url = file:///usr/lib/ckan/default/src/ckanext-provbz/ckanext/provbz/licenses/ckan.json
 
-9. Restart CKAN.
+10. Restart CKAN.
 
 ----------------------
 Harvest Configuration
