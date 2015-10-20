@@ -7,6 +7,9 @@ class PROVBZController(base.BaseController):
     def provbzprivacy(self):
         return base.render('home/privacy.html')
 
+    def provbzcookie(self):
+        return base.render('home/cookie.html')
+
     def provbzlegal(self):
         return base.render('home/legal.html')
 

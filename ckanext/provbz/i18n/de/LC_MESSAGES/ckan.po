@@ -4374,7 +4374,7 @@ msgstr "Haben Sie Ihr Kennwort vergessen?"
 
 #: ckan/templates/user/login.html:44
 msgid "No problem, use our password recovery form to reset it."
-msgstr "Kein Problem, nutze die Möglichkeit dein Passwort zurückzusetzen."
+msgstr "Kein Problem, nutzen Sie die Möglichkeit dein Passwort zurückzusetzen."
 
 #: ckan/templates/user/login.html:47
 msgid "Forgot your password?"
@@ -4503,7 +4503,7 @@ msgstr "Anforderung abschicken"
 msgid ""
 "Enter your username into the box and we will send you an email with a link "
 "to enter a new password."
-msgstr "Gibt deinen Benutzernamen in das Feld ein und wir senden dir eine E-Mail mit einem Link um ein neues Passwort zu setzen."
+msgstr "Geben Sie Ihren Benutzernamen in das Feld ein und wir senden Ihnen eine E-Mail mit einem Link um ein neues Passwort zu setzen."
 
 #: ckan/templates/user/snippets/followee_dropdown.html:14
 #: ckan/templates/user/snippets/followee_dropdown.html:15

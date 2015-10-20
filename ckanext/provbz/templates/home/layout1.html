@@ -1,4 +1,6 @@
 
+{% set locale = h.get_locale() %}
+
 <div id="center-body">
 	<div role="main" class="hero">
 	  <div class="container">
@@ -58,6 +60,9 @@
                 </div>
               </div>
             {% endif %}
+            <a href="https://www.facebook.com/opendata.southtyrol?fref=ts" target="_blank">
+              <img style="margin-bottom: 20px;" class="news-object" src="{{h.url_for_static('/images/fb_' + locale +  '.png')}}" alt="..." width="200px" height="80px" />
+            </a>
           </div>
       </div>
     </div>
