@@ -67,7 +67,7 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
             import ckan.logic.action.get as _license
             license_list = _license.license_list({'model': model, 'session': Session, 'user': 'harvest'}, {})
             for license in license_list:
-                if use_constraints == str(license.get('id')) or use_constraints == str(license.get('url')):
+                if use_constraints == str(license.get('id')) or use_constraints == str(license.get('url')) or (str(license.get('id')) in use_constraints.lower()):
                     ckan_license = license
                     break
 

@@ -1897,15 +1897,15 @@ msgstr "Open Data Commons Open Database License (ODbL)"
 
 #: ckan/model/license.py:250
 msgid "Open Data Commons Attribution License"
-msgstr "Open Data Commons Attribution License"
+msgstr "Open Data Commons CC-BY"
 
 #: ckan/model/license.py:261
 msgid "Creative Commons CCZero"
-msgstr "Creative Commons CCZero"
+msgstr "Creative Commons CC0"
 
 #: ckan/model/license.py:270
 msgid "Creative Commons Attribution"
-msgstr "Creative Commons Attribution"
+msgstr "Creative Commons CC-BY"
 
 #: ckan/model/license.py:280
 msgid "Creative Commons Attribution Share-Alike"
@@ -4895,7 +4895,7 @@ msgstr "Zugang zu Datensätzen"
 
 #: templates/home/layout1.html:32
 msgid "Cosa sono gli OPENdata?"
-msgstr "Was sind Open Data"
+msgstr "Was sind Open Data?"
 
 #: templates/home/layout1.html:38
 msgid "Leggi tutto"
@@ -5043,7 +5043,7 @@ msgid "Encoding"
 msgstr "Zeichenkodierung"
 
 msgid "Leggi tutto il contenuto"
-msgstr "Lesen Sie sich die Inhalte"
+msgstr "Lesen Sie alle Inhalte"
 
 msgid "Metadata di default"
 msgstr "Metadaten-Standard"
@@ -5108,16 +5108,16 @@ msgstr "einmalig"
 ## ----------------testo cosa sono gli opendata------------------ ##
 
 msgid "Per dati si intendono pezzi di singola informazione di varia natura, che descrivono fatti riproducibili senza ambiguità e che possono essere espressi e archiviati in formati digitali. Il Codice dell'Amministrazione Digitale (art. 68, c. 3, lett. b) definisce dati aperti i dati che presentano le seguenti caratteristiche:"
-msgstr "Die Daten beziehen sich auf die einzelnen Informationen verschiedener Art, beschreibt eindeutig reproduzierbaren Fakten und dass zum Ausdruck gebracht und in digitalen Formaten gespeichert werden können. (... Kunst 68, c 3, Buchstabe B) Die Digitale Verwaltung Kodex definiert Daten öffnen Sie die Daten, die die folgenden Eigenschaften aufweisen:"
+msgstr "Daten sind einzelne Informationen unterschiedlicher Art, die eindeutig reproduzierbare Fakten beschreiben und zum Ausdruck bringen und in digitaler Form gespeichert werden können. Der Kodex der Digitalen Verwaltung (Art. 68, Abs. 3.b) definiert offene Daten wie folgt:"
 
 msgid "sono disponibili secondo i termini di una licenza che ne permetta l'utilizzo da parte di chiunque, anche per finalità commerciali, in formato disaggregato"
-msgstr "sind unter den Bedingungen der Lizenz, die ihre Verwendung von jedermann, auch für kommerzielle Zwecke, in aufgeschlüsselten Format"
+msgstr "sie stehen gemäß den Bedingungen einer Lizenz zur Verfügung, die ihre freie Verwendung erlaubt, auch für kommerzielle Zwecke, in aufgeschlüsselter Form,"
 
 msgid "sono accessibili attraverso le tecnologie dell'informazione e della comunicazione, ivi comprese le reti telematiche pubbliche e private, in formati aperti ai sensi della lettera a), sono adatti all'utilizzo automatico da parte di programmi per elaboratori e sono provvisti dei relativi metadati"
-msgstr "Sie sind durch die Informations- und Kommunikationstechnologie zu erreichen, einschließlich Computer-Netzwerken von öffentlichen und privaten, in offenen Formaten in Übereinstimmung mit Buchstabe a), sind für die Verwendung durch automatisierte Computerprogramme und sind mit ihren Metadaten bereitgestellt"
+msgstr "sie sind mittels Informations- und Kommunikationstechnologien zu erreichen, einschließlich öffentlicher und privater Computer-Netzwerke, in offener Form in Übereinstimmung mit Abs. a), sie sind für die Verwendung durch automatisierte Computerprogramme geeignet und sind mit den entsprechenden Metadaten ausgerüstet,"
 
 msgid "sono resi disponibili gratuitamente attraverso le tecnologie dell'informazione e della comunicazione, ivi comprese le reti telematiche pubbliche e private, oppure sono resi disponibili ai costi marginali sostenuti per la loro riproduzione e divulgazione"
-msgstr "Sie werden kostenlos zur Verfügung durch die Informations- und Kommunikationstechnologien, einschließlich Computer-Netzwerken von öffentlichen und privaten, oder auf die Grenzkosten für die Reproduktion und Verbreitung entstehen zur Verfügung gestellt werden"
+msgstr "sie stehen kostenlos durch die Informations- und Kommunikationstechnologien zur Verfügung, einschließlich öffentlicher und privater Computer-Netzwerke, oder sie werden für ihre Reproduktion und Verbreitung als Nebenkosten  zur Verfügung gestellt."
 
 # -------- shibbolet plugin ------------#
 

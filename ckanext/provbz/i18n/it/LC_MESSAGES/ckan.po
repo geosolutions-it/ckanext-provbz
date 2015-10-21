@@ -1894,15 +1894,15 @@ msgstr "Open Data Commons Open Database License (ODbL)"
 
 #: ckan/model/license.py:250
 msgid "Open Data Commons Attribution License"
-msgstr "Open Data Commons Attribution License"
+msgstr "Open Data Commons CC-BY"
 
 #: ckan/model/license.py:261
 msgid "Creative Commons CCZero"
-msgstr "Creative Commons CCZero"
+msgstr "Creative Commons CC0"
 
 #: ckan/model/license.py:270
 msgid "Creative Commons Attribution"
-msgstr "Creative Commons Attribuzione"
+msgstr "Creative Commons CC-BY"
 
 #: ckan/model/license.py:280
 msgid "Creative Commons Attribution Share-Alike"
