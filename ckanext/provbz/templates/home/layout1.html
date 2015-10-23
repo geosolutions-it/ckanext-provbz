@@ -31,11 +31,14 @@
                   {% trans %}Ultime News{% endtrans %}
                 </h2>
                 {% set locale = h.get_locale() %}
-                <h3 class="news-heading"><a href={{ h.getLocalizedPageLink('pages/news') }}>{% trans %}Leggi tutto il contenuto{% endtrans %}</a></h3>        
                 <div class="news">  
                   <!--img class="news-object" src="{{h.url_for_static('/images/news-img.jpg')}}" alt="..."-->  
                   {% if news_page.image %}
                     <img class="news-object"  src="{{ news_page.image }}" />
+                  {% endif %}
+
+                  {% if news_page.title %}
+                    <h4>{{ news_page.title }}</h4>
                   {% endif %}
 
                   {% if news_page.publish_date %}
@@ -58,10 +61,13 @@
                     </p>
                   </div-->
                 </div>
+                <div id="alltextlink" align="right">
+                  <h3 class="news-heading"><a href={{ h.getLocalizedPageLink('pages/news') }}>{% trans %}Leggi tutto il contenuto{% endtrans %}</a></h3>
+                </div>                       
               </div>
             {% endif %}
             <a href="https://www.facebook.com/opendata.southtyrol?fref=ts" target="_blank">
-              <img style="margin-bottom: 20px;" class="news-object" src="{{h.url_for_static('/images/fb_' + locale +  '.png')}}" alt="..." width="200px" height="80px" />
+              <img style="margin-bottom: 20px;" class="news-object" src="{{h.url_for_static('/images/fb_' + locale +  '.png')}}" alt="..." />
             </a>
           </div>
       </div>
