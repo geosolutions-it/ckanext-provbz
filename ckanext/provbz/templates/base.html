@@ -6,6 +6,12 @@
   {#% block meta_viewport %}<meta name="viewport" content="width=device-width, initial-scale=1.0">{% endblock %#}
 {%- endblock -%}
 
+<title>
+  {%- block title -%}
+    {% trans %}Portale OpenData Bolzano{% endtrans %}
+  {%- endblock -%}
+</title>
+
 {% block styles %}
    {{ super() }}
    <link rel="stylesheet" href="/css/provbz.css" type="text/css">

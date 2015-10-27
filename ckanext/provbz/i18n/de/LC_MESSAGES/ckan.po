@@ -292,7 +292,7 @@ msgstr "Organisationen"
 #: ckan/templates/package/read_base.html:25
 #: ckan/templates/revision/diff.html:16 ckan/templates/revision/read.html:84
 msgid "Groups"
-msgstr "Gruppen"
+msgstr "Kategorien"
 
 #: ckan/controllers/group.py:293 ckan/controllers/home.py:72
 #: ckan/controllers/package.py:243 ckan/lib/helpers.py:699
@@ -1668,7 +1668,7 @@ msgstr "Benutzer %s hat keine Berechtigung Pakete zu bearbeiten"
 #: ckan/logic/auth/create.py:29 ckan/logic/auth/update.py:43
 #, python-format
 msgid "User %s not authorized to edit these groups"
-msgstr "Benutzer %s hat keine Berechtigung diese Gruppen zu bearbeiten"
+msgstr "Benutzer %s hat keine Berechtigung diese Kategorien zu bearbeiten"
 
 #: ckan/logic/auth/create.py:36
 #, python-format
@@ -1705,7 +1705,7 @@ msgstr "Benutzer %s hat keine Berechtigung diese Pakete zu bearbeiten"
 #: ckan/logic/auth/create.py:135
 #, python-format
 msgid "User %s not authorized to create groups"
-msgstr "Benutzer %s hat keine Berechtigung Gruppen zu bearbeiten"
+msgstr "Benutzer %s hat keine Berechtigung Kategorien zu bearbeiten"
 
 #: ckan/logic/auth/create.py:145
 #, python-format
@@ -1763,7 +1763,7 @@ msgstr "Benutzer %s hat keine Berechtigung die Beziehung %s zu löschen"
 #: ckan/logic/auth/delete.py:100
 #, python-format
 msgid "User %s not authorized to delete groups"
-msgstr "Benutzer %s hat keine Berechtigung Gruppen zu löschen"
+msgstr "Benutzer %s hat keine Berechtigung Kategorien zu löschen"
 
 #: ckan/logic/auth/delete.py:104
 #, python-format
@@ -2559,7 +2559,7 @@ msgstr "Füge eine Gruppe hinzu"
 
 #: ckan/templates/group/base_form_page.html:11
 msgid "Group Form"
-msgstr "Gruppen-Formular"
+msgstr "Kategorien-Formular"
 
 #: ckan/templates/group/confirm_delete.html:3
 #: ckan/templates/group/confirm_delete.html:15
@@ -2661,7 +2661,7 @@ msgstr "Name absteigend"
 
 #: ckan/templates/group/index.html:29
 msgid "There are currently no groups for this site"
-msgstr "Es gibt momentan keine Gruppen für diese Seite"
+msgstr "Es gibt momentan keine Kategorien für diese Seite"
 
 #: ckan/templates/group/index.html:31
 #: ckan/templates/organization/index.html:31
@@ -2758,7 +2758,7 @@ msgid ""
 " <p><strong>Admin:</strong> Can edit group information, as well as manage "
 "organization members.</p> <p><strong>Member:</strong> Can add/remove "
 "datasets from groups</p> "
-msgstr " <p><strong>Admin:</strong> Kann Gruppen-Informationen und Organisationsmitglieder verwalten.</p> <p><strong>Member:</strong> Kann Datensätze von Gruppen hinzufügen und entfernen.</p> "
+msgstr " <p><strong>Admin:</strong> Kann Kategorien-Informationen und Organisationsmitglieder verwalten.</p> <p><strong>Member:</strong> Kann Datensätze von Kategorien hinzufügen und entfernen.</p> "
 
 #: ckan/templates/group/new.html:3 ckan/templates/group/new.html:5
 #: ckan/templates/group/new.html:7
@@ -2875,7 +2875,7 @@ msgstr "Datensatz aus dieser Gruppe entfernen"
 
 #: ckan/templates/group/snippets/helper.html:4
 msgid "What are Groups?"
-msgstr "Was sind Gruppen?"
+msgstr "Was sind Kategorien?"
 
 #: ckan/templates/group/snippets/helper.html:8
 msgid ""
@@ -2883,7 +2883,7 @@ msgid ""
 "could be to catalogue datasets for a particular project or team, or on a "
 "particular theme, or as a very simple way to help people find and search "
 "your own published datasets. "
-msgstr "Sie können mit CKAN Gruppen Datensätze erstellen und verwalten. Damit können Datensätze für ein bestimmtes Projekt, ein Team oder zu einem bestimmten Thema katalogisiert oder sehr leicht die eigenen veröffentlichten Datensätze anderen Leuten zugänglich gemacht werden."
+msgstr "Sie können mit CKAN Kategorien Datensätze erstellen und verwalten. Damit können Datensätze für ein bestimmtes Projekt, ein Team oder zu einem bestimmten Thema katalogisiert oder sehr leicht die eigenen veröffentlichten Datensätze anderen Leuten zugänglich gemacht werden."
 
 #: ckan/templates/group/snippets/history_revisions.html:10
 #: ckan/templates/package/snippets/history_revisions.html:10
@@ -3015,7 +3015,7 @@ msgstr "Gruppe"
 
 #: ckan/templates/home/snippets/stats.html:23
 msgid "groups"
-msgstr "Gruppen"
+msgstr "Kategorien"
 
 #: ckan/templates/home/snippets/stats.html:29
 msgid "related item"
@@ -3206,7 +3206,7 @@ msgid ""
 " CKAN Organizations are used to create, manage and publish collections of "
 "datasets. Users can have different roles within an Organization, depending "
 "on their level of authorisation to create, edit and publish. "
-msgstr "Mit CKAN Organisationen können Gruppen von Datensätzen erstellt, bearbeitet und veröffentlicht werden. Benutzer haben verschiedene Berechtigungen innerhalb von Organisationen, die von ihrer Berechtigungsstufe abhängen: erstellen, bearbeiten, veröffentlichen."
+msgstr "Mit CKAN Organisationen können Kategorien von Datensätzen erstellt, bearbeitet und veröffentlicht werden. Benutzer haben verschiedene Berechtigungen innerhalb von Organisationen, die von ihrer Berechtigungsstufe abhängen: erstellen, bearbeiten, veröffentlichen."
 
 #: ckan/templates/organization/snippets/organization_form.html:10
 msgid "My Organization"
@@ -3296,7 +3296,7 @@ msgstr "Zu einer Gruppe hinzufügen"
 
 #: ckan/templates/package/group_list.html:23
 msgid "There are no groups associated with this dataset"
-msgstr "Es gibt keine Gruppen, die mit diesem Datensatz verbunden sind"
+msgstr "Es gibt keine Kategorien, die mit diesem Datensatz verbunden sind"
 
 #: ckan/templates/package/new_package_form.html:15
 msgid "Update Dataset"
@@ -4166,21 +4166,21 @@ msgstr "Keine Datensätze gefunden"
 msgid "{number} group found for \"{query}\""
 msgid_plural "{number} groups found for \"{query}\""
 msgstr[0] "{number} Gruppe gefunden für \"{query}\""
-msgstr[1] "{number} Gruppen gefunden für \"{query}\""
+msgstr[1] "{number} Kategorien gefunden für \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:22
 msgid "No groups found for \"{query}\""
-msgstr "Keine Gruppen gefunden bei der Suche nach \"{query}\""
+msgstr "Keine Kategorien gefunden bei der Suche nach \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:23
 msgid "{number} group found"
 msgid_plural "{number} groups found"
 msgstr[0] "{number} Gruppe gefunden"
-msgstr[1] "{number} Gruppen gefunden"
+msgstr[1] "{number} Kategorien gefunden"
 
 #: ckan/templates/snippets/search_result_text.html:24
 msgid "No groups found"
-msgstr "Keine Gruppen gefunden"
+msgstr "Keine Kategorien gefunden"
 
 #: ckan/templates/snippets/search_result_text.html:27
 msgid "{number} organization found for \"{query}\""
@@ -4247,7 +4247,7 @@ msgstr "Meine Organisationen"
 #: ckan/templates/user/dashboard.html:22
 #: ckan/templates/user/dashboard_groups.html:12
 msgid "My Groups"
-msgstr "Meine Gruppen"
+msgstr "Meine Kategorien"
 
 #: ckan/templates/user/dashboard.html:39
 msgid "Activity from items that I'm following"
@@ -4427,7 +4427,7 @@ msgstr "Warum registrieren?"
 
 #: ckan/templates/user/new.html:28
 msgid "Create datasets, groups and other exciting things"
-msgstr "Erstelle Datensätze, Gruppen und mehr spannende Dinge"
+msgstr "Erstelle Datensätze, Kategorien und mehr spannende Dinge"
 
 #: ckan/templates/user/new_user_form.html:5
 msgid "username"
@@ -4497,7 +4497,7 @@ msgstr "Kennwort zurücksetzen"
 
 #: ckan/templates/user/request_reset.html:19
 msgid "Request reset"
-msgstr "Anforderung abschicken"
+msgstr "Abschicken"
 
 #: ckan/templates/user/request_reset.html:34
 msgid ""
@@ -4752,7 +4752,7 @@ msgstr "Keine bearbeiteten Datensätze"
 #: ckanext/stats/templates/ckanext/stats/index.html:182
 #: ckanext/stats/templates_legacy/ckanext/stats/index.html:80
 msgid "Largest Groups"
-msgstr "Größte Gruppen"
+msgstr "Größte Kategorien"
 
 #: ckanext/stats/templates/ckanext/stats/index.html:114
 #: ckanext/stats/templates_legacy/ckanext/stats/index.html:82
@@ -4761,7 +4761,7 @@ msgstr "Zahl der Datensätze"
 
 #: ckanext/stats/templates/ckanext/stats/index.html:127
 msgid "No groups"
-msgstr "Keine Gruppen"
+msgstr "Keine Kategorien"
 
 #: ckanext/stats/templates/ckanext/stats/index.html:132
 #: ckanext/stats/templates/ckanext/stats/index.html:183
@@ -4859,7 +4859,7 @@ msgstr "Informationen Open Data Südtirol"
 
 #: templates/footer.html:19
 msgid "Domande frequenti"
-msgstr "häufige gestellte Fragen" 
+msgstr "häufig gestellte Fragen" 
 
 #: templates/footer.html:25
 msgid "Atom Feed"
@@ -5104,6 +5104,21 @@ msgstr "dauer"
 
 msgid "una tantum"
 msgstr "einmalig"
+
+msgid "decennale"
+msgstr "decennial"
+
+msgid "quartale"
+msgstr "vierjahres"
+
+msgid "stagionale"
+msgstr "saisonal"
+
+msgid "non programmato"
+msgstr "unprogrammierten"
+
+msgid "Portale OpenData Bolzano"
+msgstr "Open Data Portal Bozen"
 
 ## ----------------testo cosa sono gli opendata------------------ ##
 

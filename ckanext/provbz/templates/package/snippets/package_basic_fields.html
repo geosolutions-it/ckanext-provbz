@@ -20,7 +20,7 @@
   {{ form.input('publication_date', label=_('Publication Date'), id='field-publication_date', placeholder=_('Publication Date'), value=publication_date or data.publication_date, error=errors.publication_date, classes=['control-medium']) }}
 
   {% set update_type = h.getLocalizedFieldValue('update_type', data) %}
-  {{ form.select('update_type', label=_('Update Type'), options=[{'name':"annuale", 'value': _('annuale')},{'name': "mensile", 'value': _('mensile')},{'name': "settimanale", 'value': _('settimanale')},{'name': "giornaliero", 'value': _('giornaliero')},{'name': "continuo", 'value': _('continuo')},{'name': "una tantum", 'value': _('una tantum')}], selected=update_type or data.update_type, error=errors.update_type) }}
+  {{ form.select('update_type', label=_('Update Type'), options=[{'name':"decennale", 'value': _('decennale')},{'name':"quartale", 'value': _('quartale')},{'name':"stagionale", 'value': _('stagionale')}, {'name':"annuale", 'value': _('annuale')},{'name': "mensile", 'value': _('mensile')},{'name': "settimanale", 'value': _('settimanale')},{'name': "giornaliero", 'value': _('giornaliero')},{'name': "continuo", 'value': _('continuo')},{'name': "una tantum", 'value': _('una tantum')},{'name': "non programmato", 'value': _('non programmato')}], selected=update_type or data.update_type or 'annuale', error=errors.update_type) }}
 
   {% set update_text = h.getLocalizedFieldValue('update_text', data) %}
   {{ form.input('update_text', label=_('Update Text'), id='field-update_text', placeholder=_('Update Text'), value=update_text or data.update_text, error=errors.update_text, classes=['control-medium']) }}

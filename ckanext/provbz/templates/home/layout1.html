@@ -43,7 +43,7 @@
 
                   {% if news_page.publish_date %}
                   <h3 class="dataset-heading">  
-                    <small class="date"> {{ h.render_datetime(news_page.publish_date) }} </small>
+                    <small class="date"> {{ h.render_datetime(news_page.publish_date, date_format='%d/%m/%Y') }} </small>
                   </h3>
                   {% endif %}
 

@@ -24,7 +24,8 @@
   		  <a class="btn-ck btn-block" href="{% url_for controller='package', action='search', tags=tag.name %}" title="{{ tag.display_name }}">{{ h.truncate(tag.display_name, 16) }}</a>
   		</div-->
         <!--a role="button" class="btn btn-primary small" href="{% url_for controller='package', action='search', tags=tag.name %}" title="{{ tag.display_name }}">{{ tag.display_name }}</a-->
-        <a role="button" class="btn-ck" href="{% url_for controller='package', action='search', tags=tag.name %}" title="{{ tag.display_name }}">{{ h.truncate(tag.display_name, 50) }}</a>
+        {% set localized_tag_name = h.getLocalizedTagName(tag.name) %}
+        <a role="button" class="btn-ck" href="{% url_for controller='package', action='search', tags=tag.name %}" title="{{ localized_tag_name }}">{{ h.truncate((localized_tag_name or tag.display_name), 50) }}</a>
   	{% endfor %}	
     </div>
   </div>

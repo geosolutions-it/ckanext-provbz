@@ -13,7 +13,7 @@ import ckan.logic as logic
 from pylons import config
 
 from pylons.i18n.translation import get_lang
-from ckanext.multilang.model import PackageMultilang
+from ckanext.multilang.model import PackageMultilang, TagMultilang
 
 import ckanext.provbz.model.custom as custom
 
@@ -132,6 +132,17 @@ def getLocalizedFieldValue(field=None, pkg_dict=None):
         localized_value = custom.get_field(field, pkg_dict.get('id'), lang)
         if localized_value:
             return localized_value.text
+        else:
+            return None
+    else:
+        return None
+
+def getLocalizedTagName(tag_name=None):
+    if tag_name:
+        lang = get_lang()[0]
+        localized_tag_name = TagMultilang.by_name(tag_name, lang)
+        if localized_tag_name:
+            return localized_tag_name.text
         else:
             return None
     else:
