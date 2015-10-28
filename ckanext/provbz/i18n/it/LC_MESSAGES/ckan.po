@@ -5116,6 +5116,8 @@ msgstr "non programmato"
 msgid "Portale OpenData Bolzano"
 msgstr "Portale OpenData Bolzano"
 
+msgid "Localized Tag Name"
+msgstr "Nome Tag Localizzato"
 
 ## ----------------testo cosa sono gli opendata------------------ ##
 
