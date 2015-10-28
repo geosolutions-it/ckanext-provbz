@@ -18,3 +18,6 @@ class PROVBZController(base.BaseController):
 
     def provbzacknowledgements(self):
         return base.render('home/acknowledgements.html')
+
+    def provbzformats(self):
+        return base.render('home/formats.html')

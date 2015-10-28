@@ -1,0 +1,35 @@
+{% extends "page.html" %}
+
+{% set locale = h.get_locale() %}
+
+{% block subtitle %}
+    {% if locale == 'de' %}
+		{{ _(' Liste der Größen von offenen') }}
+	{% else %}
+		{{ _(' Lista di formati di tipo aperto') }}
+	{% endif %}
+{% endblock %}
+
+{% block breadcrumb_content %}
+    {% if locale == 'de' %}
+    	 <li class="active">{% link_for _('Liste der Größen von offenen'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzformats' %}</li>
+  	{% else %}
+		 <li class="active">{% link_for _('Lista di formati di tipo aperto'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzformats' %}</li>
+  	{% endif %}
+{% endblock %}
+
+{% block primary %}
+  <article class="module">
+    <div class="module-content">
+      {% block about %}          
+          {% if locale == 'de' %}
+          	{% snippet 'home/snippets/formats_de.html' %}
+          {% else %}
+			{% snippet 'home/snippets/formats.html' %}
+          {% endif %}
+      {% endblock %}
+    </div>
+  </article>
+{% endblock %}
+
+{% block secondary %}{% endblock %}

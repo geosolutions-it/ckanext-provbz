@@ -115,6 +115,8 @@ class PBZThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
         map.connect('/faq', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzfaq')
         map.connect('/info', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzinfo')
         map.connect('/acknowledgements', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzacknowledgements')
+        map.connect('/formats', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzformats')
+        
         return map
         
     def after_map(self, route_map):
