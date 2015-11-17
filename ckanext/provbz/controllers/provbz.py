@@ -49,9 +49,7 @@ class PROVBZController(base.BaseController):
                 q = language.split(";")[1].split("=")[1]
                 locale_q_pairs.append((locale, q))
 
-        log.debug('Locale Q-Pairs: %r', locale_q_pairs)
-
-        json_response = {}
+        log.debug('Locale Q-Pairs: %r', locale_q_pairs)        
         
         locale_default = config.get('ckan.locale_default')
         log.debug('Ckan locale_default: %r', locale_default)
@@ -60,11 +58,24 @@ class PROVBZController(base.BaseController):
         log.debug('Ckan locale_order: %r', locales_offered)
 
         for pair in locale_q_pairs:
+            log.debug('::::::::::::::::::::::::: %r', pair[0])
             if pair[0] in locales_offered:
-                json_response["availableLocales"] = locales_offered
-                json_response["isDefaultLocale"] = (pair[0] == locale_default)
-                json_response["locale"] = pair[0]
-
+                json_response = self.build_json_response(locales_offered, pair[0], locale_default)
                 return json.dumps(json_response)
+            else:
+                ## Double check for cross-browsr compatibility
+                for locale in locales_offered:
+                    if locale in pair[0]:
+                        json_response = self.build_json_response(locales_offered, locale, locale_default)
+                        return json.dumps(json_response)
 
         return '{}'
+
+    def build_json_response(self, locales_offered, pair, locale_default):
+        json_response = {}
+
+        json_response["availableLocales"] = locales_offered
+        json_response["isDefaultLocale"] = (pair == locale_default)
+        json_response["locale"] = pair
+
+        return json_response
