@@ -4,17 +4,17 @@
 
 {% block subtitle %}
     {% if locale == 'de' %}
-		{{ _(' häufige gestellte Fragen FAQs') }}
+		{{ _(' FAQ') }}
 	{% else %}
-		{{ _(' Domande frequenti FAQs') }}
+		{{ _(' FAQ') }}
 	{% endif %}
 {% endblock %}
 
 {% block breadcrumb_content %}
     {% if locale == 'de' %}
-    	 <li class="active">{% link_for _('häufige gestellte Fragen FAQ'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzfaq' %}</li>
+    	 <li class="active">{% link_for _('FAQ'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzfaq' %}</li>
   	{% else %}
-		 <li class="active">{% link_for _('Domande frequenti FAQs'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzfaq' %}</li>
+		 <li class="active">{% link_for _('FAQ'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzfaq' %}</li>
   	{% endif %}
 {% endblock %}
 

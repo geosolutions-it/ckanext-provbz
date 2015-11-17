@@ -11,51 +11,58 @@
 				  <!--li><a href="{{ h.url_for(controller='home', action='about') }}">{{ _('About {0}').format(g.site_title) }}</a></li-->
 				  <li>
 					  <a href={{ h.getLocalizedPageLink('info') }}>
-						  <i class="icon-comment"></i>
+						  <i class="icon-comment footer_icon"></i>
 						  {% trans %}Informazioni Dati Alto Adige{% endtrans %}
 					  </a>
 				  </li>
 				  <li>
 					  <a href={{ h.getLocalizedPageLink('faq') }}>
-						  <i class="icon-question"></i>
+						  <i class="icon-question footer_icon"></i>
 						  {% trans %}Domande frequenti{% endtrans %}
 					  </a>
 				  </li>
 				  <li>
 					  <a href="/revision/list?format=atom">
-						<i class="icon-rss"></i> 
+						<i class="icon-rss footer_icon"></i> 
 						{% trans %}Atom Feed{% endtrans %}
 					  </a>
 				  </li>
 				  <li>
 					<a href={{ h.getLocalizedPageLink('acknowledgements') }}>
-					  <i class="icon-user"></i>
+					  <i class="icon-user footer_icon"></i>
 					  {% trans %}Ringraziamenti{% endtrans %}
 					</a>
 				  </li>
 				  <li>
 					<a href={{ h.getLocalizedPageLink('legal') }}>
-					  <i class="icon-legal"></i>
+					  <i class="icon-legal footer_icon"></i>
 					  {% trans %}Note legali{% endtrans %}
 					</a>
 				  </li>
 				  <li>
 					<a href={{ h.getLocalizedPageLink('privacy') }}>
-					  <i class="icon-key"></i>
+					  <i class="icon-key footer_icon"></i>
 					  {% trans %}Privacy{% endtrans %}
 					</a>
 				  </li>
 				  <li>
 					<a href="mailto:opendata@retecivica.bz.it">
-					  <i class="icon-share-alt"></i>
+					  <i class="icon-share-alt footer_icon"></i>
 					  {% trans %}Contattaci{% endtrans %}
 					</a>
 				  </li>
 				  <li>
-					<a href="http://www.provincia.bz.it/{{ locale }}/cookie.asp" target="_blank">
-					  <i class="icon-bullseye"></i>
-					  {% trans %}Cookie{% endtrans %}
-					</a>
+					{% if locale == 'de' %}
+						<a href="http://www.buergernetz.bz.it/de/cookie.asp" target="_blank">
+						  <i class="icon-bullseye footer_icon"></i>
+						  {% trans %}Cookie{% endtrans %}
+						</a>
+					{% else %}
+						<a href="http://www.retecivica.bz.it/it/cookie.asp" target="_blank">
+						  <i class="icon-bullseye footer_icon"></i>
+						  {% trans %}Cookie{% endtrans %}
+						</a>
+					{% endif %}
 				  </li>
 				{% endblock %}
 			  </ul>

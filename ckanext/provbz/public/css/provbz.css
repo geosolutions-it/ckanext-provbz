@@ -505,7 +505,7 @@ body {
 .news .news-object {
     width: 150px;
     margin: 5px 10px 0px 0px;
-    float: left;
+    /*float: left;*/
 }
 
 .news .news-heading {
@@ -570,4 +570,21 @@ body {
 
 #alltextlink h3{
     width: 190px;
+}
+
+.format_th{
+    width: 150px;
+}
+
+.faq_index{
+    text-decoration: underline;
+}
+
+a .footer_icon{
+    display: inline-flex;
+    width: 15px;
+}
+
+.pbz-media-heading{
+    width: 160px;
 }

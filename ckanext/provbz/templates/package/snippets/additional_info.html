@@ -153,13 +153,15 @@
         {% if pkg_dict.metadata_modified %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Last Updated") }}</th>
-            <td class="dataset-details">{{ h.render_datetime(pkg_dict.metadata_modified, with_hours=True) }}</td>
+            {% set hour_str = " " + _('hour') + " " %}
+            <td class="dataset-details">{{ h.render_datetime(pkg_dict.metadata_modified, with_hours=True).replace(", ", "," + hour_str) }}</td>
           </tr>
         {% endif %}
         {% if pkg_dict.metadata_created %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Created") }}</th>
-            <td class="dataset-details">{{ h.render_datetime(pkg_dict.metadata_created, with_hours=True) }}</td>
+            {% set hour_str = " " + _('hour') + " " %}
+            <td class="dataset-details">{{ h.render_datetime(pkg_dict.metadata_created, with_hours=True).replace(", ", "," + hour_str) }}</td>
           </tr>
         {% endif %}
 

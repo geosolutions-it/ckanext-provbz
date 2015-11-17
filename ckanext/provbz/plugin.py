@@ -48,6 +48,8 @@ class PBZThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
         # that CKAN will use this plugin's custom static files.
         toolkit.add_public_directory(config, 'public')
 
+        toolkit.add_resource('public/base', 'ckanext-provbz')
+
     def _modify_package_schema(self, schema):
         for field in self.custom_fields:
             schema.update({
@@ -116,6 +118,9 @@ class PBZThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
         map.connect('/info', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzinfo')
         map.connect('/acknowledgements', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzacknowledgements')
         map.connect('/formats', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzformats')
+        
+        ## Used as utility end-point to manage cookies messages and the automatic locale setting
+        map.connect('/loc_status', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='status')
         
         return map
         

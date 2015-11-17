@@ -4,17 +4,17 @@
 
 {% block subtitle %}
     {% if locale == 'de' %}
-		{{ _(' Informationen zu den Open Data in Südtirol') }}
+		{{ _(' Über uns') }}
 	{% else %}
-		{{ _(' Informazioni Open data Alto Adige') }}
+		{{ _(' Informazioni') }}
 	{% endif %}
 {% endblock %}
 
 {% block breadcrumb_content %}
     {% if locale == 'de' %}
-    	<li class="active">{% link_for _(' Informationen zu den Open Data in Südtirol'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzinfo' %}</li>
+    	<li class="active">{% link_for _(' Über uns'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzinfo' %}</li>
   	{% else %}
-		<li class="active">{% link_for _(' Informazioni Open data Alto Adige'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzinfo' %}</li>
+		<li class="active">{% link_for _(' Informazioni'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzinfo' %}</li>
   	{% endif %}
 {% endblock %}
 

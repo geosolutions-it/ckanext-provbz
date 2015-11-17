@@ -33,14 +33,15 @@
                 {% set locale = h.get_locale() %}
                 <div class="news">  
                   <!--img class="news-object" src="{{h.url_for_static('/images/news-img.jpg')}}" alt="..."-->  
-                  {% if news_page.image %}
-                    <img class="news-object"  src="{{ news_page.image }}" />
-                  {% endif %}
 
                   {% if news_page.title %}
                     <h4>{{ news_page.title }}</h4>
                   {% endif %}
 
+                  {% if news_page.image %}
+                    <img class="news-object"  src="{{ news_page.image }}" />
+                  {% endif %}
+                  <br/>
                   {% if news_page.publish_date %}
                   <h3 class="dataset-heading">  
                     <small class="date"> {{ h.render_datetime(news_page.publish_date, date_format='%d/%m/%Y') }} </small>
@@ -100,12 +101,22 @@
 	<div class="container container-home">
 	  <div class="row">
 		<div class="logos row">
-		  <a href="http://www.provincia.bz.it">
-			<img src="{{h.url_for_static('/images/logo/logo_pr.png')}}" alt="Provincia autonoma di Bolzano" class="img-responsive pr_bz">
+		  <a href="http://www.provincia.bz.it/{{ locale }}/" target="_blank">
+			 <img src="{{h.url_for_static('/images/logo/logo_pr.png')}}" alt="Provincia autonoma di Bolzano" class="img-responsive pr_bz" height="45">
 		  </a>
-		  <a href="http://www.gvcc.net">
-			<img src="{{h.url_for_static('/images/logo/logo_cc.png')}}" alt="Consorzio dei Comuni di Bolzano" class="img-responsive consorzio_comuni">
+      {% if locale == 'de' %}
+		    <a href="http://www.gvcc.net/system/web/default.aspx?menuonr=218264968" target="_blank">
+      {% else %}
+        <a href="http://www.gvcc.net" target="_blank">
+      {% endif %}
+			 <img src="{{h.url_for_static('/images/logo/logo_cc.png')}}" alt="Consorzio dei Comuni di Bolzano" class="img-responsive consorzio_comuni" height="45">
 		  </a>
+      <a href="http://www.eurac.edu/{{ locale }}/pages/default.aspx" target="_blank">
+       <img src="{{h.url_for_static('/images/logo/logo_EURAC.jpg')}}" alt="EURAC Research" class="img-responsive consorzio_comuni" height="45">
+      </a>
+      <a href="http://www.sasabz.it/{{ locale }}/" target="_blank">
+       <img src="{{h.url_for_static('/images/logo/logo_SASA.gif')}}" alt="SASA Bus" class="img-responsive consorzio_comuni" height="45">
+      </a>
 		</div>
 	  </div>
 	</div>

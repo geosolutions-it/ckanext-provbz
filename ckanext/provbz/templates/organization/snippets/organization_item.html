@@ -19,7 +19,7 @@ Example:
     <img src="{{ organization.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}" alt="{{ organization.name }}" class="media-image">
   {% endblock %}
   {% block title %}
-    <h3 class="media-heading">{{ organization.display_name }}</h3>
+    <h3 class="media-heading pbz-media-heading">{{ organization.display_name }}</h3>
   {% endblock %}
   {% block description %}
     {% if organization.description %}

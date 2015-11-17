@@ -4859,7 +4859,7 @@ msgstr "Informationen Open Data Südtirol"
 
 #: templates/footer.html:19
 msgid "Domande frequenti"
-msgstr "häufig gestellte Fragen" 
+msgstr "Häufig gestellte Fragen" 
 
 #: templates/footer.html:25
 msgid "Atom Feed"
@@ -4883,7 +4883,7 @@ msgstr "realisiert mit"
 
 #: templates/footer.html:125
 msgid "ACCEDI AL GEOPORTALE"
-msgstr "ZUGANGSGESCHÜTZER BEREICH"
+msgstr "GESCHÜTZER BEREICH"
 
 #: templates/home/layout1.html:11
 msgid "Benvenuto nella piattaforma Open Data Alto Adige"
@@ -4903,7 +4903,7 @@ msgstr "alles lesen"
 
 #: templates/home/snippets/search.html:2
 msgid "Trova i dati che ti interessano"
-msgstr "finden Sie die Daten, die Sie interessieren"
+msgstr "Finden Sie die Daten, die Sie interessieren"
 
 #: templates/home/snippets/search.html:5
 msgid "Cerca i dati e ottieni gli aggiornamenti per i dataset e le categorie a cui sei interessato"
@@ -5122,6 +5122,9 @@ msgstr "Open Data Portal Bozen"
 
 msgid "Localized Tag Name"
 msgstr "Lokalisierte Name Tag"
+
+msgid "hour"
+msgstr "uhr"
 
 ## ----------------testo cosa sono gli opendata------------------ ##
 
