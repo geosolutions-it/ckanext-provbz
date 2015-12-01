@@ -1,33 +1,39 @@
 {% ckan_extends %}
 
+{% set locale = h.get_locale() %}
+
 {% block package_basic_fields_custom %}
   {% set holder = h.getLocalizedFieldValue('holder', data) %}
   {{ form.input('holder', label=_('Holder'), id='field-holder', placeholder=_('Holder'), value=holder or data.holder, error=errors.holder, classes=['control-medium']) }}
-   
-  {% set sector = h.getLocalizedFieldValue('sector', data) %}
-  {{ form.input('sector', label=_('Sector'), id='field-sector', placeholder=_('Sector'), value=sector or data.sector, error=errors.sector, classes=['control-medium']) }}
-
-  {% set temporal_coverage = h.getLocalizedFieldValue('temporal_coverage', data) %}
-  {{ form.input('temporal_coverage', label=_('Temporal Coverage'), id='field-temporal_coverage', placeholder=_('Temporal Coverage'), value=temporal_coverage or data.temporal_coverage, error=errors.temporal_coverage, classes=['control-medium']) }}
 
   {% set geographical_coverage = h.getLocalizedFieldValue('geographical_coverage', data) %}
-  {{ form.input('geographical_coverage', label=_('Geographical Coverage'), id='field-geographical_coverage', placeholder=_('Geographical Coverage'), value=geographical_coverage or data.geographical_coverage, error=errors.geographical_coverage, classes=['control-medium']) }}
+  {% set geographical_coverage_default = "Zuständigkeitsgebiet der Organisationseinheit" if locale =='de' else "Area di competenza dell'unità organizzativa preposta" %}
+  {{ form.input('geographical_coverage', label=_('Geographical Coverage'), id='field-geographical_coverage', placeholder=_('Geographical Coverage'), value=geographical_coverage or data.geographical_coverage or geographical_coverage_default, error=errors.geographical_coverage, classes=['control-medium']) }}
 
-  {% set geographical_min_level = h.getLocalizedFieldValue('geographical_min_level', data) %}
-  {{ form.input('geographical_min_level', label=_('Geographical Min Level'), id='field-geographical_min_level', placeholder=_('Geographical Min Level'), value=geographical_min_level or data.geographical_min_level, error=errors.geographical_min_level, classes=['control-medium']) }}
+  {% set temporal_coverage_start = h.getLocalizedFieldValue('temporal_coverage_start', data) %}
+  {% set temporal_coverage_start_default = 'N/V' if locale =='de' else 'N/A' %}
+  {{ form.input('temporal_coverage_start', label=_('Temporal Coverage (Start Date)'), id='field-temporal_coverage_start', placeholder=_('Temporal Coverage (Start Date)'), value=temporal_coverage_start or data.temporal_coverage_start or temporal_coverage_start_default, error=errors.temporal_coverage_start, classes=['control-medium']) }}
+
+  {% set temporal_coverage_end = h.getLocalizedFieldValue('temporal_coverage_end', data) %}
+  {% set temporal_coverage_end_default = 'N/V' if locale =='de' else 'N/A' %}
+  {{ form.input('temporal_coverage_end', label=_('Temporal Coverage (End Date)'), id='field-temporal_coverage_end', placeholder=_('Temporal Coverage (End Date)'), value=temporal_coverage_end or data.temporal_coverage_end or temporal_coverage_end_default, error=errors.temporal_coverage_end, classes=['control-medium']) }}
+
+  {% set update_frequency = h.getLocalizedFieldValue('update_frequency', data) %}
+  {{ form.select('update_frequency', label=_('Update Frequency'), options=[{'name':"asNeeded", 'value': _('asNeeded')},{'name':"quarterly", 'value': _('quarterly')},{'name':"fortnightly", 'value': _('fortnightly')}, {'name':"annually", 'value': _('annually')},{'name': "monthly", 'value': _('monthly')},{'name': "weekly", 'value': _('weekly')},{'name': "daily", 'value': _('daily')},{'name': "continual", 'value': _('continual')},{'name': "notPlanned", 'value': _('notPlanned')},{'name': "irregular", 'value': _('irregular')},{'name': "unknown", 'value': _('unknown')}], selected=update_frequency or data.update_frequency or 'annuale', error=errors.update_frequency) }}
+
+  {% set creation_date = h.getLocalizedFieldValue('creation_date', data) %}
+  {{ form.input('creation_date', label=_('Creation Date'), id='field-creation_date', placeholder=_('Creation Date'), value=creation_date or data.creation_date, error=errors.creation_date, classes=['control-medium']) }}
 
   {% set publication_date = h.getLocalizedFieldValue('publication_date', data) %}
   {{ form.input('publication_date', label=_('Publication Date'), id='field-publication_date', placeholder=_('Publication Date'), value=publication_date or data.publication_date, error=errors.publication_date, classes=['control-medium']) }}
 
-  {% set update_type = h.getLocalizedFieldValue('update_type', data) %}
-  {{ form.select('update_type', label=_('Update Type'), options=[{'name':"decennale", 'value': _('decennale')},{'name':"quartale", 'value': _('quartale')},{'name':"stagionale", 'value': _('stagionale')}, {'name':"annuale", 'value': _('annuale')},{'name': "mensile", 'value': _('mensile')},{'name': "settimanale", 'value': _('settimanale')},{'name': "giornaliero", 'value': _('giornaliero')},{'name': "continuo", 'value': _('continuo')},{'name': "una tantum", 'value': _('una tantum')},{'name': "non programmato", 'value': _('non programmato')}], selected=update_type or data.update_type or 'annuale', error=errors.update_type) }}
-
-  {% set update_text = h.getLocalizedFieldValue('update_text', data) %}
-  {{ form.input('update_text', label=_('Update Text'), id='field-update_text', placeholder=_('Update Text'), value=update_text or data.update_text, error=errors.update_text, classes=['control-medium']) }}
-
-  {% set base_year = h.getLocalizedFieldValue('base_year', data) %}
-  {{ form.input('base_year', label=_('Base Year'), id='field-base_year', placeholder=_('Base Year'), value=base_year or data.base_year, error=errors.base_year, classes=['control-medium']) }}
+  {% set revision_date = h.getLocalizedFieldValue('revision_date', data) %}
+  {{ form.input('revision_date', label=_('Revision Date'), id='field-revision_date', placeholder=_('Revision Date'), value=revision_date or data.revision_date, error=errors.revision_date, classes=['control-medium']) }}
 
   {% set encoding = h.getLocalizedFieldValue('encoding', data) %}
   {{ form.input('encoding', label=_('Encoding'), id='field-encoding', placeholder=_('Encoding'), value=encoding or data.encoding, error=errors.encoding, classes=['control-medium']) }}
+
+  {% set site_url = h.getLocalizedFieldValue('site_url', data) %}
+  {{ form.input('site_url', label=_('Site URL'), id='field-site_url', placeholder=_('Site URL'), value=site_url or data.site_url, error=errors.site_url, classes=['control-medium']) }}
+
 {% endblock %}

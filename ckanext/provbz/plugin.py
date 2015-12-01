@@ -19,16 +19,16 @@ class PBZThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     '''
 
     custom_fields = [
-        ['holder'], 
-        ['sector'], 
-        ['geographical_coverage'], 
-        ['temporal_coverage'], 
-        ['geographical_min_level'], 
-        ['publication_date'], 
-        ['update_type'], 
-        ['update_text'],  
-        ['base_year'], 
-        ['encoding']
+        ['holder'],
+        ['geographical_coverage'],
+        ['temporal_coverage_start'],
+        ['temporal_coverage_end'],
+        ['update_frequency'],
+        ['creation_date'],
+        ['publication_date'],
+        ['revision_date'],
+        ['encoding'],
+        ['site_url']
     ]
 
     # Declare that this class implements IConfigurer.

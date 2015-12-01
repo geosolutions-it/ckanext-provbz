@@ -4963,6 +4963,9 @@ msgstr "URL di visualizzazione e scarico del dato dal Geocatalogo"
 msgid "contact-email"
 msgstr "E-mail del Contatto"
 
+msgid "contact"
+msgstr "Contatto"
+
 msgid "guid"
 msgstr "Identificatore del Metadato"
 
@@ -5008,35 +5011,39 @@ msgstr "Geocatalogo"
 msgid "Contattaci"
 msgstr "Contattaci"
 
+# -- METADATA DI DEFAULT -- #
+
 msgid "Holder"
-msgstr "Titolare del dato"
-
-msgid "Sector"
-msgstr "Settore"
-
-msgid "Temporal Coverage"
-msgstr "Copertura Temporale"
+msgstr "Titolare"
 
 msgid "Geographical Coverage"
 msgstr "Copertura geografica"
 
-msgid "Geographical Min Level"
-msgstr "Livello geografico minimo"
+msgid "Temporal Coverage (Start Date)"
+msgstr "Copertura temporale (Data di inizio)"
+
+msgid "Temporal Coverage (End Date)"
+msgstr "Copertura temporale (Data fine)"
+
+msgid "Update Frequency"
+msgstr "Frequenza aggiornamento"
+
+msgid "Creation Date"
+msgstr "Data di creazione"
 
 msgid "Publication Date"
 msgstr "Data di pubblicazione"
 
-msgid "Update Type"
-msgstr "Tipo di aggiornamento"
-
-msgid "Update Text"
-msgstr "Aggiornamento"
-
-msgid "Base Year"
-msgstr "Anno di base"
+msgid "Revision Date"
+msgstr "Data di aggiornamento"
 
 msgid "Encoding"
-msgstr "Codifica caratteri"
+msgstr "Codifica caratteri (Set dei caratteri)"
+
+msgid "Site URL"
+msgstr "URL sito"
+
+# --------------------------- #
 
 msgid "Leggi tutto il contenuto"
 msgstr "Leggi tutto il contenuto"
@@ -5083,35 +5090,41 @@ msgstr "Non trovato"
 msgid "The resource could not be found."
 msgstr "La risorsa non è stata trovata."
 
-msgid "annuale"
+msgid "annually"
 msgstr "annuale"
 
-msgid "mensile"
+msgid "monthly"
 msgstr "mensile"
 
-msgid "settimanale"
+msgid "weekly"
 msgstr "settimanale"
 
-msgid "giornaliero"
+msgid "daily"
 msgstr "giornaliero"
 
-msgid "continuo"
+msgid "continual"
 msgstr "continuo"
 
-msgid "una tantum"
-msgstr "una tantum"
+msgid "asNeeded"
+msgstr "se necessario"
 
-msgid "decennale"
-msgstr "decennale"
-
-msgid "quartale"
+msgid "quarterly"
 msgstr "quartale"
 
-msgid "stagionale"
+msgid "fortnightly"
 msgstr "stagionale"
 
-msgid "non programmato"
+msgid "notPlanned"
 msgstr "non programmato"
+
+msgid "irregular"
+msgstr "irregolare"
+
+msgid "unknown"
+msgstr "sconosciuto"
+
+msgid "biannually"
+msgstr "ogni due anni"
 
 msgid "Portale OpenData Bolzano"
 msgstr "Portale OpenData Bolzano"
@@ -5170,3 +5183,8 @@ msgstr "Password"
 msgid "Log in"
 msgstr "Accedi"
 
+# ----------------- Other in Additional Info --------------------#
+
+#: ckan/templates/package/snippets/additional_info.html
+msgid "Origin"
+msgstr "Origine"
