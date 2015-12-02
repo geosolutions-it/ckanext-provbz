@@ -29,6 +29,7 @@ Example:
 
 {% block package_item %}
   <li class="{{ item_class or "dataset-item" }}">
+    <div class="package-item-clickable" onClick="location.href='{{ h.url_for(controller='package', action='read', id=package.name) }}'">
     {% block content %}
       <div class="dataset-content">
         {% block heading %}
@@ -96,5 +97,6 @@ Example:
         {% endif %}
       {% endblock %}
     {% endblock %}
+    </div>
   </li>
 {% endblock %}

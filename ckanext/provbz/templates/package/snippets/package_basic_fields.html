@@ -8,18 +8,18 @@
 
   {% set geographical_coverage = h.getLocalizedFieldValue('geographical_coverage', data) %}
   {% set geographical_coverage_default = "Zuständigkeitsgebiet der Organisationseinheit" if locale =='de' else "Area di competenza dell'unità organizzativa preposta" %}
-  {{ form.input('geographical_coverage', label=_('Geographical Coverage'), id='field-geographical_coverage', placeholder=_('Geographical Coverage'), value=geographical_coverage or data.geographical_coverage or geographical_coverage_default, error=errors.geographical_coverage, classes=['control-medium']) }}
+  {{ form.input('geographical_coverage', label=_('Geographical Coverage'), id='field-geographical_coverage', placeholder=_('Geographical Coverage'), value=geographical_coverage or geographical_coverage_default, error=errors.geographical_coverage, classes=['control-medium']) }}
 
   {% set temporal_coverage_start = h.getLocalizedFieldValue('temporal_coverage_start', data) %}
   {% set temporal_coverage_start_default = 'N/V' if locale =='de' else 'N/A' %}
-  {{ form.input('temporal_coverage_start', label=_('Temporal Coverage (Start Date)'), id='field-temporal_coverage_start', placeholder=_('Temporal Coverage (Start Date)'), value=temporal_coverage_start or data.temporal_coverage_start or temporal_coverage_start_default, error=errors.temporal_coverage_start, classes=['control-medium']) }}
+  {{ form.input('temporal_coverage_start', label=_('Temporal Coverage (Start Date)'), id='field-temporal_coverage_start', placeholder=_('Temporal Coverage (Start Date)'), value=temporal_coverage_start or temporal_coverage_start_default, error=errors.temporal_coverage_start, classes=['control-medium']) }}
 
   {% set temporal_coverage_end = h.getLocalizedFieldValue('temporal_coverage_end', data) %}
   {% set temporal_coverage_end_default = 'N/V' if locale =='de' else 'N/A' %}
-  {{ form.input('temporal_coverage_end', label=_('Temporal Coverage (End Date)'), id='field-temporal_coverage_end', placeholder=_('Temporal Coverage (End Date)'), value=temporal_coverage_end or data.temporal_coverage_end or temporal_coverage_end_default, error=errors.temporal_coverage_end, classes=['control-medium']) }}
-
+  {{ form.input('temporal_coverage_end', label=_('Temporal Coverage (End Date)'), id='field-temporal_coverage_end', placeholder=_('Temporal Coverage (End Date)'), value=temporal_coverage_end or temporal_coverage_end_default, error=errors.temporal_coverage_end, classes=['control-medium']) }}
+  
   {% set update_frequency = h.getLocalizedFieldValue('update_frequency', data) %}
-  {{ form.select('update_frequency', label=_('Update Frequency'), options=[{'name':"asNeeded", 'value': _('asNeeded')},{'name':"quarterly", 'value': _('quarterly')},{'name':"fortnightly", 'value': _('fortnightly')}, {'name':"annually", 'value': _('annually')},{'name': "monthly", 'value': _('monthly')},{'name': "weekly", 'value': _('weekly')},{'name': "daily", 'value': _('daily')},{'name': "continual", 'value': _('continual')},{'name': "notPlanned", 'value': _('notPlanned')},{'name': "irregular", 'value': _('irregular')},{'name': "unknown", 'value': _('unknown')}], selected=update_frequency or data.update_frequency or 'annuale', error=errors.update_frequency) }}
+  {{ form.select('update_frequency', label=_('Update Frequency'), options=[{'name':"asNeeded", 'value': _('asNeeded')},{'name':"quarterly", 'value': _('quarterly')},{'name':"fortnightly", 'value': _('fortnightly')}, {'name':"annually", 'value': _('annually')},{'name': "monthly", 'value': _('monthly')},{'name': "weekly", 'value': _('weekly')},{'name': "daily", 'value': _('daily')},{'name': "continual", 'value': _('continual')},{'name': "notPlanned", 'value': _('notPlanned')},{'name': "irregular", 'value': _('irregular')},{'name': "unknown", 'value': _('unknown')}], selected=update_frequency or _(data.update_frequency), error=errors.update_frequency) }}
 
   {% set creation_date = h.getLocalizedFieldValue('creation_date', data) %}
   {{ form.input('creation_date', label=_('Creation Date'), id='field-creation_date', placeholder=_('Creation Date'), value=creation_date or data.creation_date, error=errors.creation_date, classes=['control-medium']) }}

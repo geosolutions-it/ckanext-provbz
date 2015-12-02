@@ -170,10 +170,10 @@ class PBZThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
                             # Create the localized field record
                             self.createLocField(extra, lang, pkg_dict.get('id'))
 
-    def createLocField(self, extra, lang, packege_id): 
-        log.debug(':::::::::::::::::::::::: %r', str(packege_id))
+    def createLocField(self, extra, lang, package_id): 
+        log.debug('Creating createLocField for package ID: %r', str(package_id))
 
-        new_loc_field = custom.CustomFieldMultilang(packege_id, extra.get('key'), lang, extra.get('value'))
+        new_loc_field = custom.CustomFieldMultilang(package_id, extra.get('key'), lang, extra.get('value'))
         custom.CustomFieldMultilang.save(new_loc_field)
 
         log.info('Custom field created successfully')

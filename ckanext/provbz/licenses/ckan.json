@@ -46,5 +46,21 @@
       "domain_content":"False",
       "domain_software":"False",
       "id":"cc-by"
+   },
+   {
+      "status":"active",
+      "maintainer":"",
+      "od_conformance":"approved",
+      "family":"",
+      "osd_conformance":"not reviewed",
+      "domain_data":"False",
+      "title":"Creative Commons CC BY-SA 3.0",
+      "url": "http://creativecommons.org/licenses/by-sa/3.0/deed",
+      "is_generic":"False",
+      "is_okd_compliant":"True",
+      "is_osi_compliant":"False",
+      "domain_content":"False",
+      "domain_software":"False",
+      "id":"cc-by-sa"
    }
 ]

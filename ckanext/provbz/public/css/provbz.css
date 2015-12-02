@@ -588,3 +588,12 @@ a .footer_icon{
 .pbz-media-heading{
     width: 160px;
 }
+
+.package-item-clickable{
+    cursor: pointer;
+}
+
+.package-item-clickable a:hover{
+    color: #B11D1E;
+    text-decoration: none;
+}

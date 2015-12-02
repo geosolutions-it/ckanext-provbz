@@ -5,12 +5,12 @@
   <h3>{{ _('Metadata di default') }}</h3>
 
   <table class="table table-striped table-bordered table-condensed">
-    <thead>
+    <!--thead>
       <tr>
         <th scope="col">{{ _('Field') }}</th>
         <th scope="col">{{ _('Value') }}</th>
       </tr>
-    </thead>
+    </thead-->
     <tbody>
         {% if pkg_dict.holder %}
           {% set holder = h.getLocalizedFieldValue('holder', pkg_dict) %}
@@ -87,7 +87,7 @@
           {% set update_frequency = h.getLocalizedFieldValue('update_frequency', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Update Frequency") }}</th>
-            <td class="dataset-details">{{ update_frequency or pkg_dict.update_frequency }}</td>
+            <td class="dataset-details">{{ update_frequency or _(pkg_dict.update_frequency) }}</td>
           </tr>
         {% endif %}
 
@@ -127,7 +127,16 @@
           {% set site_url = h.getLocalizedFieldValue('site_url', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Site URL") }}</th>
-            <td class="dataset-details">{{ site_url or pkg_dict.site_url }}</td>
+            <td class="dataset-details">{{ h.link_to(site_url or pkg_dict.site_url, site_url or pkg_dict.site_url, rel='foaf:homepage', target='_blank') }}</td>
+          </tr>
+        {% else %}
+          <tr>
+            <th scope="row" class="dataset-label">{{ _("Site URL") }}</th>
+            {% if locale == 'de' %}
+              <td class="dataset-details">{{ "N/V" }}</td>
+            {% else %}
+              <td class="dataset-details">{{ "N/A" }}</td>
+            {% endif %}
           </tr>
         {% endif %}
     </tbody>
@@ -135,12 +144,12 @@
 
   <h3>{{ _('Additional Info') }}</h3>
   <table class="table table-striped table-bordered table-condensed">
-    <thead>
+    <!--thead>
       <tr>
         <th scope="col">{{ _('Field') }}</th>
         <th scope="col">{{ _('Value') }}</th>
       </tr>
-    </thead>
+    </thead-->
     <tbody>
       {% block package_additional_info %}
         {#% if pkg_dict.url %}
@@ -164,12 +173,30 @@
             <th scope="row" class="dataset-label">{{ _("Author") }}</th>
             <td class="dataset-details" property="dc:creator">{{ pkg_dict.author }}</td>
           </tr>
+        {% else %}
+          <tr>
+            <th scope="row" class="dataset-label">{{ _("Author") }}</th>
+            {% if locale == 'de' %}
+              <td class="dataset-details">{{ "N/V" }}</td>
+            {% else %}
+              <td class="dataset-details">{{ "N/A" }}</td>
+            {% endif %}
+          </tr>
         {% endif %}
 
         {% if pkg_dict.url %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Origin") }}</th>
-            <td class="dataset-details" property="dc:creator">{{ pkg_dict.url }}</td>
+            <td class="dataset-details" property="dc:creator">{{ h.link_to(pkg_dict.url , pkg_dict.url, rel='foaf:homepage', target='_blank') }}</td>
+          </tr>
+        {% else %}
+          <tr>
+            <th scope="row" class="dataset-label">{{ _("Origin") }}</th>
+            {% if locale == 'de' %}
+              <td class="dataset-details">{{ "N/V" }}</td>
+            {% else %}
+              <td class="dataset-details">{{ "N/A" }}</td>
+            {% endif %}
           </tr>
         {% endif %}
 
@@ -259,7 +286,7 @@
           {% if key == 'contact' %}
             <tr rel="dc:relation" resource="_:extra{{ i }}">
               <th scope="row" class="dataset-label" property="rdfs:label">{{ _(key) }}</th>
-              <td class="dataset-details" property="rdf:value">{{ value }}</td>
+              <td class="dataset-details" property="rdf:value">{{ h.mail_to(email_address=value, name=value) }}</td>
             </tr>
           {% endif %}
 
