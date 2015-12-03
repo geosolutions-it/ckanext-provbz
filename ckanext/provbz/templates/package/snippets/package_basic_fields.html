@@ -40,3 +40,32 @@
   {{ form.input('contact', label=_('contact'), id='field-contact', placeholder=_('contact'), value=contact or data.contact, error=errors.contact, classes=['control-medium']) }}
 
 {% endblock %}
+
+<!-- Override the license dropdown block in order to set the 'notspecified' license as default option -->
+
+{% block package_basic_fields_license %}
+<div class="control-group">
+  {% set error = errors.license_id %}
+  <label class="control-label" for="field-license">{{ _("License") }}</label>
+  <div class="controls">
+    <select id="field-license" name="license_id" data-module="autocomplete">
+      {% set existing_license_id = data.get('license_id') %}
+      {% for license_id, license_desc in h.license_options(existing_license_id) %}
+        {% if existing_license_id == license_id %}
+          <option value="{{ license_id }}" selected="selected">{{ license_desc }}</option>
+        {% else %}
+          <option value="{{ license_id }}" {% if license_id == 'notspecified' and not existing_license_id %}selected="selected"{% endif %}>{{ license_desc }}</option>
+        {% endif %}
+      {% endfor %}
+    </select>
+    {% if error %}<span class="error-block">{{ error }}</span>{% endif %}
+    <span class="info-block info-inline">
+      <i class="icon-info-sign"></i>
+      {% trans %}
+        License definitions and additional information can be found
+        at <a href="http://opendefinition.org/licenses/">opendefinition.org</a>
+      {% endtrans %}
+    </span>
+  </div>
+</div>
+{% endblock %}
