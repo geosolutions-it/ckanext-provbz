@@ -23,10 +23,6 @@
 
 /*---------------- Override of ckan base CSS --------------*/
 
-.btn-group.open .btn-primary.dropdown-toggle {
-    background-color: #710825;
-};
-
 .media-grid {
     margin-left: -15px;
 	margin-right: -22px;
@@ -604,4 +600,12 @@ a .footer_icon{
 
 .nav-tabs a:hover{
     color: #333333;
-};
+}
+
+.btn-group.open .btn-primary.dropdown-toggle {
+    background-color: #711708;
+}
+
+.partners-logos{
+    padding-right: 5px;
+}
