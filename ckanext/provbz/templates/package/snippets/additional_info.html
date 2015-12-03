@@ -2,7 +2,7 @@
 {% set locale = h.get_locale() %}
 
 <section class="additional-info">
-  <h3>{{ _('Metadata di default') }}</h3>
+  <h3>{{ _('Metadati del dataset') }}</h3>
 
   <table class="table table-striped table-bordered table-condensed">
     <!--thead>
@@ -240,6 +240,13 @@
           </tr>
         {% endif %#}
 
+        {% if pkg_dict.contact %}
+          <tr>
+            <th scope="row" class="dataset-label">{{ _("contact") }}</th>
+            <td class="dataset-details">{{ h.mail_to(email_address=pkg_dict.contact, name=pkg_dict.contact) }}</td>
+          </tr>
+        {% endif %}
+
       {% block extras scoped %}
         {% for extra in h.sorted_extras(pkg_dict.extras) %}
           {% set key, value = extra %}
@@ -282,14 +289,6 @@
             {% endfor %}
           {% endif % #}
           <!-- end comment -->
-
-          {% if key == 'contact' %}
-            <tr rel="dc:relation" resource="_:extra{{ i }}">
-              <th scope="row" class="dataset-label" property="rdfs:label">{{ _(key) }}</th>
-              <td class="dataset-details" property="rdf:value">{{ h.mail_to(email_address=value, name=value) }}</td>
-            </tr>
-          {% endif %}
-
 
         {% endfor %}
       {% endblock %}

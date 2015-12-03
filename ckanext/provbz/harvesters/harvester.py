@@ -35,7 +35,7 @@ ISODocument.elements.append(
         search_paths=[
             "gmd:identificationInfo/gmd:MD_DataIdentification/gmd:characterSet"
         ],
-        multiplicity="0..*"
+        multiplicity="*"
     )
 )
 
@@ -182,6 +182,10 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
         log.debug("::::::::::::: Persisting localized Author package field :::::::::::::")     
 
         try:
+
+            ## PERSISTING the 'author' standard field localized
+            ## ------------------------------------------------
+
             session = Session
 
             rows = session.query(PackageMultilang).filter(PackageMultilang.package_id == package_id, PackageMultilang.field == 'author').all()
@@ -195,10 +199,6 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
                     session.add_all([
                         PackageMultilang(package_id=package_id, field='author', field_type='localized', lang=org.get('locale'), text=org.get('text')),
                     ])
-
-                    # This for the holder custom field
-                    new_holder_loc_field = custom.CustomFieldMultilang(package_id, 'holder', org.get('locale'), org.get('text'))
-                    custom.CustomFieldMultilang.save(new_holder_loc_field)
 
                 session.commit()
 
@@ -215,6 +215,23 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
                     row.save()
 
                 log.info('::::::::: OBJECT UPDATED SUCCESSFULLY :::::::::') 
+
+            ## PERSISTING the 'holder' custom field localized
+            ## ----------------------------------------------
+
+            for org in self.localized_org:
+                record = custom.get_field('holder', package_id, org.get('locale'))
+                if record:
+                    log.info('::::::::: Updating the localized holder custom field in the custom_field table :::::::::')
+                    record.text = org.get('text')
+                    record.save()
+                    log.info('::::::::: CUSTOM OBJECT UPDATED SUCCESSFULLY :::::::::') 
+                else:
+                    log.info('::::::::: Adding new localized holder custom field in the custom_field table :::::::::')
+                    # This for the holder custom field
+                    new_holder_loc_field = custom.CustomFieldMultilang(package_id, 'holder', org.get('locale'), org.get('text'))
+                    custom.CustomFieldMultilang.save(new_holder_loc_field)
+                    log.info('::::::::: CUSTOM OBJECT PERSISTED SUCCESSFULLY :::::::::')
 
             pass
         except Exception, e:

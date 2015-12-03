@@ -5048,8 +5048,8 @@ msgstr "URL sito"
 msgid "Leggi tutto il contenuto"
 msgstr "Leggi tutto il contenuto"
 
-msgid "Metadata di default"
-msgstr "Metadata di default"
+msgid "Metadati del dataset"
+msgstr "Metadati del dataset"
 
 msgid "Add page"
 msgstr "Aggiungi pagina"

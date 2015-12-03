@@ -5052,8 +5052,8 @@ msgstr "Webseite"
 msgid "Leggi tutto il contenuto"
 msgstr "Lesen Sie alle Inhalte"
 
-msgid "Metadata di default"
-msgstr "Metadaten-Standard"
+msgid "Metadati del dataset"
+msgstr "Metadaten-Datasets"
 
 msgid "Add page"
 msgstr "Seite hinzufügen"

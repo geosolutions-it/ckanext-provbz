@@ -28,7 +28,8 @@ class PBZThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
         ['publication_date'],
         ['revision_date'],
         ['encoding'],
-        ['site_url']
+        ['site_url'],
+        ['contact']
     ]
 
     # Declare that this class implements IConfigurer.
