@@ -108,7 +108,8 @@ class PBZThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
             'parseRefDate': helpers.parseRefDate,
             'get_news_preview': helpers.get_news_preview,
             'getLocalizedFieldValue': helpers.getLocalizedFieldValue,
-            'getLocalizedTagName': helpers.getLocalizedTagName
+            'getLocalizedTagName': helpers.getLocalizedTagName,
+            'checkForShibboletURL': helpers.checkForShibboletURL
             #'get_custom_categories_list': helpers.get_custom_categories_list
         }
 

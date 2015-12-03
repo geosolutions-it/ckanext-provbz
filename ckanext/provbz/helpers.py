@@ -148,6 +148,13 @@ def getLocalizedTagName(tag_name=None):
     else:
         return None
 
+def checkForShibboletURL(login_url):
+    url = login_url
+    if url.startswith("/de") or url.startswith("/it"):
+        url = url[3:]
+
+    return url
+
 '''	
 def get_custom_categories_list(items):
     #
