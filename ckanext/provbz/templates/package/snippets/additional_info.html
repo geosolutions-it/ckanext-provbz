@@ -164,14 +164,16 @@
         {% endif %#}
 
         {% if pkg_dict.author_email %}
+          {% set author = h.getLocalizedFieldValue('author', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Author") }}</th>
-            <td class="dataset-details" property="dc:creator">{{ h.mail_to(email_address=pkg_dict.author_email, name=pkg_dict.author) }}</td>
+            <td class="dataset-details" property="dc:creator">{{ h.mail_to(email_address=pkg_dict.author_email, name=author or pkg_dict.author) }}</td>
           </tr>
         {% elif pkg_dict.author %}
+          {% set author = h.getLocalizedFieldValue('author', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Author") }}</th>
-            <td class="dataset-details" property="dc:creator">{{ pkg_dict.author }}</td>
+            <td class="dataset-details" property="dc:creator">{{ author or pkg_dict.author }}</td>
           </tr>
         {% else %}
           <tr>
@@ -185,9 +187,10 @@
         {% endif %}
 
         {% if pkg_dict.url %}
+          {% set url = h.getLocalizedFieldValue('url', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Origin") }}</th>
-            <td class="dataset-details" property="dc:creator">{{ h.link_to(pkg_dict.url , pkg_dict.url, rel='foaf:homepage', target='_blank') }}</td>
+            <td class="dataset-details" property="dc:creator">{{ h.link_to(url or pkg_dict.url , url or pkg_dict.url, rel='foaf:homepage', target='_blank') }}</td>
           </tr>
         {% else %}
           <tr>
@@ -201,14 +204,16 @@
         {% endif %}
 
         {#% if pkg_dict.maintainer_email %}
+          {% set maintainer = h.getLocalizedFieldValue('maintainer', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _('Maintainer') }}</th>
-            <td class="dataset-details" property="dc:contributor">{{ h.mail_to(email_address=pkg_dict.maintainer_email, name=pkg_dict.maintainer) }}</td>
+            <td class="dataset-details" property="dc:contributor">{{ h.mail_to(email_address=pkg_dict.maintainer_email, name=maintainer or pkg_dict.maintainer) }}</td>
           </tr>
         {% elif pkg_dict.maintainer %}
+          {% set maintainer = h.getLocalizedFieldValue('maintainer', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _('Maintainer') }}</th>
-            <td class="dataset-details" property="dc:contributor">{{ pkg_dict.maintainer }}</td>
+            <td class="dataset-details" property="dc:contributor">{{ maintainer or pkg_dict.maintainer }}</td>
           </tr>
         {% endif %#}
 
@@ -245,6 +250,15 @@
           <tr>
             <th scope="row" class="dataset-label">{{ _("contact") }}</th>
             <td class="dataset-details">{{ h.mail_to(email_address=contact or pkg_dict.contact, name=contact or pkg_dict.contact) }}</td>
+          </tr>
+        {% else %}
+          <tr>
+            <th scope="row" class="dataset-label">{{ _("contact") }}</th>
+            {% if locale == 'de' %}
+              <td class="dataset-details">{{ "N/V" }}</td>
+            {% else %}
+              <td class="dataset-details">{{ "N/A" }}</td>
+            {% endif %}
           </tr>
         {% endif %}
 
