@@ -241,9 +241,10 @@
         {% endif %#}
 
         {% if pkg_dict.contact %}
+          {% set contact = h.getLocalizedFieldValue('contact', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("contact") }}</th>
-            <td class="dataset-details">{{ h.mail_to(email_address=pkg_dict.contact, name=pkg_dict.contact) }}</td>
+            <td class="dataset-details">{{ h.mail_to(email_address=contact or pkg_dict.contact, name=contact or pkg_dict.contact) }}</td>
           </tr>
         {% endif %}
 

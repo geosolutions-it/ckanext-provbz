@@ -37,6 +37,6 @@
   {{ form.input('site_url', label=_('Site URL'), id='field-site_url', placeholder=_('Site URL'), value=site_url or data.site_url, error=errors.site_url, classes=['control-medium']) }}
 
   {% set contact = h.getLocalizedFieldValue('contact', data) %}
-  {{ form.input('contact', label=_('contact'), id='field-contact', placeholder=_('Site URL'), value=contact or data.contact, error=errors.contact, classes=['control-medium']) }}
+  {{ form.input('contact', label=_('contact'), id='field-contact', placeholder=_('contact'), value=contact or data.contact, error=errors.contact, classes=['control-medium']) }}
 
 {% endblock %}
