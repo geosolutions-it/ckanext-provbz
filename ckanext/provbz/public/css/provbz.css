@@ -609,3 +609,7 @@ a .footer_icon{
 .partners-logos{
     padding-right: 5px;
 }
+
+.align-text{
+    text-align: justify;
+}
