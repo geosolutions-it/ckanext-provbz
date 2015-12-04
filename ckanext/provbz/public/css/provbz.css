@@ -613,3 +613,16 @@ a .footer_icon{
 .align-text{
     text-align: justify;
 }
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #967876;
+    background-image: -moz-linear-gradient(top,#967876,#75231A);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#967876),to(#75231A));
+    background-image: -webkit-linear-gradient(top,#967876,#75231A);
+    background-image: -o-linear-gradient(top,#967876,#75231A);
+    background-image: linear-gradient(to bottom,#967876,#75231A);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff967876',endColorstr='#ff75231A',GradientType=0);
+}
