@@ -631,3 +631,7 @@ a:hover, a:focus {
     color: #333333;
     text-decoration: underline;
 }
+
+div.align-text th{
+    text-align: center;
+}
