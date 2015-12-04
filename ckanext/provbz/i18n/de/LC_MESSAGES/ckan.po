@@ -4891,7 +4891,7 @@ msgstr "Willkommen auf Open Data Plattform Südtirol"
 
 #: templates/home/layout1.html:11
 msgid "ACCEDI AI DATASET"
-msgstr "Zugang zu Datensätzen"
+msgstr "ZU DEN DATENSÄTZEN"
 
 #: templates/home/layout1.html:32
 msgid "Cosa sono gli OPENdata?"
