@@ -4911,7 +4911,7 @@ msgstr "Suchen Sie die Daten und erhalten Sie Aktualisierungen für die Datenmen
 
 #: templates/home/snippets/search.html:7
 msgid "Tag maggiormente utilizzati"
-msgstr "Schlagwörter meisten benutzt"
+msgstr "Am häufigsten vorkommende Schlagwörter"
 
 #: templates/home/snippets/search.html:19
 msgid "Cerca per..."
@@ -5004,7 +5004,7 @@ msgid "spatial_harvester"
 msgstr "Harvester Raum"
 
 msgid "Ultimi dataset"
-msgstr "Letzte Dataset"
+msgstr "Neueste Datensätze"
 
 msgid "Ultime News"
 msgstr "Neueste Nachrichten"
@@ -5053,7 +5053,7 @@ msgid "Leggi tutto il contenuto"
 msgstr "Lesen Sie alle Inhalte"
 
 msgid "Metadati del dataset"
-msgstr "Metadaten-Datasets"
+msgstr "Standard-Metadaten"
 
 msgid "Add page"
 msgstr "Seite hinzufügen"

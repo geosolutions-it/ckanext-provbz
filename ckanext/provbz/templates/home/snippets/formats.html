@@ -1,504 +1,506 @@
-<h2>{% trans %}Lista di formati di tipo aperto{% endtrans %}</h2>
+<div  class="align-text">
+	<h2>{% trans %}Lista di formati di tipo aperto{% endtrans %}</h2>
 
-<p>
-	Ogni dominio di applicazione utilizza propri standard tecnici: i formati dei documenti sono diversi da 
+	<p>
+		Ogni dominio di applicazione utilizza propri standard tecnici: i formati dei documenti sono diversi da 
 
-	quelli delle tabelle e diversi da quelli di grafici, della cartografia, delle immagini, dei video ecc. Di seguito 
+		quelli delle tabelle e diversi da quelli di grafici, della cartografia, delle immagini, dei video ecc. Di seguito 
 
-	rileggendo le linee guida Open Data dell’Agenzia per l’Italia Digitale (AgID), <span style="font-weight: bold;">si definiscono i formati 
+		rileggendo le linee guida Open Data dell’Agenzia per l’Italia Digitale (AgID), <span style="font-weight: bold;">si definiscono i formati 
 
-	aperti più comunemente utilizzati e suggeriti per la pubblicazione</span> sul catalogo dati.retecivica.bz.it. 
+		aperti più comunemente utilizzati e suggeriti per la pubblicazione</span> sul catalogo dati.retecivica.bz.it. 
 
-	E’ sempre auspicabile l’utilizzo di una pluralità di formati, ove possibile, in modo da offrire più opzioni ai 
+		E’ sempre auspicabile l’utilizzo di una pluralità di formati, ove possibile, in modo da offrire più opzioni ai 
 
-	riutilizzatori.  I formati proposti nelle tabelle che seguono sono stati selezionati facendo riferimento agli 
+		riutilizzatori.  I formati proposti nelle tabelle che seguono sono stati selezionati facendo riferimento agli 
 
-	<span style="font-weight: bold;">standard internazionali e alle prescrizioni normative previste dal Codice dall'Amministrazione Digitale</span>
+		<span style="font-weight: bold;">standard internazionali e alle prescrizioni normative previste dal Codice dall'Amministrazione Digitale</span>
 
-	(CAD) relativi al rilascio di un sottoinsieme di dati della Provincia Autonoma di Bolzano secondo il 
+		(CAD) relativi al rilascio di un sottoinsieme di dati della Provincia Autonoma di Bolzano secondo il 
 
-	paradigma degli Open Government Data.
-</p>
+		paradigma degli Open Government Data.
+	</p>
 
-<h3>Formati di tipo aperto per documenti</h3>
+	<h3>Formati di tipo aperto per documenti</h3>
 
-<p>
-	Nel caso di documenti in generale, si raccomanda, ove esistano, standard XML documentali 
+	<p>
+		Nel caso di documenti in generale, si raccomanda, ove esistano, standard XML documentali 
 
-	internazionali o nazionali. La <span style="font-style: italic;">Tabella 1</span> fornisce un elenco dei formati aperti per i dati documentali 
+		internazionali o nazionali. La <span style="font-style: italic;">Tabella 1</span> fornisce un elenco dei formati aperti per i dati documentali 
 
-	maggiormente diffusi a cui si intende fare riferimento.
+		maggiormente diffusi a cui si intende fare riferimento.
 
-	Per quanto riguarda i documenti, quali ad esempio delibere, atti amministrativi si osserva che nel caso 
+		Per quanto riguarda i documenti, quali ad esempio delibere, atti amministrativi si osserva che nel caso 
 
-	siano da pubblicare dei dati solo in forma tabellare senza elementi aggiuntivi (e.g., grafici, formule, tipi 
+		siano da pubblicare dei dati solo in forma tabellare senza elementi aggiuntivi (e.g., grafici, formule, tipi 
 
-	di dato, metadati) si può evitare di utilizzare formati come PDF o “Open Document Text” (ODT) ma è 
+		di dato, metadati) si può evitare di utilizzare formati come PDF o “Open Document Text” (ODT) ma è 
 
-	possibile utilizzare il formato “Comma Separated Values” (CSV). Negli altri casi di dati, in forma tabellare 
+		possibile utilizzare il formato “Comma Separated Values” (CSV). Negli altri casi di dati, in forma tabellare 
 
-	con elementi aggiuntivi si raccomanda l’uso ove possibile del formato “OpenDocument Spreadsheet” 
+		con elementi aggiuntivi si raccomanda l’uso ove possibile del formato “OpenDocument Spreadsheet” 
 
-	(ODS).
-</p>
+		(ODS).
+	</p>
 
-<br/>
-<table style="width:100%" border="1">
-  <tr>
-    <th>Nome (Acronimo) Descrizione</th>
-    <th class="format_th">Tipo di Dato</th>		
-    <th class="format_th">Estensione</th>
-  </tr>
-  <tr>
-    <td>
-		ODT (Open Document Text).
+	<br/>
+	<table style="width:100%" border="1">
+	  <tr>
+	    <th>Nome (Acronimo) Descrizione</th>
+	    <th class="format_th">Tipo di Dato</th>		
+	    <th class="format_th">Estensione</th>
+	  </tr>
+	  <tr>
+	    <td>
+			ODT (Open Document Text).
 
-		E' uno standard aperto per documenti testuali basato su XML. Fa parte dello 
+			E' uno standard aperto per documenti testuali basato su XML. Fa parte dello 
 
-		standard OASIS Open Document Format for Office Applications [18]. E' stato 
+			standard OASIS Open Document Format for Office Applications [18]. E' stato 
 
-		adottato come formato principale per i testi in alcune suite per l'automazione 
+			adottato come formato principale per i testi in alcune suite per l'automazione 
 
-		d'ufficio come OpenOffice.org e LibreOffice ed è supportato da altre come 
+			d'ufficio come OpenOffice.org e LibreOffice ed è supportato da altre come 
 
-		Microsoft Office, Google Docs e IBM Lotus.
-	</td>
-    <td align='center'>Dato documentale</td>		
-    <td align='center'>.odt</td>
-  </tr>
-  <tr>
-    <td>
-		PDF (Portable Document Format).
+			Microsoft Office, Google Docs e IBM Lotus.
+		</td>
+	    <td align='center'>Dato documentale</td>		
+	    <td align='center'>.odt</td>
+	  </tr>
+	  <tr>
+	    <td>
+			PDF (Portable Document Format).
 
-		E' un formato aperto creato da Adobe per la rappresentazione di documenti 
+			E' un formato aperto creato da Adobe per la rappresentazione di documenti 
 
-		contenenti testo e immagini che sia indipendente dalla piattaforma di lettura 
+			contenenti testo e immagini che sia indipendente dalla piattaforma di lettura 
 
-		(applicativo, sistema operativo e hardware). È stato successivamente 
+			(applicativo, sistema operativo e hardware). È stato successivamente 
 
-		standardizzato dall’ISO (ISO/IEC 32000-1:2008) con una serie di formati differenti, 
+			standardizzato dall’ISO (ISO/IEC 32000-1:2008) con una serie di formati differenti, 
 
-		ognuno avente una propria prerogativa (e.g., PDF/UA per l’accessibilità, PDF/H 
+			ognuno avente una propria prerogativa (e.g., PDF/UA per l’accessibilità, PDF/H 
 
-		per documenti sanitari, PDF/A per l’archiviazione, ecc.). Se ne scoraggia 
+			per documenti sanitari, PDF/A per l’archiviazione, ecc.). Se ne scoraggia 
 
-		assolutamente l'uso per distribuire tabelle.
-	</td>
-    <td align='center'>Dato documentale</td>		
-    <td align='center'>.pdf</td>
-  </tr>
-</table>		
-<br/>
+			assolutamente l'uso per distribuire tabelle.
+		</td>
+	    <td align='center'>Dato documentale</td>		
+	    <td align='center'>.pdf</td>
+	  </tr>
+	</table>		
+	<br/>
 
-<p>
-	<span style="font-weight: bold; font-style: italic;">Tabella 1</span> <span style="font-style: italic;">Formati documentali</span>
-</p>
+	<p>
+		<span style="font-weight: bold; font-style: italic;">Tabella 1</span> <span style="font-style: italic;">Formati documentali</span>
+	</p>
 
 
-<h3>Formati di tipo aperto per dati “strutturati generici”</h3>
+	<h3>Formati di tipo aperto per dati “strutturati generici”</h3>
 
-<p>
-	La <span style="font-style: italic;">Tabella 2</span> mostra un primo elenco dei formati aperti maggiormente diffusi nell'ambito 
+	<p>
+		La <span style="font-style: italic;">Tabella 2</span> mostra un primo elenco dei formati aperti maggiormente diffusi nell'ambito 
 
-	dell’amministrazione pubblica ai quali si intende fare riferimento per le attività di pubblicazione dei dati 
+		dell’amministrazione pubblica ai quali si intende fare riferimento per le attività di pubblicazione dei dati 
 
-	aperti. Tali formato sono adatti per la rappresentazione e lo scambio di dati, e anche quindi metadati,  
+		aperti. Tali formato sono adatti per la rappresentazione e lo scambio di dati, e anche quindi metadati,  
 
-	piu o meno strutturati.
-</p>
+		piu o meno strutturati.
+	</p>
 
-<br/>
-<table style="width:100%" border="1">
-  <tr>
-    <th>Nome (Acronimo) e descrizione</th>
-    <th class="format_th">Tipo di Dato</th> 
-    <th class="format_th">Estensione</th>
-  </tr>
-  <tr>
-    <td>
-		Comma Separated Value (CSV)
+	<br/>
+	<table style="width:100%" border="1">
+	  <tr>
+	    <th>Nome (Acronimo) e descrizione</th>
+	    <th class="format_th">Tipo di Dato</th> 
+	    <th class="format_th">Estensione</th>
+	  </tr>
+	  <tr>
+	    <td>
+			Comma Separated Value (CSV)
 
-		Formato di file testuale usato per rappresentare informazioni con struttura 
+			Formato di file testuale usato per rappresentare informazioni con struttura 
 
-		tabellare, le cui righe corrispondono a linee e i cui valori delle singole colonne 
+			tabellare, le cui righe corrispondono a linee e i cui valori delle singole colonne 
 
-		sono separati da una virgola (o punto e virgola). Esso è spesso usato per 
+			sono separati da una virgola (o punto e virgola). Esso è spesso usato per 
 
-		importare ed esportare il contenuto di tabelle di database relazionali e fogli 
+			importare ed esportare il contenuto di tabelle di database relazionali e fogli 
 
-		elettronici. Le righe delle tabelle corrispondono a righe nel file di testo CSV e i 
+			elettronici. Le righe delle tabelle corrispondono a righe nel file di testo CSV e i 
 
-		valori delle celle sono divisi da un carattere separatore.
-    </td>
-    <td align='center'>Dato tabellare</td> 
-    <td align='center'>.csv</td>
-  </tr>
-  <tr>
-    <td>
-		Tab Separated Value (TSV)
+			valori delle celle sono divisi da un carattere separatore.
+	    </td>
+	    <td align='center'>Dato tabellare</td> 
+	    <td align='center'>.csv</td>
+	  </tr>
+	  <tr>
+	    <td>
+			Tab Separated Value (TSV)
 
-		Formato  di file testuale per l'interscambio di tabelle, le cui righe corrispondono 
+			Formato  di file testuale per l'interscambio di tabelle, le cui righe corrispondono 
 
-		a linee e i cui valori delle singole colonne sono separati da un carattere di 
+			a linee e i cui valori delle singole colonne sono separati da un carattere di 
 
-		tabulazione
-    </td>
-    <td align='center'>Dato tabellare</td> 
-    <td align='center'>.tsv</td>
-  </tr>
-  <tr>
-    <td>
-		ODS (Open Document Spreadsheet).
+			tabulazione
+	    </td>
+	    <td align='center'>Dato tabellare</td> 
+	    <td align='center'>.tsv</td>
+	  </tr>
+	  <tr>
+	    <td>
+			ODS (Open Document Spreadsheet).
 
-		Formato di file XML basato su standard aperto per fogli di calcolo. Fa parte dello 
+			Formato di file XML basato su standard aperto per fogli di calcolo. Fa parte dello 
 
-		standard OASIS Open Document Format for Office Applications [18]. Come nel 
+			standard OASIS Open Document Format for Office Applications [18]. Come nel 
 
-		caso precedente, è stato adottato come formato principale per i fogli di calcolo 
+			caso precedente, è stato adottato come formato principale per i fogli di calcolo 
 
-		in alcune suite per l'automazione d'ufficio come OpenOffice.org e LibreOffice ed 
+			in alcune suite per l'automazione d'ufficio come OpenOffice.org e LibreOffice ed 
 
-		è supportato da altre come Microsoft Office, Google Docs e IBM Lotus. Si 
+			è supportato da altre come Microsoft Office, Google Docs e IBM Lotus. Si 
 
-		incoraggia a farne uso per la distribuzione di tabelle.
-    </td>
-    <td align='center'>Dato tabellare</td> 
-    <td align='center'>.ods</td>
-  </tr>
-  <tr>
-    <td>
-		Extensible Markup Language (XML)
+			incoraggia a farne uso per la distribuzione di tabelle.
+	    </td>
+	    <td align='center'>Dato tabellare</td> 
+	    <td align='center'>.ods</td>
+	  </tr>
+	  <tr>
+	    <td>
+			Extensible Markup Language (XML)
 
-		XML è un linguaggio generale di marcatura, ovvero basato su un meccanismo 
+			XML è un linguaggio generale di marcatura, ovvero basato su un meccanismo 
 
-		che consente di definire e controllare il significato degli elementi contenuti in un 
+			che consente di definire e controllare il significato degli elementi contenuti in un 
 
-		documento o in un testo attraverso delle etichette (markup), standardizzato dal 
+			documento o in un testo attraverso delle etichette (markup), standardizzato dal 
 
-		W3C usato per l'annotazione di documenti e per la costruzione di altri linguaggi 
+			W3C usato per l'annotazione di documenti e per la costruzione di altri linguaggi 
 
-		più specifici per l'annotazione di documenti. Esistono strumenti che possono 
+			più specifici per l'annotazione di documenti. Esistono strumenti che possono 
 
-		essere utilizzati per definire la struttura dell’XML come DTD e/o XML schema.
+			essere utilizzati per definire la struttura dell’XML come DTD e/o XML schema.
 
-		Il formato XML è utilizzato per rappresentare altri formati standard quali ad 
+			Il formato XML è utilizzato per rappresentare altri formati standard quali ad 
 
-		esempio RDF, ODS e molti altri formati specifici di settore
-    </td>
-    <td align='center'>Dato strutturato</td> 
-    <td align='center'>.xml</td>
-  </tr>
-  <tr>
-    <td>
-		Resource Description Framework (RDF)
+			esempio RDF, ODS e molti altri formati specifici di settore
+	    </td>
+	    <td align='center'>Dato strutturato</td> 
+	    <td align='center'>.xml</td>
+	  </tr>
+	  <tr>
+	    <td>
+			Resource Description Framework (RDF)
 
-		Formato di file XML basato su uno standard aperto proposto da World Wide 
+			Formato di file XML basato su uno standard aperto proposto da World Wide 
 
-		Web Consortium (W3C) per la codifica, lo scambio e il riutilizzo di dati linked e  
+			Web Consortium (W3C) per la codifica, lo scambio e il riutilizzo di dati linked e  
 
-		metadati strutturati e consente l'interoperabilità tra applicazioni che si 
+			metadati strutturati e consente l'interoperabilità tra applicazioni che si 
 
-		scambiano informazioni sul Web
-    </td>
-    <td align='center'>Dato strutturato</td> 
-    <td align='center'>.rdf</td>
-  </tr>
-  <tr>
-    <td>
-		Notation3 (N3) e Turtle
+			scambiano informazioni sul Web
+	    </td>
+	    <td align='center'>Dato strutturato</td> 
+	    <td align='center'>.rdf</td>
+	  </tr>
+	  <tr>
+	    <td>
+			Notation3 (N3) e Turtle
 
-		L’N3 è un formato di file pensato per essere più compatto rispetto a quella 
+			L’N3 è un formato di file pensato per essere più compatto rispetto a quella 
 
-		ottenuta utilizzando la sintassi XML del RDF. Essa risulta più leggibile da parte 
+			ottenuta utilizzando la sintassi XML del RDF. Essa risulta più leggibile da parte 
 
-		degli umani e possiede delle caratteristiche che esulano dall'uso stretto di RDF 
+			degli umani e possiede delle caratteristiche che esulano dall'uso stretto di RDF 
 
-		(e.g., rappresentazione di formule logiche).  In modo simile, il formato Turtle 
+			(e.g., rappresentazione di formule logiche).  In modo simile, il formato Turtle 
 
-		(anche noto come Terse RDF Triple Language) è una versione semplificata (un 
+			(anche noto come Terse RDF Triple Language) è una versione semplificata (un 
 
-		sottoinsieme di funzionalità) di N3 che include solo aspetti relativi a RDF
-    </td>
-    <td align='center'>Dato strutturato</td> 
-    <td align='center'>.n3</td>
-  </tr>
-  <tr>
-    <td>
-		JSON (JavaScript Object Notation)
+			sottoinsieme di funzionalità) di N3 che include solo aspetti relativi a RDF
+	    </td>
+	    <td align='center'>Dato strutturato</td> 
+	    <td align='center'>.n3</td>
+	  </tr>
+	  <tr>
+	    <td>
+			JSON (JavaScript Object Notation)
 
-		E’ un formato maggiormente leggibile dagli umani e che mantiene, rispetto a 
+			E’ un formato maggiormente leggibile dagli umani e che mantiene, rispetto a 
 
-		formati simili come l'XML, una sintassi poco prolissa. Questo aspetto ne fa un 
+			formati simili come l'XML, una sintassi poco prolissa. Questo aspetto ne fa un 
 
-		formato flessibile e compatto. Esso nasce dalla rappresentazione di strutture 
+			formato flessibile e compatto. Esso nasce dalla rappresentazione di strutture 
 
-		dati semplici nel linguaggio di programmazione JavaScript, ma mantiene 
+			dati semplici nel linguaggio di programmazione JavaScript, ma mantiene 
 
-		indipendenza rispetto ai linguaggi di programmazione. Ha avuto ampia 
+			indipendenza rispetto ai linguaggi di programmazione. Ha avuto ampia 
 
-		diffusione per il fatto di essere flessibile e compatto
-    </td>
-    <td align='center'>Dato strutturato</td> 
-    <td align='center'>.json</td>
-  </tr>
-  <tr>
-    <td>
-		JSON-LD
+			diffusione per il fatto di essere flessibile e compatto
+	    </td>
+	    <td align='center'>Dato strutturato</td> 
+	    <td align='center'>.json</td>
+	  </tr>
+	  <tr>
+	    <td>
+			JSON-LD
 
-		E’ un formato  di file per la rappresentazione di dati linked che si basa sulla 
+			E’ un formato  di file per la rappresentazione di dati linked che si basa sulla 
 
-		sintassi JSON ed è pensato per essere più compatto rispetto alla 
+			sintassi JSON ed è pensato per essere più compatto rispetto alla 
 
-		rappresentazione ottenuta con il formato RDF.  Il formato JSON-LD è stato 
+			rappresentazione ottenuta con il formato RDF.  Il formato JSON-LD è stato 
 
-		standardizzato recentemente dal W3C, con la speranza di essere accolto 
+			standardizzato recentemente dal W3C, con la speranza di essere accolto 
 
-		favorevolmente dall’imponente numero di programmatori che già utilizzano e 
+			favorevolmente dall’imponente numero di programmatori che già utilizzano e 
 
-		conoscono JSON ma che potrebbero avere necessità di manipolare dati linked.
-    </td>
-    <td align='center'>Dato strutturato</td> 
-    <td align='center'>.jsonld</td>
-  </tr>
-</table>
-<br/>
+			conoscono JSON ma che potrebbero avere necessità di manipolare dati linked.
+	    </td>
+	    <td align='center'>Dato strutturato</td> 
+	    <td align='center'>.jsonld</td>
+	  </tr>
+	</table>
+	<br/>
 
-<p>
-	<span style="font-weight: bold; font-style: italic;">Tabella 2</span> <span style="font-style: italic;">Formati aperti adatti alla pubblicazione dei dati aperti di “tipo strutturato” generale, ovvero non 
+	<p>
+		<span style="font-weight: bold; font-style: italic;">Tabella 2</span> <span style="font-style: italic;">Formati aperti adatti alla pubblicazione dei dati aperti di “tipo strutturato” generale, ovvero non 
 
-	a specifici  domini applicativi o di settore</span>
-</p>
+		a specifici  domini applicativi o di settore</span>
+	</p>
 
 
-<h3>Formati di tipo aperto per dati geografici</h3>
+	<h3>Formati di tipo aperto per dati geografici</h3>
 
-<p>
-	Fra i vari tipi di dati su specifici domini, i dati geografici sono stati i primi ad essere rivisti in ottica di 
+	<p>
+		Fra i vari tipi di dati su specifici domini, i dati geografici sono stati i primi ad essere rivisti in ottica di 
 
-	standardizzazioni e riutilizzo in modalità aperta, così che l’ambito applicativo più diffuso e consolidato a 
+		standardizzazioni e riutilizzo in modalità aperta, così che l’ambito applicativo più diffuso e consolidato a 
 
-	livello di standard sono i dati geografici-ambientali.
-</p>
+		livello di standard sono i dati geografici-ambientali.
+	</p>
 
-<br/>
-<table style="width:100%" border="1">
-  <tr>
-    <th>Nome (Acronimo) Descrizione</th>
-    <th class="format_th">Tipo di Dato</th> 
-    <th class="format_th">Estensione</th>
-  </tr>
-  <tr>
-    <td>
-		Geographic Markup Language (GML)
+	<br/>
+	<table style="width:100%" border="1">
+	  <tr>
+	    <th>Nome (Acronimo) Descrizione</th>
+	    <th class="format_th">Tipo di Dato</th> 
+	    <th class="format_th">Estensione</th>
+	  </tr>
+	  <tr>
+	    <td>
+			Geographic Markup Language (GML)
 
-		Formato XML utile allo scambio di dati territoriali di tipo vettoriale. Si tratta di 
+			Formato XML utile allo scambio di dati territoriali di tipo vettoriale. Si tratta di 
 
-		una grammatica XML che rappresenta un formato di scambio aperto per i dati 
+			una grammatica XML che rappresenta un formato di scambio aperto per i dati 
 
-		territoriali. Essa, definita originariamente da OGC e diventata lo Standard ISO 
+			territoriali. Essa, definita originariamente da OGC e diventata lo Standard ISO 
 
-		19136:2008, fornisce la codifica XML (schemi XSD) delle classi concettuali definite 
+			19136:2008, fornisce la codifica XML (schemi XSD) delle classi concettuali definite 
 
-		in diversi Standard ISO della serie 19100 e di classi aggiuntive appositamente 
+			in diversi Standard ISO della serie 19100 e di classi aggiuntive appositamente 
 
-		definite: geometrie, oggetti topologici, unità di misura, tipi di base, riferimenti 
+			definite: geometrie, oggetti topologici, unità di misura, tipi di base, riferimenti 
 
-		temporali, feature, sistemi di riferimento, copertura
-    </td>
-    <td align='center'>Dato geografico vettoriale</td> 
-    <td align='center'>.gml</td>
-  </tr>
-  <tr>
-    <td>
-		Keyhole Markup Language (KML)
+			temporali, feature, sistemi di riferimento, copertura
+	    </td>
+	    <td align='center'>Dato geografico vettoriale</td> 
+	    <td align='center'>.gml</td>
+	  </tr>
+	  <tr>
+	    <td>
+			Keyhole Markup Language (KML)
 
-		È un formato basato su XML per rappresentare dati geografici. Nato con Google, 
+			È un formato basato su XML per rappresentare dati geografici. Nato con Google, 
 
-		è diventato poi uno standard OGC. Le specifiche della versione 2.2 presentano 
+			è diventato poi uno standard OGC. Le specifiche della versione 2.2 presentano 
 
-		una serie di entità XML attraverso cui archiviare le coordinate geografiche che 
+			una serie di entità XML attraverso cui archiviare le coordinate geografiche che 
 
-		rappresentano punti, linee e poligoni espressi in coordinate WGS84 e altre utili a 
+			rappresentano punti, linee e poligoni espressi in coordinate WGS84 e altre utili a 
 
-		definire gli stili attraverso cui i dati andranno visualizzati. Si incoraggia l'uso solo 
+			definire gli stili attraverso cui i dati andranno visualizzati. Si incoraggia l'uso solo 
 
-		se il file viene distribuito attraverso adeguata strutturazione degli attributi delle 
+			se il file viene distribuito attraverso adeguata strutturazione degli attributi delle 
 
-		geometrie.
-    </td>
-    <td align='center'>Dato geografico vettoriale</td> 
-    <td align='center'>.kml</td>
-  </tr>
-  <tr>
-    <td>
-		ESRI Shapefile (SHP)
+			geometrie.
+	    </td>
+	    <td align='center'>Dato geografico vettoriale</td> 
+	    <td align='center'>.kml</td>
+	  </tr>
+	  <tr>
+	    <td>
+			ESRI Shapefile (SHP)
 
-		È il formato standard de-facto (non è un formato aperto ma sono note le 
+			È il formato standard de-facto (non è un formato aperto ma sono note le 
 
-		specifiche) per la rappresentazione dei dati dei sistemi informativi geografici 
+			specifiche) per la rappresentazione dei dati dei sistemi informativi geografici 
 
-		(GIS). I dati sono di tipo vettoriale. Lo shapefile è stato creato dalla società 
+			(GIS). I dati sono di tipo vettoriale. Lo shapefile è stato creato dalla società 
 
-		privata ESRI che rende comunque pubbliche le sue specifiche. L’apertura delle 
+			privata ESRI che rende comunque pubbliche le sue specifiche. L’apertura delle 
 
-		specifiche ha consentito lo sviluppo di diversi strumenti in grado di gestire e 
+			specifiche ha consentito lo sviluppo di diversi strumenti in grado di gestire e 
 
-		creare tale formato. Seppur impropriamente ci si riferisca a uno shapefile, nella 
+			creare tale formato. Seppur impropriamente ci si riferisca a uno shapefile, nella 
 
-		pratica si devono considerare almeno tre file: un .shp contenente le forme 
+			pratica si devono considerare almeno tre file: un .shp contenente le forme 
 
-		geometriche, un .dbf contenente il database degli attributi delle forme 
+			geometriche, un .dbf contenente il database degli attributi delle forme 
 
-		geometriche e un file .shx come indice delle forme geometriche. A questi tre si 
+			geometriche e un file .shx come indice delle forme geometriche. A questi tre si 
 
-		deve anche accompagnare un file .prj che contiene le impostazioni del sistema di 
+			deve anche accompagnare un file .prj che contiene le impostazioni del sistema di 
 
-		riferimento. I files possono essere distribuiti all'interno di un file archivio 
+			riferimento. I files possono essere distribuiti all'interno di un file archivio 
 
-		compresso (es. “.zip”). In questo caso è necessario indicare il formato dei dati 
+			compresso (es. “.zip”). In questo caso è necessario indicare il formato dei dati 
 
-		contenuti nell'archivio come SHP. Si incoraggia a distribuire i dati completi del file 
+			contenuti nell'archivio come SHP. Si incoraggia a distribuire i dati completi del file 
 
-		.prj
-    </td>
-    <td align='center'>Dato geografico vettoriale</td> 
-    <td align='center'>.shp, .shx, .dbf, .prj</td>
-  </tr>
-  <tr>
-    <td>
-		GeoJSON
+			.prj
+	    </td>
+	    <td align='center'>Dato geografico vettoriale</td> 
+	    <td align='center'>.shp, .shx, .dbf, .prj</td>
+	  </tr>
+	  <tr>
+	    <td>
+			GeoJSON
 
-		E’ un formato aperto per la rappresentazione e l'interscambio dei dati territoriali 
+			E’ un formato aperto per la rappresentazione e l'interscambio dei dati territoriali 
 
-		in forma vettoriale, basato su JSON (JavaScript Object Notation). Ogni dato è 
+			in forma vettoriale, basato su JSON (JavaScript Object Notation). Ogni dato è 
 
-		codificato come oggetto che può rappresentare una geometria, una feature o 
+			codificato come oggetto che può rappresentare una geometria, una feature o 
 
-		una collezione di feature. Ad ogni elemento geografico sono associati degli 
+			una collezione di feature. Ad ogni elemento geografico sono associati degli 
 
-		attributi attraverso un insieme di coppie nome/valore (membri)
-    </td>
-    <td align='center'>Dato geografico vettoriale</td> 
-    <td align='center'>.json</td>
-  </tr>
-  <tr>
-    <td>
-		Geopackage
+			attributi attraverso un insieme di coppie nome/valore (membri)
+	    </td>
+	    <td align='center'>Dato geografico vettoriale</td> 
+	    <td align='center'>.json</td>
+	  </tr>
+	  <tr>
+	    <td>
+			Geopackage
 
-		E’ un formato aperto per la rappresentazione di dati geografici che può essere 
+			E’ un formato aperto per la rappresentazione di dati geografici che può essere 
 
-		considerato un’alternativa al formato shapefile prima introdotto. Esso supporta 
+			considerato un’alternativa al formato shapefile prima introdotto. Esso supporta 
 
-		SpatiaLite ovvero un’estensione dello schema del database SQLite. Se ne 
+			SpatiaLite ovvero un’estensione dello schema del database SQLite. Se ne 
 
-		incoraggia l'uso e la distribuzione grazie alla duttilità del formato che, in un unico 
+			incoraggia l'uso e la distribuzione grazie alla duttilità del formato che, in un unico 
 
-		file, riesce a distribuire le geometrie, gli attributi collegati e le modalità di 
+			file, riesce a distribuire le geometrie, gli attributi collegati e le modalità di 
 
-		rappresentazione.
-    </td>
-    <td align='center'>Dato geografico vettoriale</td> 
-    <td align='center'>.gpkg</td>
-  </tr>
-  <tr>
-    <td>
-		Formati Immagini
+			rappresentazione.
+	    </td>
+	    <td align='center'>Dato geografico vettoriale</td> 
+	    <td align='center'>.gpkg</td>
+	  </tr>
+	  <tr>
+	    <td>
+			Formati Immagini
 
-		I dati raster possono cioè essere memorizzati attraverso tipologie di file che 
+			I dati raster possono cioè essere memorizzati attraverso tipologie di file che 
 
-		sfruttano algoritmi di compressione diversi, gravando in modo differente sul 
+			sfruttano algoritmi di compressione diversi, gravando in modo differente sul 
 
-		supporto di memorizzazione. I formati raster più comuni sono i seguenti:
+			supporto di memorizzazione. I formati raster più comuni sono i seguenti:
 
-		Non compressi; Con compressione lossless (cioè senza perdita di informazione); 
+			Non compressi; Con compressione lossless (cioè senza perdita di informazione); 
 
-		Con compressione lossy (cioè con perdita di informazione, per cui il file 
+			Con compressione lossy (cioè con perdita di informazione, per cui il file 
 
-		decompresso avrà qualità inferiore dell’originale)
-    </td>
-    <td align='center'>Dato geografico Raster</td> 
-    <td align='center'>.raw, .bmp, .png, jpeg</td>
-  </tr>
-</table>
-<br/>
+			decompresso avrà qualità inferiore dell’originale)
+	    </td>
+	    <td align='center'>Dato geografico Raster</td> 
+	    <td align='center'>.raw, .bmp, .png, jpeg</td>
+	  </tr>
+	</table>
+	<br/>
 
-<p>
-	<span style="font-weight: bold; font-style: italic;">Tabella 3</span> <span style="font-style: italic;">Formati aperti per la pubblicazione dei dati aperti di tipo geografico</span>
-</p>
+	<p>
+		<span style="font-weight: bold; font-style: italic;">Tabella 3</span> <span style="font-style: italic;">Formati aperti per la pubblicazione dei dati aperti di tipo geografico</span>
+	</p>
 
-<h3>Formati di tipo proprietario “aperti de facto”</h3>
+	<h3>Formati di tipo proprietario “aperti de facto”</h3>
 
-<p>
-	La <span style="font-style: italic;">Tabella 4</span> fornisce un elenco dei formati proprietari “de facto” più diffusi di cui è comunque suggerita 
+	<p>
+		La <span style="font-style: italic;">Tabella 4</span> fornisce un elenco dei formati proprietari “de facto” più diffusi di cui è comunque suggerita 
 
-	la pubblicazione sempre insieme alla versione del dato in un formato di tipo aperto. Si sottolinea che, 
+		la pubblicazione sempre insieme alla versione del dato in un formato di tipo aperto. Si sottolinea che, 
 
-	nel caso di pubblicazione di dati in forma solo tabellare, senza elementi aggiuntivi (es. metadati, grafici, 
+		nel caso di pubblicazione di dati in forma solo tabellare, senza elementi aggiuntivi (es. metadati, grafici, 
 
-	formule) è possibile evitare di utilizzare formati quali PDF o ODT e utilizzare il formato CSV prima 
+		formule) è possibile evitare di utilizzare formati quali PDF o ODT e utilizzare il formato CSV prima 
 
-	descritto. Negli altri casi di dati in forma tabellare, con elementi aggiuntivi quali in particolare metadati, 
+		descritto. Negli altri casi di dati in forma tabellare, con elementi aggiuntivi quali in particolare metadati, 
 
-	si raccomanda l’uso del formato ODS. Nel caso di documenti in generale, si raccomanda, ove esistano, 
+		si raccomanda l’uso del formato ODS. Nel caso di documenti in generale, si raccomanda, ove esistano, 
 
-	l’utilizzo di standard XML documentali internazionali o nazionali.
-</p>
+		l’utilizzo di standard XML documentali internazionali o nazionali.
+	</p>
 
-<br/>
-<table style="width:100%" border="1">
-  <tr>
-    <th>Tipologia</th>
-    <th class="format_th">Tipo di Dato</th> 
-    <th class="format_th">Estensione</th>
-  </tr>
-  <tr>
-    <td>
-		Microsoft Excel (fino alla versione 2003)
+	<br/>
+	<table style="width:100%" border="1">
+	  <tr>
+	    <th>Tipologia</th>
+	    <th class="format_th">Tipo di Dato</th> 
+	    <th class="format_th">Estensione</th>
+	  </tr>
+	  <tr>
+	    <td>
+			Microsoft Excel (fino alla versione 2003)
 
-		Formato proprietario Microsoft, leggibile da programmi Open Source, utile 
+			Formato proprietario Microsoft, leggibile da programmi Open Source, utile 
 
-		alla memorizzazione di fogli di calcolo
-    </td>
-    <td align='center'>Dato tabellare</td> 
-    <td align='center'>.xls</td>
-  </tr>
-  <tr>
-    <td>
-		Microsoft Excel versioni successive (XSLX)
+			alla memorizzazione di fogli di calcolo
+	    </td>
+	    <td align='center'>Dato tabellare</td> 
+	    <td align='center'>.xls</td>
+	  </tr>
+	  <tr>
+	    <td>
+			Microsoft Excel versioni successive (XSLX)
 
-		Formato proprietario Microsoft, leggibile da programmi Open Source qualora 
+			Formato proprietario Microsoft, leggibile da programmi Open Source qualora 
 
-		non siano introdotte formattazioni complesse, utile alla memorizzazione di 
+			non siano introdotte formattazioni complesse, utile alla memorizzazione di 
 
-		fogli di calcolo
-    </td>
-    <td align='center'>Dato tabellare</td> 
-    <td align='center'>.xlsx</td>
-  </tr>
-  <tr>
-    <td>
-		DXF (Drawing Interchange Format)
+			fogli di calcolo
+	    </td>
+	    <td align='center'>Dato tabellare</td> 
+	    <td align='center'>.xlsx</td>
+	  </tr>
+	  <tr>
+	    <td>
+			DXF (Drawing Interchange Format)
 
-		è un formato per i file di tipo CAD, sviluppato da Autodesk come soluzione 
+			è un formato per i file di tipo CAD, sviluppato da Autodesk come soluzione 
 
-		per scambiare dati tra il programma AutoCAD e altri programmi.
-    </td>
-    <td align='center'>Dato geografico vettoriale</td> 
-    <td align='center'>.dxf</td>
-  </tr>
-</table>
-<br/>
+			per scambiare dati tra il programma AutoCAD e altri programmi.
+	    </td>
+	    <td align='center'>Dato geografico vettoriale</td> 
+	    <td align='center'>.dxf</td>
+	  </tr>
+	</table>
+	<br/>
 
-<p>
-	<span style="font-weight: bold; font-style: italic;">Tabella 4</span> <span style="font-style: italic;">Formati proprietari “de facto”</span> 
-</p>
+	<p>
+		<span style="font-weight: bold; font-style: italic;">Tabella 4</span> <span style="font-style: italic;">Formati proprietari “de facto”</span> 
+	</p>
 
-<p>
-	Tali formati sono quindi utilizzabili solamente insieme ad un formato di tipo aperto. Si pone attenzione 
+	<p>
+		Tali formati sono quindi utilizzabili solamente insieme ad un formato di tipo aperto. Si pone attenzione 
 
-	al fatto che <span style="font-weight: bold;">l’utilizzo di tali formati è da limitare ove possibile ai soli casi di necessità per agevolare il 
+		al fatto che <span style="font-weight: bold;">l’utilizzo di tali formati è da limitare ove possibile ai soli casi di necessità per agevolare il 
 
-	riuso</span> del dato e per permettere una transizione completa più graduale nel tempo ai formati di tipo 
+		riuso</span> del dato e per permettere una transizione completa più graduale nel tempo ai formati di tipo 
 
-	aperto.
-</p>
+		aperto.
+	</p>
+</div>

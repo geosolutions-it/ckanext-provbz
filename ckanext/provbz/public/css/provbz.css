@@ -626,3 +626,8 @@ a .footer_icon{
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff967876',endColorstr='#ff75231A',GradientType=0);
 }
+
+a:hover, a:focus {
+    color: #333333;
+    text-decoration: underline;
+}

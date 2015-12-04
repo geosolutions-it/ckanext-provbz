@@ -4,7 +4,7 @@
 
 {% block subtitle %}
     {% if locale == 'de' %}
-		{{ _(' Liste der Größen von offenen') }}
+		{{ _(' Liste der offenen Formattypen') }}
 	{% else %}
 		{{ _(' Lista di formati di tipo aperto') }}
 	{% endif %}
@@ -12,7 +12,7 @@
 
 {% block breadcrumb_content %}
     {% if locale == 'de' %}
-    	 <li class="active">{% link_for _('Liste der Größen von offenen'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzformats' %}</li>
+    	 <li class="active">{% link_for _('Liste der offenen Formattypen'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzformats' %}</li>
   	{% else %}
 		 <li class="active">{% link_for _('Lista di formati di tipo aperto'), controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzformats' %}</li>
   	{% endif %}
