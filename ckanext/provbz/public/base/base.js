@@ -68,13 +68,14 @@ $(document).ready(function(){
       );
     };
 
-    $.ajax({ 
+    cookiesConsentShow();
+    /*$.ajax({ 
       url: "/loc_status",
       success: function(data, textStatus, jqXHR) {
         setSiteLanguage(data);
       },
       error: function(jqXHR, textStatus, errorThrown) {
       }
-    });
+    });*/
     
 });
