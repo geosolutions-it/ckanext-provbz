@@ -635,3 +635,13 @@ a:hover, a:focus {
 div.align-text th{
     text-align: center;
 }
+
+.copyrights{
+    width: 550px;
+    font-size: 12px;
+    padding-top: 10px;
+}
+
+.geosolutions_logo {
+    background: url('../images/logo/GeoSolutions_logo.png') center  no-repeat;
+}

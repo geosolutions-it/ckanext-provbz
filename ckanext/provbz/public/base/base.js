@@ -43,15 +43,15 @@ $(document).ready(function(){
       var locales = {
         i18n: {
           it:{
-            cookieMsg: "Questo sito web utilizza i cookies per erogare servizi di qualità, continuando la navigazione l'utente acconsente al loro utilizzo.",
-            cookieAccept: "Accetto",
-            cookieMoreInfo: "Ulteriori Informazioni",
+            cookieMsg: "Questo sito web utilizza i cookies per erogare servizi di qualità, continuando la navigazione si acconsente al loro utilizzo.",
+            cookieAccept: "ACCETTO",
+            cookieMoreInfo: "Visualizzare dettagli",
             cookieInfoPage: "http://www.retecivica.bz.it/it/cookie.asp"
           },
           de:{
-            cookieMsg: "Diese Website verwendet Cookies, um qualitativ hochwertige Dienstleistungen zu liefern, weiter Surfen Sie zu deren Verwendung.",
-            cookieAccept: "Akzeptabel",
-            cookieMoreInfo: "Weitere Informationen",
+            cookieMsg: "Diese Website verwendet Cookies, um die angebotenen Dienste zu optimieren. Indem Sie weiter auf der Webseite navigieren stimmen Sie deren Verwendung zu.",
+            cookieAccept: "AKZEPTIEREN",
+            cookieMoreInfo: "Details ansehen",
             cookieInfoPage: "http://www.buergernetz.bz.it/de/cookie.asp"
           }
         }

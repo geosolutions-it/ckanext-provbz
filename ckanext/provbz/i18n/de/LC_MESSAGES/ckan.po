@@ -2153,7 +2153,7 @@ msgstr "Ressourcen neu ordnen"
 #: ckan/templates/package/snippets/resource_form.html:24
 #: ckan/templates/related/snippets/related_form.html:19
 msgid "URL"
-msgstr "URL"
+msgstr "URL für die Anwendungskooperation"
 
 #: ckan/public/base/javascript/modules/slug-preview.js:36
 #: ckan/templates/group/edit_base.html:20 ckan/templates/group/members.html:32
@@ -4615,7 +4615,7 @@ msgstr "z.B. http://example.com/image.jpg (wenn leer, wird Ressourcen-URL verwen
 
 #: ckanext/reclineview/plugin.py:84
 msgid "Data Explorer"
-msgstr "Data Explorer"
+msgstr "Datenvorschau"
 
 #: ckanext/reclineview/plugin.py:111
 msgid "Table"

@@ -2150,7 +2150,7 @@ msgstr "Riordina vista di risorsa"
 #: ckan/templates/package/snippets/resource_form.html:24
 #: ckan/templates/related/snippets/related_form.html:19
 msgid "URL"
-msgstr "URL"
+msgstr "URL per la cooperazione applicativa"
 
 #: ckan/public/base/javascript/modules/slug-preview.js:36
 #: ckan/templates/group/edit_base.html:20 ckan/templates/group/members.html:32
