@@ -10,7 +10,7 @@
 	
 	<div class="page-top">
       <div class="container">
-        <h1>{% trans %}Benvenuto nella piattaforma Open Data Alto Adige{% endtrans %} <a href="/dataset?q=" type="button" class="btn-dataset-link">{% trans %}ACCEDI AI DATASET{% endtrans %}</a></h1>
+        <h1>{% trans %}Benvenuto nella piattaforma Open Data Alto Adige{% endtrans %} <a href={{ h.getLocalizedPageLink("dataset?q=") }} type="button" class="btn-dataset-link">{% trans %}ACCEDI AI DATASET{% endtrans %}</a></h1>
       </div>
     </div>
 </div>
