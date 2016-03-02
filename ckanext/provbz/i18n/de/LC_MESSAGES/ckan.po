@@ -4887,7 +4887,7 @@ msgstr "GESCHÜTZER BEREICH"
 
 #: templates/home/layout1.html:11
 msgid "Benvenuto nella piattaforma Open Data Alto Adige"
-msgstr "Willkommen auf Open Data Plattform Südtirol"
+msgstr "Willkommen auf der Open Data Plattform Südtirol"
 
 #: templates/home/layout1.html:11
 msgid "ACCEDI AI DATASET"
