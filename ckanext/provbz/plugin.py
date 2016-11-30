@@ -139,33 +139,27 @@ class PBZThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     # ------------------------------------------------------------
 
     def after_create(self, context, pkg_dict):
-        #if not custom.custom_field_table.exists():
-        #    custom.init_db()
-
         # During the harvest the get_lang() is not defined
-        if get_lang():
-            lang = get_lang()[0]
-            
+        lang = helpers.get_locale()
+
+        if lang:    
             for extra in pkg_dict.get('extras'):
                 for field in self.get_custom_schema():
-                    if extra.get('key') == field[0]:
-                        log.info(':::::::::::::::Localizing custom field: %r', field[0])
+                    if extra.get('key') == field['name'] and field['localized'] == True:
+                        log.info(':::::::::::::::Localizing custom field: %r', field['name'])
                         
                         # Create the localized field record
                         self.createLocField(extra, lang, pkg_dict.get('id'))
 
     def after_update(self, context, pkg_dict):
-        #if not custom.custom_field_table.exists():
-        #    custom.init_db()
-
         # During the harvest the get_lang() is not defined
-        if get_lang():
-            lang = get_lang()[0]
-            
+        lang = helpers.get_locale()
+
+        if lang:             
             for extra in pkg_dict.get('extras'):
                 for field in self.get_custom_schema():
-                    if extra.get('key') == field[0]:
-                        log.info(':::::::::::::::Localizing custom field: %r', field[0])
+                    if extra.get('key') == field['name'] and field['localized'] == True:
+                        log.info(':::::::::::::::Localizing custom field: %r', field['name'])
                         f = custom.get_field(extra.get('key'), pkg_dict.get('id'), lang)
                         if f:
                             if extra.get('value') == '':

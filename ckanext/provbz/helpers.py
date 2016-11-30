@@ -32,9 +32,11 @@ def get_default_locale():
     return locale_default
 
 def get_locale():
-    lang = get_lang()[0]
-
-    log.info('Retrieving Ckan current locale: %r', lang)
+    lang = get_lang()
+    
+    if lang is not None:
+        lang = unicode(lang[0])        
+    
     return lang
 
 def getLocalizedPageLink(page):
