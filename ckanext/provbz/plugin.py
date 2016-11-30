@@ -88,14 +88,6 @@ class PBZThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
                 'placeholder': _('contact'),
                 'is_required': False,
                 'localized': True
-            }, {
-                'name': 'fields_description',
-                'validator': ['ignore_missing'],
-                'element': 'textarea',
-                'label': _('Fields Description'),
-                'placeholder': _('description of the dataset fields'),
-                'is_required': False,
-                'localized': True
             }
         ]
 
@@ -155,7 +147,7 @@ class PBZThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
             lang = get_lang()[0]
             
             for extra in pkg_dict.get('extras'):
-                for field in self.custom_fields:
+                for field in self.get_custom_schema():
                     if extra.get('key') == field[0]:
                         log.info(':::::::::::::::Localizing custom field: %r', field[0])
                         
@@ -171,7 +163,7 @@ class PBZThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
             lang = get_lang()[0]
             
             for extra in pkg_dict.get('extras'):
-                for field in self.custom_fields:
+                for field in self.get_custom_schema():
                     if extra.get('key') == field[0]:
                         log.info(':::::::::::::::Localizing custom field: %r', field[0])
                         f = custom.get_field(extra.get('key'), pkg_dict.get('id'), lang)

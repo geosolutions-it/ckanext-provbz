@@ -1,0 +1,2410 @@
+# Italian translations for ckanext-provbz.
+# Copyright (C) 2016 ORGANIZATION
+# This file is distributed under the same license as the ckanext-provbz
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-provbz 0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2016-11-30 13:25+0100\n"
+"PO-Revision-Date: 2016-11-30 13:26+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: it <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+
+#: ckanext/provbz/plugin.py:60
+#: ckanext/provbz/templates/package/snippets/additional_info.html:99
+msgid "Creation Date"
+msgstr ""
+
+#: ckanext/provbz/plugin.py:61
+msgid "creation date"
+msgstr ""
+
+#: ckanext/provbz/plugin.py:69
+#: ckanext/provbz/templates/package/snippets/additional_info.html:123
+msgid "Encoding"
+msgstr ""
+
+#: ckanext/provbz/plugin.py:70
+msgid "encoding type"
+msgstr ""
+
+#: ckanext/provbz/plugin.py:78
+#: ckanext/provbz/templates/package/snippets/additional_info.html:131
+#: ckanext/provbz/templates/package/snippets/additional_info.html:136
+msgid "Site URL"
+msgstr ""
+
+#: ckanext/provbz/plugin.py:79
+msgid "site url"
+msgstr ""
+
+#: ckanext/provbz/plugin.py:87
+msgid "Contact"
+msgstr ""
+
+#: ckanext/provbz/plugin.py:88
+#: ckanext/provbz/templates/package/snippets/additional_info.html:253
+#: ckanext/provbz/templates/package/snippets/additional_info.html:258
+msgid "contact"
+msgstr ""
+
+#: ckanext/provbz/templates/base.html:11
+msgid "Portale OpenData Bolzano"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:11
+msgid "About {0}"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:15
+msgid "Informazioni Dati Alto Adige"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:21
+msgid "Domande frequenti"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:27
+msgid "Atom Feed"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:33
+#: ckanext/provbz/templates/home/acknowledgements.html:17
+#: ckanext/provbz/templates/home/snippets/acknowledgements.html:2
+msgid "Ringraziamenti"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:39
+#: ckanext/provbz/templates/home/snippets/legal.html:2
+msgid "Note legali"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:45
+#: ckanext/provbz/templates/home/privacy.html:15
+#: ckanext/provbz/templates/home/privacy.html:17
+#: ckanext/provbz/templates/home/snippets/privacy.html:2
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:2
+msgid "Privacy"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:51
+msgid "Contattaci"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:58
+#: ckanext/provbz/templates/footer.html:63
+msgid "Cookie"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:96
+msgid "CKAN API"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:97
+msgid "Open Knowledge Foundation"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:101
+msgid "Realizzato con"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:123
+msgid "Pages"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:128
+msgid "Blog"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:134
+#: ckanext/provbz/templates/header.html:15
+msgid "Sysadmin settings"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:140
+#: ckanext/provbz/templates/header.html:21
+msgid "View profile"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:147
+#: ckanext/provbz/templates/header.html:28
+#, python-format
+msgid "Dashboard (%(num)d new item)"
+msgid_plural "Dashboard (%(num)d new items)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ckanext/provbz/templates/footer.html:155
+#: ckanext/provbz/templates/header.html:36
+msgid "Edit settings"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:162
+#: ckanext/provbz/templates/header.html:43
+msgid "Log out"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:184
+msgid "ACCEDI AL GEOPORTALE"
+msgstr ""
+
+#: ckanext/provbz/templates/header.html:55
+msgid "Log in"
+msgstr ""
+
+#: ckanext/provbz/templates/header.html:57
+msgid "Register"
+msgstr ""
+
+#: ckanext/provbz/templates/header.html:102
+msgid "Datasets"
+msgstr ""
+
+#: ckanext/provbz/templates/header.html:103
+msgid "Organizations"
+msgstr ""
+
+#: ckanext/provbz/templates/header.html:104
+msgid "Groups"
+msgstr ""
+
+#: ckanext/provbz/templates/header.html:107
+msgid "About"
+msgstr ""
+
+#: ckanext/provbz/templates/header.html:108
+msgid "Faq"
+msgstr ""
+
+#: ckanext/provbz/templates/page.html:6
+msgid "Skip to content"
+msgstr ""
+
+#: ckanext/provbz/templates/home/acknowledgements.html:7
+msgid " Dank"
+msgstr ""
+
+#: ckanext/provbz/templates/home/acknowledgements.html:9
+msgid " Ribgraziamenti"
+msgstr ""
+
+#: ckanext/provbz/templates/home/acknowledgements.html:15
+#: ckanext/provbz/templates/home/snippets/acknowledgements_de.html:3
+msgid "Dank"
+msgstr ""
+
+#: ckanext/provbz/templates/home/faq.html:7
+#: ckanext/provbz/templates/home/faq.html:9
+msgid " FAQ"
+msgstr ""
+
+#: ckanext/provbz/templates/home/faq.html:15
+#: ckanext/provbz/templates/home/faq.html:17
+#: ckanext/provbz/templates/home/snippets/faq.html:2
+#: ckanext/provbz/templates/home/snippets/faq_de.html:2
+msgid "FAQ"
+msgstr ""
+
+#: ckanext/provbz/templates/home/formats.html:7
+msgid " Liste der offenen Formattypen"
+msgstr ""
+
+#: ckanext/provbz/templates/home/formats.html:9
+msgid " Lista di formati di tipo aperto"
+msgstr ""
+
+#: ckanext/provbz/templates/home/formats.html:15
+#: ckanext/provbz/templates/home/snippets/formats_de.html:2
+msgid "Liste der offenen Formattypen"
+msgstr ""
+
+#: ckanext/provbz/templates/home/formats.html:17
+#: ckanext/provbz/templates/home/snippets/formats.html:2
+msgid "Lista di formati di tipo aperto"
+msgstr ""
+
+#: ckanext/provbz/templates/home/info.html:7
+#: ckanext/provbz/templates/home/info.html:15
+msgid " Über uns"
+msgstr ""
+
+#: ckanext/provbz/templates/home/info.html:9
+#: ckanext/provbz/templates/home/info.html:17
+msgid " Informazioni"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:13
+msgid "Benvenuto nella piattaforma Open Data Alto Adige"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:13
+msgid "ACCEDI AI DATASET"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:31
+msgid "Ultime News"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:66
+msgid "Leggi tutto il contenuto"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:82
+msgid "Cosa sono gli OPENdata?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:84
+msgid ""
+"Per dati si intendono pezzi di singola informazione di varia natura, che "
+"descrivono fatti riproducibili senza ambiguità e che possono essere "
+"espressi e archiviati in formati digitali. Il Codice dell'Amministrazione"
+" Digitale (art. 68, c. 3, lett. b) definisce dati aperti i dati che "
+"presentano le seguenti caratteristiche:"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:88
+msgid ""
+"sono disponibili secondo i termini di una licenza che ne permetta "
+"l'utilizzo da parte di chiunque, anche per finalità commerciali, in "
+"formato disaggregato"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:89
+msgid ""
+"sono accessibili attraverso le tecnologie dell'informazione e della "
+"comunicazione, ivi comprese le reti telematiche pubbliche e private, in "
+"formati aperti ai sensi della lettera a), sono adatti all'utilizzo "
+"automatico da parte di programmi per elaboratori e sono provvisti dei "
+"relativi metadati"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:90
+msgid ""
+"sono resi disponibili gratuitamente attraverso le tecnologie "
+"dell'informazione e della comunicazione, ivi comprese le reti telematiche"
+" pubbliche e private, oppure sono resi disponibili ai costi marginali "
+"sostenuti per la loro riproduzione e divulgazione"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:94
+msgid "Leggi tutto"
+msgstr ""
+
+#: ckanext/provbz/templates/home/legal.html:7
+msgid " Rechtliche Anmerkungen"
+msgstr ""
+
+#: ckanext/provbz/templates/home/legal.html:9
+msgid " Note Legali"
+msgstr ""
+
+#: ckanext/provbz/templates/home/legal.html:15
+msgid "Rechtliche Anmerkungen"
+msgstr ""
+
+#: ckanext/provbz/templates/home/legal.html:17
+msgid "Note Legali"
+msgstr ""
+
+#: ckanext/provbz/templates/home/privacy.html:7
+#: ckanext/provbz/templates/home/privacy.html:9
+msgid " Privacy"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/acknowledgements.html:3
+msgid "Partners del progetto"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/acknowledgements.html:4
+msgid "Provincia Autonoma di Bolzano, consorzio dei comuni, informatica altoadige"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/acknowledgements.html:6
+msgid "Piattaforma"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/acknowledgements.html:7
+msgid ""
+"La tecnologia su cui si basa il portale è CKAN (Comprehensive Knowledge "
+"Archive Network), piattaforma open source e web-based sviluppata dalla "
+"Open Knowledge Foundation per l’archiviazione e distribuzione di dati "
+"aperti."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/acknowledgements_de.html:5
+msgid ""
+"Autonome Provinz Bozen, Autonome Provinz Trient, Gemeindenverband "
+"Südtirol, Südtiroler Informatik AG"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/acknowledgements_de.html:7
+msgid "Plattform"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/acknowledgements_de.html:8
+msgid ""
+"Das offene Datenportal Südtirol basiert auf der Technologie „CKAN“ "
+"(Comprehensive Knowledge Archive Network), eine Open Source und "
+"webbasierte Plattform, von Open Knowledge Foundation zur Archivierung und"
+" Verteilung von offenen Daten entwickelt. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:4
+msgid "Indice"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:7
+msgid "Cos'è il portale Dati aperti dell'Alto Adige?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:8
+msgid "Cosa sono gli Open Data?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:9
+msgid "Perché un unico catalogo dei Dati aperti per tutto l' Alto Adige?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:10
+msgid "Che cosa c'è nel catalogo Dati aperti dell'Alto Adige?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:11
+msgid "A chi si rivolge il portale Dati apertidell'Alto Adige?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:12
+msgid "Quali dati si possono scaricare?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:13
+msgid "Come si scaricano i dati?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:14
+msgid "Chi può pubblicare i dati nel catalogo Dati aperti dell'Alto Adige?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:15
+msgid ""
+"Come si possono pubblicare i dati sul catalogo dei Dati aperti dell'Alto "
+"Adige?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:16
+msgid "Cosa sono i formati aperti?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:17
+msgid "Cosa sono i metadati?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:18
+msgid "Come si aprono i file in formato .csv?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:19
+msgid "Come si aprono i file in formato .shp?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:20
+msgid "Come si aprono i file in formato .json?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:21
+msgid "Cos'è una API?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:22
+msgid "Cosa sono le licenze per il riutilizzo dei dati?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:23
+msgid "Cos'è la licenza CC0?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:24
+msgid "Cos'è la licenza CC-BY?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:25
+msgid "Dove si trovano ulteriori informazioni?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:26
+msgid "Dove si trova una lista di formati aperti?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:30
+msgid "1 - Cos'è il portale Dati aperti dell'Alto Adige?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:32
+msgid ""
+"Il portale Dati aperti dell'Alto Adige è un catalogo che permette la "
+"ricerca, l'accesso, il download e l'anteprima dei dati aperti dell'Alto "
+"Adige tramite un unico punto di accesso. Grazie al rispetto degli "
+"standard definiti nelle Linee guida nazionali , i dati pubblici e i "
+"documenti qui raccolti sono pronti al riuso sia da un punto di vista "
+"tecnologico che giuridico. Le Linee guida chiariscono gli aspetti "
+"giuridici del rilascio dei dati, i formati, i protocolli di pubblicazione"
+" e la documentazione (metadati) dei dati contenuti nel catalogo. Il "
+"caricamento dei dati è un'operazione continua e costante che si "
+"svilupperà in collaborazione con tutte le realtà del territorio, "
+"pubbliche e private. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:40
+#: ckanext/provbz/templates/home/snippets/faq.html:56
+#: ckanext/provbz/templates/home/snippets/faq.html:63
+#: ckanext/provbz/templates/home/snippets/faq.html:80
+#: ckanext/provbz/templates/home/snippets/faq.html:87
+#: ckanext/provbz/templates/home/snippets/faq.html:96
+#: ckanext/provbz/templates/home/snippets/faq.html:103
+#: ckanext/provbz/templates/home/snippets/faq.html:110
+#: ckanext/provbz/templates/home/snippets/faq.html:126
+#: ckanext/provbz/templates/home/snippets/faq.html:140
+#: ckanext/provbz/templates/home/snippets/faq.html:149
+#: ckanext/provbz/templates/home/snippets/faq.html:157
+#: ckanext/provbz/templates/home/snippets/faq.html:164
+#: ckanext/provbz/templates/home/snippets/faq.html:171
+#: ckanext/provbz/templates/home/snippets/faq.html:178
+#: ckanext/provbz/templates/home/snippets/faq.html:185
+#: ckanext/provbz/templates/home/snippets/faq.html:192
+#: ckanext/provbz/templates/home/snippets/faq.html:200
+#: ckanext/provbz/templates/home/snippets/faq.html:207
+#: ckanext/provbz/templates/home/snippets/faq.html:214
+msgid "torna all'indice"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:43
+msgid "2 - Cosa sono gli Open Data?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:44
+msgid ""
+"Per dati si intendono pezzi di singola informazione di varia natura, che "
+"descrivono fatti riproducibili senza ambiguità e che possono essere "
+"espressi e archiviati in formati digitali."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:46
+msgid ""
+"Il CAD (art. 68, c. 3, lett. b) dati aperti quei dati che presentano le "
+"seguenti caratteristiche:"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:49
+msgid ""
+"sono disponibili secondo i termini di una licenza che ne permetta "
+"l'utilizzo da parte di chiunque, anche per finalità commerciali, in "
+"formato disaggregato;"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:50
+msgid ""
+"sono accessibili attraverso le tecnologie dell'informazione e della "
+"comunicazione, ivi comprese le reti telematiche pubbliche e private, in "
+"formati aperti ai sensi della lettera a), sono adatti all'utilizzo "
+"automatico da parte di programmi per elaboratori e sono provvisti dei "
+"relativi metadati;"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:51
+msgid ""
+"sono resi disponibili gratuitamente attraverso le tecnologie "
+"dell'informazione e della comunicazione, ivi comprese le reti telematiche"
+" pubbliche e private, oppure sono resi disponibili ai costi marginali "
+"sostenuti per la loro riproduzione e divulgazione."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:59
+msgid "3 - Perché un unico catalogo dei Dati aperti per tutto l'Alto Adige?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:60
+msgid ""
+"La scelta dell'Alto Adige di pubblicare un portale unico facilita il "
+"riuso dei dati e garantisce un punto unico d'accesso. Migliora il livello"
+" di condivisione, aumenta la qualità dei dati e offre un notevole "
+"supporto nella ricerca di dati. L'obiettivo è quello di promuovere il "
+"riuso dei dati favorendo lo sviluppo di idee innovative."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:66
+msgid "4 - Che cosa c'è nel catalogo Dati aperti dell'Alto Adige?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:67
+msgid ""
+"Nel catalogo sono presenti dati o documenti contenenti dati pubblici "
+"prodotti dalle amministrazioni pubbliche nell'ambito dei propri scopi "
+"istituzionali che, per poter essere pubblicati, sono stati vagliati "
+"rispetto agli standard di legalità, qualità, metadatazione, ecc. Non "
+"sono, ne saranno mai presenti i dati e i documenti esclusi dal diritto di"
+" accesso (L. 241/90), i dati presenti nell'Anagrafe Tributaria e quelli "
+"che, per il tipo di riutilizzo o per le modalità con cui si intenda "
+"realizzarlo, potrebbero violare: "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:72
+msgid "il diritto alla privacy e alla tutela dei dati personali"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:73
+msgid "il segreto statistico, militare, industriale, commerciale, ecc."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:74
+msgid "il diritto di terzi alla proprietà intellettuale"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:75
+msgid ""
+"la sicurezza pubblica e la difesa nazionale o lo svolgimento di indagini "
+"penali o disciplinari"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:83
+msgid "5 - A chi si rivolge il portale Dati aperti dell'Alto Adige?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:84
+msgid ""
+"Il portale si rivolge a tutti: operatori pubblici, privati o commerciali,"
+" ricercatori, analisti, organizzazioni della società civile, media, "
+"etc..., siano interessati a pubblicare in modalità open i proprio dati "
+"e/o abbiano necessità di dati da utilizzare nelle proprie attività."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:90
+msgid "6 - Quali dati si possono scaricare?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:91
+msgid ""
+"Tutti quelli presenti sul catalogo. Per il download non è richiesta "
+"alcuna procedura di autenticazione. Si consiglia comunque di prendere "
+"visione della licenza d'uso a corredo dei dati, in quanto questa "
+"determina l'uso che si può fare con i dati. Qualora si abbiano commenti, "
+"idee, consigli, segnalazioni, esempi di riuso (applicazioni, "
+"visualizzazioni, servizi, ricerche) che si basano sui dati pubblicati, si"
+" invita a segnalarli all'indirizzo email <a "
+"href=\"mailto:opendata@retecivica.bz.it\">opendata@retecivica.bz.it</a>."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:99
+msgid "7 - Come si scaricano i dati?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:100
+msgid ""
+"Una volta scelto il dataset che si vuole scaricare, è necessario seguire "
+"il link sulla risorsa scelta (= il file da scaricare o accedere al "
+"documento WSDL di descrizione di un servizio web interoperabile) e "
+"premere sul tasto rosso \"Esplora\" che compare a destra nella scheda "
+"della descrizione."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:106
+msgid "8 - Chi può pubblicare i dati nel catalogo Dati aperti dell'Alto Adige?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:107
+msgid ""
+"I Dipartimenti e le strutture della Provincia, nonché tutte le Pubbliche "
+"Amministrazioni operanti sul territorio provinciale e i loro enti "
+"strumentali possono pubblicare i propri dati sul portale Dati aperti "
+"dell'Alto Adige, previa adesione alle politiche di open government data "
+"(OGD) della PAB, attraverso la sottoscrizione di appositi accordi o "
+"protocolli di intesa."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:113
+msgid ""
+"9 - Come si possono pubblicare i dati sul catalogo dei Dati aperti "
+"dell'Alto Adige?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:114
+msgid ""
+"Se si rientra nella categoria di coloro che possono pubblicare i dati nel"
+" catalogo (cfr. \"Chi può pubblicare i dati nel catalogo Dati aperti "
+"dell'Alto Adige?\"), allora il primo passo necessario è contattare il "
+"gruppo di lavoro all'indirizzo email <a "
+"href=\"mailto:opendata@retecivica.bz.it\">opendata@retecivica.bz.it</a> "
+"da cui si otterranno tutte le informazioni e il supporto anche ai fini "
+"della creazione di procedure automatizzate qualora i dati siano "
+"disponibili su piattaforme interoperabili. In linea di massima i passi da"
+" seguire sono:"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:117
+msgid ""
+"verificare che i dati non siano coperti da particolari vincoli (privacy, "
+"diritti di terzi, ecc.)"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:118
+msgid "concordare la licenza d'uso"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:119
+msgid "fornire i dati in formati aperti"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:120
+msgid "fornire le informazioni sui metadati"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:121
+msgid "concordare le attività di aggiornamento"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:129
+msgid "10 - Cosa sono i formati aperti?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:130
+msgid ""
+"Il Codice dell'Amministrazione digitale fornisce questa definizione di "
+"formato di dati di tipo aperto: un formato di dati reso pubblico, "
+"documentato esaustivamente e neutro rispetto agli strumenti tecnologici "
+"necessari per la fruizione dei dati stessi (art. 68, c. 3, lett. a), "
+"CAD); Ad esempio, per rappresentare una tabella, il formato CSV (vd "
+"\"Come si aprono i file in formato .csv?\") rispetta questo requisito in "
+"quanto:"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:133
+msgid "è un formato di dati (non è ad esempio un'immagine"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:134
+msgid "nella sua semplicità è ben documentato"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:135
+msgid ""
+"è neutro rispetto agli strumenti tecnologici necessari alla sua fruizione"
+" in quanto può essere aperto con diversi software su diverse piattaforme"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:143
+msgid "11 - Cosa sono i metadati?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:144
+msgid ""
+"Con il termine metadato si intende l'informazione che descrive un insieme"
+" di dati. Nel caso specifico dei metadati descrittivi, essi costituiscono"
+" un livello di informazioni che corredano i dati, ne esplicitano alcune "
+"caratteristiche e ne rendono più semplice l'identificazione. Per "
+"agevolare la reperibilità dei dati e la loro interoperabilità è "
+"importante utilizzare elementi descrittivi come titolo, descrizione, "
+"link, indicazione della licenza, periodo di validità, ente gestore, "
+"formato, ecc. Il metadato è l’informazione cardine del catalogo in quanto"
+" senza di esso non sarebbe possibile catalogare i dati. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:152
+msgid "12 - Come si aprono i file in formato .csv?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:153
+msgid ""
+"Il formato .csv (Comma Separated Value, letteralmente \"valore separato "
+"da virgola\") è un formato testuale che serve a distribuire dati in "
+"formato tabellare. Ogni riga del file corrisponde ad una riga della "
+"tabella ed i contenuti delle celle sono individuati dal separatore scelto"
+" (la virgola, o il punto e virgola o qualsiasi altro simbolo). I file in "
+"formato .csv possono essere letti utilizzando sia software open source "
+"come Calc di OpenOffice, sia software proprietari come Microsoft Excel."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:160
+msgid "13 - Come si aprono i file in formato .shp?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:161
+msgid ""
+"Il formato .shp (\"ESRI Shapefile\") è un formato di dati di tipo "
+"geografico. Si tratta di un insieme di diversi file con nome uguale ed "
+"estensione diversa (es. ammcmp.shp, ammcmp.shx, ammcmp.dbf e ammcmp.prj),"
+" per tale motivo vengono distribuiti in un unico file .zip (un formato "
+"che, oltre a comprimere, permette di distribuire i file in un unico "
+"archivio). Per il loro utilizzo è necessario prima di tutto decomprimere "
+"il file, e successivamente aprirlo con un software GIS (Geographical "
+"Information Systems) come ad esempio Quantum GIS, OpenJump, gvSIG, ESRI "
+"ArcGIS ecc."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:167
+msgid "14 - Come si aprono i file in formato .json?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:168
+msgid ""
+"Il formato .json (JavaScript Object Notation) è un formato adatto per lo "
+"scambio dei dati in applicazioni client-server web. Viene usato nella "
+"programmazione software come alternativa a XML/XSLT. La semplicità del "
+"formato JSON ne ha decretato un rapido utilizzo. Il suo uso tramite "
+"JavaScript è particolarmente semplice, infatti l'interprete è in grado di"
+" eseguirne il parsing tramite una semplice chiamata ad 1 funzione (la "
+"funzione \"eval()\"). Non è un formato orientato all'uso diretto nelle "
+"applicazioni desktop, non è quindi facilmente utilizzabile come invece "
+"altri formati dati. E' possibile visualizzarlo con dei \"json viewer\" "
+"nel browser e anche convertirlo in altri formati con tool gratuiti come "
+"ad esempio Konklone."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:174
+msgid "15 - Cos'è una API?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:175
+msgid ""
+"L'acronimo API (Application Programming Interface) indica il modo in cui "
+"i programmi per computer comunicano tra di loro. Può essere inteso come "
+"un protocollo di comunicazione a cui i programmatori si riferiscono per "
+"interrogare altri programmi. Il catalogo dei dati aperti può essere "
+"interrogato mediante le API di CKAN, pubblicate con specifiche aperte."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:181
+msgid "16 - Cosa sono le licenze per il riutilizzo dei dati?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:182
+msgid ""
+"Nella maggior parte delle legislazioni nazionali ci sono diritti di "
+"proprietà intellettuale che possono impedire a terzi l'uso, il riutilizzo"
+" e la ridistribuzione dei dati senza un autorizzazione esplicita. Una "
+"volta accertata la mancanza di vincoli di proprietà intellettuale che "
+"impediscano l'apertura dei dati pubblici, è necessario applicare ad essi "
+"una licenza che ne definisca le condizioni e le modalità di riutilizzo da"
+" parte di chiunque anche per scopi commerciali (conformemente all'art.8 "
+"del D. Lgs. 36/2006 e all'art. 68 del Codice dell’Amministrazione "
+"Digitale). La PaB di default fa uso della licenza Creative Commons Zero "
+"(CC0) e in casi particolari e giustificati della licenza Creative Commons"
+" Attribuzione (CC-BY).\""
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:188
+msgid "17.\tCos'è la licenza CC0?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:189
+msgid ""
+"La licenza Creative Commons Zero (CC0) è una dichiarazione che consente "
+"\"la più ampia e libera utilizzazione gratuita, anche per fini "
+"commerciali\" di quanto viene ad essa associato. Associando una licenza "
+"CC0 ad un documento o a un dataset si rinuncia a tutti i diritti sul "
+"documento e sui suoi contenuti, dati inclusi, nella misura massima "
+"possibile prevista dalla legge, in piena sintonia con le politiche Open "
+"Government Data (OGD). A questo indirizzo è possibile leggere il testo "
+"riassuntivo in italiano <a "
+"href=\"http://creativecommons.org/publicdomain/zero/1.0/deed.it\" "
+"target=\"_blank\" title=\"Link esterno, si apre in una nuova "
+"finestra\">http://creativecommons.org/publicdomain/zero/1.0/deed.it</a>"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:195
+msgid "18.\tCos'è la licenza CC-BY?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:196
+msgid ""
+"In casi particolari e specificatamente documentati nei quali la "
+"dichiarazione Creative Commons Zero (CC0) non è applicabile vi è data la "
+"possibilità di applicare in alternativa la licenza Creative Commons CC BY"
+" \"Attribuzione\". Essa permette di distribuire, modificare, creare opere"
+" derivate dall'originale, anche a scopi commerciali, a condizione che "
+"venga riconosciuta la paternità dell'opera all'autore o al costitutore "
+"della banca dati o del documento. Anche questa licenza è espressione del "
+"principio della più ampia e libera utilizzazione gratuita anche per fini "
+"commerciali. L'unico obbligo imposto al licenziatario (colui che accetta "
+"una licenza) è quello di citare l'autore della banca dati o del documento"
+" oggetto di riutilizzo. Questa licenza è adottabile per le banche dati "
+"che risultano chiaramente tutelate dal diritto d'autore e/o dal diritto "
+"sui generis sulle banche dati (art. 102 bis, L. n. 633/41 e s.m.i). A "
+"questo indirizzo è possibile leggere il testo riassuntivo in italiano <a "
+"href=\"https://creativecommons.org/licenses/by/4.0/deed.it\" "
+"target=\"_blank\" title=\"Link esterno, si apre in una nuova "
+"finestra\">https://creativecommons.org/licenses/by/4.0/deed.it </a> "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:203
+msgid "19 - Dove si trovano ulteriori informazioni?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:204
+msgid ""
+"Queste FAQ sono in via di sviluppo continuo e si arricchiscono grazie ai "
+"contributi degli utenti di questo catalogo. Vi invitiamo a inviare le "
+"vostre domande all'indirizzo email <a "
+"href=\"mailto:opendata@retecivica.bz.it\">opendata@retecivica.bz.it</a>."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:210
+msgid "20.\tDove si trova una lista di formati aperti?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq.html:211
+msgid "La lista dei formati aperti è reperibile nella seguente pagina "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:4
+msgid "Übersicht"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:7
+msgid "Was ist das Open Data Portal Südtirol?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:8
+msgid "Was sind Open Data?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:9
+msgid "Warum einen einzigen Katalog von offenen Daten für ganz Südtirol?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:10
+msgid "Was beinhaltet der Katalog der offenen Daten Südtirols?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:11
+msgid "An wen richtet sich das Portal der offenen Daten Südtirol?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:12
+msgid "Welche Daten können heruntergeladen werden?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:13
+msgid "Wie können Sie die Daten herunterladen?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:14
+msgid "Wer kann Daten im Datenkatalog Südtirol veröffentlichen?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:15
+msgid "Wie können Daten über den offene Datenkatalog veröffentlicht werden?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:16
+msgid "Was sind offene Formate?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:17
+msgid "Was sind Metadaten?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:18
+msgid "Wie lassen sich Dateien im CSV-Format öffnen?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:19
+msgid "Wie lassen sich Dateien im shp-Format öffnen?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:20
+msgid "Wie lassen sich Dateien im json-Format öffnen?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:21
+msgid "Was ist eine API?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:22
+msgid "Was sind die Lizenzen für die Wiederverwendung von Daten?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:23
+msgid "Was ist die CCO-Lizenz?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:24
+msgid "Was ist die CC-BY-Lizenz?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:25
+msgid "Wo finden Sie weitere Informationen?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:26
+msgid "Wo finden Sie eine Liste von offenen Formaten?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:30
+msgid "1 - Was ist das Open Data Portal Südtirol?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:32
+msgid ""
+"Das Open Data Portal Südtirol ist ein Katalog, der Suche, Zugriff, "
+"Download- und Vorschau auf die Open Data in Südtirol zentral ermöglicht. "
+"Die hier gesammelten öffentlichen Daten und Dokumente sind bereit zur "
+"Wiederverwendung, aus technologischer und rechtlicher Sicht, da die in "
+"den nationalen Richtlinien festgelegten Standards eingehalten worden "
+"sind. Die Leitlinien erläutern die rechtlichen Aspekte der "
+"Veröffentlichung der Daten, die Formate, Protokolle für die Publizierung "
+"und die Dokumentation (Metadaten) der im Katalog enthaltenen Daten. Die "
+"Daten werden ständig geladen und in Zusammenarbeit mit allen öffentlichen"
+" und privaten Organisationen im Land entwickelt. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:38
+#: ckanext/provbz/templates/home/snippets/faq_de.html:54
+#: ckanext/provbz/templates/home/snippets/faq_de.html:61
+#: ckanext/provbz/templates/home/snippets/faq_de.html:78
+#: ckanext/provbz/templates/home/snippets/faq_de.html:85
+#: ckanext/provbz/templates/home/snippets/faq_de.html:94
+#: ckanext/provbz/templates/home/snippets/faq_de.html:101
+#: ckanext/provbz/templates/home/snippets/faq_de.html:108
+#: ckanext/provbz/templates/home/snippets/faq_de.html:126
+#: ckanext/provbz/templates/home/snippets/faq_de.html:138
+#: ckanext/provbz/templates/home/snippets/faq_de.html:149
+#: ckanext/provbz/templates/home/snippets/faq_de.html:156
+#: ckanext/provbz/templates/home/snippets/faq_de.html:163
+#: ckanext/provbz/templates/home/snippets/faq_de.html:170
+#: ckanext/provbz/templates/home/snippets/faq_de.html:177
+#: ckanext/provbz/templates/home/snippets/faq_de.html:184
+#: ckanext/provbz/templates/home/snippets/faq_de.html:191
+#: ckanext/provbz/templates/home/snippets/faq_de.html:201
+#: ckanext/provbz/templates/home/snippets/faq_de.html:208
+#: ckanext/provbz/templates/home/snippets/faq_de.html:215
+msgid "zurück zur Übersicht"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:41
+msgid "2 - Was sind die Open Data?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:42
+msgid ""
+"Daten sind einzelne Informationen unterschiedlicher Art, die eindeutig "
+"reproduzierbare Fakten beschreiben und zum Ausdruck bringen und in "
+"digitaler Form gespeichert werden können. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:44
+msgid ""
+"Der Kodex der Digitalen Verwaltung (Art. 68, Abs. 3.b) definiert offene "
+"Daten wie folgt:"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:47
+msgid ""
+"sie stehen gemäß den Bedingungen einer Lizenz zur Verfügung, die ihre "
+"freie Verwendung erlaubt, auch für kommerzielle Zwecke, in "
+"aufgeschlüsselter Form,"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:48
+msgid ""
+"sie sind mittels Informations- und Kommunikationstechnologien zu "
+"erreichen, einschließlich öffentlicher und privater Computer-Netzwerke, "
+"in offener Form in Übereinstimmung mit Abs. a), sie sind für die "
+"Verwendung durch automatisierte Computerprogramme geeignet und sind mit "
+"den entsprechenden Metadaten ausgerüstet,"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:49
+msgid ""
+"sie stehen kostenlos durch die Informations- und "
+"Kommunikationstechnologien zur Verfügung, einschließlich öffentlicher und"
+" privater Computer-Netzwerke, oder sie werden für ihre Reproduktion und "
+"Verbreitung als Nebenkosten zur Verfügung gestellt."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:57
+msgid "3 - Warum ein einzelner Katalog von offenen Daten für ganz Südtirol?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:58
+msgid ""
+"Die Entscheidung in Südtirol die Daten über ein einziges Portal zu "
+"veröffentlichen, erleichtert die Wiederverwendung und bietet einen "
+"zentralen Zugriff. Das Teilen wird verbessert, die Datenqualität erhöht "
+"und es wird eine umfangreiche Unterstützung bei der Suche nach Daten "
+"geboten. Ziel ist es, die Wiederverwendung von Daten durch die Förderung "
+"der Entwicklung von innovativen Ideen zu bewerben. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:64
+msgid "4 - Was beinhaltet der Katalog der offenen Daten Südtirols?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:65
+msgid ""
+"Im Katalog sind Daten oder Dokumente mit offenen Daten der öffentlichen "
+"Verwaltungen enthalten, die im Rahmen ihrer institutionellen Tätigkeiten "
+"produziert werden, die, um veröffentlicht zu werden, laut den Standards "
+"der Rechtmäßigkeit, Qualität, Metadating usw. untersucht worden sind. "
+"Derzeit und auch in Zukunft werden keine Daten und Dokumente ohne "
+"Zugriffsberechtigung veröffentlicht (L. 241/90), die Daten aus dem "
+"Steuerregister und jene, die für die Art oder Absicht der "
+"Wiederverwertung gegen folgende Punkte verstoßen könnten: "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:70
+msgid "gegen das Recht auf Privatsphäre und Schutz personenbezogener Daten;"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:71
+msgid "gegen die statistische Geheimhaltung, Militär, Industrie, Handel, etc.;"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:72
+msgid "gegen das Recht Dritter an geistigem Eigentum;"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:73
+msgid ""
+"gegen die öffentliche Sicherheit und die Landesverteidigung oder "
+"Durchführung strafrechtlicher Ermittlungen oder Disziplinarmaßnahmen."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:81
+msgid "5 - An wen richtet sich das Portal der offenen Daten Südtirol?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:82
+msgid ""
+"Das Portal der offenen Daten Südtirol richtet sich an alle: öffentliche, "
+"private oder wirtschaftliche Akteure, Forscher, Analysten, "
+"zivilgesellschaftliche Organisationen, Medien, usw. ..., die daran "
+"interessiert sind, die eigenen Daten im offenen Modus zu veröffentlichen "
+"und / oder Daten für die eigenen Tätigkeit zu verwenden."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:88
+msgid "6 - Welche Daten können heruntergeladen werden?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:89
+msgid ""
+"Alle Daten, die im Katalog vorhanden sind, können heruntergeladen werden."
+" Für den Download ist kein Authentifizierungsverfahren erforderlich. Es "
+"empfiehlt sich trotzdem, die begleitende Lizenz für die Daten einzusehen,"
+" weil diese die Verwendung der Daten regelt. Falls Sie Anmerkungen, "
+"Ideen, Tipps, Berichte, Beispiele für die Wiederverwendung (Anwendungen, "
+"Ansichten, Dienstleistungen, Forschung) zu den veröffentlichten Daten "
+"haben, können Sie diese an <a "
+"href=\"mailto:opendata@buergernetz.bz.it\">opendata@buergernetz.bz.it</a>"
+" senden. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:97
+msgid "7 - Wie können Sie die Daten herunterladen?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:98
+msgid ""
+"Sobald Sie die Datenmenge, die Sie herunterladen möchten, ausgewählt "
+"haben, müssen Sie dem Link auf der Ressourcenauswahl folgen (= die Datei "
+"zum Herunterladen oder Zugriff auf die WSDL-Beschreibung eines "
+"interoperablen Web Services) und auf den roten Knopf \"Mehr dazu\" "
+"klicken, der auf der rechten Seite der Beschreibungskarte erscheint."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:104
+msgid ""
+"8 - Wer kann Daten im Katalog des Open Data Portal Südtirol "
+"veröffentlichen?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:105
+msgid ""
+"Alle Abteilungen und Einrichtungen des Landes sowie allen öffentlichen "
+"Institutionen und abhängigen Körperschaften, die im Land tätig sind, "
+"können ihre Daten über das Portal Open Data Südtirol veröffentlichen. "
+"Vorher müssen allerdings entsprechende Vereinbarungen und "
+"Absichtserklärungen für „Open Government Data (OGD)“ der Landesverwaltung"
+" unterschrieben werden. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:111
+msgid ""
+"9 - Wie können Daten im Katalog des Open Data Portals Südtirol "
+"veröffentlicht werden?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:112
+msgid ""
+"Wer über die Berechtigung verfügt, im Katalog Daten zu veröffentlichen "
+"(siehe unter 8. „Wer kann Daten im Katalog des Open Data Portal Südtirol "
+"veröffentlichen?“) muss zuerst mit der Arbeitsgruppe Kontakt aufnehmen "
+"(<a "
+"href=\"mailto:opendata@buergernetz.bz.it\">opendata@buergernetz.bz.it</a>)."
+" Die Arbeitsgruppe liefert dann alle Informationen und unterstützt auch "
+"die Erstellung automatisierter Prozesse, bei denen Daten über "
+"interoperable Plattformen zur Verfügung gestellt werden. Die wesentlichen"
+" Schritte sind wie folgt: "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:117
+msgid ""
+"prüfen, ob die Daten nicht durch spezifische Bindungen (Datenschutz, "
+"Rechte Dritter, usw.) geschützt sind;"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:118
+msgid "Lizenz- Vereinbarungen treffen;"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:119
+msgid "Bereitstellung der Daten in offenen Formaten;"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:120
+msgid "Metadaten-Informationen liefern;"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:121
+msgid "Update-Aktivitäten vereinbaren."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:129
+msgid "10 - Was sind die offenen Formate?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:130
+msgid ""
+"Gemäß Kodex der Digitalen Verwaltung lautet die Definition des "
+"Datenformats von offenen Daten wie folgt: Ein veröffentlichtes "
+"Datenformat, ausführlich dokumentiert und neutral gegenüber den "
+"technologischen Instrumenten für die Nutzung der Daten (Art 68, c. 3, "
+"Buchstabe. a), CAD); um beispielsweise eine Tabelle zu erstellen erfüllt "
+"das CSV-Format (siehe \" Wie lassen sich Dateien im CSV-Format öffnen?\")"
+" diese Anforderung wie folgt:"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:132
+msgid "es sich um ein Datenformat handelt (z.B. kein Bild);"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:133
+msgid "es in seiner Einfachheit gut dokumentiert ist;"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:134
+msgid ""
+"es in Hinblick auf die notwendigen technologischen Instrumente neutral "
+"ist, da es mit unterschiedlicher Software auf verschiedenen Plattformen "
+"geöffnet werden kann."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:141
+msgid "11 - Was sind Metadaten?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:142
+msgid ""
+"Mit dem Begriff Metadaten werden Informationen bezeichnet, die einen "
+"Datensatz beschreiben. Beschreibende Metadaten stellen ein "
+"Informationsniveau dar, die in den Daten enthalten sind und durch einige "
+"Funktionen die Daten leichter identifizierbar machen. Um die "
+"Verfügbarkeit und Interoperabilität der Daten zu erhöhen, müssen Elemente"
+" wie Titel, Beschreibung, Link, Lizenz, Gültigkeitszeitraum, "
+"Leitungsorgan, Größe usw. angezeigt werden. Die Metadaten sind die "
+"Eckpfeiler des Katalogs, ohne sie wäre es nämlich nicht möglich, die "
+"Daten zu katalogisieren."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:152
+msgid "12 - Wie lassen sich Dateien im CSV-Format öffnen?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:153
+msgid ""
+"Das CSV-Format (Comma Separated Value, wörtlich \"Comma-Separated "
+"Value\") ist ein Textformat, das verwendet wird, um Daten in einem "
+"tabellarischen Format zu verteilen. Jede Zeile der Datei entspricht einer"
+" Zeile der Tabelle und die Inhalte der Zellen werden durch ein Zeichen "
+"getrennt (Beistrich, Strichpunkt oder jedes andere Symbol).Die CSV-Datei "
+"können sowohl mit Hilfe einer Open Source-Software wie Openoffice Calc "
+"gelesen werden, als auch mit einer gekauften Software wie Microsoft "
+"Excel."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:159
+msgid "13 - Wie lassen sich Dateien im .shp-Format öffnen?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:160
+msgid ""
+"Das Format .shp (\"ESRI Shapefile\") ist ein Format für georeferenzierte "
+"Daten. Es handelt sich um einen Satz von mehreren Dateien mit gleichem "
+"Namen und unterschiedlicher Größe (z. Ammcmp.shp, ammcmp.shx, ammcmp.dbf "
+"und ammcmp.prj). Aus diesem Grund werden sie in einer einzigen ZIP-Datei "
+"verteilt (ein Format, das komprimiert und Dateien gleichzeitig in einem "
+"einzigen Archiv verteilt). Bei Verwendung müssen die Dateien zunächst "
+"entkomprimiert werden, um sie danach mit einer GIS-Software zu öffnen "
+"(Geographical Information Systems), wie beispielsweise Quantum GIS, "
+"Openjump, gvSIG ESRI ArcGIS usw."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:166
+msgid "14 - Wie lassen sich Dateien im .json-Format öffnen?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:167
+msgid ""
+"Das .json-Format (JavaScript Object Notation) ist ein Format für den "
+"Austausch von Daten im Client-Server-Netz. Es wird in der "
+"Programmierumgebung als Alternative zu XML / XSLT verwendet. Da das JSON-"
+"Format so einfach ist, ist es rasch in Umlauf gekommen. Mit JavaScript "
+"ist es für den Benutzer besonders einfach die Analyse (Parsing) "
+"durchzuführen, denn es genügt der einfacher Aufruf einer Funktion (die "
+"Funktion \"eval ()\"). Das Format ist nicht für den direkten Einsatz von "
+"Desktop-Anwendungen geeignet und kann folglich nicht so einfach genutzt "
+"werden wie andere Datenformate. Mit einem \"JSON-Viewer\" können die "
+"Daten im Browser angezeigt und mit kostenlosen Tools wie „Konklone“ in "
+"andere Formate konvertiert werden."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:173
+msgid "15 - Was ist eine API?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:174
+msgid ""
+"Das Akronym API (Application Programming Interface) zeigt an, wie "
+"Computerprogramme miteinander kommunizieren. Es kann als "
+"Kommunikationsprotokoll verstanden werden, mit dem Programmierer andere "
+"Programme abfragen. Der Open Data Katalog kann über die API „CKAN“ "
+"abgefragt werden, die mit offenen Spezifikationen veröffentlicht sind."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:180
+msgid "16 - Was sind die Lizenzen für die Wiederverwendung von Daten?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:181
+msgid ""
+"In den meisten nationalen Gesetzen gibt es Rechte auf das geistige "
+"Eigentum, wodurch Dritte an der Nutzung, Wiederverwendung und "
+"Umverteilung von Daten ohne ausdrückliche Genehmigung gehindert werden. "
+"Sobald geklärt ist, dass die Eigentumsrechte an den öffentlichen Daten "
+"keinen Einschränkungen unterliegen, muss eine Lizenz vergeben werden, die"
+" Bedingungen und Verfahren für die Weiterverwendung auch für gewerbliche "
+"Zwecke regelt (gemäß Kodex der digitalen Verwaltung, Artikel 8, 36/2006 "
+"und Art. 68). Die Landesverwaltung verwendet normalerweise die Lizenz "
+"“Creative Commons Zero (CC0)“ und in besonderen und begründeten Fällen "
+"die Lizenz „Creative Commons Namensnennung (CC-BY)\"."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:187
+msgid "17 - Was ist die Lizenz CC0?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:188
+msgid ""
+"Creative Commons Zero (CC0) ist eine Erklärung, die eine vollkommen freie"
+" und kostenlose Verwendung zu privaten und zu gewerblichen Zwecken "
+"ermöglicht. Sobald die CC0-Erklärung einem Objekt (Datensatz oder "
+"Dokument) zugeordnet wird, verzichtet man auf alle Rechte bezogen auf das"
+" Objekt, seinen Inhalten und seinen Daten in der maximalen von Gesetzt "
+"zulässigen Art und Weise. Die CC0-Erklärung steht in Einklang mit der "
+"Politik der offenen Daten, die von der Südtiroler Landesregierung "
+"vorangetrieben wird. Unter dem folgenden Link können Sie den "
+"zusammenfassenden Text in deutscher Sprache einsehen <a "
+"href=\"http://creativecommons.org/publicdomain/zero/1.0/deed.de\" "
+"target=\"_blank\" "
+"title=\"\">http://creativecommons.org/publicdomain/zero/1.0/deed.de</a> "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:194
+msgid "18 - Was ist die Lizenz CC-BY?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:195
+msgid ""
+"In besonderen, speziell dokumentierten Fällen in denen die CC0-Erklärung "
+"nicht angewandt werden kann, stellt die Lizenz Creative Commons CC BY "
+"\"Namensnennung\", eine Alternative dar. Mit der CC-BY-Lizenz können "
+"Datensätze oder Dokumente verteilt und modifiziert werden. Zudem können "
+"von Original abgeleitete Werke erstellt werden. Dies gilt auch für "
+"kommerzielle Zwecke, sofern der jeweilige Autor bzw. Ersteller des "
+"Datensatzes in der Weiterverwendung genannt wird. Auch diese Lizenz "
+"bringt den Grundsatz des breiten Zugangs und der kostenfreien Nutzung "
+"auch für kommerzielle Zwecke zum Ausdruck. Die einzige Verpflichtung des "
+"Lizenznehmers (derjenige, der den mit dieser Lizenz ausgegebenen "
+"Datensatz oder Dokument übernimmt) ist es, den Autor der Datensatzes oder"
+" des Dokuments in der Weiterverwendung zu zitieren. Diese Lizenz gilt für"
+" Datensätze, die eindeutig durch das Urheberrecht geschützt sind (Art. "
+"102-bis des Gesetzes Nr. 633/41 und nachfolgende Änderungen). Unter "
+"diesem Link können Sie die Zusammenfassung des Textes in deutscher "
+"Sprache einsehen. <a "
+"href=\"https://creativecommons.org/licenses/by/4.0/deed.de\" "
+"target=\"_blank\" "
+"title=\"\">https://creativecommons.org/licenses/by/4.0/deed.de</a> "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:204
+msgid "19 - Wo finden Sie weitere Informationen?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:205
+msgid ""
+"Diese FAQ werden ständig erweitert und bereichert dank der Beiträge der "
+"Benutzer dieses Katalogs. Bitte senden Sie Ihre Fragen an <a "
+"href=\"mailto:opendata@buergernetz.bz.it\">opendata@buergernetz.bz.it</a>."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:211
+msgid "20 - Wo finden Sie eine Liste von offenen Formaten?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/faq_de.html:212
+msgid ""
+"Die Liste der offenen Datenformate befindet sich auf der folgenden "
+"Webseite."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info.html:2
+msgid "Informazioni"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info.html:3
+msgid ""
+"Le pubbliche amministrazioni presentano una caratteristica comune: "
+"producono, gestiscono ed accumulano dati come risultato del loro normale "
+"funzionamento."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info.html:5
+msgid ""
+"Alcuni dati sono soggetti a precisi vincoli, quali ad esempio la tutela "
+"della privacy, la sicurezza nazionale o la proprietà intellettuale. Altri"
+" invece possono essere liberamente diffusi e riutilizzati da tutti."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info.html:7
+msgid ""
+"Le informazioni relative a piste ciclabili, la localizzazione dei "
+"prodotti locali possono stimolare lo sviluppo di servizi innovativi per "
+"il turista, le famiglie, il cittadino. Le informazioni relative ai "
+"trasporti pubblici e al grafo stradale possono consentire una "
+"ottimizzazione dei servizi dal basso mediante un feedback inviato dagli "
+"stessi utenti. I dati relativi alle manifestazioni pubbliche e al meteo "
+"consentono la creazione di applicazioni capaci di aumentare ancora più "
+"visibilità agli eventi, oltre a consentirne una migliore organizzazione "
+"da parte dei partecipanti."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info.html:9
+msgid ""
+"Queste informazioni possiedono un grande valore economico e un forte "
+"potenziale di crescita innovativa: aprire i dati pubblici significa "
+"creare nuove opportunità per il territorio, basate sul loro riutilizzo "
+"creativo, proponendo e inventando nuove soluzioni a problemi comuni, "
+"senza aggravio per le attività della pubblica amministrazione."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info.html:11
+msgid ""
+"Il catalogo Open Data dell'Alto Adige mette a disposizione questi dati, "
+"favorendone il riutilizzo sia in senso tecnologico che giuridico. "
+"Contiene dataset forniti da tutti gli attori istituzionali del sistema "
+"Alto Adige, Provincia autonoma di Bolzano, gli Enti locali, le società di"
+" sistema e, più in generale, da tutti gli attori interessati a "
+"partecipare a questo processo."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info.html:13
+msgid "Come operiamo"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info.html:15
+msgid ""
+"Il catalogo è gestito e implementato da un gruppo di progetto composto da"
+" esperti nelle diverse aree tematiche coinvolte (quali la raccolta, "
+"l'analisi e la modellazione dei dati, la semantica e correttezza "
+"giuridica del processo di apertura, l’impatto organizzativo). Il gruppo "
+"di lavoro è coordinato dall'Incarico dirigenziale in materia di "
+"Informatica della Provincia autonoma di Bolzano che è la struttura "
+"provinciale indicata dalla Giunta Provinciale come competente per il "
+"Progetto Open data in Alto Adige."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info.html:17
+msgid ""
+"Il sito è basato su un software open-source di catalogazione dei dati, "
+"chiamato CKAN, sviluppato dalla Open Knowledge Foundation: "
+"un'organizzazione no-profit che promuove il sapere libero."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info.html:19
+msgid ""
+"Ogni voce contiene una descrizione dei dati (metadati) e altre "
+"informazioni utili, come i formati disponibili, il detentore, la libertà "
+"di accesso e riuso, e gli argomenti che i dati affrontano. CKAN, "
+"utilizzato per diversi cataloghi di dati su internet, converge in The "
+"Data Hub: un raccoglitore centrale liberamente modificabile e "
+"riutilizzabile, nello stile di Wikipedia."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info.html:21
+msgid "Open data come processo"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info.html:23
+msgid ""
+"Il livello di innovazione che realizza la liberazione dei dati è "
+"notevole: già solo l'apertura di un semplice dato da parte di una "
+"struttura pubblica è un grande risultato in termini di cambiamento "
+"organizzativo in direzione della cultura del dato e dell’economia della "
+"conoscenza."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info.html:25
+msgid ""
+"Per questo, il catalogo è in continua evoluzione: partendo dall'apertura "
+"dei dati si creano connessioni che porteranno ad un cambiamento nel modo "
+"di pensare e di lavorare, nel settore pubblico come in quello privato: "
+"dal dato come risorsa privata per scopi gestionali al dato come \"bene "
+"pubblico\" per scopi pubblici e sociali."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info.html:27
+msgid ""
+"L'informazione del settore pubblico è vista come una piattaforma di base "
+"le cui applicazioni sono ancora da scrivere."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info.html:29
+msgid ""
+"Questo enorme cambiamento, per potersi realizzare, ha bisogno anche di "
+"voi. Inviateci suggerimenti e feedback attraverso l'email (<a "
+"href=\"mailto:opendata@retecivica.bz.it\">opendata@retecivica.bz.it</a>)."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info.html:31
+msgid ""
+"Per informazioni più dettagliate consulta la pagina delle <a "
+"href=\"http://dati.retecivica.bz.it/it/faq\" target=”_blank” title=”Link "
+"esterno, si apre in una nuova finestra”>F.A.Q.</a>"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info_de.html:2
+msgid "Über uns"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info_de.html:3
+msgid ""
+"Die Behörden zeichnen sich durch eine Gemeinsamkeit aus: sie erzeugen, "
+"verwalten und sammeln Daten als Folge ihrer ordentlichen Tätigkeit."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info_de.html:5
+msgid ""
+"Einige Daten unterliegen bestimmten Einschränkungen, wie etwa dem Schutz "
+"der Privatsphäre, der nationalen Sicherheit oder dem geistigen Eigentum. "
+"Andere hingegen können frei in Umlauf gebracht und von allen "
+"wiederverwendet werden."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info_de.html:7
+msgid ""
+"Informationen zu Radwegen und die Ortsbestimmung lokaler Produkte können "
+"die Entwicklung innovativer Dienstleistungen für Touristen, Familien und "
+"Bürger anregen. Der Informationsdienst zum öffentlichen Verkehr und zur "
+"Situation auf den Straßen lässt sich durch die Miteinbeziehung der Nutzer"
+" mittels Feedback verbessern. Daten zu öffentlichen Veranstaltungen und "
+"zum Wetter ermöglichen die Erstellung von Anwendungen, die die "
+"Sichtbarkeit der Ereignisse noch weiter erhöhen, sowie eine bessere "
+"Organisation für die Teilnehmer ermöglichen."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info_de.html:9
+msgid ""
+"Diese Informationen haben großen wirtschaftlichen Wert und ein hohes "
+"Potenzial für innovatives Wachstum: die Öffnung öffentlicher Daten "
+"verschafft dem Territorium neue Möglichkeiten, beruhend auf der Grundlage"
+" ihrer kreativen Wiederverwendung, indem neue Lösungen für gemeinsame "
+"Probleme gefunden und erfunden werden, ohne die Tätigkeit der "
+"öffentlichen Verwaltung zu belasten. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info_de.html:11
+msgid ""
+"Der Open Data Katalog Südtirol stellt diese Daten zur Verfügung und "
+"fördert die Wiederverwendung sowohl unter technologischen als auch "
+"rechtlichem Aspekt. Er enthält Datensätze von allen Institutionen aus dem"
+" System Südtirol, der Autonomen Provinz Bozen, den lokalen "
+"Körperschaften, lokalen Unternehmen und, im übergeordneten Sinn, von "
+"allen relevanten Akteuren, die sich an diesem Prozess beteiligen möchten."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info_de.html:13
+msgid "Wie wir arbeiten"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info_de.html:15
+msgid ""
+"Der Katalog wird von einem Projektteam verwaltet, das aus Experten der "
+"verschiedenen Bereiche besteht (Sammlung, Analyse und Datenmodellierung, "
+"Semantik und rechtliche Korrektheit des Eröffnungsprozesses, "
+"organisatorische Auswirkungen). Die Arbeitsgruppe wird von der "
+"Informatikabteilung der Autonomen Provinz Bozen koordiniert, der die "
+"Verantwortung von der Landesregierung für das Projekt Open Data Südtirol "
+"übertragen wurde."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info_de.html:17
+msgid ""
+"Die Seite stützt sich auf eine Open-Source-Software zur Katalogisierung "
+"von Daten namens CKAN, die von der Open Knowledge Foundation entwickelt "
+"wurde: eine Non-Profit-Organisation, die das freie Wissen fördert."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info_de.html:19
+msgid ""
+"Jeder Eintrag enthält eine Beschreibung der Daten (Metadaten) und anderer"
+" nützlicher Informationen wie verfügbare Größen, Inhaber, freier Zugang "
+"und Wiederverwendung, sowie die Themen, die die Daten betreffen. CKAN, "
+"für verschiedene Datenkataloge im Internet verwendet, konvergiert in "
+"Stammdaten (The Data Hub): eine zentrale Sammlung frei veränderbar und "
+"wiederverwendbar, ähnlich wie Wikipedia."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info_de.html:21
+msgid "Open Data als Prozess"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info_de.html:23
+msgid ""
+"Der Veröffentlichung der Daten lässt auf ein beachtliches "
+"Innovationsniveau schließen: allein die Öffnung durch eine öffentliche "
+"Institution ist ein großer Erfolg in Hinblick auf die organisatorischen "
+"Veränderungen der Datenkultur und wissensbasierten Wirtschaft."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info_de.html:25
+msgid ""
+"Aus diesem Grund wird der Katalog ständig angepasst: ausgehend von der "
+"Öffnung der Datenverbindungen ergeben sich andere Denk- und "
+"Arbeitsweisen, sowohl im öffentlichen als auch im privaten Bereich: die "
+"Daten als private Ressource für Verwaltungszwecke hin zu den Daten als "
+"\"öffentliches Gut\" für öffentliche und soziale Zwecke."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info_de.html:27
+msgid ""
+"Die Informationen des öffentlichen Sektors gelten als Basis-Plattform, "
+"deren Applikationen noch zu schreiben sind."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info_de.html:29
+msgid ""
+"Damit diese riesigen Veränderungen stattfinden können, braucht es auch "
+"Sie. Senden Sie uns Ihre Anregungen und Rückmeldungen an (<a "
+"href=\"mailto:opendata@buergernetz.bz.it\">opendata@buergernetz.bz.it</a>)."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/info_de.html:31
+msgid ""
+"Für detaillierte Informationen besuchen Sie bitte unsere <a "
+"href=\"http://dati.retecivica.bz.it/de/faq\" target=”_blank” title=”Link "
+"esterno, si apre in una nuova finestra”>FAQs</a> "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/legal.html:3
+msgid ""
+"Il catalogo Open data dell'Alto Adige contiene dati raccolti da diversi "
+"enti e pubblicati da questi in modo autonomo. I dati presenti sul "
+"catalogo <a href=\"http://dati.retecivica.bz.it\" target=”_blank” "
+"title=”Link esterno, si apre in una nuova "
+"finestra”>dati.retecivica.bz.it</a> sono pubblicati ai sensi del D. Lgs "
+"36/2006, del D. Lgs. 82/2005 (Codice dell'Amministrazione Digitale), del "
+"D. Lgs. 33/2013. I dati e i documenti presenti sul catalogo sono stati "
+"raccolti, trattati, pubblicati e aggiornati ai sensi degli artt. 50 ss. "
+"del D. Lgs. 82/2005 e di ulteriori disposizioni di legge individuate per "
+"specifiche tipologie di dati e sono pubblicati autonomamente dalla "
+"struttura che ne ha la titolarità e la responsabilità . La Provincia "
+"Autonoma di Bolzano non è responsabile della pubblicazione dei dati "
+"presenti sul catalogo di cui non abbia la titolarità o la piena "
+"disponibilità. I dati sono messi a disposizione di chiunque voglia "
+"riutilizzarli per qualunque scopo. Chi ne effettua il download manuale o "
+"tramite API, si assume la piena responsabilità sull'utilizzo dei dati e "
+"sulle conseguenze che possano derivarne a terzi. I dati, una volta "
+"scaricati, non potranno essere riaggregati in un unico dataset in modo da"
+" violare le prescrizioni a tutela del segreto statistico e della "
+"riservatezza dei dati personali, aggirando le misure di protezione "
+"adottate in vista della loro diffusione. La Provincia Autonoma di Bolzano"
+" non sarà responsabile per eventuali rielaborazioni e riaggregazioni "
+"illecite. Inoltre, chiunque scarichi i dati rilasciati su questo sito è "
+"tenuto a evitare qualsiasi tentativo di re-identificazione dei dati "
+"personali già anonimizzati."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/legal.html:14
+msgid ""
+"I dati presenti sul catalogo sono rilasciati con licenza Creative Commons"
+" Zero o in casi particolari e giustificati con licenza Creative Commons "
+"Attribuzione."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/legal.html:15
+msgid ""
+"Ogni prodotto o società menzionati in questo sito sono marchi dei "
+"rispettivi proprietari o titolari e possono essere protetti da brevetti "
+"e/o copyright concessi o registrati dalle autorità preposte. Il presente "
+"sito non è una testata giornalistica e viene aggiornato senza alcuna "
+"periodicità prefissata. Non può, quindi, essere considerato un prodotto "
+"editoriale ai sensi della L. 62/2001. La Provincia Autonoma di Bolzano si"
+" assume la piena responsabilità di ciò che è scritto nelle pagine "
+"informative (Informazioni, FAQ, etc.) in quanto frutto del proprio libero"
+" pensiero. Se ritieni che i dati pubblicati non siano corretti o se "
+"ritieni di essere stato leso nei tuoi diritti puoi rivolgerti "
+"direttamente al Titolare del dataset indicato nella scheda di "
+"metadatazione e segnalarlo con una email a <a "
+"href=\"mailto:opendata@retecivica.bz.it\">opendata@retecivica.bz.it</a> "
+"in modo che si possa provvedere tempestivamente. Ad integrazione delle "
+"presenti Note si rinvia alle Note Legali del Portale istituzionale della "
+"Provincia Autonoma di Bolzano."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/legal_de.html:3
+msgid "Rechtliche Anmerkungen:"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/legal_de.html:4
+msgid ""
+"Der Open Data Katalog Südtirol enthält Daten, die von mehreren "
+"Institutionen gesammelt und von diesen autonom veröffentlicht werden. Die"
+" im Katalog <a href=\"http://daten.buergernetz.bz.it\" target=”_blank” "
+"title=”Link esterno, si apre in una nuova "
+"finestra”>daten.buergernetz.bz.it</a> enthaltenen Daten wurden laut den "
+"gesetzlichen Vorschriften D. Lgs. 36/2006, D. Lgs. 82/2005 (Kodex der "
+"Digitalen Verwaltung), D. Lgs. 33/2013 veröffentlicht. Die Daten und "
+"Dokumente im Katalog sind gesammelt, untersucht, veröffentlicht und "
+"aktualisiert worden gemäß Art. 50ff. des D. Lgs. 82/2005 und weitere "
+"gesetzliche Vorschriften gemäß der technischen Besonderheiten der Daten, "
+"die autonom von der jeweiligen Struktur veröffentlicht werden, sofern sie"
+" Eigentümer ist und die Verantwortung übernimmt. Die Autonome Provinz "
+"Bozen ist nicht für die Veröffentlichung der Daten im Katalog "
+"verantwortlich, für die sie nicht Eigentümer ist und daher nicht die "
+"Verantwortung übernimmt. Die Daten sind für alle zugänglich, die sie zu "
+"jedem Zweck weiterverwenden wollen. Diejenigen, die manuell oder über "
+"eine API einen Download durchführen, übernehmen die Haftung für die "
+"Verwendung der Daten und die Folgen, die für Dritte entstehen könnten. "
+"Sind die Daten heruntergeladen worden, können sie nicht mehr zu einem "
+"einzigen Datensatz zusammengerechnet werden, um den Anforderungen der "
+"statistischen Geheimhaltung personenbezogener Daten und den "
+"Sicherheitsmaßnahmen im Hinblick auf ihre Verteilung gerecht zu werden. "
+"Die Autonome Provinz Bozen ist nicht verantwortlich für eventuelle "
+"Nachbearbeitungen oder illegale Datenaggregationen. Darüber hinaus wird "
+"jeder, der Daten von dieser Website herunterlädt, gebeten, keinen Versuch"
+" zu unternehmen, bereits anonymisierte Daten erneut zu identifizieren."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/legal_de.html:16
+msgid ""
+"Die im Katalog veröffentlichten Daten werden mit der Lizenz „Creative "
+"Commons Null“ und in gerechtfertigten Sonderfällen mit „Creative Commons "
+"Attribution“ veröffentlicht. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/legal_de.html:17
+msgid ""
+"Alle auf dieser Website erwähnten Produkte und Firmen sind Marken der "
+"jeweiligen Inhaber oder Eigentümer und können von Patenten und / oder "
+"Urheberrechten geschützt oder von den Behörden registriert sein. Diese "
+"Seite ist keine Online-Zeitung und wird in nicht festgelegten Abständen "
+"aktualisiert. Sie kann daher nicht als redaktionelles Produkt im Rahmen "
+"des Gesetzes 62/2001 angesehen werden. Die Autonome Provinz Bozen "
+"übernimmt die Verantwortung für jene Inhalte, die als Ergebnis des "
+"eigenen freien Denkens auf den Informationsseiten (Informationen, FAQ, "
+"etc.) zu finden sind. Falls Sie glauben, dass die veröffentlichten Daten "
+"nicht korrekt sind oder Sie sich in Ihren Rechten verletzt fühlen, wenden"
+" Sie sich bitte direkt an den Eigentümer des Datasets, der in der "
+"Beschreibung der Metadating angegeben ist. Oder schreiben Sie Ihr "
+"Anliegen an <a "
+"href=\"mailto:opendata@buergernetz.bz.it\">opendata@buergernetz.bz.it</a>,"
+" sodass Sie umgehend eine Antwort erhalten. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:3
+msgid ""
+"La presente informativa è resa ai sensi dell’art. 13 del D. lgs. "
+"n.196/2003 (Codice in materia di protezione dei dati personali) e si "
+"ispira alla Raccomandazione n. 2/2001 relativa ai requisiti minimi per la"
+" raccolta di dati personali on-line nell’Unione Europea, adottata il 17 "
+"maggio 2001 dal Gruppo istituito dall’art. 29 della direttiva n.95/46/CE."
+" Descrive le modalità di gestione del portale Open Data Alto Adige <a "
+"href=\"http://dati.retecivica.bz.it\" target=”_blank” title=”Link "
+"esterno, si apre in una nuova finestra”>dati.retecivica.bz.it</a> in "
+"riferimento al trattamento dei dati personali degli utenti, identificati "
+"o identificabili, che lo consultano e che interagiscono con esso e con i "
+"servizi web provinciali accessibili per via telematica. In particolare, "
+"la presente informativa intende fornire notizie relative alle modalità, "
+"ai tempi e alla natura delle informazioni che i titolari del trattamento "
+"devono fornire agli utenti quando questi si collegano a pagine web, "
+"indipendentemente dagli scopi del collegamento. L´informativa è resa solo"
+" per il sito web del portale Open Data Alto Adige <a "
+"href=\"http://dati.retecivica.bz.it\" target=”_blank” title=”Link "
+"esterno, si apre in una nuova finestra”>dati.retecivica.bz.it</a> e non "
+"per altri siti web esterni, eventualmente consultati dall´utente tramite "
+"link. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:8
+msgid "Titolare del trattamento la Provincia Autonoma di Bolzano"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:9
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:9
+msgid ""
+"Il titolare del trattamento dei dati personali è la Provincia Autonoma di"
+" Bolzano con sede in Bolzano (Italia), Piazza Silvius Magnago 1- CAP "
+"39100. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:13
+msgid "Responsabile del trattamento dei dati"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:14
+msgid ""
+"Responsabile esterno del trattamento è Informatica Alto Adige Spa, via "
+"Siemens 29, 39100 Bolzano. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:19
+msgid "Luogo del trattamento dei dati"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:20
+msgid ""
+"I trattamenti connessi ai servizi web di questo sito hanno luogo presso "
+"la predetta sede dell’Ente e sono curati solo da personale tecnico "
+"incaricato del trattamento, oppure da eventuali incaricati di occasionali"
+" operazioni di manutenzione. Nessun dato derivante dal servizio web viene"
+" comunicato o diffuso, salvo nei casi espressamente previsti dalla legge."
+" I dati personali forniti dagli utenti sono utilizzati al solo fine di "
+"eseguire il servizio o la prestazione richiesta ed espressa nelle "
+"finalità del trattamento e sono comunicati a terzi nel solo caso in cui "
+"ciò sia a tal fine necessario. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:26
+msgid "Dati di navigazione"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:27
+msgid ""
+"I sistemi informatici e le procedure software preposte al funzionamento "
+"di questo sito web acquisiscono, nel corso del loro normale esercizio, "
+"alcuni dati personali la cui trasmissione è implicita nell’uso dei "
+"protocolli di comunicazione di Internet. Si tratta di informazioni che "
+"non sono raccolte per essere associate a interessati identificati, ma che"
+" per loro stessa natura potrebbero, attraverso elaborazioni ed "
+"associazioni con dati detenuti da terzi, permettere di identificare gli "
+"utenti. In questa categoria di dati rientrano gli indirizzi IP o i nomi a"
+" dominio dei computer utilizzati dagli utenti che si connettono al sito, "
+"gli indirizzi in notazione URI (Uniform Resource Identifier)delle risorse"
+" richieste, l’orario della richiesta, il metodo utilizzato nel sottoporre"
+" la richiesta al server, la dimensione del file ottenuto in risposta, il "
+"codice numerico indicante lo stato della risposta data dal server (buon "
+"fine, errore, ecc.) ed altri parametri relativi al sistema operativo e "
+"all’ambiente informatico dell’utente. Questi dati vengono utilizzati al "
+"solo fine di ricavare informazioni statistiche anonime sull’uso del sito "
+"e per controllarne il corretto funzionamento e vengono conservati per il "
+"tempo strettamente necessario. I dati potrebbero essere utilizzati per "
+"l’accertamento di responsabilità in caso di ipotetici reati informatici "
+"ai danni del sito. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:34
+msgid "Dati forniti volontariamente dall´utente"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:35
+msgid ""
+"L’invio facoltativo, esplicito e volontario di posta elettronica agli "
+"indirizzi indicati su questo sito comporta la successiva acquisizione "
+"dell’indirizzo del mittente, necessario per rispondere alle richieste, "
+"nonché degli eventuali altri dati personali inseriti nella missiva. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:39
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:34
+msgid "Cookies"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:40
+msgid ""
+"Nessun dato personale degli utenti viene in proposito acquisito dal sito."
+" Non viene fatto uso di cookies per la trasmissione di informazioni di "
+"carattere personale. L’uso di c.d. cookies di sessione (che non vengono "
+"memorizzati in modo persistente sul computer dell’utente e svaniscono con"
+" la chiusura del browser) è strettamente limitato alla trasmissione di "
+"identificativi di sessione (costituiti da numeri casuali generati dal "
+"server) necessari per consentire l’esplorazione sicura ed efficiente del "
+"sito. I c.d. cookies di sessione utilizzati in questo sito evitano il "
+"ricorso ad altre tecniche informatiche potenzialmente pregiudizievoli per"
+" la riservatezza della navigazione degli utenti e non consentono "
+"l’acquisizione di dati personali identificativi dell’utente. È possibile "
+"ottenere maggiori informazioni sui cookies e registrare/modificare le "
+"proprie preferenze, cliccando <a "
+"href=\"http://www.provincia.bz.it/it/cookie.asp\" target=”_blank” "
+"title=”Link esterno, si apre in una nuova finestra”>qui</a> o, in "
+"qualsiasi momento durante la navigazione, sul link <a "
+"href=\"http://www.provincia.bz.it/it/cookie.asp\" target=”_blank” "
+"title=”Link esterno, si apre in una nuova finestra”>COOKIE</a>, posto "
+"nella parte inferiore del sito web. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:48
+msgid "Facoltatività del conferimento dei dati"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:49
+msgid ""
+"A parte quanto specificato per i dati di navigazione, l’utente è libero "
+"di fornire i dati personali riportati nei moduli di richiesta all’Ente. "
+"Il loro mancato conferimento può comportare l’impossibilità di ottenere "
+"quanto richiesto. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:53
+msgid "Modalità del trattamento"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:54
+msgid ""
+"I dati personali sono trattati con strumenti automatizzati per il tempo "
+"strettamente necessario a conseguire gli scopi per cui sono stati "
+"raccolti. Specifiche misure di sicurezza sono osservate per prevenire la "
+"perdita dei dati, usi illeciti o non corretti ed accessi non autorizzati."
+" "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:58
+msgid "Diritti degli interessati"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:59
+msgid ""
+"I soggetti cui si riferiscono i dati personali hanno il diritto in "
+"qualunque momento di ottenere la conferma dell’esistenza o meno dei "
+"medesimi dati e di conoscerne il contenuto e l’origine, verificarne "
+"l’esattezza o chiederne l’integrazione o l’aggiornamento, oppure la "
+"rettificazione (art. 7 del d.lgs. n. 196/2003). Ai sensi del medesimo "
+"articolo si ha il diritto di chiedere la cancellazione, la trasformazione"
+" in forma anonima o il blocco dei dati trattati in violazione di legge, "
+"nonché di opporsi in ogni caso, per motivi legittimi, al loro "
+"trattamento. Per eventuali informazioni è possibile contattare "
+"Informatica Alto Adige Spa al seguente indirizzo di posta elettronica: <a"
+" href=\"mailto:webmaster@siag.it\">webmaster@siag.it</a> . "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy.html:68
+msgid ""
+"Per informazioni è anche possibile scrivere a <a "
+"href=\"mailto:opendata@retecivica.bz.it\">opendata@retecivica.bz.it</a>"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:3
+msgid ""
+"Diese Mitteilung erfolgt im Sinne des Art. 13 des Legislativdekretes Nr. "
+"196/2003 (Datenschutzkodex) und bezieht sich auch auf die am 17. Mai 2001"
+" von der Datenschutzgruppe laut Art. 29 der Richtlinie Nr. 95/46/EG "
+"erlassenen Empfehlung Nr. 2/2001 betreffend die Mindestanforderungen für "
+"die Online-Erhebung personenbezogener Daten in der Europäischen Union. "
+"Sie beschreibt, wie das Open-Data-Portal Südtirol <a "
+"href=\"http://daten.buergernetz.bz.it\" target=”_blank” title=”Link "
+"esterno, si apre in una nuova finestra”>daten.buergernetz.bz.it</a> mit "
+"den personenbezogenen Daten der – identifizierten oder identifizierbaren "
+"– Benutzer umgeht, die auf die Website zugreifen oder mit der Website und"
+" mit den über das Netz zugänglichen Landesdiensten interagieren. Es "
+"handelt sich um eine Information im Sinne des Art. 13, Legislativdekret "
+"Nr. 196/2003 (Datenschutzkodex). Im Besonderen wird hiermit festgelegt, "
+"welche Informationen die Rechtsinhaber der Datenverarbeitung den "
+"Personen, die – zu welchem Zweck auch immer – auf eine Webseite "
+"zugreifen, bieten müssen sowie wie und wann diese Mitteilung erfolgen "
+"muss. Diese Information gilt ausschließlich für das Open-Data-Portal "
+"Südtirol <a href=\"http://daten.buergernetz.bz.it\" target=”_blank” "
+"title=”Link esterno, si apre in una nuova "
+"finestra”>daten.buergernetz.bz.it</a>. Sie gilt nicht für sonstige "
+"externe Webseiten, die eventuell über eine Verlinkung auf dieser Website "
+"zu erreichen sind. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:8
+msgid "Rechtsinhaber der Datenverarbeitung"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:13
+msgid "Externer Rechtsinhaber der Datenverarbeitung"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:14
+msgid ""
+"Externer Verantwortlicher für die Datenverarbeitung ist die Südtiroler "
+"Informatik AG, Siemensstr. 29, 39100 Bolzen. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:18
+msgid "Ort der Datenverarbeitung"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:19
+msgid ""
+"Die mit den Web-Dienstleistungen dieser Website zusammenhängende "
+"Datenverarbeitung erfolgt am Sitz der oben genannten Verantwortlichen und"
+" wird nur vom technischen Personal der mit der Datenverarbeitung "
+"beauftragten Stelle oder von eventuell mit gelegentlicher Wartungsarbeit "
+"beauftragten Personen vorgenommen. Keine aus den Web-Dienstleistungen "
+"gewonnenen Daten werden – mit Ausnahme der gesetzlich vorgesehen Fälle – "
+"an Dritte mitgeteilt oder verbreitet. Die von den Benutzern gelieferten "
+"personenbezogenen Daten werden nur für die Ausführung der gewünschten "
+"Leistung gemäß der ausdrücklich festgelegten Zweckbestimmung der "
+"Datenverarbeitung verwendet und werden Dritten nur dann mitgeteilt, wenn "
+"dies für den angegebenen Zweck erforderlich ist. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:22
+msgid "Navigationsdaten"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:23
+msgid ""
+"Navigationsdaten – Die für die Funktion dieser Website benötigten "
+"Softwaresysteme und -prozeduren erfassen während des normalen Betriebs "
+"bestimmte personenbezogene Daten, deren Übertragung für die Anwendung der"
+" Internet-Kommunikationsprotokolle erforderlich ist. Solche Informationen"
+" werden nicht erfasst, um sie identifizierten Personen zuzuordnen, "
+"könnten jedoch wegen ihrer Beschaffenheit durch Verarbeitung und "
+"Verknüpfung mit Daten im Besitz von Dritten eine Identifizierung der "
+"Benutzer ermöglichen. Zu dieser Datenkategorie gehören die IP-Adressen "
+"oder Domain-Namen der Computer, die von den Besuchern für die Verbindung "
+"zur Website benutzt werden, die URI (Uniform Resource "
+"Identifier)-Adressen der angeforderten Ressourcen, die Zeit der "
+"Anforderung, die zur Übermittlung der Anforderung an den Server benutzte "
+"Methode, die Größe der als Antwort erhaltenen Datei, der den Status der "
+"vom Server gegebenen Antwort kennzeichnende numerische Code (erfolgreich,"
+" Fehler usw.) und sonstige Parameter, die sich auf das Betriebssystem und"
+" die Computer-Konfiguration des Benutzers beziehen. Diese Daten werden "
+"nur für Zwecke anonymer statistischer Datenerfassung über die Benutzung "
+"der Website sowie für die Überprüfung deren korrekter Funktion verwendet "
+"und werden nur für die dazu erforderliche Zeit aufbewahrt. Die Daten "
+"können zur Feststellung einer Haftung im Falle eventueller IT-Delikte zum"
+" Schaden unserer Website benutzt werden. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:28
+msgid "Vom Benutzer freiwillig gelieferte Daten"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:29
+msgid ""
+"Das ausdrückliche und freiwillige Versenden von elektronischer Post an "
+"die in dieser Website angegebenen Adressen bedingt die Erfassung der "
+"Adresse des Absenders, die zur Beantwortung der Anfragen notwendig ist, "
+"sowie allfälliger personenbezogener Daten, die in der Mitteilung "
+"enthalten sind. Spezifische Mitteilungen und Einwilligungen sind auf den "
+"Webseiten angezeigt, die sich auf die speziellen angeforderten Dienste "
+"beziehen. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:35
+msgid ""
+"Diesbezüglich erfasst die Website keinerlei personenbezogene Daten über "
+"die Benutzer. Es werden keine Cookies für die Übertragung von "
+"Informationen persönlicher Art verwendet. Der Einsatz von sogenannten "
+"Session-Cookies oder Sitzungscookies (die nicht dauerhaft auf dem "
+"Computer des Besuchers gespeichert und mit dem Schließen des Browsers "
+"gelöscht werden) ist streng auf die Übertragung von Sitzungskennungen "
+"(bestehend aus vom Server generierten Zufallszahlen) beschränkt, die das "
+"sichere und effiziente Navigieren innerhalb der Website ermöglichen. Mit "
+"den auf dieser Website verwendeten sogenannten Session-Cookies wird die "
+"Verwendung anderer IT-Techniken vermieden, die für die Besucher "
+"nachteilige Effekte für die Vertraulichkeit beim Navigieren haben "
+"könnten. Die Erfassung von personenbezogenen Daten, mit denen der "
+"Besucher identifiziert werden kann, ist jedenfalls ausgeschlossen. Um "
+"weitere Details über die Cookies zu erhalten und die eigene Einstellungen"
+" abändern/speichern zu können, bitte <a "
+"href=\"http://www.provinz.bz.it/de/cookie.asp\" target=”_blank” "
+"title=”Link esterno, si apre in una nuova finestra”>hier</a> klicken, "
+"oder in einem späteren Zeitpunkt auf den Link <a "
+"href=\"http://www.provincia.bz.it/it/cookie.asp\" target=”_blank” "
+"title=”Link esterno, si apre in una nuova finestra”>COOKIE</a> klicken, "
+"welcher am Ende der Webseite zu finden ist. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:42
+msgid "Freiwilligkeit der Bereitstellung von Daten"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:43
+msgid ""
+"Abgesehen von den Angaben bezüglich der Navigationsdaten steht es dem "
+"Benutzer frei, die im Registrierungsformular angeforderten "
+"personenbezogenen Daten mitzuteilen. Werden diese jedoch nicht geliefert,"
+" so kann es dazu führen, dass die gewünschte Leistung nicht erbracht "
+"werden kann. "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:46
+msgid "Modalitäten der Datenverarbeitung"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:47
+msgid ""
+"Die personenbezogenen Daten werden mit automatisierten Mitteln "
+"verarbeitet, und zwar nur für die Zeit, die für die Zwecke, für die sie "
+"eingeholt wurden, unbedingt notwendig ist. Spezielle Sicherheitsmaßnahmen"
+" werden befolgt, um einem Datenverlust, einer unrechtmäßigen oder "
+"ungeeigneten Verwendung oder einem nicht genehmigten Zugriff vorzubeugen."
+" "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:50
+msgid "Rechte der Betroffenen"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/privacy_de.html:51
+msgid ""
+"Die Personen, auf die sich die personenbezogenen Daten beziehen, haben "
+"das Recht, jederzeit eine Bestätigung über das Vorhandensein oder "
+"Nichtvorhandensein dieser Daten zu erhalten, ihren Inhalt und Herkunft zu"
+" erfahren, ihre Übereinstimmung mit den tatsächlichen Verhältnissen zu "
+"prüfen oder deren Ergänzung, Aktualisierung oder Richtigstellung zu "
+"verlangen (Art. 7, Legistalivdekret Nr. 196/2003). Nach demselben Artikel"
+" haben sie das Recht, die Löschung, die Umwandlung in eine anonymisierte "
+"Form oder die Sperrung der widerrechtlich verarbeiteten Daten zu "
+"verlangen sowie sich in jedem Falle aus berechtigten Gründen deren "
+"Verarbeitung zu widersetzen. Für etwaige Informationen kontaktieren Sie "
+"die Südtiroler Informatik AG unter der folgenden E-Mail Addresse: <a "
+"href=\"mailto:webmaster@siag.it\">webmaster@siag.it</a> . "
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/recently_updated_dataset_list.html:4
+msgid "Ultimi dataset"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/search.html:2
+msgid "Cerca per..."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/search.html:5
+msgid "Trova i dati che ti interessano"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/search.html:7
+msgid ""
+"Cerca i dati e ottieni gli aggiornamenti per i dataset e le categorie a "
+"cui sei interessato"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/search.html:8
+msgid "Search Your Data"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/search.html:13
+msgid "Search"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/search.html:19
+msgid "Popular Tags"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/search.html:20
+msgid "Tag maggiormente utilizzati"
+msgstr ""
+
+#: ckanext/provbz/templates/organization/snippets/organization_item.html:31
+msgid "{num} Dataset"
+msgid_plural "{num} Datasets"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ckanext/provbz/templates/organization/snippets/organization_item.html:33
+msgid "0 Datasets"
+msgstr ""
+
+#: ckanext/provbz/templates/organization/snippets/organization_item.html:37
+#: ckanext/provbz/templates/organization/snippets/organization_item.html:38
+msgid "View {organization_name}"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:33
+msgid "Manage"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:54
+#: ckanext/provbz/templates/package/resource_read.html:65
+#: ckanext/provbz/templates/package/snippets/resource_item.html:64
+#: ckanext/provbz/templates/package/snippets/resource_item.html:76
+msgid "Go to resource"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:61
+msgid "View"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:63
+msgid "API Endpoint"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:67
+#: ckanext/provbz/templates/package/snippets/resource_item.html:61
+#: ckanext/provbz/templates/package/snippets/resource_item.html:73
+#: ckanext/provbz/templates/package/snippets/resource_item.html:86
+msgid "Download"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:100
+#: ckanext/provbz/templates/package/resource_read.html:103
+#: ckanext/provbz/templates/package/resource_read.html:105
+msgid "URL:"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:115
+msgid "From the dataset abstract"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:117
+#, python-format
+msgid "Source: <a href=\"%(url)s\">%(dataset)s</a>"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:158
+msgid "There are no views created for this resource yet."
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:162
+msgid "Not seeing the views you were expecting?"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:164
+msgid "Click here for more information."
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:167
+msgid "Here are some reasons you may not be seeing expected views:"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:169
+msgid "No view has been created that is suitable for this resource"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:170
+msgid "The site administrators may not have enabled the relevant view plugins"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:171
+msgid ""
+"If a view requires the DataStore, the DataStore plugin may not be "
+"enabled, or the data may not have been pushed to the DataStore, or the "
+"DataStore hasn't finished processing the data yet"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:193
+msgid "Additional Information"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:197
+#: ckanext/provbz/templates/package/snippets/additional_info.html:12
+#: ckanext/provbz/templates/package/snippets/additional_info.html:151
+msgid "Field"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:198
+#: ckanext/provbz/templates/package/snippets/additional_info.html:13
+#: ckanext/provbz/templates/package/snippets/additional_info.html:152
+msgid "Value"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:203
+msgid "Last updated"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:204
+#: ckanext/provbz/templates/package/resource_read.html:208
+#: ckanext/provbz/templates/package/resource_read.html:212
+msgid "unknown"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:207
+msgid "Created"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:211
+msgid "Format"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:215
+#: ckanext/provbz/templates/package/snippets/package_basic_fields.html:53
+#: ckanext/provbz/templates/snippets/license.html:23
+msgid "License"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:219
+msgid "URL"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/additional_info.html:7
+msgid "Metadati del dataset"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/additional_info.html:20
+msgid "Holder"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/additional_info.html:28
+#: ckanext/provbz/templates/package/snippets/additional_info.html:37
+msgid "Geographical Coverage"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/additional_info.html:49
+#: ckanext/provbz/templates/package/snippets/additional_info.html:58
+msgid "Temporal Coverage (Start Date)"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/additional_info.html:70
+#: ckanext/provbz/templates/package/snippets/additional_info.html:79
+msgid "Temporal Coverage (End Date)"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/additional_info.html:91
+msgid "Update Frequency"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/additional_info.html:107
+msgid "Publication Date"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/additional_info.html:115
+msgid "Revision Date"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/additional_info.html:147
+msgid "Additional Info"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/additional_info.html:171
+#: ckanext/provbz/templates/package/snippets/additional_info.html:177
+#: ckanext/provbz/templates/package/snippets/additional_info.html:182
+msgid "Author"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/additional_info.html:194
+#: ckanext/provbz/templates/package/snippets/additional_info.html:199
+msgid "Origin"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/package_basic_fields.html:68
+msgid ""
+" License definitions and additional information can be found at <a "
+"href=\"http://opendefinition.org/licenses/\">opendefinition.org</a> "
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/resource_item.html:25
+msgid "Explore"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/resource_item.html:34
+msgid "Preview"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/resource_item.html:37
+msgid "More information"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/resource_item.html:95
+msgid "Edit"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/resource_views_list_item.html:17
+msgid "Data Explorer"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/resources.html:29
+msgid "Resources"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/resources_list.html:22
+msgid "Data and Resources"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/resources_list.html:39
+#, python-format
+msgid ""
+" <p class=\"empty\">This dataset has no data, <a href=\"%(url)s\">why not"
+" add some?</a></p> "
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/resources_list.html:43
+msgid "This dataset has no data"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/custom_form_fields.html:29
+#: ckanext/provbz/templates/snippets/custom_form_fields.html:48
+msgid "Custom Field"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/language_selector.html:7
+msgid "Language"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/language_selector.html:16
+msgid "Go"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/license.html:16
+msgid "No License Provided"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/license.html:30
+msgid "This dataset satisfies the Open Definition."
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/package_item.html:41
+msgid "Private"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/package_item.html:50
+msgid "Draft"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/package_item.html:52
+msgid "Deleted"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/package_item.html:60
+msgid "Popular"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/package_item.html:67
+msgid "This dataset has no description"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/package_item.html:91
+msgid "Geocatalogo"
+msgstr ""
+
+#: ckanext/provbz/templates/user/logout.html:3
+#: ckanext/provbz/templates/user/logout.html:9
+msgid "Logged Out"
+msgstr ""
+
+#: ckanext/provbz/templates/user/logout.html:11
+msgid "You are now logged out."
+msgstr ""
+

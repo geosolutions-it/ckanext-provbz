@@ -31,4 +31,13 @@ setup(
         [paste.paster_command]
         provbzdb=ckanext.provbz.commands.command:ProvBZCommand
     ''',
+
+    # Translations
+    message_extractors={
+        'ckanext': [
+            ('**.py', 'python', None),
+            ('**.js', 'javascript', None),
+            ('**/templates/**.html', 'ckan', None),
+        ],
+    }
 )
