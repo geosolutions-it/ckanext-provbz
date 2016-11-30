@@ -2,6 +2,8 @@
 
 {% set locale = h.get_locale() %}
 
+{# --- OLD block now managed extending the ckanext-dcatapit schema ---
+
 {% block package_basic_fields_custom %}
   {% set holder = h.getLocalizedFieldValue('holder', data) %}
   {{ form.input('holder', label=_('Holder'), id='field-holder', placeholder=_('Holder'), value=holder or data.holder, error=errors.holder, classes=['control-medium']) }}
@@ -40,6 +42,8 @@
   {{ form.input('contact', label=_('contact'), id='field-contact', placeholder=_('contact'), value=contact or data.contact, error=errors.contact, classes=['control-medium']) }}
 
 {% endblock %}
+
+------------------------------------------------------------------- #}
 
 <!-- Override the license dropdown block in order to set the 'notspecified' license as default option -->
 

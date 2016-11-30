@@ -25,7 +25,7 @@ setup(
     entry_points='''
         [ckan.plugins]
         # Add plugins here, e.g.
-        provbz_theme=ckanext.provbz.plugin:PBZThemePlugin
+        provbz=ckanext.provbz.plugin:PBZThemePlugin
         provbz_harvester=ckanext.provbz.harvesters.harvester:PBZHarvester
 
         [paste.paster_command]

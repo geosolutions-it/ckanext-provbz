@@ -22,7 +22,8 @@ custom_field_table = Table('custom_field_table', meta.metadata,
     Column('package_id', types.UnicodeText, ForeignKey("package.id", ondelete="CASCADE"), nullable=False),
     Column('field', types.UnicodeText, nullable=False, index=True),
     Column('lang', types.UnicodeText, nullable=False, index=True),
-    Column('text', types.UnicodeText, nullable=False, index=True))
+    Column('text', types.UnicodeText, nullable=False, index=True),
+    extend_existing=True)
 
 def init_db():
     #Setting up custom fiels table for locales    
