@@ -91,7 +91,7 @@ class PBZThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
             }
         ]
 
-    # Implementation of ICustomSchema
+    # Implementation of IConfigurer
     # ------------------------------------------------------------
 
     def update_config(self, config):

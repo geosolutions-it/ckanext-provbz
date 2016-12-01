@@ -41,6 +41,22 @@ ISODocument.elements.append(
 
 class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
 
+    ## Temporarily mapping: frequencies must be changed CSW side
+    _mapping_frequencies_to_mdr_vocabulary = {
+        'biannually' : 'BIENNIAL',
+        'asNeeded' : 'IRREG',
+        'quarterly' : 'QUARTERLY',
+        'fortnightly' : 'BIWEEKLY',
+        'annually' : 'ANNUAL',
+        'monthly' : 'MONTHLY',
+        'weekly' : 'WEEKLY',
+        'daily' : 'DAILY',
+        'continual' : 'CONT',
+        'notPlanned' : 'UNKNOWN',
+        'irregular' : 'IRREG',
+        'unknown' : 'UNKNOWN'
+    }
+
     def info(self):
         return {
             'name': 'Provincia Di Bolzano',
@@ -64,6 +80,9 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
 
             if hasattr(c, '_ckan_locales_mapping'):
                     self._ckan_locales_mapping = c._ckan_locales_mapping
+
+        ## Temporarily mapping: frequencies must be changed CSW side
+        mapping_frequencies_to_mdr_vocabulary = self.source_config.get('mapping_frequencies_to_mdr_vocabulary', self._mapping_frequencies_to_mdr_vocabulary)
 
         # Merging metadata extras
         package_dict = None
@@ -91,16 +110,16 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
         
         # Custom fields (default metadata) harvestng
         updateFrequency = iso_values["frequency-of-update"]
-        package_dict['extras'].append({'key': 'update_frequency', 'value': updateFrequency})
+        package_dict['extras'].append({'key': 'frequency', 'value': mapping_frequencies_to_mdr_vocabulary.get(updateFrequency, 'UNKNOWN')})
 
         creation_date = iso_values["date-created"]
         package_dict['extras'].append({'key': 'creation_date', 'value': creation_date})
 
         publication_date = iso_values["date-released"]
-        package_dict['extras'].append({'key': 'publication_date', 'value': publication_date})
+        package_dict['extras'].append({'key': 'issued', 'value': publication_date})
 
         revision_date = iso_values["date-updated"]
-        package_dict['extras'].append({'key': 'revision_date', 'value': revision_date})
+        package_dict['extras'].append({'key': 'modified', 'value': revision_date})
 
         codes = []
         for char_set in iso_values["character-set"]:
@@ -116,14 +135,15 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
             if party["role"] == "owner":
 
                 contact_info_online_resource = None
-                if party["contact-info"]["online-resource"] and party["contact-info"]["online-resource"] != '':
+                if party["contact-info"] != '' and party["contact-info"]["online-resource"] and party["contact-info"]["online-resource"] != '':
                     contact_info_online_resource = party["contact-info"]["online-resource"].get('url')
+
                     package_dict['extras'].append({'key': 'site_url', 'value': contact_info_online_resource})
                     package_dict['url'] = contact_info_online_resource
 
-                package_dict['extras'].append({'key': 'contact', 'value': party["contact-info"]["email"] or None})
+                    package_dict['extras'].append({'key': 'contact', 'value': party["contact-info"]["email"] or None})
 
-                package_dict['extras'].append({'key': 'holder', 'value': party["organisation-name"]})
+                package_dict['extras'].append({'key': 'holder_name', 'value': party["organisation-name"]})
 
                 # Default value to populate the package table too during the harvest
                 package_dict['author'] = party["organisation-name"]
@@ -216,20 +236,20 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
 
                 log.info('::::::::: OBJECT UPDATED SUCCESSFULLY :::::::::') 
 
-            ## PERSISTING the 'holder' custom field localized
+            ## PERSISTING the 'holder_name' custom field localized
             ## ----------------------------------------------
 
             for org in self.localized_org:
-                record = custom.get_field('holder', package_id, org.get('locale'))
+                record = custom.get_field('holder_name', package_id, org.get('locale'))
                 if record:
-                    log.info('::::::::: Updating the localized holder custom field in the custom_field table :::::::::')
+                    log.info('::::::::: Updating the localized holder_name custom field in the custom_field table :::::::::')
                     record.text = org.get('text')
                     record.save()
                     log.info('::::::::: CUSTOM OBJECT UPDATED SUCCESSFULLY :::::::::') 
                 else:
-                    log.info('::::::::: Adding new localized holder custom field in the custom_field table :::::::::')
-                    # This for the holder custom field
-                    new_holder_loc_field = custom.CustomFieldMultilang(package_id, 'holder', org.get('locale'), org.get('text'))
+                    log.info('::::::::: Adding new localized holder_name custom field in the custom_field table :::::::::')
+                    # This for the holder_name custom field
+                    new_holder_loc_field = custom.CustomFieldMultilang(package_id, 'holder_name', org.get('locale'), org.get('text'))
                     custom.CustomFieldMultilang.save(new_holder_loc_field)
                     log.info('::::::::: CUSTOM OBJECT PERSISTED SUCCESSFULLY :::::::::')
 
