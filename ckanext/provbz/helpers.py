@@ -128,17 +128,6 @@ def recent_updates(n):
 	
     return search_results.get('results', [])
 
-def getLocalizedFieldValue(field=None, pkg_dict=None):
-    if field and pkg_dict:
-        lang = get_lang()[0]
-        localized_value = custom.get_field(field, pkg_dict.get('id'), lang)
-        if localized_value:
-            return localized_value.text
-        else:
-            return None
-    else:
-        return None
-
 def getLocalizedTagName(tag_name=None):
     if tag_name:
         lang = get_lang()[0]

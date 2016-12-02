@@ -6,16 +6,14 @@
       {% block package_additional_info %}
 
         {% if pkg_dict.author_email %}
-          {% set author = h.getLocalizedFieldValue('author', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Author") }}</th>
-            <td class="dataset-details" property="dc:creator">{{ h.mail_to(email_address=pkg_dict.author_email, name=author or pkg_dict.author) }}</td>
+            <td class="dataset-details" property="dc:creator">{{ h.mail_to(email_address=pkg_dict.author_email, name=pkg_dict.author) }}</td>
           </tr>
         {% elif pkg_dict.author %}
-          {% set author = h.getLocalizedFieldValue('author', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Author") }}</th>
-            <td class="dataset-details" property="dc:creator">{{ author or pkg_dict.author }}</td>
+            <td class="dataset-details" property="dc:creator">{{ pkg_dict.author }}</td>
           </tr>
         {% else %}
           <tr>
@@ -25,10 +23,9 @@
         {% endif %}
 
         {% if pkg_dict.url %}
-          {% set url = h.getLocalizedFieldValue('url', pkg_dict) %}
           <tr>
             <th scope="row" class="dataset-label">{{ _("Origin") }}</th>
-            <td class="dataset-details" property="dc:creator">{{ h.link_to(url or pkg_dict.url , url or pkg_dict.url, rel='foaf:homepage', target='_blank') }}</td>
+            <td class="dataset-details" property="dc:creator">{{ h.link_to(pkg_dict.url , pkg_dict.url, rel='foaf:homepage', target='_blank') }}</td>
           </tr>
         {% else %}
           <tr>

@@ -37,9 +37,6 @@ class PBZThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     # IRoutes
     plugins.implements(plugins.IRoutes)
 
-    # IPackageController
-    plugins.implements(plugins.IPackageController, inherit=True)
-
     # ICustomSchema
     plugins.implements(interfaces.ICustomSchema)
 
@@ -110,7 +107,6 @@ class PBZThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
             'getLocalizedPageLink': helpers.getLocalizedPageLink,
             'parseRefDate': helpers.parseRefDate,
             'get_news_preview': helpers.get_news_preview,
-            'getLocalizedFieldValue': helpers.getLocalizedFieldValue,
             'getLocalizedTagName': helpers.getLocalizedTagName,
             'checkForShibboletURL': helpers.checkForShibboletURL
             #'get_custom_categories_list': helpers.get_custom_categories_list
@@ -134,52 +130,4 @@ class PBZThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
         
     def after_map(self, route_map):
         return route_map
-
-    # Implementation of IPackageController
-    # ------------------------------------------------------------
-
-    def after_create(self, context, pkg_dict):
-        # During the harvest the get_lang() is not defined
-        lang = helpers.get_locale()
-
-        if lang:    
-            for extra in pkg_dict.get('extras'):
-                for field in self.get_custom_schema():
-                    if extra.get('key') == field['name'] and field['localized'] == True:
-                        log.info(':::::::::::::::Localizing custom field: %r', field['name'])
-                        
-                        # Create the localized field record
-                        self.createLocField(extra, lang, pkg_dict.get('id'))
-
-    def after_update(self, context, pkg_dict):
-        # During the harvest the get_lang() is not defined
-        lang = helpers.get_locale()
-
-        if lang:             
-            for extra in pkg_dict.get('extras'):
-                for field in self.get_custom_schema():
-                    if extra.get('key') == field['name'] and field['localized'] == True:
-                        log.info(':::::::::::::::Localizing custom field: %r', field['name'])
-                        f = custom.get_field(extra.get('key'), pkg_dict.get('id'), lang)
-                        if f:
-                            if extra.get('value') == '':
-                                f.purge()
-                            elif f.text != extra.get('value'):
-                                # Update the localized field value for the current language
-                                f.text = extra.get('value')
-                                f.save()
-
-                                log.info('Custom field updated successfully')
-
-                        elif extra.get('value') != '':
-                            # Create the localized field record
-                            self.createLocField(extra, lang, pkg_dict.get('id'))
-
-    def createLocField(self, extra, lang, package_id): 
-        log.debug('Creating createLocField for package ID: %r', str(package_id))
-
-        new_loc_field = custom.CustomFieldMultilang(package_id, extra.get('key'), lang, extra.get('value'))
-        custom.CustomFieldMultilang.save(new_loc_field)
-
-        log.info('Custom field created successfully')
         
