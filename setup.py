@@ -6,7 +6,7 @@ version = '0.1'
 setup(
     name='ckanext-provbz',
     version=version,
-    description="Custom theme extension for Provincia di Bolzano",
+    description="Custom theme extension for the Provincia di Bolzano",
     long_description='''
     ''',
     classifiers=[], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -25,10 +25,16 @@ setup(
     entry_points='''
         [ckan.plugins]
         # Add plugins here, e.g.
-        provbz_theme=ckanext.provbz.plugin:PBZThemePlugin
+        provbz=ckanext.provbz.plugin:PBZThemePlugin
         provbz_harvester=ckanext.provbz.harvesters.harvester:PBZHarvester
-
-        [paste.paster_command]
-        provbzdb=ckanext.provbz.commands.command:ProvBZCommand
     ''',
+
+    # Translations
+    message_extractors={
+        'ckanext': [
+            ('**.py', 'python', None),
+            ('**.js', 'javascript', None),
+            ('**/templates/**.html', 'ckan', None),
+        ],
+    }
 )

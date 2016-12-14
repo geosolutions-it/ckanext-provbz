@@ -15,8 +15,6 @@ from pylons import config
 from pylons.i18n.translation import get_lang
 from ckanext.multilang.model import PackageMultilang, TagMultilang
 
-import ckanext.provbz.model.custom as custom
-
 import ckanext.pages.db as db
 
 from HTMLParser import HTMLParser
@@ -32,9 +30,11 @@ def get_default_locale():
     return locale_default
 
 def get_locale():
-    lang = get_lang()[0]
-
-    log.info('Retrieving Ckan current locale: %r', lang)
+    lang = get_lang()
+    
+    if lang is not None:
+        lang = unicode(lang[0])        
+    
     return lang
 
 def getLocalizedPageLink(page):
@@ -125,17 +125,6 @@ def recent_updates(n):
     log.debug('Updates:::::::::::::::::::::::  %r ' % search_results)
 	
     return search_results.get('results', [])
-
-def getLocalizedFieldValue(field=None, pkg_dict=None):
-    if field and pkg_dict:
-        lang = get_lang()[0]
-        localized_value = custom.get_field(field, pkg_dict.get('id'), lang)
-        if localized_value:
-            return localized_value.text
-        else:
-            return None
-    else:
-        return None
 
 def getLocalizedTagName(tag_name=None):
     if tag_name:

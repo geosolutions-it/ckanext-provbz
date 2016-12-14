@@ -1,0 +1,577 @@
+# Translations template for ckanext-provbz.
+# Copyright (C) 2016 ORGANIZATION
+# This file is distributed under the same license as the ckanext-provbz project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-provbz 0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2016-12-01 19:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+
+#: ckanext/provbz/plugin.py:60
+msgid "Creation Date"
+msgstr ""
+
+#: ckanext/provbz/plugin.py:61
+msgid "creation date"
+msgstr ""
+
+#: ckanext/provbz/plugin.py:69
+msgid "Encoding"
+msgstr ""
+
+#: ckanext/provbz/plugin.py:70
+msgid "encoding type"
+msgstr ""
+
+#: ckanext/provbz/plugin.py:78
+msgid "Site URL"
+msgstr ""
+
+#: ckanext/provbz/plugin.py:79
+msgid "site url"
+msgstr ""
+
+#: ckanext/provbz/plugin.py:87
+msgid "Contact"
+msgstr ""
+
+#: ckanext/provbz/plugin.py:88
+msgid "contact"
+msgstr ""
+
+#: ckanext/provbz/templates/base.html:11
+msgid "Portale OpenData Bolzano"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:11
+msgid "About {0}"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:15
+msgid "Informazioni Dati Alto Adige"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:21
+msgid "Domande frequenti"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:27
+msgid "Atom Feed"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:33
+#: ckanext/provbz/templates/home/acknowledgements.html:17
+msgid "Ringraziamenti"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:39
+msgid "Note legali"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:45
+#: ckanext/provbz/templates/home/privacy.html:15
+#: ckanext/provbz/templates/home/privacy.html:17
+msgid "Privacy"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:51
+msgid "Contattaci"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:58 ckanext/provbz/templates/footer.html:63
+msgid "Cookie"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:96
+msgid "CKAN API"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:97
+msgid "Open Knowledge Foundation"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:101
+msgid "Realizzato con"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:123
+msgid "Pages"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:128
+msgid "Blog"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:134 ckanext/provbz/templates/header.html:15
+msgid "Sysadmin settings"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:140 ckanext/provbz/templates/header.html:21
+msgid "View profile"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:147 ckanext/provbz/templates/header.html:28
+#, python-format
+msgid "Dashboard (%(num)d new item)"
+msgid_plural "Dashboard (%(num)d new items)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ckanext/provbz/templates/footer.html:155 ckanext/provbz/templates/header.html:36
+msgid "Edit settings"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:162 ckanext/provbz/templates/header.html:43
+msgid "Log out"
+msgstr ""
+
+#: ckanext/provbz/templates/footer.html:184
+msgid "ACCEDI AL GEOPORTALE"
+msgstr ""
+
+#: ckanext/provbz/templates/header.html:55
+msgid "Log in"
+msgstr ""
+
+#: ckanext/provbz/templates/header.html:57
+msgid "Register"
+msgstr ""
+
+#: ckanext/provbz/templates/header.html:102
+msgid "Datasets"
+msgstr ""
+
+#: ckanext/provbz/templates/header.html:103
+msgid "Organizations"
+msgstr ""
+
+#: ckanext/provbz/templates/header.html:104
+msgid "Groups"
+msgstr ""
+
+#: ckanext/provbz/templates/header.html:107
+msgid "About"
+msgstr ""
+
+#: ckanext/provbz/templates/header.html:108
+msgid "Faq"
+msgstr ""
+
+#: ckanext/provbz/templates/page.html:6
+msgid "Skip to content"
+msgstr ""
+
+#: ckanext/provbz/templates/home/acknowledgements.html:7
+msgid " Dank"
+msgstr ""
+
+#: ckanext/provbz/templates/home/acknowledgements.html:9
+msgid " Ribgraziamenti"
+msgstr ""
+
+#: ckanext/provbz/templates/home/acknowledgements.html:15
+msgid "Dank"
+msgstr ""
+
+#: ckanext/provbz/templates/home/faq.html:7
+#: ckanext/provbz/templates/home/faq.html:9
+msgid " FAQ"
+msgstr ""
+
+#: ckanext/provbz/templates/home/faq.html:15
+#: ckanext/provbz/templates/home/faq.html:17
+msgid "FAQ"
+msgstr ""
+
+#: ckanext/provbz/templates/home/formats.html:7
+msgid " Liste der offenen Formattypen"
+msgstr ""
+
+#: ckanext/provbz/templates/home/formats.html:9
+msgid " Lista di formati di tipo aperto"
+msgstr ""
+
+#: ckanext/provbz/templates/home/formats.html:15
+msgid "Liste der offenen Formattypen"
+msgstr ""
+
+#: ckanext/provbz/templates/home/formats.html:17
+msgid "Lista di formati di tipo aperto"
+msgstr ""
+
+#: ckanext/provbz/templates/home/info.html:7
+#: ckanext/provbz/templates/home/info.html:15
+msgid " Über uns"
+msgstr ""
+
+#: ckanext/provbz/templates/home/info.html:9
+#: ckanext/provbz/templates/home/info.html:17
+msgid " Informazioni"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:13
+msgid "Benvenuto nella piattaforma Open Data Alto Adige"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:13
+msgid "ACCEDI AI DATASET"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:31
+msgid "Ultime News"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:66
+msgid "Leggi tutto il contenuto"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:82
+msgid "Cosa sono gli OPENdata?"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:84
+msgid ""
+"Per dati si intendono pezzi di singola informazione di varia natura, che "
+"descrivono fatti riproducibili senza ambiguità e che possono essere espressi "
+"e archiviati in formati digitali. Il Codice dell'Amministrazione Digitale "
+"(art. 68, c. 3, lett. b) definisce dati aperti i dati che presentano le "
+"seguenti caratteristiche:"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:88
+msgid ""
+"sono disponibili secondo i termini di una licenza che ne permetta l'utilizzo "
+"da parte di chiunque, anche per finalità commerciali, in formato disaggregato"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:89
+msgid ""
+"sono accessibili attraverso le tecnologie dell'informazione e della "
+"comunicazione, ivi comprese le reti telematiche pubbliche e private, in "
+"formati aperti ai sensi della lettera a), sono adatti all'utilizzo automatico"
+" da parte di programmi per elaboratori e sono provvisti dei relativi metadati"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:90
+msgid ""
+"sono resi disponibili gratuitamente attraverso le tecnologie "
+"dell'informazione e della comunicazione, ivi comprese le reti telematiche "
+"pubbliche e private, oppure sono resi disponibili ai costi marginali "
+"sostenuti per la loro riproduzione e divulgazione"
+msgstr ""
+
+#: ckanext/provbz/templates/home/layout1.html:94
+msgid "Leggi tutto"
+msgstr ""
+
+#: ckanext/provbz/templates/home/legal.html:7
+msgid " Rechtliche Anmerkungen"
+msgstr ""
+
+#: ckanext/provbz/templates/home/legal.html:9
+msgid " Note Legali"
+msgstr ""
+
+#: ckanext/provbz/templates/home/legal.html:15
+msgid "Rechtliche Anmerkungen"
+msgstr ""
+
+#: ckanext/provbz/templates/home/legal.html:17
+msgid "Note Legali"
+msgstr ""
+
+#: ckanext/provbz/templates/home/privacy.html:7
+#: ckanext/provbz/templates/home/privacy.html:9
+msgid " Privacy"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/recently_updated_dataset_list.html:4
+msgid "Ultimi dataset"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/search.html:2
+msgid "Cerca per..."
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/search.html:5
+msgid "Trova i dati che ti interessano"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/search.html:7
+msgid ""
+"Cerca i dati e ottieni gli aggiornamenti per i dataset e le categorie a cui "
+"sei interessato"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/search.html:8
+msgid "Search Your Data"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/search.html:13
+msgid "Search"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/search.html:19
+msgid "Popular Tags"
+msgstr ""
+
+#: ckanext/provbz/templates/home/snippets/search.html:20
+msgid "Tag maggiormente utilizzati"
+msgstr ""
+
+#: ckanext/provbz/templates/organization/snippets/organization_item.html:31
+msgid "{num} Dataset"
+msgid_plural "{num} Datasets"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ckanext/provbz/templates/organization/snippets/organization_item.html:33
+msgid "0 Datasets"
+msgstr ""
+
+#: ckanext/provbz/templates/organization/snippets/organization_item.html:37
+#: ckanext/provbz/templates/organization/snippets/organization_item.html:38
+msgid "View {organization_name}"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:33
+msgid "Manage"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:54
+#: ckanext/provbz/templates/package/resource_read.html:65
+#: ckanext/provbz/templates/package/snippets/resource_item.html:64
+#: ckanext/provbz/templates/package/snippets/resource_item.html:76
+msgid "Go to resource"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:61
+msgid "View"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:63
+msgid "API Endpoint"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:67
+#: ckanext/provbz/templates/package/snippets/resource_item.html:61
+#: ckanext/provbz/templates/package/snippets/resource_item.html:73
+#: ckanext/provbz/templates/package/snippets/resource_item.html:86
+msgid "Download"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:100
+#: ckanext/provbz/templates/package/resource_read.html:103
+#: ckanext/provbz/templates/package/resource_read.html:105
+msgid "URL:"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:115
+msgid "From the dataset abstract"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:117
+#, python-format
+msgid "Source: <a href=\"%(url)s\">%(dataset)s</a>"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:158
+msgid "There are no views created for this resource yet."
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:162
+msgid "Not seeing the views you were expecting?"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:164
+msgid "Click here for more information."
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:167
+msgid "Here are some reasons you may not be seeing expected views:"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:169
+msgid "No view has been created that is suitable for this resource"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:170
+msgid "The site administrators may not have enabled the relevant view plugins"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:171
+msgid ""
+"If a view requires the DataStore, the DataStore plugin may not be enabled, or"
+" the data may not have been pushed to the DataStore, or the DataStore hasn't "
+"finished processing the data yet"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:193
+msgid "Additional Information"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:197
+msgid "Field"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:198
+msgid "Value"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:203
+msgid "Last updated"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:204
+#: ckanext/provbz/templates/package/resource_read.html:208
+#: ckanext/provbz/templates/package/resource_read.html:212
+msgid "unknown"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:207
+msgid "Created"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:211
+msgid "Format"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:215
+#: ckanext/provbz/templates/package/snippets/package_basic_fields.html:8
+#: ckanext/provbz/templates/snippets/license.html:23
+msgid "License"
+msgstr ""
+
+#: ckanext/provbz/templates/package/resource_read.html:219
+msgid "URL"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/additional_info.html:3
+msgid "Additional Info"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/additional_info.html:11
+#: ckanext/provbz/templates/package/snippets/additional_info.html:17
+#: ckanext/provbz/templates/package/snippets/additional_info.html:22
+msgid "Author"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/additional_info.html:23
+#: ckanext/provbz/templates/package/snippets/additional_info.html:36
+msgid "N/D"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/additional_info.html:30
+#: ckanext/provbz/templates/package/snippets/additional_info.html:35
+msgid "Origin"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/package_basic_fields.html:23
+msgid ""
+" License definitions and additional information can be found at <a "
+"href=\"http://opendefinition.org/licenses/\">opendefinition.org</a> "
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/resource_item.html:25
+msgid "Explore"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/resource_item.html:34
+msgid "Preview"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/resource_item.html:37
+msgid "More information"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/resource_item.html:95
+msgid "Edit"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/resource_views_list_item.html:17
+msgid "Data Explorer"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/resources.html:29
+msgid "Resources"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/resources_list.html:22
+msgid "Data and Resources"
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/resources_list.html:39
+#, python-format
+msgid ""
+" <p class=\"empty\">This dataset has no data, <a href=\"%(url)s\">why not add"
+" some?</a></p> "
+msgstr ""
+
+#: ckanext/provbz/templates/package/snippets/resources_list.html:43
+msgid "This dataset has no data"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/custom_form_fields.html:29
+#: ckanext/provbz/templates/snippets/custom_form_fields.html:48
+msgid "Custom Field"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/language_selector.html:7
+msgid "Language"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/language_selector.html:16
+msgid "Go"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/license.html:16
+msgid "No License Provided"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/license.html:30
+msgid "This dataset satisfies the Open Definition."
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/package_item.html:41
+msgid "Private"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/package_item.html:50
+msgid "Draft"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/package_item.html:52
+msgid "Deleted"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/package_item.html:60
+msgid "Popular"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/package_item.html:67
+msgid "This dataset has no description"
+msgstr ""
+
+#: ckanext/provbz/templates/snippets/package_item.html:91
+msgid "Geocatalogo"
+msgstr ""
+
+#: ckanext/provbz/templates/user/logout.html:3
+#: ckanext/provbz/templates/user/logout.html:9
+msgid "Logged Out"
+msgstr ""
+
+#: ckanext/provbz/templates/user/logout.html:11
+msgid "You are now logged out."
+msgstr ""
+
