@@ -8,8 +8,6 @@ import ckanext.provbz.helpers as helpers
 from ckan.lib.base import model
 from pylons.i18n.translation import get_lang
 
-import ckanext.provbz.model.custom as custom
-
 import ckanext.dcatapit.interfaces as interfaces
 
 from ckan.common import _, ungettext

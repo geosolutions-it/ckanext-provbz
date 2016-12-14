@@ -14,8 +14,6 @@ from ckanext.geonetwork.harvesters.geonetwork import GeoNetworkHarvester
 from ckanext.spatial.model import ISODocument
 from ckanext.spatial.model import ISOElement
 
-import ckanext.provbz.model.custom as custom
-
 log = logging.getLogger(__name__)
 
 class ISOCharacterSet(ISOElement):
@@ -237,18 +235,17 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
                 log.info('::::::::: OBJECT UPDATED SUCCESSFULLY :::::::::') 
 
             ## PERSISTING the 'holder_name' custom field localized
-            ## ----------------------------------------------
+            ## ---------------------------------------------------
 
             for org in self.localized_org:
                 record = PackageMultilang.get(package_id, 'holder_name', org.get('locale'), 'extra')
                 if record:
-                    log.info('::::::::: Updating the localized holder_name custom field in the custom_field table :::::::::')
+                    log.info('::::::::: Updating the localized holder_name custom field in the package_multilang table :::::::::')
                     record.text = org.get('text')
                     record.save()
                     log.info('::::::::: CUSTOM OBJECT UPDATED SUCCESSFULLY :::::::::') 
                 else:
-                    log.info('::::::::: Adding new localized holder_name custom field in the custom_field table :::::::::')
-                    # This for the holder_name custom field
+                    log.info('::::::::: Adding new localized holder_name custom field in the package_multilang table :::::::::')
                     PackageMultilang.persist({'id': package_id, 'text': org.get('text'), 'field': 'holder_name'}, org.get('locale'), 'extra')
                     log.info('::::::::: CUSTOM OBJECT PERSISTED SUCCESSFULLY :::::::::')
 
