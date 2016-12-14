@@ -109,7 +109,6 @@ class PBZThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
             'get_news_preview': helpers.get_news_preview,
             'getLocalizedTagName': helpers.getLocalizedTagName,
             'checkForShibboletURL': helpers.checkForShibboletURL
-            #'get_custom_categories_list': helpers.get_custom_categories_list
         }
 
     # Implementation of IRoute

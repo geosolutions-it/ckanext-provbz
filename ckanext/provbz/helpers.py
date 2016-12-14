@@ -15,8 +15,6 @@ from pylons import config
 from pylons.i18n.translation import get_lang
 from ckanext.multilang.model import PackageMultilang, TagMultilang
 
-import ckanext.provbz.model.custom as custom
-
 import ckanext.pages.db as db
 
 from HTMLParser import HTMLParser

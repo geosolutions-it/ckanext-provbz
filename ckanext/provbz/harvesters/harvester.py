@@ -217,7 +217,7 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
 
                 for org in self.localized_org:
                     session.add_all([
-                        PackageMultilang(package_id=package_id, field='author', field_type='localized', lang=org.get('locale'), text=org.get('text')),
+                        PackageMultilang(package_id=package_id, field='author', field_type='package', lang=org.get('locale'), text=org.get('text')),
                     ])
 
                 session.commit()
@@ -240,7 +240,6 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
             ## ----------------------------------------------
 
             for org in self.localized_org:
-                #record = custom.get_field('holder_name', package_id, org.get('locale'))
                 record = PackageMultilang.get(package_id, 'holder_name', org.get('locale'), 'extra')
                 if record:
                     log.info('::::::::: Updating the localized holder_name custom field in the custom_field table :::::::::')
@@ -251,8 +250,6 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
                     log.info('::::::::: Adding new localized holder_name custom field in the custom_field table :::::::::')
                     # This for the holder_name custom field
                     PackageMultilang.persist({'id': package_id, 'text': org.get('text'), 'field': 'holder_name'}, org.get('locale'), 'extra')
-                    #new_holder_loc_field = custom.CustomFieldMultilang(package_id, 'holder_name', org.get('locale'), org.get('text'))
-                    #custom.CustomFieldMultilang.save(new_holder_loc_field)
                     log.info('::::::::: CUSTOM OBJECT PERSISTED SUCCESSFULLY :::::::::')
 
             pass
