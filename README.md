@@ -13,46 +13,63 @@ harvesters built on the ckanext-spatial extension like:
 Requirements
 ------------
 
-The ckanext-provbz extension has been developed for CKAN 2.4.
+The ckanext-provbz extension has been developed for CKAN 2.5.2 or later.
 Other extensions needed as dependencies are:
 
 - https://github.com/geosolutions-it/ckanext-multilang
 - https://github.com/geosolutions-it/ckanext-geonetwork
 - https://github.com/geosolutions-it/ckanext-pages
+- https://github.com/geosolutions-it/ckanext-dcatapit
+
+------------
+Installation
+------------
+
+1. Installing all the other extensions required
+
+2. Activate your CKAN virtual environment, for example::
+
+     `. /usr/lib/ckan/default/bin/activate`
+     
+3. Go into your CKAN path for extension (like /usr/lib/ckan/default/src)::
+
+    `git clone https://github.com/geosolutions-it/ckanext-provbz.git`
+    
+    `cd ckanext-provbz`
+    
+    `pip install -e .`
+
+4. Add ``provbz_theme``  and ``provbz_harvester`` to the ``ckan.plugins`` setting in your CKAN
+   config file (by default the config file is located at
+   ``/etc/ckan/default/production.ini``).
+
+5. (Skip this step for Ckan version >= 2.5) The ckanext-provbz extension provides some updates for the i18n files for 'it' and 'de' languages. Locale files in CKAN (.mo and .po) for these languages must be replaced with files located in this extension at the ckanext-provbz/ckanext/provbz/i18n_old/ path. To do that add the ``ckan.i18n_directory`` configuration property to the production.ini file as follow::
+
+	`ckan.i18n_directory = $BASE_PATH/ckanext-provbz/ckanext/provbz/i18n_old/`
+
+6. Update the production.ini configuration finding the default property ``licenses_group_url`` and change the value:
+
+         licenses_group_url = file:///usr/lib/ckan/default/src/ckanext-provbz/ckanext/provbz/licenses/ckan.json
+
+7. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu::
+
+     sudo service apache2 reload
 
 ------------------------
 Development Installation
 ------------------------
 
-To install ckanext-provbz:
+To install `ckanext-datitrentinoit` for development, activate your CKAN virtualenv and
+do::
 
-1. Activate your CKAN virtual environment, for example::
+    `git clone https://github.com/geosolutions-it/ckanext-datitrentinoit.git`
+    
+    `cd ckanext-datitrentinoit`
+    
+    `python setup.py develop`
 
-     . /usr/lib/ckan/default/bin/activate
+    `pip install -r dev-requirements.txt`
 
-2. Go into your CKAN path for extension (like /usr/lib/ckan/default/src)
-
-3. git clone https://github.com/geosolutions-it/ckanext-provbz
-
-4. cd ckanext-provbz
-
-5. python setup.py develop
-
-6. Initilize the provbz additional DB table for custom metadata fields:
-
-	    paster --plugin=ckanext-provbz provbzdb initdb --config=/etc/ckan/default/production.ini
-
-7. Add ``provbz_theme``  and ``provbz_harvester`` to the ``ckan.plugins`` setting in your CKAN
-   config file (by default the config file is located at
-   ``/etc/ckan/default/production.ini``).
-
-8. The ckanext-provbz extension provides some updates for the i18n files for 'it' and 'de' languages. Locale files in CKAN (.mo and .po) for these languages must be replaced with files located in this extension at the ckanext-provbz/ckanext/provbz/i18n/ path.
-
-9. Update the production.ini configuration finding the default property ``licenses_group_url`` and change the value:
-
-         licenses_group_url = file:///usr/lib/ckan/default/src/ckanext-provbz/ckanext/provbz/licenses/ckan.json
-
-10. Restart CKAN.
 
 ----------------------
 Harvest Configuration
@@ -260,3 +277,43 @@ Below the complete configuration to use:
 			},
 			"default_license": "cc-zero"
 		}
+
+---------------------
+Managing translations
+---------------------
+
+The provbz extension implements the ITranslation CKAN's interface so the translations procedure of the GUI elements is automatically covered using the translations files provided in the i18n directory. 
+
+## Creating a new translation
+To create a new translation proceed as follow:
+
+1. Extract new messages from your extension updating the pot file::
+
+     `python setup.py extract_messages`
+     
+2.  Create a translation file for your language (a po file) using the existing pot file in this plugin::
+
+     `python setup.py init_catalog --locale YOUR_LANGUAGE`
+
+     Replace YOUR_LANGUAGE with the two-letter ISO language code (e.g. es, de).
+     
+3. Do the translation into the po file
+
+4. Once the translation files (po) have been updated, either manually or via Transifex, compile them by running::
+
+     `python setup.py compile_catalog --locale YOUR_LANGUAGE`
+     
+## Updating an existing translation
+In order to update the existing translations proceed as follow:
+
+1. Extract new messages from your extension updating the pot file::
+
+     `python setup.py extract_messages`
+     
+2. Update the strings in your po file, while preserving your po edits, by doing::
+
+     `python setup.py update_catalog --locale YOUR-LANGUAGE`
+
+3. Once the translation files (po) have been updated adding the new translations needed, compile them by running::
+
+     `python setup.py compile_catalog --locale YOUR_LANGUAGE`

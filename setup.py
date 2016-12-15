@@ -24,9 +24,11 @@ setup(
     ],
     entry_points='''
         [ckan.plugins]
-        # Add plugins here, e.g.
         provbz=ckanext.provbz.plugin:PBZThemePlugin
         provbz_harvester=ckanext.provbz.harvesters.harvester:PBZHarvester
+
+        [babel.extractors]
+        ckan = ckan.lib.extract:extract_ckan
     ''',
 
     # Translations

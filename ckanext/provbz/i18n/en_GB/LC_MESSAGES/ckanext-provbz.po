@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-provbz 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-12-01 19:00+0100\n"
+"POT-Creation-Date: 2016-12-15 11:43+0100\n"
 "PO-Revision-Date: 2016-12-01 19:01+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: en_GB <LL@li.org>\n"
@@ -18,35 +18,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 0.9.6\n"
 
-#: ckanext/provbz/plugin.py:60
+#: ckanext/provbz/plugin.py:55
 msgid "Creation Date"
 msgstr ""
 
-#: ckanext/provbz/plugin.py:61
+#: ckanext/provbz/plugin.py:56
 msgid "creation date"
 msgstr ""
 
-#: ckanext/provbz/plugin.py:69
+#: ckanext/provbz/plugin.py:64
 msgid "Encoding"
 msgstr ""
 
-#: ckanext/provbz/plugin.py:70
+#: ckanext/provbz/plugin.py:65
 msgid "encoding type"
 msgstr ""
 
-#: ckanext/provbz/plugin.py:78
+#: ckanext/provbz/plugin.py:73
 msgid "Site URL"
 msgstr ""
 
-#: ckanext/provbz/plugin.py:79
+#: ckanext/provbz/plugin.py:74
 msgid "site url"
 msgstr ""
 
-#: ckanext/provbz/plugin.py:87
+#: ckanext/provbz/plugin.py:82
 msgid "Contact"
 msgstr ""
 
-#: ckanext/provbz/plugin.py:88
+#: ckanext/provbz/plugin.py:83
 msgid "contact"
 msgstr ""
 
@@ -469,19 +469,19 @@ msgstr ""
 msgid "Additional Info"
 msgstr ""
 
-#: ckanext/provbz/templates/package/snippets/additional_info.html:11
-#: ckanext/provbz/templates/package/snippets/additional_info.html:17
-#: ckanext/provbz/templates/package/snippets/additional_info.html:22
+#: ckanext/provbz/templates/package/snippets/additional_info.html:10
+#: ckanext/provbz/templates/package/snippets/additional_info.html:15
+#: ckanext/provbz/templates/package/snippets/additional_info.html:20
 msgid "Author"
 msgstr ""
 
-#: ckanext/provbz/templates/package/snippets/additional_info.html:23
-#: ckanext/provbz/templates/package/snippets/additional_info.html:36
+#: ckanext/provbz/templates/package/snippets/additional_info.html:21
+#: ckanext/provbz/templates/package/snippets/additional_info.html:33
 msgid "N/D"
 msgstr ""
 
-#: ckanext/provbz/templates/package/snippets/additional_info.html:30
-#: ckanext/provbz/templates/package/snippets/additional_info.html:35
+#: ckanext/provbz/templates/package/snippets/additional_info.html:27
+#: ckanext/provbz/templates/package/snippets/additional_info.html:32
 msgid "Origin"
 msgstr ""
 
