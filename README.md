@@ -51,11 +51,11 @@ Other extensions needed as dependencies are:
 
 ## Development Installation
 
-To install `ckanext-datitrentinoit` for development, activate your CKAN virtualenv and do:
+To install `ckanext-provbz` for development, activate your CKAN virtualenv and do:
 
-	git clone https://github.com/geosolutions-it/ckanext-datitrentinoit.git
+	git clone https://github.com/geosolutions-it/ckanext-provbz.git
 
-	cd ckanext-datitrentinoit
+	cd ckanext-provbz
 
 	python setup.py develop
 
