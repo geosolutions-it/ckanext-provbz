@@ -34,7 +34,7 @@ Other extensions needed as dependencies are:
     
     `pip install -e .`
 
-4. Add ``provbz_theme``  and ``provbz_harvester`` to the ``ckan.plugins`` setting in your CKAN
+4. Add ``provbz``  and ``provbz_harvester`` to the ``ckan.plugins`` setting in your CKAN
    config file (by default the config file is located at ``/etc/ckan/default/production.ini``).
 
 5. (Skip this step for Ckan version >= 2.5) The ckanext-provbz extension provides some updates for the i18n files for 'it' and 'de' languages. Locale files in CKAN (.mo and .po) for these languages must be replaced with files located in this extension at the ckanext-provbz/ckanext/provbz/i18n_old/ path. To do that add the ``ckan.i18n_directory`` configuration property to the production.ini file as follow:
