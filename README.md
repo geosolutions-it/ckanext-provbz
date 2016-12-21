@@ -39,7 +39,7 @@ Other extensions needed as dependencies are:
 
 5. (Skip this step for Ckan version >= 2.5) The ckanext-provbz extension provides some updates for the i18n files for 'it' and 'de' languages. Locale files in CKAN (.mo and .po) for these languages must be replaced with files located in this extension at the ckanext-provbz/ckanext/provbz/i18n_old/ path. To do that add the ``ckan.i18n_directory`` configuration property to the production.ini file as follow:
 
-	`ckan.i18n_directory = $BASE_PATH/ckanext-provbz/ckanext/provbz/i18n_old/`
+	`ckan.i18n_directory = $BASE_PATH/ckanext-provbz/ckanext/provbz/translations`
 
 6. Update the production.ini configuration finding the default property ``licenses_group_url`` and change the value:
 
