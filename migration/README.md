@@ -3,7 +3,7 @@
 
 This ckanext-provbz has been updated to integrate the old version of this extension with ckanext-dcatapit:
 
-	**Follow the steps below only the first time you prepare the system for installing the ckanext-dcatapit**.
+	Follow the steps below only the first time you prepare the system for installing the ckanext-dcatapit.
 
 1. Backup the DB ckan:
 	
