@@ -64,6 +64,8 @@ This ckanext-provbz has been updated to integrate the old version of this extens
 	- Update the `/etc/ckan/default/production.ini` file adding the property below:
 	
 			ckan.i18n_directory = /usr/lib/ckan/default/src/ckanext-provbz/ckanext/provbz/translations
+			
+	- Change the name of the `provbz_theme` plugin to `provbz` (you can find that in the `ckan.plugins` property)
 		
 8. Update the ckanext-spatial extension:
 
