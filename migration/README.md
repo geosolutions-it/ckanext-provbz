@@ -5,11 +5,17 @@ This ckanext-provbz has been updated to integrate the old version of this extens
 
 	Follow the steps below only the first time you prepare the system for installing the ckanext-dcatapit.
 
-1. Upgrade the python setuptools version installed:
+1. Backup the DB ckan:
+	
+		su postgres
+
+		pg_dump -U postgres -i ckan > ckan.dump
+		
+2. Upgrade the python setuptools version installed:
 
 		pip install --upgrade setuptools
 
-2. Install the ckanext-dcat extension:
+3. Install the ckanext-dcat extension:
 
 		. /usr/lib/ckan/default/bin/activate
 
@@ -22,11 +28,11 @@ This ckanext-provbz has been updated to integrate the old version of this extens
 		pip install -e .
 
 		pip install -r requirements.txt
-
-3. Install the ckanext-dcatapit following the steps reported [here](https://github.com/geosolutions-it/ckanext-dcatapit#installation):
-
-	**Ingore the point number 1**
+		
+	- Edit the `/etc/ckan/default/production.ini` adding plugins:
 	
+		ckan.plugins = dcat dcat_rdf_harvester dcat_json_harvester dcat_json_interface
+
 4. Update the ckanext-multilang extension:
 
 		. /usr/lib/ckan/default/bin/activate
@@ -36,7 +42,7 @@ This ckanext-provbz has been updated to integrate the old version of this extens
 		git pull 
 
 		pip install -e .
-	
+		
 5. Update the ckanext-provbz extension:
 
 		. /usr/lib/ckan/default/bin/activate
@@ -48,26 +54,18 @@ This ckanext-provbz has been updated to integrate the old version of this extens
 		git checkout dcatapit
 
 		pip install -e .
-		
-	- Backup the DB ckan:
-	
-			su postgres
-
-			pg_dump -U postgres -i ckan > ckan.dump
-	
-	- Run the SQL migration script to update DB tables (make sure to have rights to execute the sql file as user postgres):
-
-			su postgres
-
-			psql -U postgres -d ckan -f /usr/lib/ckan/default/src/ckanext-provbz/migration/sql/migration.sql
 	
 	- Update the `/etc/ckan/default/production.ini` file adding the property below:
 	
 			ckan.i18n_directory = /usr/lib/ckan/default/src/ckanext-provbz/ckanext/provbz/translations
 			
 	- Change the name of the `provbz_theme` plugin to `provbz` (you can find that in the `ckan.plugins` property)
+	
+6. Install the ckanext-dcatapit following the steps reported [here](https://github.com/geosolutions-it/ckanext-dcatapit#installation):
+
+	**Ingore the point number 1**
 		
-6. Update the ckanext-spatial extension:
+7. Update the ckanext-spatial extension:
 
 		. /usr/lib/ckan/default/bin/activate
 
@@ -78,10 +76,16 @@ This ckanext-provbz has been updated to integrate the old version of this extens
 		git pull 
 
 		pip install -e .
-	
-7. Restart CKAN
+		
+8. Run the SQL migration script to update DB tables (make sure to have rights to execute the sql file as user postgres):
 
-8. Rebuild the Solr indexes:
+		su postgres
+
+		psql -U postgres -d ckan -f /usr/lib/ckan/default/src/ckanext-provbz/migration/sql/migration.sql
+	
+9. Restart CKAN
+
+10. Rebuild the Solr indexes:
 
 		. /usr/lib/ckan/default/bin/activate
 
