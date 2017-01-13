@@ -80,3 +80,11 @@ UPDATE package_multilang SET field='temporal_end' WHERE field='temporal_coverage
 UPDATE package_multilang SET field='frequency' WHERE field='update_frequency';
 UPDATE package_multilang SET field='issued' WHERE field='publication_date';
 UPDATE package_multilang SET field='modified' WHERE field='revision_date';
+
+/* these fields must not be in package_multilang */
+DELETE FROM package_multilang WHERE field='geographical_name';
+DELETE FROM package_multilang WHERE field='temporal_start';
+DELETE FROM package_multilang WHERE field='temporal_end';
+DELETE FROM package_multilang WHERE field='frequency';
+DELETE FROM package_multilang WHERE field='issued';
+DELETE FROM package_multilang WHERE field='modified';
