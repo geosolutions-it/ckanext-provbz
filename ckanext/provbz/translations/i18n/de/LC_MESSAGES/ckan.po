@@ -4967,7 +4967,16 @@ msgstr "URL für die Visualisierung und Download des Datensatzes im Geokatalog"
 msgid "contact-email"
 msgstr "E-Mail Kontakt"
 
+msgid "encoding type"
+msgstr "Charakterset"
+
+msgid "site url"
+msgstr "Webseite"
+
 msgid "contact"
+msgstr "Kontakt"
+
+msgid "Contact"
 msgstr "Kontakt"
 
 msgid "guid"

@@ -4963,7 +4963,16 @@ msgstr "URL di visualizzazione e scarico del dato dal Geocatalogo"
 msgid "contact-email"
 msgstr "E-mail del Contatto"
 
+msgid "encoding type"
+msgstr "codifica dei caratteri"
+
+msgid "site url"
+msgstr "url del sito"
+
 msgid "contact"
+msgstr "Contatto"
+
+msgid "Contact"
 msgstr "Contatto"
 
 msgid "guid"
