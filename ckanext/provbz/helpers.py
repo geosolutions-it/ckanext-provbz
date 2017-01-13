@@ -126,17 +126,6 @@ def recent_updates(n):
 	
     return search_results.get('results', [])
 
-def getLocalizedTagName(tag_name=None):
-    if tag_name:
-        lang = get_lang()[0]
-        localized_tag_name = TagMultilang.by_name(tag_name, lang)
-        if localized_tag_name:
-            return localized_tag_name.text
-        else:
-            return None
-    else:
-        return None
-
 def checkForShibboletURL(login_url):
     url = login_url
     if url.startswith("/de") or url.startswith("/it"):

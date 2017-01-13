@@ -106,7 +106,6 @@ class PBZThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
             'getLocalizedPageLink': helpers.getLocalizedPageLink,
             'parseRefDate': helpers.parseRefDate,
             'get_news_preview': helpers.get_news_preview,
-            'getLocalizedTagName': helpers.getLocalizedTagName,
             'checkForShibboletURL': helpers.checkForShibboletURL
         }
 
