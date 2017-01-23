@@ -1,5 +1,7 @@
 
 import logging
+import re
+
 from datetime import datetime
 
 from ckan import model
@@ -105,8 +107,10 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
         'dataset_theme': 'OP_DATPRO',
         'dataset_language': '{ITA,DEU}',
         'agent_code': 'p_bz',
-        'frequency': 'UNKNOWN'
-    }
+        'frequency': 'UNKNOWN',
+        'agent_code_regex': '\(([^)]+)\)',
+        'org_name_regex': '-(.+)'
+    }    
 
     def info(self):
         return {
@@ -115,10 +119,6 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
             'description': 'Provincia di Bolzano Harvester for CWS',
             'form_config_interface': 'Text'
         }
-
-    def dateformat(self, d):
-        return d.strftime(r"%Y-%m-%d")
-        return d.isoformat()
 
     def get_package_dict(self, iso_values, harvest_object):        
         super_package_dicts = []
@@ -138,6 +138,7 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
 
         mapping_frequencies_to_mdr_vocabulary = self.source_config.get('mapping_frequencies_to_mdr_vocabulary', self._mapping_frequencies_to_mdr_vocabulary)
         mapping_languages_to_mdr_vocabulary = self.source_config.get('mapping_languages_to_mdr_vocabulary', self._mapping_languages_to_mdr_vocabulary)
+        
         default_values = self.source_config.get('default_values', None)
         if default_values and not all(name in default_values for name in self._default_values):
             default_values = self._default_values
@@ -178,7 +179,7 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
         identifier = iso_values["guid"]
         package_dict['extras'].append({'key': 'identifier', 'value': identifier})
 
-        agent_code = identifier.split(':')[0] if ':' in identifier else default_values.get('agent_code')
+        default_agent_code = identifier.split(':')[0] if ':' in identifier else default_values.get('agent_code')
 
         # theme
         # ##################
@@ -190,7 +191,6 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
             for key in iso_values["keywords"]:
             	if dcatapit_skos_theme_id and dcatapit_skos_theme_id in key['thesaurus-identifier']:            		
             		for k in key['keyword']:
-            			log.info(":::::::::::::::::::::::::::::::::::: %r", k)
             			query = Session.query(TagMultilang).filter(TagMultilang.text==k)
             			query = query.autoflush(True)
             			theme = query.first()
@@ -215,22 +215,26 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
         for party in citedResponsiblePartys:
             if party["role"] == "publisher":
                 publisher_name = party["organisation-name"]
-                package_dict['extras'].append({'key': 'publisher_name', 'value': publisher_name})
+
+            	agent_code, organization_name = self.get_agent(publisher_name, default_values)
+
+                package_dict['extras'].append({'key': 'publisher_name', 'value': organization_name or publisher_name})
 
                 if publisher_name:
-                    # TODO: parse this value from the organization name
-                    package_dict['extras'].append({'key': 'publisher_identifier', 'value': agent_code})
+                    package_dict['extras'].append({'key': 'publisher_identifier', 'value': agent_code or default_agent_code})
 
                 self.localized_publisher.append({
-                    'text':  creator_name,
+                    'text':  organization_name or publisher_name,
                     'locale': self._ckan_locales_mapping[iso_values["metadata-language"].lower()]
                 })
 
                 for entry in party["organisation-name-localized"]:
                     if entry['text'] and entry['locale'].lower()[1:]:
+                    	agent_code, organization_name = self.get_agent(entry['text'], default_values)
+
                         if self._ckan_locales_mapping[entry['locale'].lower()[1:]]:
                             self.localized_publisher.append({
-                                'text': entry['text'],
+                                'text': organization_name or entry['text'],
                                 'locale': self._ckan_locales_mapping[entry['locale'].lower()[1:]]
                             })
                         else:
@@ -255,6 +259,11 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
             if party["role"] == "owner":
                 rights_older_and_author = party["organisation-name"]
 
+            	agent_code, organization_name = self.get_agent(rights_older_and_author, default_values)
+
+                if rights_older_and_author:
+                	package_dict['extras'].append({'key': 'holder_identifier', 'value': agent_code or default_agent_code})
+
                 contact_info_online_resource = None
                 if party["contact-info"] != '' and party["contact-info"]["online-resource"] and party["contact-info"]["online-resource"] != '':
                     contact_info_online_resource = party["contact-info"]["online-resource"].get('url')
@@ -264,28 +273,24 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
 
                     package_dict['extras'].append({'key': 'contact', 'value': party["contact-info"]["email"] or None})
 
-                package_dict['extras'].append({'key': 'holder_name', 'value': rights_older_and_author})
+                package_dict['extras'].append({'key': 'holder_name', 'value': organization_name or rights_older_and_author})
 
-                if rights_older_and_author:
-                	# Can we use the ipa as default value here? if not using pt_free_text in metadata ?
-                	package_dict['extras'].append({'key': 'holder_identifier', 'value': agent_code})
+                package_dict['author'] = organization_name or rights_older_and_author
 
-                # Default value to populate the package table too during the harvest
-                package_dict['author'] = rights_older_and_author
-
-                # Collecting the localized author's organizations. The aim is to assign to the author field is org name in metadata (which is localized)
                 self.localized_org = []
 
                 self.localized_org.append({
-                    'text': rights_older_and_author,
+                    'text': organization_name or rights_older_and_author,
                     'locale': self._ckan_locales_mapping[iso_values["metadata-language"].lower()]
                 })
 
                 for entry in party["organisation-name-localized"]:
                     if entry['text'] and entry['locale'].lower()[1:]:
+                    	agent_code, organization_name = self.get_agent(entry['text'], default_values)
+
                         if self._ckan_locales_mapping[entry['locale'].lower()[1:]]:
                             self.localized_org.append({
-                                'text': entry['text'],
+                                'text': organization_name or entry['text'],
                                 'locale': self._ckan_locales_mapping[entry['locale'].lower()[1:]]
                             })
                         else:
@@ -297,7 +302,7 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
         # OTHER NOT MANDATORY FOR DCAT_AP-IT
         # ---------------------------------------------------
 
-        # alternate_identifier
+        # alternate_identifier nothing to do 
         # ####################
 
         # issued
@@ -305,10 +310,10 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
 		publication_date = iso_values["date-released"]
         package_dict['extras'].append({'key': 'issued', 'value': publication_date})
 
-        # geographical_name
+        # geographical_name nothing to do 
         # #################
 
-        # geographical_geonames_url
+        # geographical_geonames_url nothing to do 
         # #########################
 		
 		# language
@@ -370,22 +375,26 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
         for party in citedResponsiblePartys:
             if party["role"] == "author":
             	creator_name = party["organisation-name"]
-            	package_dict['extras'].append({'key': 'creator_name', 'value': creator_name})
+
+            	agent_code, organization_name = self.get_agent(creator_name, default_values)
+
+            	package_dict['extras'].append({'key': 'creator_name', 'value': organization_name or creator_name})
 
                 if creator_name:
-                    # TODO: parse this value from the organization name
-                    package_dict['extras'].append({'key': 'creator_identifier', 'value': agent_code})
+                    package_dict['extras'].append({'key': 'creator_identifier', 'value': agent_code or default_agent_code})
 
                 self.localized_creator.append({
-                    'text':  creator_name,
+                    'text':  organization_name or creator_name,
                     'locale': self._ckan_locales_mapping[iso_values["metadata-language"].lower()]
                 })
 
                 for entry in party["organisation-name-localized"]:
                     if entry['text'] and entry['locale'].lower()[1:]:
+                    	agent_code, organization_name = self.get_agent(entry['text'], default_values)
+
                         if self._ckan_locales_mapping[entry['locale'].lower()[1:]]:
                             self.localized_creator.append({
-                                'text': entry['text'],
+                                'text': organization_name or entry['text'],
                                 'locale': self._ckan_locales_mapping[entry['locale'].lower()[1:]]
                             })
                         else:
@@ -438,6 +447,19 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
 
         # End of processing, return the modified package
         return package_dict
+
+    def get_agent(self, agent_string, default_values):
+        agent_code = re.search(default_values.get('agent_code_regex'), agent_string)
+        if agent_code:
+    		agent_code = agent_code.group(1).lower().strip().split(":")[1]
+    		agent_code = agent_code.lstrip()
+
+        organization_name = re.search(default_values.get('org_name_regex'), agent_string)
+        if organization_name:
+    		organization_name = organization_name.group(1)
+    		organization_name = organization_name.lstrip()
+
+    	return [agent_code, organization_name]
 
     def after_import_stage(self, package_dict):
         for cls in PBZHarvester.__bases__:
