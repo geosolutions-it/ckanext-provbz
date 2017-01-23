@@ -109,7 +109,8 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
         'agent_code': 'p_bz',
         'frequency': 'UNKNOWN',
         'agent_code_regex': '\(([^)]+)\)',
-        'org_name_regex': '-(.+)'
+        'org_name_regex': '-(.+)',
+        'dcatapit_skos_theme_id': 'theme.data-theme-skos'
     }    
 
     def info(self):
@@ -183,29 +184,28 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
 
         # theme
         # ##################
+        dataset_themes = []
         if iso_values["keywords"]:
             log.debug('::::: Collecting thesaurus data for dcatapit skos theme from the metadata keywords :::::')
 
-            dcatapit_skos_theme_id = self.source_config.get('dcatapit_skos_theme_id', 'theme.data-theme-skos')
-            dataset_themes = []
+            dcatapit_skos_theme_id = default_values.get('dcatapit_skos_theme_id')
+            
             for key in iso_values["keywords"]:
             	if dcatapit_skos_theme_id and dcatapit_skos_theme_id in key['thesaurus-identifier']:            		
             		for k in key['keyword']:
-            			query = Session.query(TagMultilang).filter(TagMultilang.text==k)
+            			query = Session.query(TagMultilang).filter(TagMultilang.text==k, TagMultilang.tag_name.in_(('AGRI','EDUC','ENVI','ENER','TRAN','TECH','ECON','SOCI','HEAL','GOVE','REGI','JUST','INTR','OP_DATPRO')))
             			query = query.autoflush(True)
             			theme = query.first()
 
             			dataset_themes.append(theme.tag_name)
 
-            if dataset_themes and len(dataset_themes) > 0:
-            	dataset_themes = '{' + ','.join(str(l) for l in dataset_themes) + '}'
-            else:
-            	dataset_themes =  default_values.get('dataset_theme')
-
-            log.info("Medatata harvested dataset themes: %r", dataset_themes)
-            package_dict['extras'].append({'key': 'theme', 'value': dataset_themes})
+        if dataset_themes and len(dataset_themes) > 0:
+            dataset_themes = '{' + ','.join(str(l) for l in dataset_themes) + '}'
         else:
-            package_dict['extras'].append({'key': 'theme', 'value':  default_values.get('dataset_theme')})
+            dataset_themes =  default_values.get('dataset_theme')
+
+        log.info("Medatata harvested dataset themes: %r", dataset_themes)
+        package_dict['extras'].append({'key': 'theme', 'value': dataset_themes})
 
         # publisher
         # ##################
