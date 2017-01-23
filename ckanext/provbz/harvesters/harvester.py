@@ -200,6 +200,7 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
             			dataset_themes.append(theme.tag_name)
 
         if dataset_themes and len(dataset_themes) > 0:
+        	dataset_themes = list(set(dataset_themes))
             dataset_themes = '{' + ','.join(str(l) for l in dataset_themes) + '}'
         else:
             dataset_themes =  default_values.get('dataset_theme')
