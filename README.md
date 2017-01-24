@@ -70,6 +70,18 @@ Using the ckanext-provbz harvester you can use an additional configuration prope
         {
             "default_license": "cc-zero"
         }
+	
+* ``default_values``: with this property you can specify some default values to use for missing properties in CSW metadata. Default values are defined into the harvester but can be overridden in the CKAN harvest source json configuration. Below the predefined defaults:
+
+		{
+		    "dataset_theme": "OP_DATPRO",
+		    "dataset_language": "{ITA,DEU}",
+		    "agent_code": "p_bz",
+		    "frequency": "UNKNOWN",
+		    "agent_code_regex": "\(([^)]+)\)",
+		    "org_name_regex": "-(.+)",
+		    "dcatapit_skos_theme_id": "theme.data-theme-skos"
+		}
 
 Below the complete configuration to use:
 
