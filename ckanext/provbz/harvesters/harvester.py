@@ -108,8 +108,14 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
         'dataset_language': '{ITA,DEU}',
         'agent_code': 'p_bz',
         'frequency': 'UNKNOWN',
-        'agent_code_regex': '\(([^)]+)\)',
-        'org_name_regex': '-(.+)',
+        'agent_code_regex': {
+            'regex': '\(([^)]+)\:([^)]+)\)',
+            'group': 2 # optional, dependes by the regular expression
+        },
+        'org_name_regex': {
+            'regex': '-(.+)',
+            'group': 1 # optional, dependes by the regular expression
+        },
         'dcatapit_skos_theme_id': 'theme.data-theme-skos'
     }    
 
@@ -143,7 +149,7 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
         default_values = self.source_config.get('default_values', None)
         if default_values and not all(name in default_values for name in self._default_values):
             default_values = self._default_values
-            log.warning('Some keys are missing in default_values configuration property, keyes to use are: dataset_theme, dataset_language, agent_code, frequency. Using defaults')
+            log.warning('Some keys are missing in default_values configuration property, keyes to use are: dataset_theme, dataset_language, agent_code, frequency, agent_code_regex, org_name_regex and dcatapit_skos_theme_id. Using defaults')
         elif not default_values:
             default_values = self._default_values
 
@@ -226,7 +232,7 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
 
                 self.localized_publisher.append({
                     'text':  organization_name or publisher_name,
-                    'locale': self._ckan_locales_mapping[iso_values["metadata-language"].lower()]
+                    'locale': self._ckan_locales_mapping.get(iso_values["metadata-language"], 'it').lower()
                 })
 
                 for entry in party["organisation-name-localized"]:
@@ -282,7 +288,7 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
 
                 self.localized_org.append({
                     'text': organization_name or rights_older_and_author,
-                    'locale': self._ckan_locales_mapping[iso_values["metadata-language"].lower()]
+                    'locale': self._ckan_locales_mapping.get(iso_values["metadata-language"], 'it').lower()
                 })
 
                 for entry in party["organisation-name-localized"]:
@@ -322,14 +328,20 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
         dataset_languages = iso_values["dataset-language"]
         language = None      
         if dataset_languages and len(dataset_languages) > 0:
-        	languages = []
-        	for language in dataset_languages:
-        		languages.append(mapping_languages_to_mdr_vocabulary.get(language, None))
+            languages = []
+            for language in dataset_languages:
+                lang = mapping_languages_to_mdr_vocabulary.get(language, None)
+                if lang:
+                    languages.append(lang)
 
-        	language = '{' + ','.join(str(l) for l in languages) + '}'
-        	log.debug("Medatata harvested dataset languages: %r", language)
+            if len(languages) > 1:
+                language = '{' + ','.join(str(l) for l in languages) + '}'
+            else:
+                language = languages[0] if len(languages) > 0 else default_values.get('dataset_language')
+
+            log.info("Medatata harvested dataset languages: %r", language)
         else:
-        	language = self.source_config.get('dataset_languages', default_values.get('dataset_language'))
+        	language = default_values.get('dataset_language')
 
         package_dict['extras'].append({'key': 'language', 'value': language})
 
@@ -353,7 +365,7 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
 
        	self.localized_confomity.append({
        		'text': conforms_to,
-       		'locale': self._ckan_locales_mapping[iso_values["metadata-language"].lower()]
+       		'locale': self._ckan_locales_mapping.get(iso_values["metadata-language"], 'it').lower()
        	})
 
        	for entry in iso_values["conformity-title-text"]:
@@ -386,7 +398,7 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
 
                 self.localized_creator.append({
                     'text':  organization_name or creator_name,
-                    'locale': self._ckan_locales_mapping[iso_values["metadata-language"].lower()]
+                    'locale': self._ckan_locales_mapping.get(iso_values["metadata-language"], 'it').lower()
                 })
 
                 for entry in party["organisation-name-localized"]:
@@ -450,14 +462,26 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
         return package_dict
 
     def get_agent(self, agent_string, default_values):
-        agent_code = re.search(default_values.get('agent_code_regex'), agent_string)
-        if agent_code:
-    		agent_code = agent_code.group(1).lower().strip().split(":")[1]
-    		agent_code = agent_code.lstrip()
+        agent_regex_config = default_values.get('agent_code_regex')
 
-        organization_name = re.search(default_values.get('org_name_regex'), agent_string)
+        agent_code = re.search(agent_regex_config.get('regex', self._default_values.get('agent_code_regex').get('regex')), agent_string)
+        if agent_code:
+            regex_group = agent_regex_config.get('group')
+            
+            if regex_group:
+                agent_code = agent_code.group(regex_group)
+
+    		agent_code = agent_code.lower().strip()
+
+        org_name_regex_config = default_values.get('org_name_regex')
+
+        organization_name = re.search(org_name_regex_config.get('regex', self._default_values.get('org_name_regex').get('regex')), agent_string)
         if organization_name:
-    		organization_name = organization_name.group(1)
+            regex_group = org_name_regex_config.get('group')
+
+            if regex_group:
+                organization_name = organization_name.group(regex_group)
+
     		organization_name = organization_name.lstrip()
 
     	return [agent_code, organization_name]
@@ -475,24 +499,28 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
             ## PERSISTING the multilang fields
             ## -------------------------------
 
-            for org in self.localized_org:
-            	# persisting author field
-            	self.persist_package_multilang_field(package_id, 'author', org.get('text'), org.get('locale'), 'package')
+            if self.localized_org and len(self.localized_org) > 0:
+                for org in self.localized_org:
+                    # persisting author field
+                    self.persist_package_multilang_field(package_id, 'author', org.get('text'), org.get('locale'), 'package')
 
-                # persisting holder_name field
-                self.persist_package_multilang_field(package_id, 'holder_name', org.get('text'), org.get('locale'), 'extra')         	
-            
-            for conformity in self.localized_confomity:
-            	# persisting author field
-            	self.persist_package_multilang_field(package_id, 'conforms_to', conformity.get('text'), conformity.get('locale'), 'extra')
+                    # persisting holder_name field
+                    self.persist_package_multilang_field(package_id, 'holder_name', org.get('text'), org.get('locale'), 'extra')         	
 
-            for creator in self.localized_creator:
-                # persisting author field
-                self.persist_package_multilang_field(package_id, 'creator_name', creator.get('text'), creator.get('locale'), 'extra')
+            if self.localized_confomity and len(self.localized_confomity) > 0:            
+                for conformity in self.localized_confomity:
+                	# persisting author field
+                	self.persist_package_multilang_field(package_id, 'conforms_to', conformity.get('text'), conformity.get('locale'), 'extra')
 
-            for publisher in self.localized_publisher:
-                # persisting author field
-                self.persist_package_multilang_field(package_id, 'publisher_name', publisher.get('text'), publisher.get('locale'), 'extra') 
+            if self.localized_creator and len(self.localized_creator) > 0:
+                for creator in self.localized_creator:
+                    # persisting author field
+                    self.persist_package_multilang_field(package_id, 'creator_name', creator.get('text'), creator.get('locale'), 'extra')
+
+            if self.localized_publisher and len(self.localized_publisher) > 0:
+                for publisher in self.localized_publisher:
+                    # persisting author field
+                    self.persist_package_multilang_field(package_id, 'publisher_name', publisher.get('text'), publisher.get('locale'), 'extra') 
 			
             pass
         except Exception, e:
