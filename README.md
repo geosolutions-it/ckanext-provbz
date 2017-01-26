@@ -78,8 +78,14 @@ Using the ckanext-provbz harvester you can use an additional configuration prope
 		    "dataset_language": "{ITA,DEU}",
 		    "agent_code": "p_bz",
 		    "frequency": "UNKNOWN",
-		    "agent_code_regex": "\(([^)]+)\)",
-		    "org_name_regex": "-(.+)",
+		    "agent_code_regex": {
+		    		"regex": "\(([^)]+)\:([^)]+)\)",
+					"group": 2 # optional, dependes by the regular expression
+	            },
+		    "org_name_regex": {
+		    		"regex": "-(.+)",
+					"group": 1 # optional, dependes by the regular expression
+		    },
 		    "dcatapit_skos_theme_id": "theme.data-theme-skos"
 		}
 
