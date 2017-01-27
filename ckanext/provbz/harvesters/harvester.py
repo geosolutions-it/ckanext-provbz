@@ -483,7 +483,8 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
     					query = query.autoflush(True)
     					theme = query.first()
 
-    					values.append(theme.tag_name)
+    					if theme and theme.tag_name:
+    						values.append(theme.tag_name)
 
         return values
 
