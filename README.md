@@ -86,7 +86,8 @@ Using the ckanext-provbz harvester you can use an additional configuration prope
 		    		"regex": "-(.+)",
 					"group": 1 # optional, dependes by the regular expression
 		    },
-		    "dcatapit_skos_theme_id": "theme.data-theme-skos"
+		    "dcatapit_skos_theme_id": "theme.data-theme-skos",
+		    "dcatapit_skos_places_id": "theme.data-places-skos"
 		}
 	
 	**note**:
@@ -96,7 +97,9 @@ Using the ckanext-provbz harvester you can use an additional configuration prope
 		Provincia Autonoma di Bolzano (IPa: p_bz) - Ripartizione 28 - Natura, paesaggio e sviluppo del territorio
 		
 	where the **agent_code_regex** match the IPa code **p_bz** and the **org_name_regex** match the real organization name
-	value **Ripartizione 28 - Natura, paesaggio e sviluppo del territorio**
+	value **Ripartizione 28 - Natura, paesaggio e sviluppo del territorio**.
+	
+	the **dcatapit_skos_theme_id** and **dcatapit_skos_places_id** values correspond to the thesaurus identifiers speficied in the CSW metadata (related to the eu_theme.rdf and places.rdf themes) so if the metadata values change also these configuration options must be modified accordingly. 
 
 Below the complete configuration to use:
 
