@@ -88,6 +88,15 @@ Using the ckanext-provbz harvester you can use an additional configuration prope
 		    },
 		    "dcatapit_skos_theme_id": "theme.data-theme-skos"
 		}
+	
+	**note**:
+		the **agent_code_regex** and **org_name_regex** (regex and/or group properties) must be changed if the corresponding 'organizationName'
+		value change in the CSW metadata. Current default value has been set to match a string type like the following:
+
+		Provincia Autonoma di Bolzano (IPa: p_bz) - Ripartizione 28 - Natura, paesaggio e sviluppo del territorio
+		
+	where the **agent_code_regex** match the IPa code **p_bz** and the **org_name_regex** match the real organization name
+	value **Ripartizione 28 - Natura, paesaggio e sviluppo del territorio**
 
 Below the complete configuration to use:
 
