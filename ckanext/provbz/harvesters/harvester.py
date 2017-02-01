@@ -179,7 +179,18 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
                                 package_dict['owner_org'] =_dict.get('owner_org')
             else:
                 package_dict = _dict
-                
+
+        #
+        # Increase the tag name max length limit to 100 as set at DB level (instead 50 as did by the ckanext-spatial)
+        #
+        tags = []
+        if 'tags' in iso_values:
+            for tag in iso_values['tags']:
+                tag = tag[:100] if len(tag) > 100 else tag
+                tags.append({'name': tag})
+
+            package_dict['tags'] = tags
+        
         # ---------------------------------------------------
         # MANDATORY FOR DCAT-AP_IT
         # ---------------------------------------------------
