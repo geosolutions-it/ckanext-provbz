@@ -48,7 +48,7 @@
           {% endfor%}
 
           {% for extra in pkg.extras%}
-            {% if extra.key == 'guid' %}
+            {% if extra.key.lower() == 'guid' %}
               {% do geocat_url.append(extra.value) %}
             {% endif %}
           {% endfor%}
