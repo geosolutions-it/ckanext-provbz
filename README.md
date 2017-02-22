@@ -74,20 +74,21 @@ Using the ckanext-provbz harvester you can use an additional configuration prope
 * ``default_values``: with this property you can specify some default values to use for missing properties in CSW metadata. Default values are defined into the harvester but can be overridden in the CKAN harvest source json configuration. Below the predefined defaults:
 
 		{
-		    "dataset_theme": "OP_DATPRO",
-		    "dataset_language": "{ITA,DEU}",
-		    "agent_code": "p_bz",
-		    "frequency": "UNKNOWN",
-		    "agent_code_regex": {
-		    		"regex": "\(([^)]+)\:([^)]+)\)",
-					"group": 2 # optional, dependes by the regular expression
-	            },
-		    "org_name_regex": {
-		    		"regex": "-(.+)",
-					"group": 1 # optional, dependes by the regular expression
-		    },
-		    "dcatapit_skos_theme_id": "theme.data-theme-skos",
-		    "dcatapit_skos_places_id": "theme.data-places-skos"
+			'dataset_theme': 'OP_DATPRO',
+			'dataset_place': 'ITA_BZO',
+			'dataset_language': '{ITA,DEU}',
+			'agent_code': 'p_bz',
+			'frequency': 'UNKNOWN',
+			'agent_code_regex': {
+			    'regex': '\(([^)]+)\:([^)]+)\)',
+			    'groups': [2] # optional, dependes by the regular expression
+			},
+			'org_name_regex': {
+			    'regex': '([^(]*)(\(IPa[^)]*\))(.+)',
+			    'groups': [1,3] # optional, dependes by the regular expression
+			},
+			'dcatapit_skos_theme_id': 'theme.data-theme-skos',
+			'dcatapit_skos_places_id': 'theme.places-skos'
 		}
 	
 	**note**:
@@ -96,8 +97,8 @@ Using the ckanext-provbz harvester you can use an additional configuration prope
 
 		Provincia Autonoma di Bolzano (IPa: p_bz) - Ripartizione 28 - Natura, paesaggio e sviluppo del territorio
 		
-	where the **agent_code_regex** match the IPa code **p_bz** and the **org_name_regex** match the real organization name
-	value **Ripartizione 28 - Natura, paesaggio e sviluppo del territorio**.
+	where the **agent_code_regex** match the IPa code **p_bz** and the **org_name_regex** match the organization name
+	value **Provincia Autonoma di Bolzano - Ripartizione 28 - Natura, paesaggio e sviluppo del territorio**.
 	
 	the **dcatapit_skos_theme_id** and **dcatapit_skos_places_id** values correspond to the thesaurus identifiers speficied in the CSW metadata (related to the eu_theme.rdf and places.rdf themes) so if the metadata values change also these configuration options must be modified accordingly. 
 
