@@ -61,7 +61,7 @@ To install `ckanext-provbz` for development, activate your CKAN virtualenv and d
 
 	pip install -r dev-requirements.txt
 
-## Harvest Configuration
+## CSW Harvest Configuration
 
 Using the ckanext-provbz harvester you can use an additional configuration property in addition to the other allowed for the ckanext-geonetwork and ckanext-multilang harvesters:
 
