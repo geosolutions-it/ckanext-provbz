@@ -128,4 +128,3 @@ class PBZThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
         
     def after_map(self, route_map):
         return route_map
-        
