@@ -6,7 +6,6 @@ import ckan.plugins.toolkit as toolkit
 import ckanext.provbz.helpers as helpers
 
 from ckan.lib.base import model
-from pylons.i18n.translation import get_lang
 
 import ckanext.dcatapit.interfaces as interfaces
 

@@ -12,7 +12,7 @@ import ckan.logic as logic
 
 from pylons import config
 
-from pylons.i18n.translation import get_lang
+from ckan.lib.i18n import get_lang
 from ckanext.multilang.model import PackageMultilang, TagMultilang
 
 import ckanext.pages.db as db
@@ -30,15 +30,10 @@ def get_default_locale():
     return locale_default
 
 def get_locale():
-    lang = get_lang()
-    
-    if lang is not None:
-        lang = unicode(lang[0])        
-    
-    return lang
+    return get_lang()
 
 def getLocalizedPageLink(page):
-    locale = get_lang()[0]
+    locale = get_lang()
 
     if(page):
         url = "/" + locale + "/" + page
@@ -60,7 +55,7 @@ class HTMLNewsFirstImage(HTMLParser):
             self.first_image = dict(attrs)['src']
 
 def get_news_preview(page):
-    lang = get_lang()[0]
+    lang = get_lang()
 
     log.info('Retrieving News page preview for current locale: %r', lang)
 
@@ -113,7 +108,7 @@ def recent_updates(n):
     for item in search_results.get('results'):
         log.info(':::::::::::: Retrieving the corresponding localized title and abstract :::::::::::::::')
 
-        lang = get_lang()[0]
+        lang = get_lang()
         
         q_results = model.Session.query(PackageMultilang).filter(PackageMultilang.package_id == item.get('id'), PackageMultilang.lang == lang).all() 
 
