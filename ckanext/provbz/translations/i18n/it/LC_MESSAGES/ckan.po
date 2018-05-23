@@ -5483,17 +5483,32 @@ msgstr ""
 "\"\\ N\"\n"
 "\"{}"
 
-#: ckanext/gsreport/reports.py:336
-msgid "List datasets with resources that are non-existent or return error response"
-msgstr "Elenca i set di dati con risorse inesistenti o restituisce il messaggio di errore"
+#: ckanext/gsreport/reports.py:365
+msgid ""
+"List datasets with resources that are non-existent or return error "
+"response"
+msgstr ""
+"Elenca i set di dati con risorse inesistenti o restituisce il messaggio "
+"di errore"
 
-#: ckanext/gsreport/reports.py:345
+#: ckanext/gsreport/reports.py:374
 msgid "List formats used in resources"
 msgstr "Elenca i formati usati nelle risorse"
 
-#: ckanext/gsreport/reports.py:354
+#: ckanext/gsreport/reports.py:383
 msgid "List of licenses used"
 msgstr "Elenca le licenze usate"
+
+#: ckanext/gsreport/templates/footer.html:8
+#: ckanext/gsreport/templates/footer.html:10
+#: ckanext/gsreport/templates/footer.html:21
+#: ckanext/gsreport/templates/footer.html:23
+#: ckanext/gsreport/templates/report/index.html:3
+#: ckanext/gsreport/templates/report/index.html:6
+#: ckanext/gsreport/templates/report/view.html:3
+#: ckanext/gsreport/templates/report/view.html:30
+msgid "Reports"
+msgstr "Rapporti"
 
 #: ckanext/gsreport/templates/report/broken_links_report.html:3
 msgid "Number of datasets checked"
@@ -5568,13 +5583,6 @@ msgstr "Stato"
 #: ckanext/gsreport/templates/report/broken_links_report.html:45
 msgid "Reason"
 msgstr "Causa"
-
-#: ckanext/gsreport/templates/report/index.html:3
-#: ckanext/gsreport/templates/report/index.html:6
-#: ckanext/gsreport/templates/report/view.html:3
-#: ckanext/gsreport/templates/report/view.html:30
-msgid "Reports"
-msgstr "Rapporti"
 
 #: ckanext/gsreport/templates/report/index.html:40
 msgid "View Report"
@@ -5653,4 +5661,16 @@ msgstr "Risultati"
 #: ckanext/gsreport/templates/report/view.html:76
 msgid "No results found."
 msgstr "Nessun risultato trovato"
+
+#: ckanext/gsreport/templates/snippets/facet_list.html:27
+msgid "Show More {facet_type}"
+msgstr ""
+
+#: ckanext/gsreport/templates/snippets/facet_list.html:30
+msgid "Show Only Popular {facet_type}"
+msgstr ""
+
+#: ckanext/gsreport/templates/snippets/facet_list.html:34
+msgid "There are no {facet_type} that match this search"
+msgstr ""
 
