@@ -106,7 +106,8 @@ class PBZThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
             'getLocalizedPageLink': helpers.getLocalizedPageLink,
             'parseRefDate': helpers.parseRefDate,
             'get_news_preview': helpers.get_news_preview,
-            'checkForShibboletURL': helpers.checkForShibboletURL
+            'checkForShibboletURL': helpers.checkForShibboletURL,
+            'hacked_current_url': helpers.hacked_current_url,
         }
 
     # Implementation of IRoute
