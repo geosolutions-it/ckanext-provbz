@@ -138,7 +138,7 @@ def recent_updates(n):
 def hacked_current_url():
     try:
         return h.current_url()
-    except AtrributeError:
+    except AttributeError:
         return urllib.unquote(request.environ['CKAN_CURRENT_URL'])
 
 def checkForShibboletURL(login_url):
