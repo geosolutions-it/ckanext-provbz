@@ -5502,7 +5502,7 @@ msgstr ""
 msgid "bad-response-code"
 msgstr ""
 
-#: ckanext/gsreport/reports.py:365
+#: ckanext/gsreport/reports.py:374
 msgid ""
 "List datasets with resources that are non-existent or return error "
 "response"
@@ -5510,17 +5510,15 @@ msgstr ""
 "Listet Datensätze mit Ressourcen auf, die nicht vorhanden sind, oder gibt"
 " eine Fehlerantwort zurück"
 
-#: ckanext/gsreport/reports.py:374
+#: ckanext/gsreport/reports.py:383
 msgid "List formats used in resources"
 msgstr "Listenformate die in Ressourcen verwendet werden"
 
-#: ckanext/gsreport/reports.py:383
+#: ckanext/gsreport/reports.py:392
 msgid "List of licenses used"
 msgstr "Liste der verwendeten Lizenzen"
 
 #: ckanext/gsreport/templates/footer.html:8
-#: ckanext/gsreport/templates/footer.html:19
-#: ckanext/gsreport/templates/footer.html:21
 #: ckanext/gsreport/templates/report/index.html:3
 #: ckanext/gsreport/templates/report/index.html:6
 #: ckanext/gsreport/templates/report/view.html:3
@@ -5556,12 +5554,9 @@ msgid "All Datasets"
 msgstr "Alle Datensätze"
 
 #: ckanext/gsreport/templates/report/broken_links_report.html:14
+#: ckanext/gsreport/templates/report/broken_links_report.html:15
 msgid "Datasets with broken links"
 msgstr "Datensätze mit defekten Links"
-
-#: ckanext/gsreport/templates/report/broken_links_report.html:15
-msgid "% Datasets with broken links"
-msgstr "% Datensätze mit defekten Links"
 
 #: ckanext/gsreport/templates/report/broken_links_report.html:17
 msgid "All resources"
@@ -5569,11 +5564,11 @@ msgstr "Alle Ressourcen"
 
 #: ckanext/gsreport/templates/report/broken_links_report.html:18
 msgid "Resources with broken links"
-msgstr "Resources with broken links"
+msgstr "Ressourcen mit defekten Links"
 
 #: ckanext/gsreport/templates/report/broken_links_report.html:19
-msgid "% Broken links"
-msgstr "% Kaputte Links"
+msgid "Broken links"
+msgstr "Kaputte Links"
 
 #: ckanext/gsreport/templates/report/broken_links_report.html:42
 #: ckanext/gsreport/templates/report/resources_format_report.html:12
@@ -5691,4 +5686,7 @@ msgstr ""
 #: ckanext/gsreport/templates/snippets/facet_list.html:34
 msgid "There are no {facet_type} that match this search"
 msgstr ""
+
+#~ msgid "% Datasets with broken links"
+#~ msgstr "%% Datensätze mit defekten Links"
 
