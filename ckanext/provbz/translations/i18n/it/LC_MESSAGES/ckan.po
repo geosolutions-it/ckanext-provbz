@@ -5530,7 +5530,7 @@ msgstr "Rapporti"
 
 #: ckanext/gsreport/templates/report/broken_links_report.html:3
 msgid "Number of datasets checked"
-msgstr "Numero di set di dati non riusciti"
+msgstr "Numero di set di dati controllati"
 
 #: ckanext/gsreport/templates/report/broken_links_report.html:4
 msgid "Number of datasets failed"
