@@ -5494,10 +5494,7 @@ msgstr ""
 "Es ist die Organisation (oder die öffentliche Verwaltung), die das "
 "Eigentum an den Daten besitzt, also jene, die ursprünglich die Daten zur "
 "eigenen Nutzung erstellt hat oder einer dritten öffentlichen oder "
-"privaten Einrichtung kommissioniert hat.\"\"Es ist die Organisation (oder"
-" die öffentliche Verwaltung), die das Eigentum an den Daten besitzt, also"
-" jene, die ursprünglich die Daten zur eigenen Nutzung erstellt hat oder "
-"einer dritten öffentlichen oder privaten Einrichtung kommissioniert hat."
+"privaten Einrichtung kommissioniert hat."
 
 #: ckanext/dcatapit/schema.py:285
 msgid "package_rights_holder_name_create_help"
