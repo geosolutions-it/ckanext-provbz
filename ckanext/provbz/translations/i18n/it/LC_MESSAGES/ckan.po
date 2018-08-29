@@ -5484,9 +5484,7 @@ msgstr ""
 "E' l'organizzazione (o pubblica amministrazione) che detiene la "
 "titolarità del dato ovvero quella che ha originariamente formato per uso "
 "proprio o commissionato ad altro soggetto pubblico o privato il "
-"dato.\"\"E' l'organizzazione (o pubblica amministrazione) che detiene la "
-"titolarità del dato ovvero quella che ha originariamente formato per uso "
-"proprio o commissionato ad altro soggetto pubblico o privato il dato."
+"dato."
 
 #: ckanext/dcatapit/schema.py:285
 msgid "package_rights_holder_name_create_help"
