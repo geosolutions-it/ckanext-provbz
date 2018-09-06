@@ -5858,7 +5858,7 @@ msgstr "Brauch"
 
 #: ckanext/dcatapit/templates/macros/dcatapit_form_macros.html:73
 msgid "Select organization"
-msgstr "Organisation E-Mail"
+msgstr "Wird automatisch der Organisation zugewiesen, der das Dataset gehört."
 
 #: ckanext/dcatapit/templates/macros/dcatapit_form_macros.html:178
 msgid "Add a Theme"
