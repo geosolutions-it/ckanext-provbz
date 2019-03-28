@@ -63,9 +63,20 @@
       {% endblock %}
     </div>
   </header-->
+  <div class="masthead masthead-top">
+    <div class="container">
+        <div class="content">
+          <a class="civis-a-link" href="http://demo.siag.it/civis.bz.it/index.html" target="_blank">
+            <div class="civis-link">
+              <div class="civis-logo"></div> CIVIS.<span>bz.it <i class="icon-chevron-right"></i></span>
+            </div>
+          </a>
+        </div>
+    </div>
+  </div>
 {% endblock %}
 
-<header class="masthead">
+<div class="masthead">
   {% block header_debug %}
     {% if g.debug and not g.debug_supress_header %}
       <div class="debug">Controller : {{ c.controller }}<br/>Action : {{ c.action }}</div>
@@ -88,39 +99,41 @@
           {% if g.site_description %}<h2>{{ g.site_description }}</h2>{% endif %}
         {% endif %}
       {% endblock %}
-
     </hgroup>
+  </div>
+</div>
+<header class="masthead masthead-navbar">
+  <div class="container">
+      <div class="content">
+        {% block header_site_navigation %}
+          {% set locale = h.get_locale() %}
+          <nav class="section navigation">
+            <ul class="nav nav-pills navbar">
+              {% block header_site_navigation_tabs %}
+                {{ h.build_nav_main(
+                  ('search', _('Datasets')),
+                  ('organizations_index', _('Organizations')),
+                  ('group_index', _('Groups')),
+                  ('info', _('About')),
+                  ('faq', _('Faq'))
+                ) }}
+              {% endblock %}
+            </ul>
+          </nav>
+        {% endblock %}
 
-    <div class="content">
-
-      {% block header_site_navigation %}
-        {% set locale = h.get_locale() %}
-        <nav class="section navigation">
-          <ul class="nav nav-pills navbar">
-            {% block header_site_navigation_tabs %}
-              {{ h.build_nav_main(
-                ('search', _('Datasets')),
-                ('organizations_index', _('Organizations')),
-                ('group_index', _('Groups'))
-              ) }}
-            {% endblock %}
-      			<li><a href={{ h.getLocalizedPageLink('info') }}>{% trans %}About{% endtrans %}</a></li>
-      			<li><a href={{ h.getLocalizedPageLink('faq') }}>{% trans %}Faq{% endtrans %}</a></li>
-          </ul>
-        </nav>
-      {% endblock %}
-
-      {#% block header_site_search %}
-        <form class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
-          <div class="field">
-            <label for="field-sitewide-search">{{ _('Search Datasets') }}</label>
-            <input id="field-sitewide-search" type="text" name="q" placeholder="{{ _('Search datasets...') }}" />
-            <button class="btn-search" type="submit"><i class="icon-search"></i></button>
-          </div>
-        </form>
-      {% endblock %#}
-
+        {#% block header_site_search %}
+          <form class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
+            <div class="field">
+              <label for="field-sitewide-search">{{ _('Search Datasets') }}</label>
+              <input id="field-sitewide-search" type="text" name="q" placeholder="{{ _('Search datasets...') }}" />
+              <button class="btn-search" type="submit"><i class="icon-search"></i></button>
+            </div>
+          </form>
+        {% endblock %#}
     </div>
   </div>
 </header>
+
+
 {% endblock %}

@@ -116,8 +116,8 @@ class PBZThemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     def before_map(self, map):
         map.connect('/privacy', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzprivacy')
         map.connect('/legal', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzlegal')
-        map.connect('/faq', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzfaq')
-        map.connect('/info', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzinfo')
+        map.connect('faq', '/faq', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzfaq')
+        map.connect('info', '/info', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzinfo')
         map.connect('/acknowledgements', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzacknowledgements')
         map.connect('/formats', controller='ckanext.provbz.controllers.provbz:PROVBZController', action='provbzformats')
         
