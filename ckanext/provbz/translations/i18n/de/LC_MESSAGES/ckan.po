@@ -6062,6 +6062,10 @@ msgstr "Ähnliche Datensätze"
 msgid "Additional Info"
 msgstr "Zusätzliche Information"
 
+#: ckanext/dcatapit/templates/package/snippets/package_basic_fields.html:36
+msgid "Subjects"
+msgstr "Themen"
+
 #: ckanext/dcatapit/templates/package/snippets/resource_form.html:13
 msgid "Last Modified"
 msgstr "Zuletzt bearbeitet"
