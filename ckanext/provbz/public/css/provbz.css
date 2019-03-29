@@ -29,11 +29,11 @@
 }
 
 .span9 .page-header {
-    margin-left: -5px !important; 
+    margin-left: -5px !important;
 }
 
 .lang-select label, .lang-select select, .lang-select .lang-container {
-    float: none; 
+    float: none;
     margin-top: 0;
 	width: 100% !important;
 }
@@ -97,7 +97,7 @@ a.tag:hover {
 	border-color: #a71718;
 	margin-top: 3px;
     margin-bottom: 3px;
-	text-decoration: none; 
+	text-decoration: none;
 	/*height: 34px;*/
 }
 
@@ -105,24 +105,24 @@ a.tag:hover {
     color: #fff;
     background-color: #96191A;
     border-color: #96191A;
-	text-decoration: none; 
+	text-decoration: none;
 }
 
 .btn-ck:active {
     color: #fff;
     background-color: #204d74;
     border-color: #122b40;
-	text-decoration: none; 
+	text-decoration: none;
 }
 
 .btn-ck:visited {
     color: #fff;
-	text-decoration: none; 
+	text-decoration: none;
 }
 
 .btn-ck:focus {
     color: #fff;
-	text-decoration: none; 
+	text-decoration: none;
 }
 
 .more {
@@ -177,13 +177,6 @@ a.tag:hover {
 	padding-top: 10px;
 }
 
-.masthead .content {
-    position: absolute;
-    top: auto;
-    bottom: 0;
-    right: 0;
-}
-
 .navbar {
     margin-top: 5px;
     min-height: 30px;
@@ -193,7 +186,7 @@ a.tag:hover {
 }
 
 .navbar > li > a {
-    color: #333 !important; 
+    color: #333 !important;
 	text-transform: uppercase;
 }
 
@@ -233,7 +226,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 	/*height: 290px;*/
-	min-height: 290px; 
+	min-height: 290px;
 }
 
 .search-form {
@@ -262,13 +255,14 @@ body {
 /* footer */
 .site-footer {
     min-height: 55px;
-    color: #ffffff;
-    background:  #404041;
+    border-top: 1px solid #a4a5a5;
+    color: #454544;
+    background: #e4e4e5;
     padding: 1em 0;
 }
 
 .site-footer a {
-    color: #D0D0D0;
+    color: #454544;
 }
 
 .powered-by{
@@ -391,7 +385,6 @@ body {
 }
 
 #center-body {
-    padding-top: 8px;
     background: #cd0e16;
 }
 
@@ -644,4 +637,82 @@ div.align-text th{
 
 .geosolutions_logo {
     background: url('../images/logo/GeoSolutions_logo.png') center  no-repeat;
+}
+
+/* Custom headers */
+.masthead-navbar {
+    min-height: 46px;
+    color: #ffffff;
+    background: #b4c420;
+    border-top: 1px solid #a4a5a5;
+    border-bottom: 1px solid #a4a5a5;
+}
+
+.masthead-navbar .navigation .nav-pills {
+    margin: 0;
+}
+
+.masthead-navbar .navigation .nav-pills li {
+    margin: 0;
+}
+
+.masthead-navbar .navigation .nav-pills a {
+    border-radius: 0;
+    height: 46px;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.masthead-navbar .navigation .nav-pills li a:hover, .masthead-navbar .navigation .nav-pills li a:focus {
+    background-color: #66700c;
+    color: white !important;
+    border-bottom: 4px solid #e04b3a;
+    box-sizing: border-box;
+}
+
+.masthead-navbar .navigation .nav-pills li.active a {
+    background-color: transparent;
+    color: black !important;
+    font-weight: bold;
+}
+
+.masthead-top {
+    min-height: auto;
+    border-bottom: 1px solid #a4a5a5;
+}
+
+.masthead-top .civis-link {
+    color: #94a212;
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    width: 130px;
+}
+.masthead-top .civis-a-link {
+    width: 130px;
+    display: block;
+}
+
+.masthead-top .civis-link .civis-logo {
+    padding-right: 8px;
+    width: 32px;
+    height: 32px;
+    background: url('../images/logo/170576_Logo_CIVIS_bz_it_RGB.svg') center no-repeat;
+    background-size: 100% auto;
+}
+
+.masthead-top .civis-link span, .masthead-top .civis-link i {
+    color: #454544;
+}
+
+.masthead .ck-row {
+    padding: 8px 0;
+}
+
+.lang-select label {
+    color: #454544;
 }
