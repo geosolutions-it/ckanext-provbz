@@ -4399,7 +4399,7 @@ msgstr "Abmelden"
 #: ckan/templates/user/logout_first.html:13
 #: ckan/templates/user/snippets/login_form.html:24
 msgid "Remember me"
-msgstr "Passwort merken"
+msgstr "Angemeldet bleiben"
 
 #: ckan/templates/user/logout_first.html:22
 msgid "You're already logged in"
@@ -5163,38 +5163,25 @@ msgid "sono resi disponibili gratuitamente attraverso le tecnologie dell'informa
 msgstr "sie stehen kostenlos durch die Informations- und Kommunikationstechnologien zur Verfügung, einschließlich öffentlicher und privater Computer-Netzwerke, oder sie werden für ihre Reproduktion und Verbreitung als Nebenkosten  zur Verfügung gestellt."
 
 # -------- shibbolet plugin ------------#
+#: ckanext/provbzauth/templates/user/snippets/login_form.html:25
+msgid "myCIVIS"
+msgstr ""
 
-#: ckanext/repoze/who/shibboleth/controller.py:25
-msgid "No user info received for login"
-msgstr "[No user info received for login]"
+#: ckanext/provbzauth/templates/user/snippets/login_form.html:26
+msgid "Login with myCIVIS (SPID, PROV.BZ or SIAG.IT)"
+msgstr "Anmeldung über myCIVIS (SPID, PROV.BZ oder SIAG.IT)"
 
-#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:25
-msgid "Shibboleth"
-msgstr "[Shibboleth]"
+#: ckanext/provbzauth/templates/user/snippets/login_form.html:33
+msgid "Login via myCIVIS"
+msgstr "Anmeldung über myCIVIS"
 
-#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:26
-msgid "Login through Shibboleth."
-msgstr "[Login through Shibboleth.]"
-
-#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:33
-msgid "Login via Shibboleth"
-msgstr "[Login through Shibboleth]"
-
-#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:45
+#: ckanext/provbzauth/templates/user/snippets/login_form.html:45
 msgid "Authentication by using local account"
-msgstr "[Authentication by using local account]"
+msgstr "Authentifizierung über lokales Konto"
 
-#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:49
-msgid "Username"
-msgstr "[Username]"
-
-#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:50
-msgid "Password"
-msgstr "[Password]"
-
-#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:59
-msgid "Log in"
-msgstr "[Log in]"
+#: ckanext/provbzauth/templates/user/snippets/login_form.html:58
+msgid "Remember me"
+msgstr "Angemeldet bleiben"
 
 # ----------------- Other in Additional Info --------------------#
 
