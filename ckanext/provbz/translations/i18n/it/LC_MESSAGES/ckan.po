@@ -5160,37 +5160,21 @@ msgstr "sono resi disponibili gratuitamente attraverso le tecnologie dell'inform
 
 # -------- shibbolet plugin ------------#
 
-#: ckanext/repoze/who/shibboleth/controller.py:25
-msgid "No user info received for login"
-msgstr "Non sono state ricevute informazioni sull'utente"
+msgid "myCIVIS"
+msgstr ""
 
-#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:25
-msgid "Shibboleth"
-msgstr "Shibboleth"
+#: ckanext/provbzauth/templates/user/snippets/login_form.html:26
+msgid "Login with myCIVIS (SPID, PROV.BZ or SIAG.IT)"
+msgstr "Autenticazione con myCIVIS (SPID, PROV.BZ or SIAG.IT)"
 
-#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:26
-msgid "Login through Shibboleth."
-msgstr "Accedi attraverso Shibboleth"
+#: ckanext/provbzauth/templates/user/snippets/login_form.html:33
+msgid "Login via myCIVIS"
+msgstr "Autenticazione con myCIVIS"
 
-#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:33
-msgid "Login via Shibboleth"
-msgstr "Accedi attraverso Shibboleth"
-
-#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:45
+#: ckanext/provbzauth/templates/user/snippets/login_form.html:45
 msgid "Authentication by using local account"
 msgstr "Autenticazione con account locale"
 
-#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:49
-msgid "Username"
-msgstr "Nome utente"
-
-#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:50
-msgid "Password"
-msgstr "Password"
-
-#: ckanext/repoze/who/shibboleth/templates/user/snippets/login_form.html:59
-msgid "Log in"
-msgstr "Accedi"
 
 # ----------------- Other in Additional Info --------------------#
 
