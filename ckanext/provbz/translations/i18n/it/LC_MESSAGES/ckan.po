@@ -5165,7 +5165,7 @@ msgstr ""
 
 #: ckanext/provbzauth/templates/user/snippets/login_form.html:26
 msgid "Login with myCIVIS (SPID, PROV.BZ or SIAG.IT)"
-msgstr "Autenticazione con myCIVIS (SPID, PROV.BZ or SIAG.IT)"
+msgstr "Accedi con myCIVIS (SPID, PROV.BZ, ...)"
 
 #: ckanext/provbzauth/templates/user/snippets/login_form.html:33
 msgid "Login via myCIVIS"
