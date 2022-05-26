@@ -1,0 +1,5 @@
+provbz-homepage-js:
+  contents:
+    - base/base.js
+  filters: rjsmin
+  output: provbz/%(version)s_homepage.js

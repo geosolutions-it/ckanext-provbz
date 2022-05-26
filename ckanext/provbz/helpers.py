@@ -12,14 +12,14 @@ import ckan.lib.helpers as h
 import ckan.logic as logic
 from ckan.common import request
 
-from pylons import config
+from ckan.plugins.toolkit import config
 
 from ckan.lib.i18n import get_lang
 from ckanext.multilang.model import PackageMultilang, TagMultilang
 
 import ckanext.pages.db as db
 
-from HTMLParser import HTMLParser
+from html.parser import HTMLParser
 
 
 log = logging.getLogger(__file__)
@@ -102,7 +102,7 @@ def recent_updates(n):
 	
     try:
         search_results = logic.get_action('package_search')(context, data_dict)
-    except search.SearchError, e:
+    except search.SearchError as e:
         log.error('Error searching for recently updated datasets')
         log.error(e)
         search_results = {}

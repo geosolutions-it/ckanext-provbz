@@ -26,10 +26,15 @@ Example:
     {% do geocat_url.append(extra.value) %}
   {% endif %}
 {% endfor%}
+<script>
+  function get_URL() {
+    return h.url_for(controller='package', action='read', id=package.name)
+  }
+</script>
 
 {% block package_item %}
   <li class="{{ item_class or "dataset-item" }}">
-    <div class="package-item-clickable" onClick="location.href='{{ h.url_for(controller='package', action='read', id=package.name) }}'">
+    <div class="package-item-clickable" onClick="location.href=get_URL()">
     {% block content %}
       <div class="dataset-content">
         {% block heading %}
@@ -43,7 +48,7 @@ Example:
               {% endif %}
             {% endblock %}
             {% block heading_title %}
-              {{ h.link_to(h.truncate(title, truncate_title), h.url_for(controller='package', action='read', id=package.name)) }}
+              {{ h.link_to(h.truncate(title, truncate_title), h.url_for(controller='dataset', action='read', id=package.name)) }}
             {% endblock %}
             {% block heading_meta %}
               {% if package.get('state', '').startswith('draft') %}

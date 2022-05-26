@@ -566,7 +566,7 @@ class PBZHarvester(GeoNetworkHarvester, MultilangHarvester):
                     self.persist_package_multilang_field(package_id, 'publisher_name', publisher.get('text'), publisher.get('locale'), 'extra') 
             
             pass
-        except Exception, e:
+        except Exception as e:
             log.error('Exception occurred while persisting DB objects: %s', e)
             raise
 
